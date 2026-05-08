@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MathPhiX — Fonctions</title>
+  <meta
+    name="description"
+    content="Découvre les fonctions en seconde : fonctions de référence, représentations graphiques, variations et extremums, avec cours, vidéos, exercices interactifs et quiz aléatoire."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/index.html" class="logo"><span>MathPhiX</span></a>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Ouvrir le menu"
+        aria-expanded="false"
+        aria-controls="mainNav"
+      >
+        ☰
+      </button>
+
+      <nav class="main-nav" id="mainNav">
+        <a href="/index.html">Accueil</a>
+
+        <div class="nav-dropdown">
+          <button class="dropdown-toggle" type="button" aria-expanded="false">
+            Programme
+          </button>
+          <div class="dropdown-menu">
+            <a href="/nombres-calculs.html">Nombres et calculs</a>
+            <a href="/geometrie.html">Géométrie</a>
+            <a href="/fonctions.html">Fonctions</a>
+            <a href="/statistiques-probabilites.html">Statistiques et probabilités</a>
+            <a href="/algorithme-programmation.html">Algorithme et programmation</a>
+          </div>
+        </div>
+
+        <a href="#videos">Vidéos</a>
+        <a href="#ressources-fonctions">Ressources</a>
+        <a href="#apropos">À propos</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="eyebrow">Maths Seconde • Chapitre Fonctions</p>
+          <h1>Comprendre les fonctions pas à pas</h1>
+          <p class="hero-description">
+            Découvre les notions essentielles du programme de seconde sur les fonctions :
+            fonctions de référence, lecture de courbes, résolution graphique,
+            variations et extremums.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#chapitres">Voir les chapitres</a>
+            <a class="btn btn-secondary" href="#ressources-fonctions">S’entraîner</a>
+          </div>
+        </div>
+
+        <div class="hero-image">
+          <img
+            src="images/fonctions.png"
+            alt="Illustration pour MathPhiX"
+            loading="eager"
+            decoding="async"
+          >
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-tag">Pourquoi ce chapitre compte</p>
+          <h2>Les fonctions servent à modéliser et à comprendre</h2>
+          <p>
+            Les fonctions permettent de relier deux grandeurs, de lire des courbes,
+            d’étudier des évolutions et de résoudre des problèmes concrets.
+            Elles sont au cœur de nombreuses notions de mathématiques.
+          </p>
+        </div>
+
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card-icon">f</div>
+            <h3>Associer une image</h3>
+            <p>
+              À un nombre de départ, une fonction associe une unique valeur appelée image.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">∿</div>
+            <h3>Lire une courbe</h3>
+            <p>
+              Une représentation graphique aide à visualiser le comportement d’une fonction.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">↗</div>
+            <h3>Étudier les variations</h3>
+            <p>
+              On apprend à repérer si une fonction est croissante, décroissante ou admet un extremum.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">x</div>
+            <h3>Résoudre graphiquement</h3>
+            <p>
+              Les courbes permettent de résoudre des équations ou des inéquations sans calcul compliqué.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="chapitres">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-tag">Vue d’ensemble</p>
+          <h2>Les chapitres de la page Fonctions</h2>
+          <p>
+            Chaque carte mène vers une page dédiée avec cours, exemples, exercices et repères essentiels.
+          </p>
+        </div>
+
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card-icon">f</div>
+            <h3>Fonctions de référence</h3>
+            <p>
+              Notion de fonction, image, antécédent, ensemble de définition,
+              fonctions affine, carré, cube, racine carrée et inverse.
+            </p>
+            <div class="card-actions">
+              <a class="btn btn-small btn-secondary" href="/fonctions-reference.html">Voir le cours</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">∿</div>
+            <h3>Représentations graphiques</h3>
+            <p>
+              Lire une image, retrouver un antécédent, résoudre graphiquement
+              des équations et des inéquations à partir d’une courbe.
+            </p>
+            <div class="card-actions">
+              <a class="btn btn-small btn-secondary" href="/fonctions-representation.html">Voir le cours</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">↕</div>
+            <h3>Variations et extremums</h3>
+            <p>
+              Sens de variation, croissance, décroissance, maximum, minimum
+              et étude de quelques fonctions usuelles.
+            </p>
+            <div class="card-actions">
+              <a class="btn btn-small btn-secondary" href="/variations-extremums.html">Voir le cours</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">★</div>
+            <h3>Objectif du chapitre</h3>
+            <p>
+              Savoir passer d’une formule à une lecture graphique,
+              puis d’un graphique à une interprétation claire et précise.
+            </p>
+            <div class="card-actions">
+              <a class="btn btn-small btn-secondary" href="#methodes">Voir les méthodes</a>
+              <a class="btn btn-small btn-primary" href="#quiz">Tester mon niveau</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-tag">Repères essentiels</p>
+          <h2>Les idées à retenir absolument</h2>
+          <p>
+            Avant de t’exercer, assure-toi de bien maîtriser ces bases.
+          </p>
+        </div>
+
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card-icon">1</div>
+            <h3>Image</h3>
+            <p>
+              L’image de x par une fonction f est la valeur obtenue en calculant f(x).
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">2</div>
+            <h3>Antécédent</h3>
+            <p>
+              Un antécédent d’un nombre y est une valeur de x telle que f(x)=y.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">3</div>
+            <h3>Courbe représentative</h3>
+            <p>
+              Elle regroupe les points de coordonnées (x ; f(x)) dans un repère.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">4</div>
+            <h3>Variation</h3>
+            <p>
+              Une fonction est croissante quand ses images augmentent lorsque x augmente.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="videos">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-tag">Vidéos pédagogiques</p>
+          <h2>Comprendre les fonctions en vidéo</h2>
+          <p>
+            Deux vidéos pour accompagner le cours et visualiser les notions essentielles du chapitre.
+          </p>
+        </div>
+
+        <div class="video-grid">
+          <article class="video-card">
+            <div class="video-wrapper">
+              <iframe
+                src="https://www.youtube.com/embed/LIEN_VIDEO"
+                title="Vidéo fonctions de référence"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <h3>Fonctions de référence en seconde</h3>
+            <p>
+              Une vidéo pour revoir les définitions, les images, les antécédents
+              et les fonctions usuelles du programme.
+            </p>
+          </article>
+
+          <article class="video-card">
+            <div class="video-wrapper">
+              <iframe
+                src="https://www.youtube.com/embed/LIEN_VIDEO"
+                title="Vidéo variations et lecture graphique"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <h3>Lire une courbe et étudier les variations</h3>
+            <p>
+              Une vidéo pour apprendre à lire un graphique et interpréter les variations d’une fonction.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="ressources-fonctions">
+      <div class="container two-columns">
+        <div>
+          <div class="section-heading left">
+            <p class="section-tag">Exercices interactifs</p>
+            <h2>Générateur d’exercices</h2>
+            <p>
+              Choisis un thème puis affiche une série de 3 questions tirées au hasard.
+            </p>
+          </div>
+
+          <div class="generator-box">
+            <label for="themeSelect">Thème du chapitre</label>
+            <select id="themeSelect">
+              <option value="fonctions-reference">Fonctions de référence</option>
+              <option value="fonctions-representation">Représentations graphiques</option>
+              <option value="variations-extremums">Variations et extremums</option>
+            </select>
+
+            <button class="btn btn-primary full-width" id="generateBtn" type="button">
+              Générer des exercices
+            </button>
+
+            <div id="exerciseList" class="generated-list">
+              <p class="generated-placeholder">
+                Clique sur le bouton pour afficher 3 questions aléatoires.
+              </p>
+            </div>
+
+            <a
+              id="chapterLink"
+              class="btn btn-secondary full-width chapter-link"
+              href="fonctions-reference.html"
+            >
+              Ouvrir la page du chapitre
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <div class="section-heading left" id="quiz">
+            <p class="section-tag">Quiz automatique</p>
+            <h2>Teste ton niveau sur les fonctions</h2>
+            <p>
+              Réponds aux 3 questions, suis ta progression puis corrige pour voir ton score et les explications.
+            </p>
+          </div>
+
+          <form id="quizForm" class="quiz-box">
+            <div id="quizQuestions">
+              <p class="generated-placeholder">
+                Le quiz va afficher 3 questions aléatoires.
+              </p>
+            </div>
+
+            <div class="quiz-actions">
+              <button type="button" class="btn btn-secondary full-width" id="newQuizBtn">
+                Nouveau quiz
+              </button>
+              <button type="submit" class="btn btn-primary full-width">
+                Corriger le quiz
+              </button>
+            </div>
+
+            <div id="quizResult" class="quiz-result"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="methodes">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-tag">Méthodes</p>
+          <h2>Comment réussir ce chapitre</h2>
+          <p>
+            Quelques réflexes simples pour progresser plus vite sur les fonctions.
+          </p>
+        </div>
+
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card-icon">A</div>
+            <h3>Lire précisément la consigne</h3>
+            <p>
+              Vérifie toujours si l’on te demande une image, un antécédent,
+              une lecture graphique ou une étude de variation.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">B</div>
+            <h3>Soigner le vocabulaire</h3>
+            <p>
+              Utilise les bons mots : image, antécédent, courbe représentative,
+              croissante, décroissante, maximum, minimum.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">C</div>
+            <h3>S’appuyer sur les fonctions usuelles</h3>
+            <p>
+              Les fonctions carré, racine carrée ou inverse servent souvent de modèles à connaître.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">D</div>
+            <h3>Relier calcul et graphique</h3>
+            <p>
+              Entraîne-toi à passer d’une expression algébrique à une interprétation graphique.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reassurance-section" id="apropos">
+      <div class="container reassurance-card">
+        <p class="section-tag">Message rassurant</p>
+        <h2>Les fonctions deviennent plus simples avec de bons repères</h2>
+        <p>
+          En seconde, les fonctions peuvent sembler nouvelles, mais avec des exemples simples,
+          des courbes bien lues et des tableaux de variations, on progresse vite.
+          L’important est d’avancer étape par étape et de s’entraîner régulièrement.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <h3>MathPhiX</h3>
+        <p>Des bases solides pour bien commencer sa seconde.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="/fonctions-reference.html">Fonctions de référence</a>
+        <a href="/fonctions-representation.html">Représentations graphiques</a>
+        <a href="/variations-extremums.html">Variations et extremums</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/script3.js"></script>
+</body>
+</html>
+

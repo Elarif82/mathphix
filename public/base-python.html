@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MathPhiX — Bases de Python</title>
+  <link rel="stylesheet" href="/css/style2.css" />
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="header-container container">
+      <div>
+        <h1 class="site-title">MathPhiX</h1>
+        <p class="site-subtitle">Seconde — Bases de Python</p>
+      </div>
+      <a href="algorithme-programmation.html" class="back-link">← Retour</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-card">
+        <h1>Les bases de Python</h1>
+        <p>
+          Dans ce chapitre, tu vas découvrir les bases de Python utiles en seconde :
+          variables, instruction conditionnelle avec <strong>if</strong>,
+          instruction itérative avec <strong>for</strong> et fonction en Python.
+        </p>
+
+        <div class="hero-tags">
+          <span class="tag">Cours</span>
+          <span class="tag">Exercices</span>
+          <span class="tag">Vidéo</span>
+          <span class="tag">Astuce</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+
+    <section class="section">
+      <h2>Cours</h2>
+
+      <div class="lesson-box">
+        <h3>1. Variable</h3>
+        <p>
+          Une <strong>variable</strong> permet de stocker une valeur dans un programme.
+        </p>
+        <p>
+          On peut ensuite réutiliser cette valeur dans des calculs.
+        </p>
+<pre><code>a = 5
+b = 7
+somme = a + b
+print(somme)
+</code></pre>
+        <p>
+          Ici, <strong>a</strong>, <strong>b</strong> et <strong>somme</strong> sont des variables.
+        </p>
+      </div>
+
+      <div class="lesson-box">
+        <h3>2. Instruction conditionnelle avec if</h3>
+        <p>
+          Une instruction conditionnelle permet d’exécuter des actions différentes
+          selon qu’une condition est vraie ou fausse.
+        </p>
+<pre><code>x = 4
+
+if x &gt; 0:
+    print("x est positif")
+</code></pre>
+        <p>
+          On peut aussi utiliser <strong>elif</strong> et <strong>else</strong>
+          pour distinguer plusieurs cas.
+        </p>
+<pre><code>x = -2
+
+if x &gt; 0:
+    print("positif")
+elif x == 0:
+    print("nul")
+else:
+    print("négatif")
+</code></pre>
+      </div>
+
+      <div class="lesson-box">
+        <h3>3. Instruction itérative avec for</h3>
+        <p>
+          Une boucle <strong>for</strong> permet de répéter une instruction
+          plusieurs fois.
+        </p>
+<pre><code>for i in range(5):
+    print(i)
+</code></pre>
+        <p>
+          Ce programme affiche successivement :
+          <strong>0</strong>, <strong>1</strong>, <strong>2</strong>,
+          <strong>3</strong>, <strong>4</strong>.
+        </p>
+        <p>
+          La boucle <strong>for</strong> est très utile pour faire des calculs répétés
+          ou des simulations.
+        </p>
+      </div>
+
+      <div class="lesson-box">
+        <h3>4. Fonction en Python</h3>
+        <p>
+          Une fonction en Python permet de regrouper des instructions
+          et de les réutiliser facilement.
+        </p>
+<pre><code>def f(x):
+    return 2 * x + 1
+
+print(f(3))
+print(f(5))
+</code></pre>
+        <p>
+          Ici, la fonction <strong>f</strong> associe à chaque nombre
+          <strong>x</strong> la valeur <strong>2x + 1</strong>.
+        </p>
+      </div>
+
+      <div class="example-box">
+        <h3>Exemple</h3>
+        <p>
+          On veut afficher les carrés des nombres de 1 à 5.
+        </p>
+<pre><code>for i in range(1, 6):
+    print(i, i ** 2)
+</code></pre>
+        <p>
+          Ce programme utilise une boucle <strong>for</strong>
+          et l’opérateur de puissance <strong>**</strong>.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Exercices</h2>
+
+      <div class="exercise-box">
+        <h3>Exercice 1</h3>
+        <p>
+          Écrire un programme Python qui stocke deux nombres dans des variables
+          puis affiche leur produit.
+        </p>
+      </div>
+
+      <div class="exercise-box">
+        <h3>Exercice 2</h3>
+        <p>
+          Écrire un programme qui teste si un nombre est positif, nul ou négatif.
+        </p>
+      </div>
+
+      <div class="exercise-box">
+        <h3>Exercice 3</h3>
+        <p>
+          Écrire une boucle <strong>for</strong> qui affiche les entiers de 1 à 10.
+        </p>
+      </div>
+
+      <div class="exercise-box">
+        <h3>Exercice 4</h3>
+        <p>
+          Écrire une fonction Python qui calcule le carré d’un nombre.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Vidéo</h2>
+
+      <div class="video-box">
+        <p>Vidéo explicative sur les bases de Python :</p>
+        <iframe
+          src="https://www.youtube.com/embed/LIEN_VIDEO"
+          title="Vidéo bases de Python"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Astuce</h2>
+
+      <div class="tip-box">
+        <p>
+          En Python, l’indentation est très importante :
+          elle indique quelles instructions appartiennent à une condition
+          ou à une boucle.
+        </p>
+      </div>
+
+      <div class="tip-box">
+        <p>
+          Commence par écrire des programmes très courts,
+          puis ajoute progressivement des variables, des conditions
+          et des boucles.
+        </p>
+      </div>
+
+      <div class="footer-nav">
+        <a href="algorithme-programmation.html" class="btn btn-secondary">← Retour</a>
+        <a href="index.html" class="btn btn-primary">Accueil</a>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>

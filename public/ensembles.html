@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MathPhiX — Ensembles</title>
+  <link rel="stylesheet" href="/css/style2.css" />
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="header-container container">
+      <div>
+        <h1 class="site-title">MathPhiX</h1>
+        <p class="site-subtitle">Seconde — Ensembles de nombres</p>
+      </div>
+      <a href="nombres-calculs.html" class="back-link">← Retour</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-card">
+        <h1>Les ensembles de nombres</h1>
+        <p>
+          Dans ce chapitre, tu vas apprendre à reconnaître les principaux ensembles
+          de nombres, à utiliser les symboles d’appartenance et d’inclusion,
+          et à classer correctement un nombre dans l’ensemble le plus précis.
+        </p>
+
+        <div class="hero-tags">
+          <span class="tag">Cours</span>
+          <span class="tag">Exercices</span>
+          <span class="tag">Vidéo</span>
+          <span class="tag">Astuce</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+
+    <section class="section">
+      <h2>Cours</h2>
+
+      <div class="lesson-box">
+        <h3>1. Appartenance</h3>
+        <p>
+          Un nombre appartient à un ensemble si on peut le trouver dans cet ensemble.
+        </p>
+        <p>
+          On note cela avec le symbole <span class="math">∈</span>.
+        </p>
+        <p>
+          Exemple : <span class="math">3 ∈ ℕ</span>
+        </p>
+        <p>
+          Si un nombre n’appartient pas à un ensemble, on utilise
+          <span class="math">∉</span>.
+        </p>
+        <p>
+          Exemple : <span class="math">-2 ∉ ℕ</span>
+        </p>
+      </div>
+
+      <div class="lesson-box">
+        <h3>2. Les entiers naturels : <span class="math">ℕ</span></h3>
+        <p>
+          L’ensemble <span class="math">ℕ</span> contient les entiers naturels :
+          <span class="math">0 ; 1 ; 2 ; 3 ; 4 ; ...</span>
+        </p>
+        <p>
+          Ce sont les nombres que l’on utilise pour compter.
+        </p>
+        <p>
+          Exemples :
+          <span class="math">5 ∈ ℕ</span>,
+          <span class="math">12 ∈ ℕ</span>,
+          mais <span class="math">-3 ∉ ℕ</span>.
+        </p>
+      </div>
+
+      <div class="lesson-box">
+        <h3>3. Les entiers relatifs : <span class="math">ℤ</span></h3>
+        <p>
+          L’ensemble <span class="math">ℤ</span> contient tous les entiers,
+          positifs, négatifs et zéro :
+          <span class="math">... ; -3 ; -2 ; -1 ; 0 ; 1 ; 2 ; 3 ; ...</span>
+        </p>
+        <p>
+          Exemples :
+          <span class="math">-7 ∈ ℤ</span>,
+          <span class="math">4 ∈ ℤ</span>.
+        </p>
+      </div>
+
+      <div class="lesson-box">
+        <h3>4. Les nombres décimaux : <span class="math">𝔻</span></h3>
+        <p>
+          L’ensemble <span class="math">𝔻</span> contient les nombres qui peuvent
+          s’écrire avec un nombre fini de chiffres après la virgule.
+        </p>
+        <p>
+          Exemples :
+          <span class="math">2,5 ∈ 𝔻</span>,
+          <span class="math">-3,14 ∈ 𝔻</span>,
+          <span class="math">7 ∈ 𝔻</span>.
+        </p>
+        <p>
+          En effet, un entier peut aussi s’écrire avec zéro chiffre après la virgule.
+        </p>
+      </div>
+
+      <div class="lesson-box">
+        <h3>5. Les nombres rationnels : <span class="math">ℚ</span></h3>
+        <p>
+          L’ensemble <span class="math">ℚ</span> contient les nombres qui peuvent
+          s’écrire sous la forme d’une fraction :
+          <span class="math">a / b</span> avec <span class="math">b ≠ 0</span>.
+        </p>
+        <p>
+          Exemples :
+          <span class="math">1/2 ∈ ℚ</span>,
+          <span class="math">-7/3 ∈ ℚ</span>,
+          <span class="math">2,5 ∈ ℚ</span>.
+        </p>
+        <p>
+          Un nombre décimal est donc aussi un nombre rationnel.
+        </p>
+      </div>
+
+      <div class="lesson-box">
+        <h3>6. Les nombres irrationnels</h3>
+        <p>
+          Un nombre irrationnel est un nombre réel qui ne peut pas s’écrire
+          sous la forme d’une fraction <span class="math">a / b</span>
+          avec <span class="math">b ≠ 0</span>.
+        </p>
+        <p>
+          Son écriture décimale est illimitée et non périodique.
+        </p>
+        <p>
+          Exemples :
+          <span class="math">√2</span>,
+          <span class="math">π</span>.
+        </p>
+        <p>
+          Ainsi, <span class="math">√2 ∉ ℚ</span> mais
+          <span class="math">√2 ∈ ℝ</span>.
+        </p>
+      </div>
+
+      <div class="lesson-box">
+        <h3>7. Les nombres réels : <span class="math">ℝ</span></h3>
+        <p>
+          L’ensemble <span class="math">ℝ</span> contient tous les nombres que l’on
+          peut placer sur une droite graduée.
+        </p>
+        <p>
+          Les nombres réels sont formés de deux grandes familles :
+          les nombres rationnels et les nombres irrationnels.
+        </p>
+        <p>
+          Donc :
+          <span class="math">ℝ</span> contient <span class="math">ℚ</span>
+          et aussi des nombres comme <span class="math">√2</span> ou
+          <span class="math">π</span>.
+        </p>
+        <p>
+          Exemples :
+          <span class="math">1/3 ∈ ℝ</span>,
+          <span class="math">√2 ∈ ℝ</span>,
+          <span class="math">π ∈ ℝ</span>.
+        </p>
+      </div>
+
+      <div class="lesson-box">
+        <h3>8. Inclusion</h3>
+        <p>
+          Un ensemble A est inclus dans un ensemble B si tous les éléments de A
+          appartiennent aussi à B.
+        </p>
+        <p>
+          On note : <span class="math">A ⊂ B</span>
+        </p>
+        <p>
+          Pour les ensembles de nombres, on a :
+        </p>
+        <p>
+          <span class="math">ℕ ⊂ ℤ ⊂ 𝔻 ⊂ ℚ ⊂ ℝ</span>
+        </p>
+        <p>
+          Les nombres irrationnels appartiennent à <span class="math">ℝ</span>
+          mais n’appartiennent pas à <span class="math">ℚ</span>.
+        </p>
+      </div>
+
+      <div class="example-box">
+        <h3>Exemple</h3>
+        <p>
+          Le nombre <span class="math">-4</span> appartient à
+          <span class="math">ℤ</span>, à <span class="math">𝔻</span>,
+          à <span class="math">ℚ</span> et à <span class="math">ℝ</span>.
+        </p>
+        <p>
+          L’ensemble le plus précis est donc <span class="math">ℤ</span>.
+        </p>
+        <p>
+          En revanche, <span class="math">√2</span> appartient à
+          <span class="math">ℝ</span> mais pas à <span class="math">ℚ</span> :
+          c’est un nombre irrationnel.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Exercices</h2>
+
+      <div class="exercise-box">
+        <h3>Exercice 1</h3>
+        <p>Complète avec <span class="math">∈</span> ou <span class="math">∉</span> :</p>
+        <ul>
+          <li><span class="math">5 ... ℕ</span></li>
+          <li><span class="math">-3 ... ℤ</span></li>
+          <li><span class="math">2,4 ... 𝔻</span></li>
+          <li><span class="math">1/3 ... ℚ</span></li>
+          <li><span class="math">√2 ... ℚ</span></li>
+          <li><span class="math">√2 ... ℝ</span></li>
+        </ul>
+      </div>
+
+      <div class="exercise-box">
+        <h3>Exercice 2</h3>
+        <p>Complète avec <span class="math">⊂</span> :</p>
+        <ul>
+          <li><span class="math">ℕ ... ℤ</span></li>
+          <li><span class="math">ℤ ... 𝔻</span></li>
+          <li><span class="math">𝔻 ... ℚ</span></li>
+          <li><span class="math">ℚ ... ℝ</span></li>
+        </ul>
+      </div>
+
+      <div class="exercise-box">
+        <h3>Exercice 3</h3>
+        <p>
+          Donne l’ensemble le plus précis auquel appartient chacun des nombres suivants :
+        </p>
+        <ul>
+          <li><span class="math">8</span></li>
+          <li><span class="math">-5</span></li>
+          <li><span class="math">3,7</span></li>
+          <li><span class="math">2/9</span></li>
+          <li><span class="math">√2</span></li>
+          <li><span class="math">π</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Vidéo</h2>
+
+      <div class="video-box">
+        <p>Vidéo explicative sur les ensembles de nombres :</p>
+
+        <iframe
+          src="https://www.youtube.com/embed/LIEN_VIDEO"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Astuce</h2>
+
+      <div class="tip-box">
+        <p>
+          Pour retenir l’ordre des ensembles, pense à des boîtes emboîtées :
+        </p>
+        <p>
+          <span class="math">ℕ ⊂ ℤ ⊂ 𝔻 ⊂ ℚ ⊂ ℝ</span>
+        </p>
+        <p>
+          Chaque ensemble contient le précédent.
+        </p>
+      </div>
+
+      <div class="tip-box">
+        <p>
+          Retenir :
+          <span class="math">rationnels + irrationnels = réels</span>.
+        </p>
+        <p>
+          Donc un nombre réel n’est pas forcément rationnel.
+        </p>
+      </div>
+
+      <div class="tip-box">
+        <p>
+          Quand on te demande l’ensemble le plus précis, choisis le plus petit ensemble
+          dans lequel le nombre se trouve.
+        </p>
+      </div>
+
+      <div class="footer-nav">
+        <a href="nombres-calculs.html" class="btn btn-secondary">← Retour</a>
+        <a href="index.html" class="btn btn-primary">Accueil</a>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>

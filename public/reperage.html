@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MathPhiX — Repérage</title>
+  <link rel="stylesheet" href="/css/style2.css" />
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="header-container container">
+      <div>
+        <h1 class="site-title">MathPhiX</h1>
+        <p class="site-subtitle">Seconde — Repérage</p>
+      </div>
+      <a href="/geometrie.html" class="back-link">← Retour</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-card">
+        <h1>Repérage dans le plan</h1>
+        <p>
+          Dans ce chapitre, tu vas apprendre à utiliser un repère du plan,
+          lire les coordonnées d’un point, calculer les coordonnées du milieu
+          d’un segment et déterminer la distance entre deux points.
+        </p>
+
+        <div class="hero-tags">
+          <span class="tag">Cours</span>
+          <span class="tag">Exercices</span>
+          <span class="tag">Vidéo</span>
+          <span class="tag">Astuce</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+
+    <section class="section">
+      <h2>Cours</h2>
+
+      <div class="lesson-box">
+        <h3>1. Le repère dans le plan</h3>
+        <p>
+          Un repère du plan est formé d’une origine <span class="math">O</span>,
+          d’un axe horizontal et d’un axe vertical.
+        </p>
+        <p>
+          En seconde, on travaille le plus souvent dans un
+          <strong>repère orthonormé</strong>.
+        </p>
+        <p>
+          Cela signifie que les axes sont perpendiculaires et que l’unité
+          choisie est la même sur les deux axes.
+        </p>
+      </div>
+
+      <div class="lesson-box">
+        <h3>2. Les coordonnées d’un point</h3>
+        <p>
+          Dans un repère, un point <span class="math">A</span> est repéré par
+          un couple de nombres :
+          <span class="math">A(x ; y)</span>.
+        </p>
+        <p>
+          Le premier nombre <span class="math">x</span> est l’
+          <strong>abscisse</strong>.
+        </p>
+        <p>
+          Le second nombre <span class="math">y</span> est l’
+          <strong>ordonnée</strong>.
+        </p>
+        <p>
+          Pour placer un point, on lit d’abord l’abscisse sur l’axe horizontal,
+          puis l’ordonnée sur l’axe vertical.
+        </p>
+      </div>
+
+      <div class="lesson-box">
+        <h3>3. Les coordonnées du milieu d’un segment</h3>
+        <p>
+          Si <span class="math">A(x_A ; y_A)</span> et
+          <span class="math">B(x_B ; y_B)</span>, alors le milieu
+          <span class="math">M</span> du segment <span class="math">[AB]</span>
+          a pour coordonnées :
+        </p>
+        <p>
+          <span class="math">M((x_A + x_B)/2 ; (y_A + y_B)/2)</span>
+        </p>
+        <p>
+          On calcule donc la moyenne des abscisses et la moyenne des ordonnées.
+        </p>
+      </div>
+
+      <div class="lesson-box">
+        <h3>4. La distance entre deux points</h3>
+        <p>
+          Dans un repère orthonormé, si
+          <span class="math">A(x_A ; y_A)</span> et
+          <span class="math">B(x_B ; y_B)</span>,
+          alors la distance <span class="math">AB</span> est donnée par :
+        </p>
+        <p>
+          <span class="math">AB = √((x_B - x_A)² + (y_B - y_A)²)</span>
+        </p>
+        <p>
+          Cette formule vient du théorème de Pythagore appliqué dans le repère.
+        </p>
+      </div>
+
+      <div class="example-box">
+        <h3>Exemple 1</h3>
+        <p>
+          Soit le point <span class="math">A(3 ; -2)</span>.
+        </p>
+        <p>
+          Son abscisse est <span class="math">3</span> et son ordonnée est
+          <span class="math">-2</span>.
+        </p>
+      </div>
+
+      <div class="example-box">
+        <h3>Exemple 2</h3>
+        <p>
+          Soient <span class="math">A(2 ; 4)</span> et
+          <span class="math">B(6 ; 8)</span>.
+        </p>
+        <p>
+          Le milieu <span class="math">M</span> de <span class="math">[AB]</span>
+          a pour coordonnées :
+        </p>
+        <p>
+          <span class="math">M((2 + 6)/2 ; (4 + 8)/2)</span>
+        </p>
+        <p>
+          <span class="math">M(4 ; 6)</span>
+        </p>
+      </div>
+
+      <div class="example-box">
+        <h3>Exemple 3</h3>
+        <p>
+          Soient <span class="math">A(1 ; 2)</span> et
+          <span class="math">B(4 ; 6)</span>.
+        </p>
+        <p>
+          La distance <span class="math">AB</span> vaut :
+        </p>
+        <p>
+          <span class="math">AB = √((4 - 1)² + (6 - 2)²)</span>
+        </p>
+        <p>
+          <span class="math">AB = √(3² + 4²) = √(9 + 16) = √25 = 5</span>
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Exercices</h2>
+
+      <div class="exercise-box">
+        <h3>Exercice 1</h3>
+        <p>
+          Donner l’abscisse et l’ordonnée de chacun des points suivants :
+        </p>
+        <ul>
+          <li><span class="math">A(2 ; 5)</span></li>
+          <li><span class="math">B(-3 ; 1)</span></li>
+          <li><span class="math">C(0 ; -4)</span></li>
+        </ul>
+      </div>
+
+      <div class="exercise-box">
+        <h3>Exercice 2</h3>
+        <p>
+          Placer dans un repère les points :
+        </p>
+        <ul>
+          <li><span class="math">D(1 ; 3)</span></li>
+          <li><span class="math">E(-2 ; 4)</span></li>
+          <li><span class="math">F(3 ; -1)</span></li>
+        </ul>
+      </div>
+
+      <div class="exercise-box">
+        <h3>Exercice 3</h3>
+        <p>
+          Calculer les coordonnées du milieu du segment
+          <span class="math">[AB]</span> avec :
+        </p>
+        <ul>
+          <li><span class="math">A(2 ; 4)</span> et <span class="math">B(6 ; 8)</span></li>
+        </ul>
+      </div>
+
+      <div class="exercise-box">
+        <h3>Exercice 4</h3>
+        <p>
+          Calculer les coordonnées du milieu du segment
+          <span class="math">[CD]</span> avec :
+        </p>
+        <ul>
+          <li><span class="math">C(-1 ; 5)</span> et <span class="math">D(3 ; -1)</span></li>
+        </ul>
+      </div>
+
+      <div class="exercise-box">
+        <h3>Exercice 5</h3>
+        <p>
+          Calculer la distance entre les points :
+        </p>
+        <ul>
+          <li><span class="math">A(1 ; 2)</span> et <span class="math">B(4 ; 6)</span></li>
+        </ul>
+      </div>
+
+      <div class="exercise-box">
+        <h3>Exercice 6</h3>
+        <p>
+          Calculer la distance entre les points :
+        </p>
+        <ul>
+          <li><span class="math">E(-2 ; 1)</span> et <span class="math">F(2 ; 4)</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Vidéo</h2>
+
+      <div class="video-box">
+        <p>Vidéo explicative sur le repérage dans le plan :</p>
+
+        <iframe
+          src="https://www.youtube.com/embed/LIEN_VIDEO"
+          title="Vidéo repérage"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Astuce</h2>
+
+      <div class="tip-box">
+        <p>
+          Pour lire les coordonnées d’un point, pense toujours :
+          <strong>abscisse d’abord, ordonnée ensuite</strong>.
+        </p>
+      </div>
+
+      <div class="tip-box">
+        <p>
+          Pour le milieu d’un segment, fais la moyenne des abscisses
+          puis la moyenne des ordonnées.
+        </p>
+      </div>
+
+      <div class="tip-box">
+        <p>
+          Pour la distance entre deux points, utilise la formule
+          dans un repère orthonormé en pensant au théorème de Pythagore.
+        </p>
+      </div>
+
+      <div class="footer-nav">
+        <a href="geometrie.html" class="btn btn-secondary">← Retour</a>
+        <a href="index.html" class="btn btn-primary">Accueil</a>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>
+
