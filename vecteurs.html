@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MathPhiX — Vecteurs</title>
+  <link rel="stylesheet" href="/css/style2.css" />
+
+  <!-- MathJax GLOBAL -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)'], ['$', '$']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="header-container container">
+      <div>
+        <h1 class="site-title">MathPhiX</h1>
+        <p class="site-subtitle">Seconde — Vecteurs</p>
+      </div>
+      <a href="/geometrie.html" class="back-link">← Retour</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-card">
+        <h1>Vecteurs</h1>
+        <p>
+          Dans ce chapitre, tu vas apprendre à reconnaître, calculer et utiliser
+          des vecteurs en géométrie du plan et en géométrie repérée.
+        </p>
+
+        <div class="hero-tags">
+          <span class="tag">Cours</span>
+          <span class="tag">Exercices</span>
+          <span class="tag">Vidéo</span>
+          <span class="tag">Astuce</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+
+    <section class="section">
+      <h2>Cours</h2>
+
+      <div class="lesson-box">
+        <h3>1. Vecteur en géométrie du plan</h3>
+        <p>
+          En géométrie du plan, un vecteur représente un mouvement,
+          c’est-à-dire un déplacement d’un point vers un autre.
+        </p>
+        <p>
+          Un vecteur est caractérisé par sa <strong>direction</strong>,
+          son <strong>sens</strong> et sa <strong>norme</strong>.
+        </p>
+        <p>
+          Le vecteur d’origine <span class="math">A</span> et d’extrémité
+          <span class="math">B</span> se note
+          <span class="math">\(\overrightarrow{AB}\)</span>.
+        </p>
+      </div>
+
+      <div class="lesson-box">
+        <h3>2. Égalité de deux vecteurs</h3>
+        <p>
+          Deux vecteurs sont égaux lorsqu’ils ont la même direction,
+          le même sens et la même norme.
+        </p>
+        <p>
+          Cela signifie qu’ils représentent exactement le même déplacement.
+        </p>
+      </div>
+
+      <div class="lesson-box">
+        <h3>3. Vecteur opposé</h3>
+        <p>
+          Le vecteur opposé d’un vecteur est un vecteur qui a la même direction,
+          la même norme, mais le sens contraire.
+        </p>
+        <p>
+          Le vecteur opposé de <span class="math">\(\vec{u}\)</span> se note
+          <span class="math">\(-\vec{u}\)</span>.
+        </p>
+        <p>
+          Par exemple, les vecteurs
+          <span class="math">\(\overrightarrow{AB}\)</span> et
+          <span class="math">\(\overrightarrow{BA}\)</span>
+          sont opposés.
+        </p>
+        <p>
+          On a donc :
+          <span class="math">\(\overrightarrow{BA} = -\overrightarrow{AB}\)</span>.
+        </p>
+      </div>
+
+      <div class="lesson-box">
+        <h3>4. Relation de Chasles</h3>
+        <p>
+          Pour tous points <span class="math">A</span>, <span class="math">B</span>
+          et <span class="math">C</span>, on a :
+        </p>
+        <p>
+          <span class="math">\(\overrightarrow{AB} + \overrightarrow{BC} = \overrightarrow{AC}\)</span>
+        </p>
+        <p>
+          Cette relation est fondamentale pour enchaîner des déplacements
+          et simplifier des expressions vectorielles.
+        </p>
+      </div>
+
+      <div class="lesson-box">
+        <h3>5. Vecteurs en géométrie repérée</h3>
+        <p>
+          En géométrie repérée, si
+          <span class="math">A(x_A ; y_A)</span> et
+          <span class="math">B(x_B ; y_B)</span>,
+          alors le vecteur
+          <span class="math">\(\overrightarrow{AB}\)</span>
+          a pour coordonnées :
+        </p>
+        <p>
+          <span class="math">\((x_B - x_A ; y_B - y_A)\)</span>
+        </p>
+      </div>
+
+      <div class="lesson-box">
+        <h3>6. Opérations sur les vecteurs</h3>
+        <p>
+          On peut additionner deux vecteurs coordonnée par coordonnée.
+        </p>
+        <p>
+          Si <span class="math">\(\vec{u}(x ; y)\)</span> et
+          <span class="math">\(\vec{v}(x' ; y')\)</span>,
+          alors :
+        </p>
+        <p>
+          <span class="math">\(\vec{u} + \vec{v}(x + x' ; y + y')\)</span>
+        </p>
+        <p>
+          On peut aussi multiplier un vecteur par un nombre réel.
+        </p>
+        <p>
+          Par exemple :
+          <span class="math">\(-\vec{u}\)</span>
+          est le vecteur opposé de
+          <span class="math">\(\vec{u}\)</span>.
+        </p>
+      </div>
+
+      <div class="lesson-box">
+        <h3>7. Colinéarité</h3>
+        <p>
+          Deux vecteurs sont colinéaires s’il existe un nombre réel
+          <span class="math">k</span> tel que :
+        </p>
+        <p>
+          <span class="math">\(\vec{u} = k\vec{v}\)</span>
+        </p>
+        <p>
+          Autrement dit, deux vecteurs colinéaires ont la même direction.
+        </p>
+        <p>
+          Cette propriété permet notamment de montrer que des droites sont parallèles
+          ou que des points sont alignés.
+        </p>
+      </div>
+
+      <div class="lesson-box">
+        <h3>8. Un outil entre géométrie et calcul</h3>
+        <p>
+          Les vecteurs font le lien entre la vision géométrique d’une figure
+          et le calcul dans un repère.
+        </p>
+      </div>
+
+      <div class="example-box">
+        <h3>Exemple 1</h3>
+        <p>
+          Soient <span class="math">A(1 ; 2)</span> et
+          <span class="math">B(5 ; 7)</span>.
+        </p>
+        <p>
+          Alors :
+          <span class="math">\(\overrightarrow{AB}(5 - 1 ; 7 - 2)\)</span>
+        </p>
+        <p>
+          donc
+          <span class="math">\(\overrightarrow{AB}(4 ; 5)\)</span>.
+        </p>
+      </div>
+
+      <div class="example-box">
+        <h3>Exemple 2</h3>
+        <p>
+          Les vecteurs
+          <span class="math">\(\overrightarrow{AB}\)</span>
+          et
+          <span class="math">\(\overrightarrow{BA}\)</span>
+          sont opposés.
+        </p>
+        <p>
+          Ils ont la même direction, la même norme,
+          mais des sens contraires.
+        </p>
+      </div>
+
+      <div class="example-box">
+        <h3>Exemple 3</h3>
+        <p>
+          Si
+          <span class="math">\(\vec{u}(2 ; 4)\)</span>
+          et
+          <span class="math">\(\vec{v}(1 ; 2)\)</span>,
+          alors
+          <span class="math">\(\vec{u} = 2\vec{v}\)</span>.
+        </p>
+        <p>
+          Les vecteurs <span class="math">\(\vec{u}\)</span> et
+          <span class="math">\(\vec{v}\)</span> sont donc colinéaires.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Exercices</h2>
+
+      <div class="exercise-box">
+        <h3>Exercice 1</h3>
+        <p>
+          Soient <span class="math">A(1 ; 2)</span> et
+          <span class="math">B(5 ; 7)</span>.
+        </p>
+        <ul>
+          <li>Calculer les coordonnées du vecteur <span class="math">\(\overrightarrow{AB}\)</span>.</li>
+        </ul>
+      </div>
+
+      <div class="exercise-box">
+        <h3>Exercice 2</h3>
+        <p>Compléter avec la relation de Chasles :</p>
+        <ul>
+          <li><span class="math">\(\overrightarrow{AB} + \overrightarrow{BC} = ...\)</span></li>
+          <li><span class="math">\(\overrightarrow{MN} + \overrightarrow{NP} = ...\)</span></li>
+        </ul>
+      </div>
+
+      <div class="exercise-box">
+        <h3>Exercice 3</h3>
+        <p>
+          Donner le vecteur opposé de :
+        </p>
+        <ul>
+          <li><span class="math">\(\overrightarrow{AB}\)</span></li>
+          <li><span class="math">\(\vec{u}\)</span></li>
+        </ul>
+      </div>
+
+      <div class="exercise-box">
+        <h3>Exercice 4</h3>
+        <p>
+          Soient
+          <span class="math">\(\vec{u}(3 ; 2)\)</span>
+          et
+          <span class="math">\(\vec{v}(1 ; 4)\)</span>.
+        </p>
+        <ul>
+          <li>Calculer <span class="math">\(\vec{u} + \vec{v}\)</span>.</li>
+        </ul>
+      </div>
+
+      <div class="exercise-box">
+        <h3>Exercice 5</h3>
+        <p>
+          Dire si les vecteurs
+          <span class="math">\((2 ; 4)\)</span>
+          et
+          <span class="math">\((1 ; 2)\)</span>
+          sont colinéaires.
+        </p>
+      </div>
+
+      <div class="exercise-box">
+        <h3>Exercice 6</h3>
+        <p>
+          Expliquer pourquoi deux vecteurs colinéaires ont la même direction.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Vidéo</h2>
+
+      <div class="video-box">
+        <p>Vidéo explicative sur les vecteurs :</p>
+
+        <iframe
+          src="https://www.youtube.com/embed/LIEN_VIDEO"
+          title="Vidéo vecteurs"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Astuce</h2>
+
+      <div class="tip-box">
+        <p>
+          Pour calculer les coordonnées de
+          <span class="math">\(\overrightarrow{AB}\)</span>,
+          fais toujours :
+          <strong>coordonnées de B moins coordonnées de A</strong>.
+        </p>
+      </div>
+
+      <div class="tip-box">
+        <p>
+          Retenir :
+          <span class="math">\(\overrightarrow{AB} + \overrightarrow{BC} = \overrightarrow{AC}\)</span>.
+        </p>
+      </div>
+
+      <div class="tip-box">
+        <p>
+          Le vecteur opposé garde la même direction et la même norme,
+          mais change de sens.
+        </p>
+      </div>
+
+      <div class="tip-box">
+        <p>
+          Pour montrer que deux vecteurs sont colinéaires,
+          cherche s’il existe un nombre réel
+          <span class="math">k</span>
+          tel que l’un soit un multiple de l’autre.
+        </p>
+      </div>
+
+      <div class="footer-nav">
+        <a href="geometrie.html" class="btn btn-secondary">← Retour</a>
+        <a href="index.html" class="btn btn-primary">Accueil</a>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>

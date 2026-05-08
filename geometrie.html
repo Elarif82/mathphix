@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MathPhiX — Géométrie</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/index.html" class="logo"><span>MathPhiX</span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mainNav">☰</button>
+
+      <nav class="main-nav" id="mainNav">
+        <a href="/index.html">Accueil</a>
+
+        <div class="nav-dropdown">
+          <button class="dropdown-toggle" type="button" aria-expanded="false">
+            Programme
+          </button>
+          <div class="dropdown-menu">
+            <a href="/nombres-calculs.html">Nombres et calculs</a>
+            <a href="/geometrie.html">Géométrie</a>
+            <a href="/fonctions.html">Fonctions</a>
+            <a href="/statistiques-probabilites.html">Statistiques et probabilités</a>
+            <a href="/algorithme-programmation.html">Algorithme et programmation</a>
+          </div>
+        </div>
+
+        <a href="/geometrie.html#videos">Vidéos</a>
+        <a href="/geometrie.html#ressources-geometrie">Ressources</a>
+        <a href="/geometrie.html#apropos">À propos</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="eyebrow">Maths Seconde • Chapitre Géométrie</p>
+          <h1>Comprendre la géométrie pas à pas</h1>
+          <p class="hero-description">
+            Découvre les notions essentielles du programme de seconde :
+            trigonométrie, repérage, vecteurs et droites,
+            avec des explications simples, des exemples et des exercices progressifs.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#chapitres">Voir les chapitres</a>
+            <a class="btn btn-secondary" href="#ressources-geometrie">S'entraîner</a>
+          </div>
+        </div>
+
+        <div class="hero-image">
+          <img
+            src="/images/geometrie.png"
+            alt="Illustration pour MathPhiX"
+            loading="eager"
+            decoding="async"
+          >
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="chapitres">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-tag">Vue d’ensemble</p>
+          <h2>Les chapitres de la page Géométrie</h2>
+          <p>Chaque carte ouvre une page complète avec cours, exercices, vidéo et astuce.</p>
+        </div>
+
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card-icon">△</div>
+            <h3>Trigonométrie</h3>
+            <p>Triangle rectangle, cosinus, sinus, tangente et calculs de longueurs ou d’angles.</p>
+            <div class="card-actions">
+              <a class="btn btn-small btn-secondary" href="/trigonometrie.html">Voir le cours</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">◎</div>
+            <h3>Repérage</h3>
+            <p>Repère, coordonnées, milieu d’un segment, lecture graphique et distance sur un axe.</p>
+            <div class="card-actions">
+              <a class="btn btn-small btn-secondary" href="/reperage.html">Voir le cours</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">→</div>
+            <h3>Vecteurs</h3>
+            <p>Définition, égalité, coordonnées, relation de Chasles et milieu d’un segment.</p>
+            <div class="card-actions">
+              <a class="btn btn-small btn-secondary" href="/vecteurs.html">Voir le cours</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">/</div>
+            <h3>Droites</h3>
+            <p>Coefficient directeur, équation réduite, droites parallèles et cas particuliers.</p>
+            <div class="card-actions">
+              <a class="btn btn-small btn-secondary" href="/droites.html">Voir le cours</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="videos">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-tag">Vidéos pédagogiques</p>
+          <h2>Comprendre la géométrie en vidéo</h2>
+          <p>Deux vidéos pour accompagner le cours et aider les élèves à visualiser les méthodes essentielles.</p>
+        </div>
+
+        <div class="video-grid">
+          <article class="video-card">
+            <div class="video-wrapper">
+              <iframe src="https://www.youtube.com/embed/LIEN_VIDEO" title="Vidéo Trigonométrie et repérage" allowfullscreen></iframe>
+            </div>
+            <h3>Trigonométrie et repérage en seconde</h3>
+            <p>Une vidéo pour comprendre les angles, les mesures, les triangles rectangles et le repérage dans le plan.</p>
+          </article>
+
+          <article class="video-card">
+            <div class="video-wrapper">
+              <iframe src="https://www.youtube.com/embed/LIEN_VIDEO" title="Vidéo Vecteurs et droites" allowfullscreen></iframe>
+            </div>
+            <h3>Vecteurs et droites en seconde</h3>
+            <p>Une vidéo pour introduire les vecteurs, les coordonnées et l’étude des droites en géométrie repérée.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="ressources-geometrie">
+      <div class="container two-columns">
+        <div>
+          <div class="section-heading left">
+            <p class="section-tag">Exercices interactifs</p>
+            <h2>Générateur d’exercices</h2>
+            <p>Choisis un thème puis affiche 3 questions tirées au hasard dans une banque d’exercices.</p>
+          </div>
+
+          <div class="generator-box">
+            <label for="themeSelect">Thème du chapitre</label>
+            <select id="themeSelect">
+              <option value="trigonometrie" data-link="trigonometrie.html">Trigonométrie</option>
+              <option value="reperage" data-link="reperage.html">Repérage</option>
+              <option value="vecteurs" data-link="vecteurs.html">Vecteurs</option>
+              <option value="droites" data-link="droites.html">Droites</option>
+            </select>
+
+            <button class="btn btn-primary full-width" id="generateBtn" type="button">
+              Générer des exercices
+            </button>
+
+            <div
+              id="exerciseList"
+              class="generated-list"
+              data-mode="random"
+              data-count="3"
+              aria-live="polite"
+            >
+              <p class="generator-placeholder">
+                Clique sur le bouton pour afficher 3 questions aléatoires selon le thème choisi.
+              </p>
+            </div>
+
+            <a
+              id="chapterLink"
+              class="btn btn-secondary full-width chapter-link"
+              href="/trigonometrie.html"
+            >
+              Ouvrir la page du chapitre
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <div class="section-heading left" id="quiz">
+            <p class="section-tag">Quiz automatique</p>
+            <h2>Teste ton niveau sur la géométrie</h2>
+            <p>
+              Le quiz affiche 3 questions aléatoires. Réponds, suis ta progression
+              puis clique sur corriger pour voir ton score, les bonnes réponses et les explications.
+            </p>
+          </div>
+
+          <form id="quizForm" class="quiz-box">
+            <div class="quiz-score-card">
+              <p class="generated-title">Score actuel</p>
+              <div id="quizScorePercent">0%</div>
+              <p id="quizScoreText">0 bonne réponse sur 3</p>
+            </div>
+
+            <div class="quiz-progress">
+              <div class="quiz-progress-top">
+                <span>Progression</span>
+                <span id="quizProgressText">0 / 3 répondues</span>
+              </div>
+              <div class="quiz-progress-bar">
+                <div id="quizProgressFill" class="quiz-progress-fill"></div>
+              </div>
+            </div>
+
+            <div id="quizQuestions" aria-live="polite">
+              <div class="quiz-question">
+                <p><strong>Chargement du quiz...</strong></p>
+              </div>
+            </div>
+
+            <div class="quiz-actions">
+              <button type="button" class="btn btn-secondary full-width" id="newQuizBtn">
+                Nouveau quiz aléatoire
+              </button>
+              <button type="submit" class="btn btn-primary full-width">
+                Corriger le quiz
+              </button>
+            </div>
+
+            <div id="quizResult" class="quiz-result"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reassurance-section" id="apropos">
+      <div class="container reassurance-card">
+        <p class="section-tag">Message rassurant</p>
+        <h2>La géométrie devient plus simple avec de bons repères</h2>
+        <p>
+          La géométrie peut sembler abstraite au début, mais avec des figures claires,
+          des définitions simples, quelques formules bien comprises
+          et beaucoup d’entraînement, on progresse rapidement.
+          L’essentiel est d’avancer pas à pas.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <h3>MathPhiX</h3>
+        <p>Des bases solides pour bien commencer sa seconde.</p>
+      </div>
+      <div class="footer-links">
+        <a href="/trigonometrie.html">Trigonométrie</a>
+        <a href="/reperage.html">Repérage</a>
+        <a href="/vecteurs.html">Vecteurs</a>
+        <a href="/droites.html">Droites</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/script2.js"></script>
+</body>
+</html>

@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MathPhiX — Nombres et calculs</title>
+  <meta
+    name="description"
+    content="Cours, quiz interactif et générateur d’exercices aléatoires pour réviser les nombres et calculs en seconde."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/index.html" class="logo"><span>MathPhiX</span></a>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Ouvrir le menu"
+        aria-expanded="false"
+        aria-controls="mainNav"
+      >
+        ☰
+      </button>
+
+      <nav class="main-nav" id="mainNav">
+        <a href="/index.html">Accueil</a>
+
+        <div class="nav-dropdown">
+          <button class="dropdown-toggle" type="button" aria-expanded="false">
+            Programme
+          </button>
+          <div class="dropdown-menu">
+            <a href="/nombres-calculs.html">Nombres et calculs</a>
+            <a href="/geometrie.html">Géométrie</a>
+            <a href="/fonctions.html">Fonctions</a>
+            <a href="/statistiques-probabilites.html">Statistiques et probabilités</a>
+            <a href="/algorithme-programmation.html">Algorithme et programmation</a>
+          </div>
+        </div>
+
+        <a href="#videos">Vidéos</a>
+        <a href="#ressources-nombres-calculs">Ressources</a>
+        <a href="#apropos">À propos</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="eyebrow">Maths Seconde • Nombres et calculs</p>
+          <h1>Maîtriser les bases de nombres et calculs</h1>
+          <p class="hero-description">
+            Revois les notions essentielles du programme : ensembles de nombres,
+            intervalles, arithmétique, calcul littéral, racines carrées, puissances,
+            équations et inéquations, avec des explications simples, des exercices
+            ciblés et un entraînement interactif.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#chapitres">Voir les chapitres</a>
+            <a class="btn btn-secondary" href="#ressources-nombres-calculs">S'entraîner</a>
+          </div>
+        </div>
+
+        <div class="hero-image">
+          <img
+            src="images/nombres-calculs.png"
+            alt="Illustration pour MathPhiX"
+            loading="eager"
+            decoding="async"
+          >
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="chapitres">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-tag">Organisation du chapitre</p>
+          <h2>Les grands thèmes de nombres et calculs</h2>
+          <p>
+            Chaque carte ouvre une page complète avec cours, exercices, vidéo et astuce.
+          </p>
+        </div>
+
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card-icon">ℕ</div>
+            <h3>Ensembles de nombres</h3>
+            <p>
+              Reconnaître les entiers, rationnels et réels, comprendre l’appartenance
+              et l’inclusion.
+            </p>
+            <div class="card-actions">
+              <a class="btn btn-small btn-secondary" href="/ensembles.html">Voir le cours</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">[ ]</div>
+            <h3>Intervalles</h3>
+            <p>
+              Lire, écrire et interpréter les intervalles ainsi que la réunion
+              et l’intersection.
+            </p>
+            <div class="card-actions">
+              <a class="btn btn-small btn-secondary" href="/intervalles.html">Voir le cours</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">÷</div>
+            <h3>Arithmétique</h3>
+            <p>
+              Étudier les multiples, diviseurs, critères de divisibilité,
+              nombres premiers et décompositions.
+            </p>
+            <div class="card-actions">
+              <a class="btn btn-small btn-secondary" href="/arithmetique.html">Voir le cours</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">( )</div>
+            <h3>Développer</h3>
+            <p>
+              Utiliser la distributivité simple et double ainsi que les identités remarquables.
+            </p>
+            <div class="card-actions">
+              <a class="btn btn-small btn-secondary" href="/developper.html">Voir le cours</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">×</div>
+            <h3>Factoriser</h3>
+            <p>
+              Mettre un facteur commun en évidence et reconnaître les formes classiques à factoriser.
+            </p>
+            <div class="card-actions">
+              <a class="btn btn-small btn-secondary" href="/factoriser.html">Voir le cours</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">√</div>
+            <h3>Racines carrées</h3>
+            <p>
+              Comprendre la définition, simplifier certaines écritures et effectuer des calculs simples.
+            </p>
+            <div class="card-actions">
+              <a class="btn btn-small btn-secondary" href="/racines.html">Voir le cours</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">10²</div>
+            <h3>Puissances</h3>
+            <p>
+              Maîtriser les règles de calcul sur les puissances et manipuler les puissances de 10.
+            </p>
+            <div class="card-actions">
+              <a class="btn btn-small btn-secondary" href="/puissances2.html">Voir le cours</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">=</div>
+            <h3>Équations</h3>
+            <p>
+              Résoudre des équations du premier degré avec méthode et vérifier la solution trouvée.
+            </p>
+            <div class="card-actions">
+              <a class="btn btn-small btn-secondary" href="/equations2.html">Voir le cours</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">≤</div>
+            <h3>Inéquations</h3>
+            <p>
+              Résoudre des inéquations simples et représenter les solutions sous forme d’intervalles.
+            </p>
+            <div class="card-actions">
+              <a class="btn btn-small btn-secondary" href="/inequations.html">Voir le cours</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-tag">Méthode</p>
+          <h2>Comment progresser plus facilement ?</h2>
+          <p>
+            L’idée est de comprendre d’abord, puis de s’entraîner progressivement
+            avec des exercices variés et un quiz rapide.
+          </p>
+        </div>
+
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card-icon">1</div>
+            <h3>Lire le cours</h3>
+            <p>
+              Commence par comprendre les définitions, les notations et les règles de calcul.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">2</div>
+            <h3>Faire simple d’abord</h3>
+            <p>
+              Entraîne-toi sur des questions courtes avant de passer à des exercices plus longs.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">3</div>
+            <h3>Se tester</h3>
+            <p>
+              Utilise le quiz interactif pour vérifier tes connaissances et repérer tes erreurs.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">4</div>
+            <h3>Recommencer</h3>
+            <p>
+              Génère de nouvelles séries d’exercices pour consolider les automatismes.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="videos">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-tag">Vidéos pédagogiques</p>
+          <h2>Renforcer le cours avec la vidéo</h2>
+          <p>
+            Tu peux remplacer ces emplacements par tes vidéos YouTube ou TikTok
+            sur chaque notion.
+          </p>
+        </div>
+
+        <div class="video-grid">
+          <article class="video-card">
+            <div class="video-wrapper">
+              <iframe
+                src="https://www.youtube.com/embed/LIEN_VIDEO"
+                title="Vidéo Ensembles de nombres"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <h3>Les ensembles de nombres en seconde</h3>
+            <p>Une vidéo pour apprendre à reconnaître les ensembles de nombres.</p>
+          </article>
+
+          <article class="video-card">
+            <div class="video-wrapper">
+              <iframe
+                src="https://www.youtube.com/embed/LIEN_VIDEO"
+                title="Vidéo Développer et factoriser"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <h3>Développer et factoriser simplement</h3>
+            <p>Une méthode progressive avec des exemples courts et efficaces.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="ressources-nombres-calculs">
+      <div class="container two-columns">
+        <div>
+          <div class="section-heading left">
+            <p class="section-tag">Exercices interactifs</p>
+            <h2>Générateur d’exercices</h2>
+            <p>
+              Choisis un thème puis affiche une nouvelle série de 3 exercices tirés au hasard.
+            </p>
+          </div>
+
+          <div class="generator-box">
+            <label for="themeSelect">Thème du chapitre</label>
+
+            <select id="themeSelect">
+              <option value="ensembles">Ensembles</option>
+              <option value="intervalles">Intervalles</option>
+              <option value="arithmetique">Arithmétique</option>
+              <option value="developper">Développer</option>
+              <option value="factoriser">Factoriser</option>
+              <option value="racines">Racines carrées</option>
+              <option value="puissances">Puissances</option>
+              <option value="equations">Équations</option>
+              <option value="inequations">Inéquations</option>
+            </select>
+
+            <button class="btn btn-primary full-width" id="generateBtn" type="button">
+              Générer 3 exercices
+            </button>
+
+            <div id="exerciseList" class="generated-list" aria-live="polite"></div>
+
+            <a
+              id="chapterLink"
+              class="btn btn-secondary full-width chapter-link"
+              href="/ensembles.html"
+            >
+              Ouvrir la page du chapitre
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <div class="section-heading left">
+            <p class="section-tag">Quiz interactif</p>
+            <h2>Teste tes connaissances</h2>
+            <p>
+              Lance un quiz aléatoire de 3 questions, réponds, puis consulte la correction,
+              l’explication, la progression et ton score.
+            </p>
+          </div>
+
+          <div class="quiz-box">
+            <button class="btn btn-primary full-width" id="generateQuizBtn" type="button">
+              Afficher un quiz aléatoire
+            </button>
+
+            <form id="quizForm" class="quiz-form">
+              <div id="quizContainer" aria-live="polite"></div>
+
+              <div class="quiz-actions" id="quizActions" style="display: none;">
+                <button class="btn btn-secondary full-width" id="submitQuizBtn" type="submit">
+                  Corriger le quiz
+                </button>
+                <button class="btn btn-primary full-width" id="newQuizBtn" type="button">
+                  Générer un nouveau quiz
+                </button>
+              </div>
+            </form>
+
+            <div id="quizResult" class="quiz-result" aria-live="polite">
+              <p>Le score apparaîtra ici après la correction du quiz.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-tag">Repères essentiels</p>
+          <h2>Ce qu’il faut retenir</h2>
+          <p>
+            Quelques idées simples à garder en tête pour réussir plus facilement.
+          </p>
+        </div>
+
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card-icon">ℚ</div>
+            <h3>Bien distinguer les ensembles</h3>
+            <p>
+              Savoir si un nombre est entier, rationnel ou réel évite beaucoup d’erreurs.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">[a;b]</div>
+            <h3>Lire les intervalles avec soin</h3>
+            <p>
+              Les crochets ouverts ou fermés changent le sens d’une solution.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">x</div>
+            <h3>Soigner les étapes</h3>
+            <p>
+              En développement, factorisation ou équations, chaque ligne doit être claire.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">✓</div>
+            <h3>Vérifier ses réponses</h3>
+            <p>
+              Relire ou tester une solution permet de repérer vite une erreur de calcul.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reassurance-section" id="apropos">
+      <div class="container reassurance-card">
+        <p class="section-tag">Message rassurant</p>
+        <h2>Les calculs deviennent plus simples avec de la méthode</h2>
+        <p>
+          En seconde, beaucoup d’élèves se bloquent sur les calculs parce qu’ils mélangent
+          les règles ou vont trop vite. Avec des exemples bien choisis, des rappels clairs
+          et un entraînement progressif, ces notions deviennent beaucoup plus accessibles.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <h3>MathPhiX</h3>
+        <p>Des bases solides pour bien commencer sa seconde.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="/ensembles.html">Ensembles</a>
+        <a href="/intervalles.html">Intervalles</a>
+        <a href="/arithmetique.html">Arithmétique</a>
+        <a href="/puissances2.html">Puissances</a>
+        <a href="/equations2.html">Équations</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/script1.js"></script>
+</body>
+</html>

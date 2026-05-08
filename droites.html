@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MathPhiX — Droites</title>
+  <link rel="stylesheet" href="/css/style2.css" />
+
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)'], ['$', '$']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="header-container container">
+      <div>
+        <h1 class="site-title">MathPhiX</h1>
+        <p class="site-subtitle">Seconde — Droites</p>
+      </div>
+      <a href="geometrie.html" class="back-link">← Retour</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-card">
+        <h1>Droites</h1>
+        <p>
+          Dans ce chapitre, tu vas apprendre à étudier une droite en géométrie du plan
+          puis en géométrie repérée, à utiliser un vecteur directeur, à reconnaître
+          des droites parallèles et à calculer un coefficient directeur.
+        </p>
+
+        <div class="hero-tags">
+          <span class="tag">Cours</span>
+          <span class="tag">Exercices</span>
+          <span class="tag">Vidéo</span>
+          <span class="tag">Astuce</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+
+    <section class="section">
+      <h2>Cours</h2>
+
+      <div class="lesson-box">
+        <h3>1. Droite en géométrie du plan</h3>
+        <p>
+          En géométrie du plan, une droite est définie par un point
+          et un vecteur directeur.
+        </p>
+        <p>
+          Un point <span class="math">\(M\)</span> appartient à une droite passant par le point
+          <span class="math">\(A\)</span> et de vecteur directeur
+          <span class="math">\(\vec{u}\)</span>
+          si et seulement si les vecteurs
+          <span class="math">\(\overrightarrow{AM}\)</span>
+          et
+          <span class="math">\(\vec{u}\)</span>
+          sont colinéaires.
+        </p>
+      </div>
+
+      <div class="lesson-box">
+        <h3>2. Positions relatives de deux droites</h3>
+        <p>
+          Deux droites peuvent être :
+        </p>
+        <ul>
+          <li><strong>sécantes</strong> : elles se coupent ;</li>
+          <li><strong>parallèles</strong> : elles ne se coupent pas ;</li>
+          <li><strong>confondues</strong> : elles sont superposées.</li>
+        </ul>
+      </div>
+
+      <div class="lesson-box">
+        <h3>3. Alignement de points</h3>
+        <p>
+          Trois points sont alignés s’ils appartiennent à une même droite.
+        </p>
+      </div>
+
+      <div class="lesson-box">
+        <h3>4. Droite en géométrie repérée</h3>
+        <p>
+          En géométrie repérée, une droite non verticale peut s’écrire sous la forme :
+        </p>
+        <p>
+          <span class="math">\(y = mx + p\)</span>
+        </p>
+        <p>
+          <span class="math">\(m\)</span> est le <strong>coefficient directeur</strong> :
+          il indique la direction de la droite.
+        </p>
+        <p>
+          <span class="math">\(p\)</span> est l’<strong>ordonnée à l’origine</strong> :
+          c’est la valeur de <span class="math">\(y\)</span> lorsque
+          <span class="math">\(x = 0\)</span>.
+        </p>
+      </div>
+
+      <div class="lesson-box">
+        <h3>5. Calcul du coefficient directeur</h3>
+        <p>
+          Si une droite passe par deux points
+          <span class="math">\(A(x_A ; y_A)\)</span> et
+          <span class="math">\(B(x_B ; y_B)\)</span>
+          avec <span class="math">\(x_A \ne x_B\)</span>,
+          alors son coefficient directeur vaut :
+        </p>
+        <p>
+          <span class="math">\(m = \dfrac{y_B - y_A}{x_B - x_A}\)</span>
+        </p>
+      </div>
+
+      <div class="lesson-box">
+        <h3>6. Droites parallèles dans un repère</h3>
+        <p>
+          Deux droites non verticales sont parallèles si elles ont
+          le même coefficient directeur.
+        </p>
+      </div>
+
+      <div class="lesson-box">
+        <h3>7. Lecture géométrique et lecture algébrique</h3>
+        <p>
+          Le repérage permet donc de passer d’une lecture graphique
+          à une étude algébrique précise des droites.
+        </p>
+      </div>
+
+      <div class="example-box">
+        <h3>Exemple 1</h3>
+        <p>
+          Soit une droite passant par le point
+          <span class="math">\(A\)</span> et de vecteur directeur
+          <span class="math">\(\vec{u}\)</span>.
+        </p>
+        <p>
+          Pour savoir si un point <span class="math">\(M\)</span> appartient à cette droite,
+          on vérifie si les vecteurs
+          <span class="math">\(\overrightarrow{AM}\)</span>
+          et
+          <span class="math">\(\vec{u}\)</span>
+          sont colinéaires.
+        </p>
+      </div>
+
+      <div class="example-box">
+        <h3>Exemple 2</h3>
+        <p>
+          Soient <span class="math">\(A(1 ; 2)\)</span> et
+          <span class="math">\(B(3 ; 6)\)</span>.
+        </p>
+        <p>
+          Le coefficient directeur de la droite (AB) vaut :
+        </p>
+        <p>
+          <span class="math">\(m = \dfrac{6 - 2}{3 - 1} = \dfrac{4}{2} = 2\)</span>
+        </p>
+        <p>
+          Le coefficient directeur de la droite (AB) est donc
+          <span class="math">\(2\)</span>.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Exercices</h2>
+
+      <div class="exercise-box">
+        <h3>Exercice 1</h3>
+        <p>
+          Expliquer ce qu’est un vecteur directeur d’une droite.
+        </p>
+      </div>
+
+      <div class="exercise-box">
+        <h3>Exercice 2</h3>
+        <p>
+          On considère une droite passant par le point
+          <span class="math">\(A\)</span> et de vecteur directeur
+          <span class="math">\(\vec{u}\)</span>.
+        </p>
+        <ul>
+          <li>Quelle condition doit vérifier un point <span class="math">\(M\)</span> pour appartenir à cette droite ?</li>
+        </ul>
+      </div>
+
+      <div class="exercise-box">
+        <h3>Exercice 3</h3>
+        <p>
+          Dire si les affirmations suivantes sont vraies :
+        </p>
+        <ul>
+          <li>Deux droites parallèles peuvent se couper.</li>
+          <li>Trois points alignés appartiennent à une même droite.</li>
+          <li>Deux droites confondues sont aussi parallèles.</li>
+        </ul>
+      </div>
+
+      <div class="exercise-box">
+        <h3>Exercice 4</h3>
+        <p>
+          Déterminer le coefficient directeur d’une droite passant par :
+        </p>
+        <ul>
+          <li><span class="math">\(A(1 ; 2)\)</span> et <span class="math">\(B(3 ; 6)\)</span></li>
+        </ul>
+      </div>
+
+      <div class="exercise-box">
+        <h3>Exercice 5</h3>
+        <p>
+          Soit une droite d’équation
+          <span class="math">\(y = 3x - 2\)</span>.
+        </p>
+        <ul>
+          <li>Donner son coefficient directeur.</li>
+          <li>Donner son ordonnée à l’origine.</li>
+        </ul>
+      </div>
+
+      <div class="exercise-box">
+        <h3>Exercice 6</h3>
+        <p>
+          Dire si deux droites de coefficients directeurs
+          <span class="math">\(2\)</span> et <span class="math">\(2\)</span>
+          sont parallèles.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Vidéo</h2>
+
+      <div class="video-box">
+        <p>Vidéo explicative sur les droites :</p>
+
+        <iframe
+          src="https://www.youtube.com/embed/LIEN_VIDEO"
+          title="Vidéo droites"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Astuce</h2>
+
+      <div class="tip-box">
+        <p>
+          Pour une droite passant par deux points,
+          retiens :
+          <strong>variation verticale sur variation horizontale</strong>.
+        </p>
+      </div>
+
+      <div class="tip-box">
+        <p>
+          Même coefficient directeur = droites parallèles
+          (si elles ne sont pas verticales).
+        </p>
+      </div>
+
+      <div class="tip-box">
+        <p>
+          Pour montrer qu’un point appartient à une droite définie par un point
+          et un vecteur directeur, pense à la colinéarité.
+        </p>
+      </div>
+
+      <div class="footer-nav">
+        <a href="geometrie.html" class="btn btn-secondary">← Retour</a>
+        <a href="index.html" class="btn btn-primary">Accueil</a>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MathPhiX — Exercices de Seconde</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/index.html" class="logo"><span>MathPhiX</span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mainNav">☰</button>
+
+      <nav class="main-nav" id="mainNav">
+        <div class="nav-dropdown">
+          <button class="dropdown-toggle" type="button" aria-expanded="false">
+            Programme
+          </button>
+          <div class="dropdown-menu">
+            <a href="/nombres-calculs.html">Nombres et calculs</a>
+            <a href="/geometrie.html">Géométrie</a>
+            <a href="/fonctions.html">Fonctions</a>
+            <a href="/statistiques-probabilites.html">Statistiques et probabilités</a>
+            <a href="/algorithme-programmation.html">Algorithme et programmation</a>
+          </div>
+        </div>
+
+        <a href="/exercices.html" class="active">Exercices</a>
+        <a href="/blog.html">Blog</a>
+        <a href="/index.html#videos">Vidéos</a>
+        <a href="/index.html#quiz">Quiz</a>
+        <a href="index.html#apropos">À propos</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="eyebrow">Maths Seconde • S’entraîner régulièrement</p>
+          <h1>Exercices et corrigés par thème</h1>
+          <p class="hero-description">
+            Retrouve ici des exercices classés selon les grands thèmes du programme de seconde.
+            Chaque partie comprend un espace pour s’entraîner et un espace de corrigés
+            pour vérifier sa méthode, comprendre ses erreurs et progresser pas à pas.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#liste-themes">Voir les thèmes</a>
+            <a class="btn btn-secondary" href="index.html">Retour à l’accueil</a>
+          </div>
+        </div>
+
+        <div class="hero-image">
+          <img
+            src="images/proposition.png"
+            alt="Illustration pour MathPhiX"
+            loading="eager"
+            decoding="async"
+          >
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="liste-themes">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-tag">Organisation</p>
+          <h2>Choisir un thème du programme</h2>
+          <p>Accède directement à la partie qui correspond à ton entraînement du moment.</p>
+        </div>
+
+        <div class="cards-grid">
+          <a href="#nombres-calculs" class="path-step">
+            <span class="step-number">1</span>
+            <div>
+              <h3>Nombres et calculs</h3>
+              <p>Calculs, équations, puissances, racines carrées, intervalles.</p>
+            </div>
+          </a>
+
+          <a href="#geometrie" class="path-step">
+            <span class="step-number">2</span>
+            <div>
+              <h3>Géométrie</h3>
+              <p>Repérage, vecteurs, droites, colinéarité, trigonométrie.</p>
+            </div>
+          </a>
+
+          <a href="#fonctions" class="path-step">
+            <span class="step-number">3</span>
+            <div>
+              <h3>Fonctions</h3>
+              <p>Images, antécédents, lecture graphique, variations.</p>
+            </div>
+          </a>
+
+          <a href="#statistiques-probabilites" class="path-step">
+            <span class="step-number">4</span>
+            <div>
+              <h3>Statistiques et probabilités</h3>
+              <p>Moyenne, médiane, quartiles, fréquences, probabilités.</p>
+            </div>
+          </a>
+
+          <a href="#algorithme-programmation" class="path-step">
+            <span class="step-number">5</span>
+            <div>
+              <h3>Algorithme et programmation</h3>
+              <p>Python, variables, boucles, conditions et scripts simples.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt-section" id="nombres-calculs">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-tag">Thème 1</p>
+          <h2>Nombres et calculs</h2>
+          <p>
+            Des exercices pour consolider les techniques de calcul et maîtriser les outils de base
+            du programme de seconde.
+          </p>
+        </div>
+
+        <div class="two-columns">
+          <article class="card">
+            <div class="card-icon">ℕ</div>
+            <h3>Exercices</h3>
+            <p>Cette partie peut regrouper des exercices sur :</p>
+            <ul>
+              <li>les ensembles de nombres ;</li>
+              <li>les intervalles ;</li>
+              <li>les puissances ;</li>
+              <li>les racines carrées ;</li>
+              <li>les équations et les inéquations ;</li>
+              <li>le calcul littéral.</li>
+            </ul>
+            <div class="card-actions">
+              <a class="btn btn-small btn-secondary" href="#">Feuille d’exercices 1</a>
+              <a class="btn btn-small btn-secondary" href="#">Feuille d’exercices 2</a>
+              <a class="btn btn-small btn-primary" href="nombres-calculs.html">Voir le cours</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">✔</div>
+            <h3>Corrigés</h3>
+            <p>Cette partie peut accueillir :</p>
+            <ul>
+              <li>les corrigés détaillés ;</li>
+              <li>les méthodes pas à pas ;</li>
+              <li>les erreurs fréquentes à éviter ;</li>
+              <li>les rappels de cours utiles.</li>
+            </ul>
+            <div class="card-actions">
+              <a class="btn btn-small btn-primary" href="#">Corrigé 1</a>
+              <a class="btn btn-small btn-primary" href="#">Corrigé 2</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="geometrie">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-tag">Thème 2</p>
+          <h2>Géométrie</h2>
+          <p>
+            Des exercices pour travailler la géométrie du plan, les coordonnées, les vecteurs
+            et les premiers outils de trigonométrie.
+          </p>
+        </div>
+
+        <div class="two-columns">
+          <article class="card">
+            <div class="card-icon">△</div>
+            <h3>Exercices</h3>
+            <p>Cette partie peut regrouper des exercices sur :</p>
+            <ul>
+              <li>le repérage dans le plan ;</li>
+              <li>le calcul de coordonnées ;</li>
+              <li>les vecteurs ;</li>
+              <li>les droites ;</li>
+              <li>la colinéarité ;</li>
+              <li>la trigonométrie dans le triangle rectangle.</li>
+            </ul>
+            <div class="card-actions">
+              <a class="btn btn-small btn-secondary" href="#">Feuille d’exercices 1</a>
+              <a class="btn btn-small btn-secondary" href="#">Feuille d’exercices 2</a>
+              <a class="btn btn-small btn-primary" href="geometrie.html">Voir le cours</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">✔</div>
+            <h3>Corrigés</h3>
+            <p>Cette partie peut accueillir :</p>
+            <ul>
+              <li>les figures commentées ;</li>
+              <li>les calculs détaillés ;</li>
+              <li>les raisonnements rédigés ;</li>
+              <li>les vérifications de résultats.</li>
+            </ul>
+            <div class="card-actions">
+              <a class="btn btn-small btn-primary" href="#">Corrigé 1</a>
+              <a class="btn btn-small btn-primary" href="#">Corrigé 2</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt-section" id="fonctions">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-tag">Thème 3</p>
+          <h2>Fonctions</h2>
+          <p>
+            Des exercices pour comprendre la notion de fonction et apprendre à lire, calculer
+            et interpréter des images et des antécédents.
+          </p>
+        </div>
+
+        <div class="two-columns">
+          <article class="card">
+            <div class="card-icon">f</div>
+            <h3>Exercices</h3>
+            <p>Cette partie peut regrouper des exercices sur :</p>
+            <ul>
+              <li>la notion de fonction ;</li>
+              <li>le calcul d’image ;</li>
+              <li>la recherche d’antécédent ;</li>
+              <li>la lecture graphique ;</li>
+              <li>les tableaux de variations ;</li>
+              <li>les fonctions de référence.</li>
+            </ul>
+            <div class="card-actions">
+              <a class="btn btn-small btn-secondary" href="#">Feuille d’exercices 1</a>
+              <a class="btn btn-small btn-secondary" href="#">Feuille d’exercices 2</a>
+              <a class="btn btn-small btn-primary" href="fonctions.html">Voir le cours</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">✔</div>
+            <h3>Corrigés</h3>
+            <p>Cette partie peut accueillir :</p>
+            <ul>
+              <li>les lectures de courbes expliquées ;</li>
+              <li>les calculs d’images détaillés ;</li>
+              <li>les tableaux de variations commentés ;</li>
+              <li>les pièges classiques à repérer.</li>
+            </ul>
+            <div class="card-actions">
+              <a class="btn btn-small btn-primary" href="#">Corrigé 1</a>
+              <a class="btn btn-small btn-primary" href="#">Corrigé 2</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="statistiques-probabilites">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-tag">Thème 4</p>
+          <h2>Statistiques et probabilités</h2>
+          <p>
+            Des exercices pour savoir organiser des données, calculer des indicateurs
+            et résoudre des situations simples en probabilités.
+          </p>
+        </div>
+
+        <div class="two-columns">
+          <article class="card">
+            <div class="card-icon">Σ</div>
+            <h3>Exercices</h3>
+            <p>Cette partie peut regrouper des exercices sur :</p>
+            <ul>
+              <li>les tableaux d’effectifs ;</li>
+              <li>les fréquences ;</li>
+              <li>la moyenne ;</li>
+              <li>la médiane ;</li>
+              <li>les quartiles ;</li>
+              <li>les probabilités simples.</li>
+            </ul>
+            <div class="card-actions">
+              <a class="btn btn-small btn-secondary" href="#">Feuille d’exercices 1</a>
+              <a class="btn btn-small btn-secondary" href="#">Feuille d’exercices 2</a>
+              <a class="btn btn-small btn-primary" href="statistiques-probabilites.html">Voir le cours</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">✔</div>
+            <h3>Corrigés</h3>
+            <p>Cette partie peut accueillir :</p>
+            <ul>
+              <li>les calculs d’indicateurs détaillés ;</li>
+              <li>les interprétations des résultats ;</li>
+              <li>les corrigés de tableaux statistiques ;</li>
+              <li>les démarches en probabilités.</li>
+            </ul>
+            <div class="card-actions">
+              <a class="btn btn-small btn-primary" href="#">Corrigé 1</a>
+              <a class="btn btn-small btn-primary" href="#">Corrigé 2</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt-section" id="algorithme-programmation">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-tag">Thème 5</p>
+          <h2>Algorithme et programmation</h2>
+          <p>
+            Des exercices pour découvrir Python et comprendre comment l’utiliser
+            dans des situations mathématiques simples du programme.
+          </p>
+        </div>
+
+        <div class="two-columns">
+          <article class="card">
+            <div class="card-icon">&lt;/&gt;</div>
+            <h3>Exercices</h3>
+            <p>Cette partie peut regrouper des exercices sur :</p>
+            <ul>
+              <li>les variables ;</li>
+              <li>les affichages ;</li>
+              <li>les calculs automatisés ;</li>
+              <li>les conditions ;</li>
+              <li>les boucles ;</li>
+              <li>les scripts liés aux fonctions ou aux statistiques.</li>
+            </ul>
+            <div class="card-actions">
+              <a class="btn btn-small btn-secondary" href="#">Feuille d’exercices 1</a>
+              <a class="btn btn-small btn-secondary" href="#">Feuille d’exercices 2</a>
+              <a class="btn btn-small btn-primary" href="algorithme-programmation.html">Voir le cours</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">✔</div>
+            <h3>Corrigés</h3>
+            <p>Cette partie peut accueillir :</p>
+            <ul>
+              <li>les scripts Python corrigés ;</li>
+              <li>les explications ligne par ligne ;</li>
+              <li>les versions commentées du code ;</li>
+              <li>les conseils pour éviter les erreurs de syntaxe.</li>
+            </ul>
+            <div class="card-actions">
+              <a class="btn btn-small btn-primary" href="#">Corrigé 1</a>
+              <a class="btn btn-small btn-primary" href="#">Corrigé 2</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reassurance-section">
+      <div class="container reassurance-card">
+        <p class="section-tag">Conseil méthode</p>
+        <h2>Un bon rythme vaut mieux qu’un long bloc de travail</h2>
+        <p>
+          L’idéal est de s’entraîner un peu chaque semaine, puis de comparer sa démarche avec le corrigé.
+          Les corrigés servent à comprendre la méthode, pas seulement à vérifier la réponse finale.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <h3>MathPhiX</h3>
+        <p>Des exercices progressifs pour avancer avec méthode en seconde.</p>
+      </div>
+      <div class="footer-links">
+        <a href="/index.html">Accueil</a>
+        <a href="/index.html#nombres-calculs">Nombres et calculs</a>
+        <a href="/index.html#geometrie">Géométrie</a>
+        <a href="/index.html#fonctions">Fonctions</a>
+        <a href="/index.html#statistiques-probabilites">Statistiques et probabilités</a>
+        <a href="/index.html#algorithme-programmation">Algorithme et programmation</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/script.js"></script>
+</body>
+</html>

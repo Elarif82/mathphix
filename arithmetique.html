@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MathPhiX — Arithmétique</title>
+  <link rel="stylesheet" href="/css/style2.css" />
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="header-container">
+      <div>
+        <h1 class="site-title">MathPhiX</h1>
+        <p class="site-subtitle">Seconde — Arithmétique</p>
+      </div>
+      <a href="nombres-calculs.html" class="back-link">← Retour</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-card">
+      <h1>Arithmétique</h1>
+      <p>
+        Dans ce chapitre, tu vas réviser la divisibilité, les multiples, les diviseurs,
+        la division euclidienne et les nombres premiers.
+      </p>
+
+      <div class="hero-tags">
+        <span class="tag">Cours</span>
+        <span class="tag">Exercices</span>
+        <span class="tag">Vidéo</span>
+        <span class="tag">Astuce</span>
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+
+    <section class="section">
+      <h2>Cours</h2>
+
+      <div class="lesson-box">
+        <h3>1. Multiple et diviseur</h3>
+        <p>
+          Un nombre <span class="math">a</span> est un multiple de <span class="math">b</span>
+          s’il existe un entier <span class="math">k</span> tel que
+          <span class="math">a = b × k</span>.
+        </p>
+        <p>
+          Dans ce cas, on dit aussi que <span class="math">b</span> est un diviseur de
+          <span class="math">a</span>.
+        </p>
+        <p>
+          Exemple : <span class="math">24 = 6 × 4</span>, donc 24 est un multiple de 6
+          et 6 est un diviseur de 24.
+        </p>
+      </div>
+
+      <div class="lesson-box">
+        <h3>2. Critères de divisibilité</h3>
+        <ul>
+          <li>Un nombre est divisible par 2 s’il est pair.</li>
+          <li>Un nombre est divisible par 3 si la somme de ses chiffres est un multiple de 3.</li>
+          <li>Un nombre est divisible par 5 s’il se termine par 0 ou 5.</li>
+          <li>Un nombre est divisible par 9 si la somme de ses chiffres est un multiple de 9.</li>
+          <li>Un nombre est divisible par 10 s’il se termine par 0.</li>
+        </ul>
+      </div>
+
+      <div class="lesson-box">
+        <h3>3. Division euclidienne</h3>
+        <p>
+          Effectuer la division euclidienne de <span class="math">a</span> par
+          <span class="math">b</span>, avec <span class="math">b ≠ 0</span>, consiste à écrire :
+        </p>
+        <p>
+          <span class="math">a = b × q + r</span>
+        </p>
+        <p>
+          avec <span class="math">0 ≤ r &lt; b</span>.
+        </p>
+        <p>
+          <span class="math">q</span> est le quotient et <span class="math">r</span> est le reste.
+        </p>
+        <p>
+          Exemple : <span class="math">29 = 4 × 7 + 1</span>
+        </p>
+      </div>
+
+      <div class="lesson-box">
+        <h3>4. Nombres premiers</h3>
+        <p>
+          Un nombre premier est un entier naturel qui possède exactement deux diviseurs :
+          1 et lui-même.
+        </p>
+        <p>
+          Exemples : <span class="math">2, 3, 5, 7, 11, 13</span>
+        </p>
+        <p>
+          Le nombre <span class="math">1</span> n’est pas un nombre premier.
+        </p>
+      </div>
+
+      <div class="lesson-box">
+        <h3>5. Critère de primalité</h3>
+        <p>
+          Pour savoir si un entier <span class="math">n</span> est premier, il suffit de tester
+          la divisibilité de <span class="math">n</span> par les nombres premiers inférieurs
+          ou égaux à <span class="math">√n</span>.
+        </p>
+        <p>
+          Si aucun de ces nombres premiers ne divise <span class="math">n</span>,
+          alors <span class="math">n</span> est premier.
+        </p>
+        <p>
+          Exemple : pour <span class="math">29</span>, on a
+          <span class="math">√29 ≈ 5,4</span>.
+        </p>
+        <p>
+          On teste donc <span class="math">2</span>, <span class="math">3</span> et
+          <span class="math">5</span>.
+        </p>
+        <p>
+          29 n’est divisible par aucun de ces nombres, donc
+          <span class="math">29</span> est premier.
+        </p>
+      </div>
+
+      <div class="lesson-box">
+        <h3>6. Décomposition en produit de facteurs premiers</h3>
+        <p>
+          Tout entier naturel supérieur ou égal à 2 peut s’écrire comme un produit de nombres premiers.
+        </p>
+        <p>
+          Exemple : <span class="math">60 = 2 × 2 × 3 × 5 = 2² × 3 × 5</span>
+        </p>
+      </div>
+
+      <div class="example-box">
+        <h3>Exemple</h3>
+        <p>Décomposons 84 en produit de facteurs premiers :</p>
+        <p><span class="math">84 = 2 × 42</span></p>
+        <p><span class="math">84 = 2 × 2 × 21</span></p>
+        <p><span class="math">84 = 2 × 2 × 3 × 7</span></p>
+        <p>Donc <span class="math">84 = 2² × 3 × 7</span></p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Exercices</h2>
+
+      <div class="exercise-box">
+        <h3>Exercice 1</h3>
+        <p>Recopie puis complète :</p>
+        <ul>
+          <li>18 est un multiple de ...</li>
+          <li>4 est un diviseur de ...</li>
+          <li>25 est divisible par ...</li>
+        </ul>
+      </div>
+
+      <div class="exercise-box">
+        <h3>Exercice 2</h3>
+        <p>Indique si les nombres suivants sont divisibles par 2, 3, 5, 9 ou 10 :</p>
+        <ul>
+          <li>36</li>
+          <li>75</li>
+          <li>128</li>
+          <li>450</li>
+        </ul>
+      </div>
+
+      <div class="exercise-box">
+        <h3>Exercice 3</h3>
+        <p>Effectue les divisions euclidiennes suivantes :</p>
+        <ul>
+          <li>35 par 6</li>
+          <li>48 par 7</li>
+          <li>92 par 9</li>
+        </ul>
+      </div>
+
+      <div class="exercise-box">
+        <h3>Exercice 4</h3>
+        <p>Parmi les nombres suivants, lesquels sont premiers ?</p>
+        <ul>
+          <li>2</li>
+          <li>9</li>
+          <li>13</li>
+          <li>24</li>
+          <li>31</li>
+        </ul>
+      </div>
+
+      <div class="exercise-box">
+        <h3>Exercice 5</h3>
+        <p>Déterminer si les nombres suivants sont premiers en utilisant le critère de primalité :</p>
+        <ul>
+          <li>17</li>
+          <li>21</li>
+          <li>37</li>
+          <li>41</li>
+        </ul>
+      </div>
+
+      <div class="exercise-box">
+        <h3>Exercice 6</h3>
+        <p>Décompose en produit de facteurs premiers :</p>
+        <ul>
+          <li>36</li>
+          <li>72</li>
+          <li>90</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Vidéo</h2>
+
+      <div class="video-box">
+        <p>Vidéo explicative sur l’arithmétique :</p>
+
+        <iframe
+          src="https://www.youtube.com/embed/LIEN_VIDEO"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Astuce</h2>
+
+      <div class="tip-box">
+        <p>
+          Pour tester rapidement la divisibilité, pense d’abord aux critères simples :
+          2, 3, 5, 9 et 10.
+        </p>
+      </div>
+
+      <div class="tip-box">
+        <p>
+          Pour décomposer un nombre, commence par les plus petits nombres premiers :
+          2, puis 3, puis 5, puis 7.
+        </p>
+      </div>
+
+      <div class="footer-nav">
+        <a href="nombres-calculs.html" class="btn btn-secondary">← Retour</a>
+        <a href="index.html" class="btn btn-primary">Accueil</a>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>

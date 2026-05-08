@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MathPhiX — Variations et extremums</title>
+  <link rel="stylesheet" href="/css/style2.css" />
+
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)'], ['$', '$']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="header-container container">
+      <div>
+        <h1 class="site-title">MathPhiX</h1>
+        <p class="site-subtitle">Seconde — Variations et extremums</p>
+      </div>
+      <a href="/fonctions.html" class="back-link">← Retour</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-card">
+        <h1>Variations et extremums</h1>
+        <p>
+          Dans ce chapitre, tu vas apprendre à étudier le sens de variation
+          d’une fonction et à repérer ses maximums et minimums.
+        </p>
+
+        <div class="hero-tags">
+          <span class="tag">Cours</span>
+          <span class="tag">Exercices</span>
+          <span class="tag">Vidéo</span>
+          <span class="tag">Astuce</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+
+    <section class="section">
+      <h2>Cours</h2>
+
+      <div class="lesson-box">
+        <h3>1. Sens de variation</h3>
+        <p>
+          Une fonction est <strong>croissante</strong> sur un intervalle
+          lorsque, quand <span class="math">\(x\)</span> augmente,
+          <span class="math">\(f(x)\)</span> augmente.
+        </p>
+        <p>
+          Elle est <strong>décroissante</strong> lorsque, quand
+          <span class="math">\(x\)</span> augmente,
+          <span class="math">\(f(x)\)</span> diminue.
+        </p>
+        <p>
+          On parle de <strong>monotonie</strong> lorsqu’une fonction
+          est soit croissante, soit décroissante sur un intervalle.
+        </p>
+      </div>
+
+      <div class="lesson-box">
+        <h3>2. Extremums</h3>
+        <p>
+          Un <strong>maximum</strong> est la plus grande valeur prise
+          par la fonction sur un intervalle.
+        </p>
+        <p>
+          Un <strong>minimum</strong> est la plus petite valeur prise
+          par la fonction sur un intervalle.
+        </p>
+      </div>
+
+      <div class="lesson-box">
+        <h3>3. Fonction carré</h3>
+        <p>
+          La fonction carré
+          <span class="math">\(x \mapsto x^2\)</span>
+          est :
+        </p>
+        <ul>
+          <li>décroissante sur <span class="math">\(]-\infty ; 0]\)</span> ;</li>
+          <li>croissante sur <span class="math">\([0 ; +\infty[\)</span>.</li>
+        </ul>
+        <p>
+          Elle admet un minimum égal à <span class="math">\(0\)</span> en
+          <span class="math">\(x=0\)</span>.
+        </p>
+      </div>
+
+      <div class="lesson-box">
+        <h3>4. Fonction inverse</h3>
+        <p>
+          La fonction inverse
+          <span class="math">\(x \mapsto \dfrac{1}{x}\)</span>
+          est décroissante sur
+          <span class="math">\(]-\infty ; 0[\)</span>
+          et sur
+          <span class="math">\(]0 ; +\infty[\)</span>.
+        </p>
+      </div>
+
+      <div class="lesson-box">
+        <h3>5. Fonction racine carrée</h3>
+        <p>
+          La fonction racine carrée
+          <span class="math">\(x \mapsto \sqrt{x}\)</span>
+          est croissante sur
+          <span class="math">\([0 ; +\infty[\)</span>.
+        </p>
+      </div>
+
+      <div class="lesson-box">
+        <h3>6. Fonction cube</h3>
+        <p>
+          La fonction cube
+          <span class="math">\(x \mapsto x^3\)</span>
+          est croissante sur
+          <span class="math">\(\mathbb{R}\)</span>.
+        </p>
+      </div>
+
+      <div class="lesson-box">
+        <h3>7. Fonction affine</h3>
+        <p>
+          Pour une fonction affine
+          <span class="math">\(f(x)=mx+p\)</span> :
+        </p>
+        <ul>
+          <li>si <span class="math">\(m&gt;0\)</span>, elle est croissante ;</li>
+          <li>si <span class="math">\(m&lt;0\)</span>, elle est décroissante ;</li>
+          <li>si <span class="math">\(m=0\)</span>, elle est constante.</li>
+        </ul>
+      </div>
+
+      <div class="example-box">
+        <h3>Exemple</h3>
+        <p>
+          La fonction
+          <span class="math">\(f(x)=x^2\)</span>
+          admet un minimum égal à
+          <span class="math">\(0\)</span>.
+        </p>
+        <p>
+          La fonction
+          <span class="math">\(g(x)=2x+1\)</span>
+          est croissante car son coefficient directeur vaut
+          <span class="math">\(2\)</span>.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Exercices</h2>
+
+      <div class="exercise-box">
+        <h3>Exercice 1</h3>
+        <p>
+          Dire si la fonction
+          <span class="math">\(f(x)=3x-2\)</span>
+          est croissante, décroissante ou constante.
+        </p>
+      </div>
+
+      <div class="exercise-box">
+        <h3>Exercice 2</h3>
+        <p>
+          Donner les intervalles de variation de la fonction carré.
+        </p>
+      </div>
+
+      <div class="exercise-box">
+        <h3>Exercice 3</h3>
+        <p>
+          Donner les variations de la fonction inverse.
+        </p>
+      </div>
+
+      <div class="exercise-box">
+        <h3>Exercice 4</h3>
+        <p>
+          Quel extremum possède la fonction carré ?
+        </p>
+      </div>
+
+      <div class="exercise-box">
+        <h3>Exercice 5</h3>
+        <p>
+          Indiquer les variations des fonctions cube et racine carrée.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Vidéo</h2>
+
+      <div class="video-box">
+        <p>Vidéo explicative sur les variations et extremums :</p>
+        <iframe
+          src="https://www.youtube.com/embed/LIEN_VIDEO"
+          title="Vidéo variations et extremums"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Astuce</h2>
+
+      <div class="tip-box">
+        <p>
+          Pour une fonction affine, regarde d’abord le signe du coefficient directeur.
+        </p>
+      </div>
+
+      <div class="tip-box">
+        <p>
+          Pour la fonction carré, le point clé est
+          <span class="math">\(x=0\)</span> :
+          elle descend puis elle monte.
+        </p>
+      </div>
+
+      <div class="footer-nav">
+        <a href="fonctions.html" class="btn btn-secondary">← Retour</a>
+        <a href="index.html" class="btn btn-primary">Accueil</a>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>
