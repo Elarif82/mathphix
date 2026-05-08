@@ -1,9 +1,5 @@
 
-prompts/
-scripts/
-prompts/
-hosting/
-projet/
+# Ignorer les fichiers de configuration de l'IDE
 
 # Variables d'environnement
 .env
@@ -19,3 +15,11 @@ npm-debug.log*
 # Fichiers système
 .DS_Store
 Thumbs.db
+
+# ignorer les dossiers suivants
+
+prompts/
+scripts/
+prompts/
+hosting/
+projet/
