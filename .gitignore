@@ -1,5 +1,21 @@
+
 prompts/
 scripts/
 prompts/
 hosting/
 projet/
+
+# Variables d'environnement
+.env
+server/.env
+
+# Dépendances Node.js
+node_modules/
+server/node_modules/
+
+# Logs
+npm-debug.log*
+
+# Fichiers système
+.DS_Store
+Thumbs.db
