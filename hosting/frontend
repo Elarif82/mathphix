@@ -1,0 +1,105 @@
+Voici la méthode simple pour mettre en ligne le **frontend MathPhiX** sur **GitHub Pages**.
+
+## 1. Prépare ton dossier frontend
+
+Ton dossier doit contenir directement :
+
+```txt
+public/
+├── index.html
+├── style.css
+├── script.js
+└── autres-pages.html
+```
+
+Pour GitHub Pages, le fichier important est :
+
+```txt
+index.html
+```
+
+## 2. Crée un dépôt GitHub
+
+Sur GitHub :
+
+1. Clique sur **New repository**
+2. Nom du dépôt :
+
+```txt
+mathphix
+```
+
+3. Choisis **Public**
+4. Clique sur **Create repository**
+
+## 3. Envoie ton frontend sur GitHub
+
+Depuis ton ordinateur, ouvre le terminal dans le dossier `public`.
+
+Puis fais :
+
+```bash
+git init
+git add .
+git commit -m "Ajout frontend MathPhiX"
+git branch -M main
+git remote add origin https://github.com/TON-PSEUDO/mathphix.git
+git push -u origin main
+```
+
+Remplace :
+
+```txt
+TON-PSEUDO
+```
+
+par ton pseudo GitHub.
+
+## 4. Active GitHub Pages
+
+Dans ton dépôt GitHub :
+
+1. Va dans **Settings**
+2. Clique sur **Pages**
+3. Dans **Build and deployment**
+4. Choisis :
+
+```txt
+Source : Deploy from a branch
+Branch : main
+Folder : /root
+```
+
+5. Clique sur **Save**
+
+## 5. Ton site sera en ligne
+
+GitHub va te donner une URL du type :
+
+```txt
+https://TON-PSEUDO.github.io/mathphix/
+```
+
+## 6. Connecter ton domaine OVH ensuite
+
+Quand le site GitHub fonctionne, tu pourras mettre :
+
+```txt
+www.mathphix.com
+```
+
+dans :
+
+```txt
+Settings → Pages → Custom domain
+```
+
+Puis côté OVH, tu ajouteras :
+
+```txt
+Type : CNAME
+Sous-domaine : www
+Cible : TON-PSEUDO.github.io
+```
+
+Important : sur GitHub Pages, ton fichier `index.html` doit être à la racine du dépôt, pas caché dans un sous-dossier.

@@ -1,0 +1,141 @@
+
+**procédure claire + pro**
+
+---
+
+# 🚀 1. Créer ton nom de domaine sur OVHcloud
+
+### 👉 Étapes :
+
+1. Va sur : [https://www.ovhcloud.com](https://www.ovhcloud.com)
+2. Clique sur **Domaines → Rechercher un nom de domaine**
+3. Tape :
+
+```txt
+mathphix.com
+```
+
+👉 Tu peux tester aussi :
+
+* mathphix.fr
+* mathphix.io (plus startup/tech)
+* mathphix.app (très adapté à ton projet)
+
+---
+
+# 🔍 2. Choisir le bon domaine (important)
+
+### 💡 Recommandation pour ton projet :
+
+* 🔥 **mathphix.com** → meilleur choix (pro + international)
+* 🇫🇷 **mathphix.fr** → bon pour cible française
+* 🚀 **mathphix.app** → parfait pour app éducative
+
+👉 Idéal :
+
+```txt
+mathphix.com + mathphix.fr
+```
+
+---
+
+# 💳 3. Acheter le domaine
+
+Une fois disponible :
+
+1. Clique sur **Ajouter au panier**
+2. Choisis :
+
+   * Durée : 1 an (renouvelable)
+   * Protection WHOIS (souvent incluse)
+3. Crée ton compte OVH
+4. Paye (≈ 8 à 15€/an selon extension)
+
+---
+
+# ⚙️ 4. Configurer ton domaine (le plus important)
+
+Une fois acheté :
+
+👉 Va dans :
+**OVH → Domaines → mathphix.com → Zone DNS**
+
+---
+
+## 🧠 CAS 1 : Tu utilises Render (recommandé pour toi)
+
+Dans Render, tu vas avoir une URL comme :
+
+```txt
+mathphix.onrender.com
+```
+
+### 👉 Dans OVH, ajoute :
+
+### 🔹 Enregistrement CNAME
+
+```txt
+Type : CNAME
+Sous-domaine : www
+Cible : mathphix.onrender.com
+```
+
+---
+
+### 🔹 Redirection du domaine principal
+
+```txt
+mathphix.com → www.mathphix.com
+```
+
+(OVH propose une redirection simple dans "Redirections")
+
+---
+
+## 🧠 CAS 2 : Tu utilises GitHub Pages
+
+Tu devras ajouter :
+
+### 🔹 Enregistrements A
+
+```txt
+185.199.108.153
+185.199.109.153
+185.199.110.153
+185.199.111.153
+```
+
+---
+
+### 🔹 CNAME
+
+```txt
+www → tonpseudo.github.io
+```
+
+---
+
+# 🔐 5. Activer HTTPS
+
+Bonne nouvelle :
+
+👉 Render ou GitHub activent automatiquement HTTPS
+👉 Rien à faire côté OVH
+
+---
+
+# ⏱️ 6. Temps d’activation
+
+* DNS : 5 min à 24h
+* Site accessible : souvent en quelques minutes
+
+---
+
+# 🔥 Résultat final
+
+Ton site sera accessible via :
+
+```txt
+https://www.mathphix.com
+```
+

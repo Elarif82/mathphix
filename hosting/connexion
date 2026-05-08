@@ -1,0 +1,187 @@
+
+**architecture pro** :
+👉 **GitHub Pages = frontend (rapide + gratuit)**
+👉 **Render = backend (API + IA)**
+
+Je te donne la **configuration exacte, propre et sécurisée**.
+
+---
+
+# 🧠 Architecture finale
+
+```txt
+Frontend  → https://www.mathphix.com (GitHub Pages)
+Backend   → https://api.mathphix.com (Render)
+```
+
+👉 Ton site appelle ton API via :
+
+```js
+fetch("https://api.mathphix.com/api/faq")
+```
+
+---
+
+# 🚀 1. Configurer GitHub Pages avec ton domaine
+
+## 📁 Dans ton repo GitHub (frontend)
+
+1. Va dans :
+   **Settings → Pages**
+
+2. Configure :
+
+```txt
+Source : main branch / root
+Custom domain : www.mathphix.com
+```
+
+3. GitHub va créer automatiquement un fichier :
+
+```txt
+CNAME
+```
+
+Contenu :
+
+```txt
+www.mathphix.com
+```
+
+---
+
+## 🌐 Configuration DNS sur OVHcloud
+
+Va dans :
+👉 Domaines → Zone DNS
+
+### 🔹 Ajouter :
+
+### ✅ CNAME pour le site
+
+```txt
+Type : CNAME
+Sous-domaine : www
+Cible : tonpseudo.github.io
+```
+
+---
+
+### ✅ Domaine principal → redirection
+
+Dans OVH → Redirection :
+
+```txt
+mathphix.com → https://www.mathphix.com
+```
+
+---
+
+# ⚙️ 2. Configurer Render (backend API)
+
+Dans Render :
+
+1. Va dans ton service
+2. Clique sur **Settings → Custom Domains**
+3. Ajoute :
+
+```txt
+api.mathphix.com
+```
+
+---
+
+## 🌐 DNS OVH pour le backend
+
+Ajoute :
+
+```txt
+Type : CNAME
+Sous-domaine : api
+Cible : ton-backend.onrender.com
+```
+
+👉 Exemple :
+
+```txt
+api → mathphix-api.onrender.com
+```
+
+---
+
+# 🔐 3. HTTPS (automatique)
+
+👉 GitHub Pages → SSL auto
+👉 Render → SSL auto
+
+✅ Résultat sécurisé :
+
+```txt
+https://www.mathphix.com
+https://api.mathphix.com
+```
+
+---
+
+# 🔗 4. Connecter ton frontend au backend
+
+Dans ton `script.js` :
+
+```js
+const API_URL = "https://api.mathphix.com";
+
+fetch(`${API_URL}/api/faq`, {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify({ question: "Explique les fractions" })
+})
+.then(res => res.json())
+.then(data => console.log(data));
+```
+
+---
+
+# ⚠️ 5. Important (sinon ça casse)
+
+## 🔹 Activer CORS côté backend
+
+Dans ton `server/index.js` :
+
+```js
+import cors from "cors";
+
+app.use(cors({
+  origin: "https://www.mathphix.com"
+}));
+```
+
+---
+
+## 🔹 Installer cors
+
+```bash
+npm install cors
+```
+
+---
+
+# 🧪 6. Vérification finale
+
+Teste :
+
+👉 Frontend :
+
+```txt
+https://www.mathphix.com
+```
+
+👉 Backend :
+
+```txt
+https://api.mathphix.com/api/health
+```
+
+---
+

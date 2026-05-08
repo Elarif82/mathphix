@@ -1,0 +1,138 @@
+
+Le plus utile maintenant est de **le brancher directement sur ta page d’accueil MathPhix**.
+Voici exactement **ce que tu dois intégrer** dans ta home page existante.
+
+---
+
+# 1. Bloc HTML à coller juste avant le footer
+
+```html
+<section class="faq-smart" id="faq-smart">
+  <div class="container faq-smart-container">
+    <div class="faq-smart-header">
+      <span class="faq-badge">FAQ intelligente</span>
+      <h2>Une question ? MathPhix te répond</h2>
+      <p>
+        Pose une question sur une notion de maths ou sur le fonctionnement du site.
+      </p>
+    </div>
+
+    <div class="faq-smart-box">
+      <form id="faqForm" class="faq-form">
+        <input
+          type="text"
+          id="questionInput"
+          name="question"
+          placeholder="Ex : Quelle différence entre ]2;5] et [2;5[ ?"
+          required
+        />
+        <button type="submit">Poser ma question</button>
+      </form>
+
+      <div class="faq-suggestions">
+        <button class="suggestion-btn" type="button">Comment utiliser MathPhix ?</button>
+        <button class="suggestion-btn" type="button">Comment résoudre une équation ?</button>
+        <button class="suggestion-btn" type="button">Quelle différence entre ]2;5] et [2;5[ ?</button>
+      </div>
+
+      <div id="faqLoading" class="faq-loading hidden">
+        MathPhix réfléchit à ta question...
+      </div>
+
+      <div id="faqError" class="faq-error hidden">
+        Une erreur est survenue. Merci de réessayer.
+      </div>
+
+      <div id="faqResult" class="faq-result hidden">
+        <div class="faq-result-meta" id="faqSource"></div>
+        <h3 id="faqQuestion"></h3>
+        <p id="faqAnswer"></p>
+      </div>
+    </div>
+  </div>
+</section>
+```
+
+---
+
+# 2. Ligne CSS à ajouter dans le `<head>`
+
+```html
+<link rel="stylesheet" href="/css/faq.css" />
+```
+
+---
+
+# 3. Ligne JS à ajouter avant `</body>`
+
+```html
+<script src="/js/faq.js"></script>
+```
+
+---
+
+# 4. Emplacement des fichiers
+
+Dans ton projet, ajoute :
+
+```bash
+public/
+├── css/
+│   └── faq.css
+└── js/
+    └── faq.js
+```
+
+Et côté serveur :
+
+```bash
+server/
+├── routes/
+│   └── faq.js
+├── services/
+│   ├── faqMatcher.js
+│   └── openaiService.js
+└── data/
+    └── faqData.js
+```
+
+---
+
+# 5. Intégration idéale dans ta page
+
+L’ordre recommandé sur la home page :
+
+* Hero section
+* Présentation du site
+* Chapitres / contenus
+* Vidéos / exercices
+* Assistant IA
+* **FAQ intelligente**
+* Footer
+
+Donc la FAQ doit être placée **tout en bas du contenu principal**, juste avant le footer.
+
+---
+
+# 6. Version ultra simple si tu veux l’ajouter tout de suite
+
+Si ton site tourne déjà, tu peux commencer par :
+
+* coller le bloc HTML
+* créer `faq.css`
+* créer `faq.js`
+* connecter la route `/api/faq`
+
+Ça te donne déjà une première version propre et fonctionnelle.
+
+---
+
+# 7. Étape suivante recommandée pour MathPhix
+
+Maintenant, il faut surtout faire 3 choses :
+
+* remplir `faqData.js` avec tes vraies questions fréquentes
+* adapter le prompt IA au ton MathPhix
+* brancher le tout sur ta page d’accueil réelle
+
+
