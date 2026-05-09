@@ -415,3 +415,4 @@ document.addEventListener("DOMContentLoaded", () => {
     quizForm.addEventListener("submit", correctQuiz);
   }
 });
+
