@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const API_URL = "https://mathphix-backend.onrender.com";
+
   const faqForm = document.getElementById("faqForm");
   const questionInput = document.getElementById("questionInput");
 
@@ -36,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
     faqLoading.classList.remove("hidden");
 
     try {
-      const response = await fetch("/api/faq", {
+      const response = await fetch(`${API_URL}/api/faq`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
