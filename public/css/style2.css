@@ -319,3 +319,90 @@ code {
 .exercise-box li {
   margin-bottom: 0.45rem;
 }
+
+/* ===== AJOUTS POUR INTERVALLES, TABLEAUX ET VIDÉO ===== */
+
+.lesson-box h4,
+.example-box h4 {
+  margin: 1.25rem 0 0.55rem;
+  color: var(--primary-dark);
+  font-size: 1.05rem;
+}
+
+.lesson-box .tip-box {
+  margin-top: 1.2rem;
+  margin-bottom: 0;
+  box-shadow: none;
+}
+
+.lesson-box svg,
+.example-box svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-inline: auto;
+}
+
+.lesson-box table,
+.example-box table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--surface);
+}
+
+.lesson-box th,
+.lesson-box td,
+.example-box th,
+.example-box td {
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+  text-align: left;
+  vertical-align: top;
+}
+
+.lesson-box th,
+.example-box th {
+  background: var(--surface-soft);
+  color: var(--primary-dark);
+  font-weight: 800;
+}
+
+#video {
+  scroll-margin-top: 7rem;
+}
+
+#video .video-box {
+  overflow: hidden;
+}
+
+#video .video-box iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  border-radius: 16px;
+  background: #0f172a;
+}
+
+@media (max-width: 768px) {
+  .lesson-box,
+  .example-box,
+  .exercise-box,
+  .video-box,
+  .tip-box {
+    padding: 1rem;
+  }
+
+  .lesson-box th,
+  .lesson-box td,
+  .example-box th,
+  .example-box td {
+    padding: 0.55rem;
+    font-size: 0.9rem;
+  }
+
+  .lesson-box svg,
+  .example-box svg {
+    min-width: 560px;
+  }
+}
