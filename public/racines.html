@@ -3,208 +3,308 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Cours et exercices de seconde sur les racines carrées : définition, valeur absolue, produit, quotient, simplification et équations x² = a." />
   <title>MathPhiX — Racines carrées</title>
   <link rel="stylesheet" href="css/style2.css" />
 </head>
 
 <body>
-
-<header class="site-header">
-  <div class="header-container">
-    <div>
-      <h1 class="site-title">MathPhiX</h1>
-      <p class="site-subtitle">Seconde — Racines carrées</p>
+  <header class="site-header">
+    <div class="header-container container">
+      <div>
+        <h1 class="site-title">MathPhiX</h1>
+        <p class="site-subtitle">Seconde — Racines carrées</p>
+      </div>
+      <a href="nombres-calculs.html" class="back-link">← Retour</a>
     </div>
-    <a href="nombres-calculs.html" class="back-link">← Retour</a>
-  </div>
-</header>
+  </header>
 
-<section class="hero">
-  <div class="hero-card">
-    <h1>Racines carrées</h1>
-    <p>
-      Dans ce chapitre, tu vas apprendre à manipuler les racines carrées,
-      simplifier des écritures et effectuer des calculs avec des radicaux.
-    </p>
-
-    <div class="hero-tags">
-      <span class="tag">Cours</span>
-      <span class="tag">Exercices</span>
-      <span class="tag">Vidéo</span>
-      <span class="tag">Astuce</span>
+  <section class="hero">
+    <div class="hero-card">
+      <h1>Racines carrées</h1>
+      <p>
+        Comprendre la racine carrée d'un réel positif, simplifier des écritures,
+        effectuer des calculs exacts et résoudre une équation de la forme
+        <span class="math">x² = a</span>.
+      </p>
+      <div class="hero-tags">
+        <span class="tag">Cours</span>
+        <span class="tag">Méthodes</span>
+        <span class="tag">Exercices</span>
+        <span class="tag">Vidéo</span>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<main class="container">
+  <main class="container">
+    <section class="section" id="cours">
+      <h2>Cours</h2>
 
-<section class="section">
-  <h2>Cours</h2>
+      <div class="lesson-box">
+        <h3>1. Définition</h3>
+        <p>
+          Pour tout réel <span class="math">a ≥ 0</span>, la racine carrée de
+          <span class="math">a</span>, notée <span class="math">√a</span>, est
+          l'unique réel positif ou nul dont le carré vaut <span class="math">a</span>.
+        </p>
+        <p><span class="math">√a ≥ 0</span> et <span class="math">(√a)² = a</span>.</p>
+        <p>
+          Dans l'ensemble des nombres réels, <span class="math">√a</span> est définie
+          uniquement lorsque <span class="math">a ≥ 0</span>.
+        </p>
+      </div>
 
-  <div class="lesson-box">
-    <h3>1. Définition</h3>
-    <p>
-      La racine carrée d’un nombre positif <span class="math">a</span> est le nombre positif
-      dont le carré vaut <span class="math">a</span>.
-    </p>
-    <p>
-      On la note <span class="math">√a</span>.
-    </p>
-    <p>
-      Exemple : <span class="math">√9 = 3</span> car <span class="math">3² = 9</span>.
-    </p>
-  </div>
+      <div class="example-box">
+        <h3>Exemples</h3>
+        <p><span class="math">√49 = 7</span>, car <span class="math">7² = 49</span>.</p>
+        <p><span class="math">√0 = 0</span> et <span class="math">√(25/9) = 5/3</span>.</p>
+        <p><span class="math">√(−4)</span> n'est pas définie dans <span class="math">ℝ</span>.</p>
+      </div>
 
-  <div class="lesson-box">
-    <h3>2. Condition d’existence</h3>
-    <p>
-      Dans les nombres réels, on ne peut calculer <span class="math">√a</span>
-      que si <span class="math">a ≥ 0</span>.
-    </p>
-    <p>
-      Exemple : <span class="math">√16</span> existe, mais <span class="math">√(-4)</span>
-      n’existe pas dans <span class="math">ℝ</span>.
-    </p>
-  </div>
+      <div class="lesson-box">
+        <h3>2. La relation fondamentale</h3>
+        <p>Pour tout réel <span class="math">a</span> :</p>
+        <p><span class="math">√(a²) = |a|</span></p>
+        <p>
+          La racine carrée désigne toujours un nombre positif ou nul. Il faut donc
+          prendre la valeur absolue de <span class="math">a</span>.
+        </p>
+      </div>
 
-  <div class="lesson-box">
-    <h3>3. Propriétés</h3>
-    <ul>
-      <li><span class="math">√(a × b) = √a × √b</span> si <span class="math">a ≥ 0</span> et <span class="math">b ≥ 0</span></li>
-      <li><span class="math">√(a / b) = √a / √b</span> si <span class="math">a ≥ 0</span> et <span class="math">b > 0</span></li>
-      <li><span class="math">(√a)² = a</span> si <span class="math">a ≥ 0</span></li>
-    </ul>
-  </div>
+      <div class="example-box">
+        <h3>Exemples</h3>
+        <p><span class="math">√(7²) = 7</span></p>
+        <p><span class="math">√((−7)²) = 7</span></p>
+        <p><span class="math">√((x − 3)²) = |x − 3|</span></p>
+      </div>
 
-  <div class="lesson-box">
-    <h3>4. Simplifier une racine</h3>
-    <p>
-      On cherche un carré parfait dans le nombre sous la racine.
-    </p>
-    <p>
-      Exemple :
-      <span class="math">√12 = √(4 × 3) = √4 × √3 = 2√3</span>
-    </p>
-  </div>
+      <div class="tip-box">
+        <p>
+          <strong>À ne pas confondre :</strong>
+          <span class="math">(√a)² = a</span> pour <span class="math">a ≥ 0</span>,
+          tandis que <span class="math">√(a²) = |a|</span> pour tout réel
+          <span class="math">a</span>.
+        </p>
+      </div>
 
-  <div class="lesson-box">
-    <h3>5. Addition et soustraction</h3>
-    <p>
-      On peut additionner ou soustraire seulement des racines de même nature.
-    </p>
-    <p>
-      Exemple :
-      <span class="math">2√5 + 3√5 = 5√5</span>
-    </p>
-    <p>
-      Mais <span class="math">√2 + √3</span> ne se simplifie pas.
-    </p>
-  </div>
+      <div class="lesson-box">
+        <h3>3. Produit et quotient de racines</h3>
+        <p>Pour <span class="math">a ≥ 0</span> et <span class="math">b ≥ 0</span> :</p>
+        <p><span class="math">√(ab) = √a × √b</span></p>
+        <p>Pour <span class="math">a ≥ 0</span> et <span class="math">b &gt; 0</span> :</p>
+        <p><span class="math">√(a/b) = √a/√b</span></p>
+      </div>
 
-  <div class="example-box">
-    <h3>Exemple</h3>
-    <p>Simplifier : <span class="math">√75</span></p>
-    <p>
-      <span class="math">√75 = √(25 × 3)</span>
-    </p>
-    <p>
-      <span class="math">√75 = √25 × √3 = 5√3</span>
-    </p>
-  </div>
-</section>
+      <div class="tip-box">
+        <p>
+          <strong>Attention :</strong> en général,
+          <span class="math">√(a + b) ≠ √a + √b</span>.
+        </p>
+        <p>
+          Par exemple, <span class="math">√(9 + 16) = 5</span>, alors que
+          <span class="math">√9 + √16 = 7</span>.
+        </p>
+      </div>
 
-<section class="section">
-  <h2>Exercices</h2>
+      <div class="lesson-box">
+        <h3>4. Pourquoi la formule du produit est-elle vraie ?</h3>
+        <p>
+          Pour <span class="math">a ≥ 0</span> et <span class="math">b ≥ 0</span>,
+          les nombres <span class="math">√(ab)</span> et
+          <span class="math">√a × √b</span> sont positifs ou nuls.
+        </p>
+        <p><span class="math">(√a × √b)² = (√a)² × (√b)² = ab</span></p>
+        <p>
+          Par unicité de la racine carrée positive de <span class="math">ab</span>,
+          on obtient <span class="math">√(ab) = √a × √b</span>.
+        </p>
+      </div>
 
-  <div class="exercise-box">
-    <h3>Exercice 1</h3>
-    <p>Calculer :</p>
-    <ul>
-      <li>√4</li>
-      <li>√25</li>
-      <li>√100</li>
-    </ul>
-  </div>
+      <div class="lesson-box">
+        <h3>5. Extraire un carré parfait</h3>
+        <p>Pour simplifier <span class="math">√n</span> :</p>
+        <ol>
+          <li>écrire <span class="math">n = a²b</span>, avec le plus grand carré parfait possible ;</li>
+          <li>utiliser <span class="math">√(a²b) = √(a²) × √b = a√b</span> lorsque <span class="math">a ≥ 0</span> ;</li>
+          <li>vérifier que <span class="math">b</span> ne contient plus de facteur carré.</li>
+        </ol>
+      </div>
 
-  <div class="exercise-box">
-    <h3>Exercice 2</h3>
-    <p>Dire si l’écriture existe dans ℝ :</p>
-    <ul>
-      <li>√49</li>
-      <li>√0</li>
-      <li>√(-9)</li>
-    </ul>
-  </div>
+      <div class="example-box">
+        <h3>Exemples</h3>
+        <p><span class="math">√72 = √(36 × 2) = 6√2</span></p>
+        <p><span class="math">√180 = √(36 × 5) = 6√5</span></p>
+        <p><span class="math">3√50 − 2√8 = 3 × 5√2 − 2 × 2√2 = 11√2</span></p>
+      </div>
 
-  <div class="exercise-box">
-    <h3>Exercice 3</h3>
-    <p>Simplifier :</p>
-    <ul>
-      <li>√8</li>
-      <li>√18</li>
-      <li>√50</li>
-      <li>√72</li>
-    </ul>
-  </div>
+      <div class="lesson-box">
+        <h3>6. Effectuer des calculs exacts</h3>
+        <p>
+          On additionne ou soustrait seulement des termes comportant la même racine simplifiée.
+        </p>
+        <p><span class="math">4√3 + 7√3 = 11√3</span></p>
+        <p><span class="math">√2 + √3</span> ne se réduit pas.</p>
+        <p>Pour un produit : <span class="math">(2√5)(3√10) = 6√50 = 30√2</span>.</p>
+      </div>
 
-  <div class="exercise-box">
-    <h3>Exercice 4</h3>
-    <p>Calculer :</p>
-    <ul>
-      <li>2√3 + 5√3</li>
-      <li>7√2 - 4√2</li>
-      <li>3√5 + √5</li>
-    </ul>
-  </div>
+      <div class="lesson-box">
+        <h3>7. Valeur exacte et valeur approchée</h3>
+        <p>
+          L'écriture <span class="math">3√5</span> est exacte. Une calculatrice donne
+          <span class="math">3√5 ≈ 6,708</span>. Le symbole
+          <span class="math">=</span> ne doit pas remplacer <span class="math">≈</span>.
+        </p>
+      </div>
 
-  <div class="exercise-box">
-    <h3>Exercice 5</h3>
-    <p>Écrire sous la forme la plus simple :</p>
-    <ul>
-      <li>√20 + √45</li>
-      <li>2√12 - √27</li>
-    </ul>
-  </div>
-</section>
+      <div class="tip-box">
+        <p>
+          <strong>Contrôle rapide :</strong> une racine carrée est positive ou nulle.
+          Si <span class="math">0 ≤ a &lt; b</span>, alors
+          <span class="math">√a &lt; √b</span>.
+        </p>
+        <p>
+          Comme <span class="math">49 &lt; 53 &lt; 64</span>, on a
+          <span class="math">7 &lt; √53 &lt; 8</span>.
+        </p>
+      </div>
 
-<section class="section">
-  <h2>Vidéo</h2>
+      <div class="lesson-box">
+        <h3>8. Résoudre une équation de la forme x² = a</h3>
+        <ul>
+          <li>si <span class="math">a &lt; 0</span>, l'équation n'a aucune solution réelle ;</li>
+          <li>si <span class="math">a = 0</span>, l'unique solution est <span class="math">x = 0</span> ;</li>
+          <li>
+            si <span class="math">a &gt; 0</span>, les solutions sont
+            <span class="math">x = −√a</span> et <span class="math">x = √a</span>.
+          </li>
+        </ul>
+      </div>
 
-  <div class="video-box">
-    <p>Vidéo explicative sur les racines carrées :</p>
+      <div class="example-box">
+        <h3>Exemples</h3>
+        <p><span class="math">x² = 25</span> donne <span class="math">x = −5</span> ou <span class="math">x = 5</span>.</p>
+        <p><span class="math">x² = 7</span> donne <span class="math">x = −√7</span> ou <span class="math">x = √7</span>.</p>
+        <p><span class="math">x² = −3</span> n'a aucune solution réelle.</p>
+      </div>
+    </section>
 
-    <iframe
-      src="https://www.youtube.com/embed/LIEN_VIDEO"
-      title="Vidéo sur les racines carrées"
-      allowfullscreen>
-    </iframe>
-  </div>
-</section>
+    <section class="section" id="exercices">
+      <h2>Exercices</h2>
 
-<section class="section">
-  <h2>Astuce</h2>
+      <div class="exercise-box">
+        <h3>Exercice 1 — Définition et existence</h3>
+        <p>Calculer lorsque l'écriture est définie dans <span class="math">ℝ</span> :</p>
+        <ul>
+          <li><span class="math">√81</span></li>
+          <li><span class="math">√0</span></li>
+          <li><span class="math">√(−16)</span></li>
+          <li><span class="math">√(49/25)</span></li>
+        </ul>
+      </div>
 
-  <div class="tip-box">
-    <p>
-      Pour simplifier une racine, cherche toujours le plus grand carré parfait
-      contenu dans le nombre.
-    </p>
-  </div>
+      <div class="exercise-box">
+        <h3>Exercice 2 — Racine d'un carré</h3>
+        <p>Simplifier :</p>
+        <ul>
+          <li><span class="math">√(12²)</span></li>
+          <li><span class="math">√((−9)²)</span></li>
+          <li><span class="math">√((x + 4)²)</span></li>
+          <li><span class="math">√((2x − 1)²)</span></li>
+        </ul>
+      </div>
 
-  <div class="tip-box">
-    <p>
-      N’oublie pas : on ne peut additionner que des racines semblables,
-      comme on additionne des termes semblables en calcul littéral.
-    </p>
-  </div>
+      <div class="exercise-box">
+        <h3>Exercice 3 — Produit et quotient</h3>
+        <p>Calculer ou simplifier :</p>
+        <ul>
+          <li><span class="math">√3 × √12</span></li>
+          <li><span class="math">√(16 × 5)</span></li>
+          <li><span class="math">√(100/9)</span></li>
+          <li><span class="math">√75/√3</span></li>
+        </ul>
+      </div>
 
-  <div class="footer-nav">
-    <a href="nombres-calculs.html" class="btn btn-secondary">← Retour</a>
-    <a href="index.html" class="btn btn-primary">Accueil</a>
-  </div>
-</section>
+      <div class="exercise-box">
+        <h3>Exercice 4 — Extraire un carré parfait</h3>
+        <p>Écrire sous la forme <span class="math">a√b</span>, avec <span class="math">b</span> le plus petit possible :</p>
+        <ul>
+          <li><span class="math">√8</span></li>
+          <li><span class="math">√45</span></li>
+          <li><span class="math">√98</span></li>
+          <li><span class="math">√200</span></li>
+        </ul>
+      </div>
 
-</main>
+      <div class="exercise-box">
+        <h3>Exercice 5 — Réduire</h3>
+        <p>Simplifier puis réduire :</p>
+        <ul>
+          <li><span class="math">√20 + √45</span></li>
+          <li><span class="math">3√12 − √27</span></li>
+          <li><span class="math">2√50 + 5√8</span></li>
+        </ul>
+      </div>
 
+      <div class="exercise-box">
+        <h3>Exercice 6 — Produits</h3>
+        <p>Calculer et donner une valeur exacte simplifiée :</p>
+        <ul>
+          <li><span class="math">(2√3)(5√6)</span></li>
+          <li><span class="math">(3√2)²</span></li>
+          <li><span class="math">(√5 + 2)(√5 − 2)</span></li>
+        </ul>
+      </div>
+
+      <div class="exercise-box">
+        <h3>Exercice 7 — Exact ou approché ?</h3>
+        <ol>
+          <li>Donner la valeur exacte de <span class="math">2√7</span>.</li>
+          <li>En donner une valeur approchée au centième.</li>
+          <li>Encadrer <span class="math">√30</span> entre deux entiers consécutifs.</li>
+        </ol>
+      </div>
+
+      <div class="exercise-box">
+        <h3>Exercice 8 — Équations</h3>
+        <p>Résoudre dans <span class="math">ℝ</span> :</p>
+        <ul>
+          <li><span class="math">x² = 36</span></li>
+          <li><span class="math">x² = 11</span></li>
+          <li><span class="math">x² = 0</span></li>
+          <li><span class="math">x² = −5</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="video">
+      <h2>Vidéo</h2>
+      <div class="video-box">
+        <p>Vidéo explicative sur les racines carrées :</p>
+        <iframe
+          src="https://www.youtube.com/embed/LIEN_VIDEO"
+          title="Vidéo sur les racines carrées"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>À retenir</h2>
+      <div class="tip-box">
+        <p><span class="math">(√a)² = a</span> pour <span class="math">a ≥ 0</span>.</p>
+        <p><span class="math">√(a²) = |a|</span> pour tout réel <span class="math">a</span>.</p>
+        <p>
+          Pour simplifier une racine, extrais le plus grand carré parfait possible.
+          Pour additionner, commence toujours par simplifier les racines.
+        </p>
+      </div>
+      <div class="footer-nav">
+        <a href="nombres-calculs.html" class="btn btn-secondary">← Retour</a>
+        <a href="index.html" class="btn btn-primary">Accueil</a>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
