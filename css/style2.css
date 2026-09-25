@@ -406,3 +406,136 @@ code {
     min-width: 560px;
   }
 }
+
+/* ===== VECTEURS, COORDONNÉES ET FIGURES SVG ===== */
+
+#cours,
+#exercices,
+#video {
+  scroll-margin-top: 7rem;
+}
+
+.vector-figure {
+  margin: 1.25rem auto;
+  padding: 1rem;
+  max-width: 760px;
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: #f8fafc;
+  text-align: center;
+}
+
+.vector-figure svg {
+  display: block;
+  width: 100%;
+  min-width: 520px;
+  height: auto;
+  margin-inline: auto;
+}
+
+.vector-figure figcaption {
+  margin-top: 0.75rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.vector-figure .grid-line {
+  stroke: #dbe4ee;
+  stroke-width: 1;
+}
+
+.vector-figure .axis {
+  stroke: #173f70;
+  stroke-width: 2.4;
+}
+
+.vector-figure .construction {
+  fill: none;
+  stroke: #94a3b8;
+  stroke-width: 2;
+  stroke-dasharray: 7 6;
+}
+
+.vector-figure .point {
+  fill: #173f70;
+}
+
+.vector-figure .vector-red {
+  fill: none;
+  stroke: #c94f4f;
+  stroke-width: 4;
+}
+
+.vector-figure .vector-blue {
+  fill: none;
+  stroke: #173f70;
+  stroke-width: 4;
+}
+
+.vector-figure .label-arrow {
+  stroke-width: 1.75;
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.vector-figure text,
+.vector-figure .figure-label {
+  fill: #173f70;
+  font: 600 16px Arial, sans-serif;
+}
+
+.vector-figure .vector-label,
+.vector-figure .figure-label-red {
+  fill: #c94f4f;
+  font: 700 16px Arial, sans-serif;
+}
+
+.single-line-title {
+  white-space: nowrap;
+  font-size: clamp(1rem, 4.5vw, 1.35rem);
+}
+
+.vector-over {
+  position: relative;
+  display: inline-block;
+  margin-left: 0.08em;
+  line-height: 1;
+}
+
+.vector-over::before {
+  content: "→";
+  position: absolute;
+  left: 50%;
+  top: -0.72em;
+  transform: translateX(-50%);
+  font-size: 0.72em;
+  font-weight: 700;
+  line-height: 1;
+}
+
+mjx-container[display="true"] {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-block: 0.2rem;
+}
+
+@media (max-width: 768px) {
+  .vector-figure {
+    margin-inline: 0;
+    padding: 0.75rem;
+  }
+
+  .vector-figure svg {
+    min-width: 520px;
+  }
+}
+
+@media (max-width: 420px) {
+  .single-line-title {
+    font-size: 0.96rem;
+    letter-spacing: -0.02em;
+  }
+}

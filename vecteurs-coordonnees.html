@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Cours de seconde sur les coordonnées de vecteurs, la norme, la distance, le milieu, le déterminant, la colinéarité, l’alignement et le parallélisme." />
+  <title>MathPhiX — Vecteurs et coordonnées</title>
+  <link rel="stylesheet" href="css/style2.css" />
+
+  <style>
+    .vector-figure {
+      margin: 1.25rem auto;
+      padding: 1rem;
+      max-width: 760px;
+      overflow-x: auto;
+      border: 1px solid #cbd5e1;
+      border-radius: 12px;
+      background: #f8fafc;
+      text-align: center;
+    }
+
+    .vector-figure svg {
+      display: block;
+      width: 100%;
+      min-width: 520px;
+      height: auto;
+    }
+
+    .vector-figure figcaption {
+      margin-top: 0.75rem;
+      color: #475569;
+      font-size: 0.95rem;
+    }
+
+    .grid-line { stroke: #dbe4ee; stroke-width: 1; }
+    .axis { stroke: #173f70; stroke-width: 2.4; }
+    .construction { fill: none; stroke: #94a3b8; stroke-width: 2; stroke-dasharray: 7 6; }
+    .vector-red { fill: none; stroke: #c94f4f; stroke-width: 4; }
+    .vector-blue { fill: none; stroke: #173f70; stroke-width: 4; }
+    .label-arrow { stroke-width: 1.5; }
+    .point { fill: #173f70; }
+    .figure-label { fill: #173f70; font: 600 16px Arial, sans-serif; }
+    .figure-label-red { fill: #c94f4f; font: 700 16px Arial, sans-serif; }
+
+    .single-line-title {
+      white-space: nowrap;
+      font-size: clamp(1rem, 4.5vw, 1.35rem);
+    }
+
+    .vector-over {
+      position: relative;
+      display: inline-block;
+      margin-left: 0.08em;
+      line-height: 1;
+    }
+
+    .vector-over::before {
+      content: "→";
+      position: absolute;
+      left: 50%;
+      top: -0.72em;
+      transform: translateX(-50%);
+      font-size: 0.72em;
+      font-weight: 700;
+      line-height: 1;
+    }
+  </style>
+
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)'], ['$', '$']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="header-container container">
+      <div>
+        <h1 class="site-title">MathPhiX</h1>
+        <p class="site-subtitle">Seconde — Vecteurs et coordonnées</p>
+      </div>
+      <a href="geometrie.html" class="back-link">← Retour</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-card">
+        <h1>Vecteurs et coordonnées</h1>
+        <p>
+          Apprends à calculer avec les coordonnées des vecteurs, puis utilise
+          la norme, le déterminant et la colinéarité pour résoudre des problèmes
+          de géométrie repérée.
+        </p>
+        <div class="hero-tags">
+          <span class="tag">Cours</span>
+          <span class="tag">Exercices</span>
+          <span class="tag">Vidéo</span>
+          <span class="tag">À retenir</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+    <section class="section" id="cours">
+      <h2>Cours</h2>
+
+      <div class="lesson-box">
+        <h3>1. Décomposer un vecteur dans une base</h3>
+        <p>
+          Si <span class="math">\(\vec{i}\)</span> et
+          <span class="math">\(\vec{j}\)</span> ne sont pas colinéaires, ils forment
+          une base du plan. Tout vecteur <span class="math">\(\vec{u}\)</span>
+          s’écrit alors de manière unique :
+        </p>
+        <p class="math">\[\vec{u}=x\vec{i}+y\vec{j}.\]</p>
+        <p>
+          Le couple <span class="math">\((x\,;\,y)\)</span> constitue les coordonnées
+          de <span class="math">\(\vec{u}\)</span> dans cette base. Le vecteur nul a
+          pour coordonnées <span class="math">\((0\,;\,0)\)</span>.
+        </p>
+      </div>
+
+      <div class="lesson-box">
+        <h3>2. Coordonnées d’un vecteur</h3>
+        <p>
+          Dans un repère <span class="math">\((O\,;\,\vec{i},\vec{j})\)</span>,
+          dire que <span class="math">\(\vec{u}\)</span> a pour coordonnées
+          <span class="math">\((x\,;\,y)\)</span> signifie :
+        </p>
+        <p class="math">\[\vec{u}=x\vec{i}+y\vec{j}.\]</p>
+        <p>
+          Le nombre <span class="math">\(x\)</span> est la composante horizontale
+          et <span class="math">\(y\)</span> la composante verticale.
+          Le signe de chaque coordonnée indique le sens du déplacement.
+        </p>
+
+        <figure class="vector-figure">
+          <svg viewBox="0 0 720 430" role="img" aria-labelledby="coord-title coord-desc">
+            <title id="coord-title">Représentation de deux vecteurs dans un repère</title>
+            <desc id="coord-desc">Le vecteur u a pour coordonnées trois et deux, le vecteur v a pour coordonnées moins deux et trois.</desc>
+            <defs>
+              <marker id="axis-arrow" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+                <path d="M0,0 L0,6 L8,3 z" fill="#173f70" />
+              </marker>
+              <marker id="vector-arrow-red" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+                <path d="M0,0 L0,6 L8,3 z" fill="#c94f4f" />
+              </marker>
+              <marker id="vector-arrow-blue" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+                <path d="M0,0 L0,6 L8,3 z" fill="#173f70" />
+              </marker>
+            </defs>
+
+            <g>
+              <line class="grid-line" x1="80" y1="40" x2="80" y2="390" />
+              <line class="grid-line" x1="145" y1="40" x2="145" y2="390" />
+              <line class="grid-line" x1="210" y1="40" x2="210" y2="390" />
+              <line class="grid-line" x1="275" y1="40" x2="275" y2="390" />
+              <line class="grid-line" x1="340" y1="40" x2="340" y2="390" />
+              <line class="grid-line" x1="405" y1="40" x2="405" y2="390" />
+              <line class="grid-line" x1="470" y1="40" x2="470" y2="390" />
+              <line class="grid-line" x1="535" y1="40" x2="535" y2="390" />
+              <line class="grid-line" x1="600" y1="40" x2="600" y2="390" />
+              <line class="grid-line" x1="665" y1="40" x2="665" y2="390" />
+
+              <line class="grid-line" x1="35" y1="65" x2="685" y2="65" />
+              <line class="grid-line" x1="35" y1="130" x2="685" y2="130" />
+              <line class="grid-line" x1="35" y1="195" x2="685" y2="195" />
+              <line class="grid-line" x1="35" y1="260" x2="685" y2="260" />
+              <line class="grid-line" x1="35" y1="325" x2="685" y2="325" />
+              <line class="grid-line" x1="35" y1="390" x2="685" y2="390" />
+            </g>
+
+            <line class="axis" x1="35" y1="325" x2="688" y2="325" marker-end="url(#axis-arrow)" />
+            <line class="axis" x1="340" y1="405" x2="340" y2="35" marker-end="url(#axis-arrow)" />
+            <text class="figure-label" x="350" y="345">O</text>
+            <text class="figure-label" x="692" y="345">x</text>
+            <text class="figure-label" x="350" y="42">y</text>
+
+            <line class="vector-red" x1="340" y1="325" x2="535" y2="195" marker-end="url(#vector-arrow-red)" />
+            <line class="vector-blue" x1="340" y1="325" x2="210" y2="130" marker-end="url(#vector-arrow-blue)" />
+            <text class="figure-label-red" x="465" y="235">u (3 ; 2)</text>
+            <line class="vector-red label-arrow" x1="464" y1="217" x2="480" y2="217" marker-end="url(#vector-arrow-red)" />
+            <text class="figure-label" x="140" y="115">v (-2 ; 3)</text>
+            <line class="vector-blue label-arrow" x1="139" y1="97" x2="155" y2="97" marker-end="url(#vector-arrow-blue)" />
+          </svg>
+          <figcaption>
+            Les coordonnées indiquent le déplacement horizontal puis le déplacement vertical.
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="lesson-box">
+        <h3 class="single-line-title">3. Coordonnées du vecteur <span class="vector-over" aria-label="vecteur AB">AB</span></h3>
+        <p>
+          Si <span class="math">\(A(x_A\,;\,y_A)\)</span> et
+          <span class="math">\(B(x_B\,;\,y_B)\)</span>, alors :
+        </p>
+        <p class="math">
+          \[\overrightarrow{AB}(x_B-x_A\,;\,y_B-y_A).\]
+        </p>
+        <p><strong>À retenir :</strong> on calcule toujours « arrivée moins départ ».</p>
+      </div>
+
+      <div class="example-box">
+        <h3>Exemple — calculer les coordonnées d’un vecteur</h3>
+        <p>
+          Pour <span class="math">\(A(-1\,;\,2)\)</span> et
+          <span class="math">\(B(4\,;\,-2)\)</span> :
+        </p>
+        <p class="math">
+          \[\overrightarrow{AB}(4-(-1)\,;\,-2-2),
+          \qquad\text{donc}\qquad
+          \overrightarrow{AB}(5\,;\,-4).\]
+        </p>
+        <p>
+          Inversement,
+          <span class="math">\(\overrightarrow{BA}(-5\,;\,4)\)</span> et
+          <span class="math">\(\overrightarrow{BA}=-\overrightarrow{AB}\)</span>.
+        </p>
+      </div>
+
+      <div class="lesson-box">
+        <h3>4. Calculer avec les coordonnées</h3>
+        <p>
+          Si <span class="math">\(\vec{u}(x\,;\,y)\)</span>,
+          <span class="math">\(\vec{v}(x'\,;\,y')\)</span> et
+          <span class="math">\(k\in\mathbb{R}\)</span>, alors :
+        </p>
+        <ul>
+          <li><span class="math">\((\vec{u}+\vec{v})(x+x'\,;\,y+y')\)</span> ;</li>
+          <li><span class="math">\((\vec{u}-\vec{v})(x-x'\,;\,y-y')\)</span> ;</li>
+          <li><span class="math">\((k\vec{u})(kx\,;\,ky)\)</span>.</li>
+        </ul>
+      </div>
+
+      <div class="example-box">
+        <h3>Exemple — opérations sur les vecteurs</h3>
+        <p>
+          Avec <span class="math">\(\vec{u}(3\,;\,-1)\)</span> et
+          <span class="math">\(\vec{v}(-2\,;\,4)\)</span> :
+        </p>
+        <p class="math">
+          \[(\vec{u}+\vec{v})(1\,;\,3),\qquad
+          (2\vec{u})(6\,;\,-2),\qquad
+          (2\vec{u}-\vec{v})(8\,;\,-6).\]
+        </p>
+      </div>
+
+      <div class="lesson-box">
+        <h3>5. Norme d’un vecteur et distance</h3>
+        <p>
+          Dans un repère <strong>orthonormé</strong>, si
+          <span class="math">\(\vec{u}(x\,;\,y)\)</span>, alors :
+        </p>
+        <p class="math">\[\|\vec{u}\|=\sqrt{x^2+y^2}.\]</p>
+        <p>
+          Si <span class="math">\(A(x_A\,;\,y_A)\)</span> et
+          <span class="math">\(B(x_B\,;\,y_B)\)</span>, la distance
+          <span class="math">\(AB\)</span> vaut :
+        </p>
+        <p class="math">
+          \[AB=\|\overrightarrow{AB}\|
+          =\sqrt{(x_B-x_A)^2+(y_B-y_A)^2}.\]
+        </p>
+
+        <figure class="vector-figure">
+          <svg viewBox="0 0 720 330" role="img" aria-labelledby="distance-title distance-desc">
+            <title id="distance-title">Distance entre deux points et théorème de Pythagore</title>
+            <desc id="distance-desc">Le segment AB est l’hypoténuse d’un triangle rectangle dont les côtés mesurent la différence des abscisses et la différence des ordonnées.</desc>
+            <defs>
+              <marker id="distance-arrow" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+                <path d="M0,0 L0,6 L8,3 z" fill="#c94f4f" />
+              </marker>
+            </defs>
+            <line class="construction" x1="130" y1="260" x2="570" y2="260" />
+            <line class="construction" x1="570" y1="260" x2="570" y2="70" />
+            <line class="vector-red" x1="130" y1="260" x2="570" y2="70" marker-end="url(#distance-arrow)" />
+            <path d="M540 260 L540 230 L570 230" fill="none" stroke="#64748b" stroke-width="2" />
+            <circle class="point" cx="130" cy="260" r="5" />
+            <circle class="point" cx="570" cy="70" r="5" />
+            <text class="figure-label" x="108" y="287">A</text>
+            <text class="figure-label" x="582" y="66">B</text>
+            <text class="figure-label" x="312" y="288">xB − xA</text>
+            <text class="figure-label" x="585" y="177">yB − yA</text>
+            <text class="figure-label-red" x="315" y="145">AB</text>
+          </svg>
+          <figcaption>
+            La formule de la distance résulte du théorème de Pythagore.
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="example-box">
+        <h3>Exemple — calculer une distance</h3>
+        <p>
+          Pour <span class="math">\(A(-1\,;\,2)\)</span> et
+          <span class="math">\(B(3\,;\,5)\)</span> :
+        </p>
+        <p class="math">
+          \[AB=\sqrt{(3+1)^2+(5-2)^2}=\sqrt{16+9}=5.\]
+        </p>
+      </div>
+
+      <div class="lesson-box">
+        <h3>6. Coordonnées du milieu</h3>
+        <p>
+          Le milieu <span class="math">\(I\)</span> du segment
+          <span class="math">\([AB]\)</span> a pour coordonnées :
+        </p>
+        <p class="math">
+          \[I\left(\frac{x_A+x_B}{2}\,;\,\frac{y_A+y_B}{2}\right).\]
+        </p>
+        <p>Cette propriété se traduit aussi par :</p>
+        <p class="math">
+          \[I\text{ milieu de }[AB]
+          \iff \overrightarrow{AI}=\overrightarrow{IB}.\]
+        </p>
+        <p>
+          Pour une origine <span class="math">\(O\)</span>, on a également
+          <span class="math">\(\overrightarrow{OA}+\overrightarrow{OB}=2\overrightarrow{OI}\)</span>.
+        </p>
+      </div>
+
+      <div class="example-box">
+        <h3>Exemple — calculer un milieu</h3>
+        <p>
+          Si <span class="math">\(A(-2\,;\,1)\)</span> et
+          <span class="math">\(B(4\,;\,7)\)</span>, alors :
+        </p>
+        <p class="math">
+          \[I\left(\frac{-2+4}{2}\,;\,\frac{1+7}{2}\right)=(1\,;\,4).\]
+        </p>
+      </div>
+
+      <div class="lesson-box">
+        <h3>7. Déterminant et critère de colinéarité</h3>
+        <p>
+          Pour <span class="math">\(\vec{u}(x\,;\,y)\)</span> et
+          <span class="math">\(\vec{v}(x'\,;\,y')\)</span>, on définit :
+        </p>
+        <p class="math">
+          \[\det(\vec{u},\vec{v})=xy'-yx'.\]
+        </p>
+        <p>Le déterminant fournit un critère simple :</p>
+        <p class="math">
+          \[\vec{u}\text{ et }\vec{v}\text{ sont colinéaires}
+          \iff \det(\vec{u},\vec{v})=0.\]
+        </p>
+        <p>
+          Le calcul du déterminant est particulièrement utile lorsqu’une coordonnée
+          est nulle, car il évite les divisions.
+        </p>
+      </div>
+
+      <div class="example-box">
+        <h3>Exemple — tester la colinéarité</h3>
+        <p>
+          Pour <span class="math">\(\vec{u}(2\,;\,-1)\)</span> et
+          <span class="math">\(\vec{v}(-6\,;\,3)\)</span> :
+        </p>
+        <p class="math">
+          \[\det(\vec{u},\vec{v})=2\times3-(-1)\times(-6)=0.\]
+        </p>
+        <p>Les deux vecteurs sont donc colinéaires. On peut aussi remarquer que <span class="math">\(\vec{v}=-3\vec{u}\)</span>.</p>
+      </div>
+
+      <div class="lesson-box">
+        <h3>8. Démontrer un alignement</h3>
+        <ol>
+          <li>Calculer deux vecteurs de même origine, par exemple <span class="math">\(\overrightarrow{AB}\)</span> et <span class="math">\(\overrightarrow{AC}\)</span>.</li>
+          <li>Calculer leur déterminant.</li>
+          <li>S’il est nul, les vecteurs sont colinéaires et les points <span class="math">\(A\)</span>, <span class="math">\(B\)</span> et <span class="math">\(C\)</span> sont alignés.</li>
+        </ol>
+
+        <figure class="vector-figure">
+          <svg viewBox="0 0 720 220" role="img" aria-labelledby="align-title align-desc">
+            <title id="align-title">Trois points alignés</title>
+            <desc id="align-desc">Les vecteurs AB et AC sont colinéaires et les points A, B et C sont alignés.</desc>
+            <defs>
+              <marker id="align-arrow-red" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+                <path d="M0,0 L0,6 L8,3 z" fill="#c94f4f" />
+              </marker>
+              <marker id="align-arrow-blue" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+                <path d="M0,0 L0,6 L8,3 z" fill="#173f70" />
+              </marker>
+            </defs>
+            <line class="construction" x1="80" y1="175" x2="650" y2="45" />
+            <line class="vector-red" x1="100" y1="170" x2="340" y2="115" marker-end="url(#align-arrow-red)" />
+            <line class="vector-blue" x1="100" y1="170" x2="610" y2="54" marker-end="url(#align-arrow-blue)" />
+            <circle class="point" cx="100" cy="170" r="5" />
+            <circle class="point" cx="340" cy="115" r="5" />
+            <circle class="point" cx="610" cy="54" r="5" />
+            <text class="figure-label" x="84" y="199">A</text>
+            <text class="figure-label" x="335" y="101">B</text>
+            <text class="figure-label" x="617" y="48">C</text>
+          </svg>
+          <figcaption>
+            Si <span class="math">\(\det(\overrightarrow{AB},\overrightarrow{AC})=0\)</span>,
+            alors <span class="math">\(A\)</span>, <span class="math">\(B\)</span> et <span class="math">\(C\)</span> sont alignés.
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="example-box">
+        <h3>Exemple — prouver un alignement</h3>
+        <p>
+          Pour <span class="math">\(A(1\,;\,2)\)</span>,
+          <span class="math">\(B(3\,;\,5)\)</span> et
+          <span class="math">\(C(5\,;\,8)\)</span> :
+        </p>
+        <p class="math">
+          \[\overrightarrow{AB}(2\,;\,3),\qquad
+          \overrightarrow{AC}(4\,;\,6).\]
+          \[\det(\overrightarrow{AB},\overrightarrow{AC})
+          =2\times6-3\times4=0.\]
+        </p>
+        <p>Les points <span class="math">\(A\)</span>, <span class="math">\(B\)</span> et <span class="math">\(C\)</span> sont alignés.</p>
+      </div>
+
+      <div class="lesson-box">
+        <h3>9. Démontrer un parallélisme</h3>
+        <ol>
+          <li>Choisir un vecteur directeur de chaque droite.</li>
+          <li>Calculer le déterminant de ces deux vecteurs.</li>
+          <li>S’il est nul, les vecteurs sont colinéaires et les droites sont parallèles.</li>
+        </ol>
+
+        <figure class="vector-figure">
+          <svg viewBox="0 0 720 270" role="img" aria-labelledby="parallel-title parallel-desc">
+            <title id="parallel-title">Deux droites parallèles</title>
+            <desc id="parallel-desc">Les vecteurs AB et CD sont colinéaires, donc les droites AB et CD sont parallèles.</desc>
+            <defs>
+              <marker id="parallel-arrow" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+                <path d="M0,0 L0,6 L8,3 z" fill="#c94f4f" />
+              </marker>
+            </defs>
+            <line class="construction" x1="65" y1="210" x2="655" y2="80" />
+            <line class="construction" x1="65" y1="135" x2="655" y2="5" />
+            <line class="vector-red" x1="120" y1="198" x2="365" y2="144" marker-end="url(#parallel-arrow)" />
+            <line class="vector-red" x1="270" y1="90" x2="515" y2="36" marker-end="url(#parallel-arrow)" />
+            <circle class="point" cx="120" cy="198" r="5" />
+            <circle class="point" cx="365" cy="144" r="5" />
+            <circle class="point" cx="270" cy="90" r="5" />
+            <circle class="point" cx="515" cy="36" r="5" />
+            <text class="figure-label" x="103" y="225">A</text>
+            <text class="figure-label" x="370" y="163">B</text>
+            <text class="figure-label" x="251" y="78">C</text>
+            <text class="figure-label" x="522" y="31">D</text>
+          </svg>
+          <figcaption>
+            Si <span class="math">\(\det(\overrightarrow{AB},\overrightarrow{CD})=0\)</span>,
+            alors <span class="math">\((AB)\parallel(CD)\)</span>.
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="example-box">
+        <h3>Exemple — prouver un parallélisme</h3>
+        <p>
+          Pour <span class="math">\(A(0\,;\,1)\)</span>,
+          <span class="math">\(B(2\,;\,4)\)</span>,
+          <span class="math">\(C(-1\,;\,0)\)</span> et
+          <span class="math">\(D(3\,;\,6)\)</span> :
+        </p>
+        <p class="math">
+          \[\overrightarrow{AB}(2\,;\,3),\qquad
+          \overrightarrow{CD}(4\,;\,6).\]
+        </p>
+        <p>
+          Leur déterminant est nul ; les droites
+          <span class="math">\((AB)\)</span> et <span class="math">\((CD)\)</span>
+          sont donc parallèles.
+        </p>
+      </div>
+
+      <div class="lesson-box">
+        <h3>10. Reconnaître un parallélogramme</h3>
+        <p>Pour démontrer que <span class="math">\(ABCD\)</span> est un parallélogramme, on peut établir l’un des critères suivants :</p>
+        <ul>
+          <li><span class="math">\(\overrightarrow{AB}=\overrightarrow{DC}\)</span> ;</li>
+          <li>les diagonales <span class="math">\([AC]\)</span> et <span class="math">\([BD]\)</span> ont le même milieu ;</li>
+          <li><span class="math">\(\overrightarrow{AC}=\overrightarrow{AB}+\overrightarrow{AD}\)</span>.</li>
+        </ul>
+      </div>
+
+      <div class="example-box">
+        <h3>Exemple — reconnaître un parallélogramme</h3>
+        <p>
+          Pour <span class="math">\(A(0\,;\,0)\)</span>,
+          <span class="math">\(B(4\,;\,1)\)</span>,
+          <span class="math">\(D(1\,;\,3)\)</span> et
+          <span class="math">\(C(5\,;\,4)\)</span> :
+        </p>
+        <p class="math">
+          \[\overrightarrow{AB}(4\,;\,1)
+          \qquad\text{et}\qquad
+          \overrightarrow{DC}(4\,;\,1).\]
+        </p>
+        <p>Donc <span class="math">\(ABCD\)</span> est un parallélogramme.</p>
+      </div>
+    </section>
+
+    <section class="section" id="exercices">
+      <h2>Exercices</h2>
+
+      <div class="exercise-box">
+        <h3>Exercice 1 — Coordonnées d’un vecteur</h3>
+        <p>On donne <span class="math">\(A(-3\,;\,2)\)</span>, <span class="math">\(B(2\,;\,-1)\)</span> et <span class="math">\(C(5\,;\,4)\)</span>.</p>
+        <ol>
+          <li>Calculer <span class="math">\(\overrightarrow{AB}\)</span>, <span class="math">\(\overrightarrow{AC}\)</span> et <span class="math">\(\overrightarrow{BC}\)</span>.</li>
+          <li>Vérifier la relation de Chasles.</li>
+        </ol>
+      </div>
+
+      <div class="exercise-box">
+        <h3>Exercice 2 — Opérations</h3>
+        <p>Soient <span class="math">\(\vec{u}(4\,;\,-3)\)</span> et <span class="math">\(\vec{v}(-2\,;\,5)\)</span>.</p>
+        <ol>
+          <li>Calculer <span class="math">\(\vec{u}+\vec{v}\)</span> et <span class="math">\(\vec{u}-\vec{v}\)</span>.</li>
+          <li>Calculer <span class="math">\(3\vec{u}-2\vec{v}\)</span>.</li>
+        </ol>
+      </div>
+
+      <div class="exercise-box">
+        <h3>Exercice 3 — Norme et distance</h3>
+        <ol>
+          <li>Calculer la norme du vecteur <span class="math">\(\vec{w}(-5\,;\,12)\)</span>.</li>
+          <li>Calculer la distance entre <span class="math">\(E(-2\,;\,1)\)</span> et <span class="math">\(F(4\,;\,9)\)</span>.</li>
+        </ol>
+      </div>
+
+      <div class="exercise-box">
+        <h3>Exercice 4 — Milieu</h3>
+        <p>On donne <span class="math">\(A(-4\,;\,3)\)</span> et <span class="math">\(B(6\,;\,-5)\)</span>.</p>
+        <ol>
+          <li>Calculer les coordonnées du milieu <span class="math">\(I\)</span> de <span class="math">\([AB]\)</span>.</li>
+          <li>Vérifier par le calcul que <span class="math">\(\overrightarrow{AI}=\overrightarrow{IB}\)</span>.</li>
+        </ol>
+      </div>
+
+      <div class="exercise-box">
+        <h3>Exercice 5 — Déterminant</h3>
+        <p>Calculer chaque déterminant et conclure sur la colinéarité :</p>
+        <ol>
+          <li><span class="math">\(\vec{u}(3\,;\,2)\)</span> et <span class="math">\(\vec{v}(-6\,;\,-4)\)</span> ;</li>
+          <li><span class="math">\(\vec{a}(1\,;\,5)\)</span> et <span class="math">\(\vec{b}(3\,;\,14)\)</span>.</li>
+        </ol>
+      </div>
+
+      <div class="exercise-box">
+        <h3>Exercice 6 — Alignement</h3>
+        <p>
+          Les points <span class="math">\(A(-1\,;\,2)\)</span>,
+          <span class="math">\(B(2\,;\,5)\)</span> et
+          <span class="math">\(C(5\,;\,8)\)</span> sont-ils alignés ?
+          Justifier avec un déterminant.
+        </p>
+      </div>
+
+      <div class="exercise-box">
+        <h3>Exercice 7 — Parallélisme</h3>
+        <p>
+          On donne <span class="math">\(A(1\,;\,-1)\)</span>,
+          <span class="math">\(B(4\,;\,5)\)</span>,
+          <span class="math">\(C(-2\,;\,3)\)</span> et
+          <span class="math">\(D(0\,;\,7)\)</span>.
+          Déterminer si les droites <span class="math">\((AB)\)</span> et
+          <span class="math">\((CD)\)</span> sont parallèles.
+        </p>
+      </div>
+
+      <div class="exercise-box">
+        <h3>Exercice 8 — Parallélogramme</h3>
+        <p>
+          On donne <span class="math">\(A(0\,;\,1)\)</span>,
+          <span class="math">\(B(5\,;\,2)\)</span>,
+          <span class="math">\(C(7\,;\,6)\)</span> et
+          <span class="math">\(D(2\,;\,5)\)</span>.
+        </p>
+        <ol>
+          <li>Démontrer que <span class="math">\(ABCD\)</span> est un parallélogramme à l’aide des vecteurs.</li>
+          <li>Vérifier le résultat en calculant les milieux des diagonales.</li>
+        </ol>
+      </div>
+
+    </section>
+
+    <section class="section" id="video">
+      <h2>Vidéo</h2>
+      <div class="video-box">
+        <p>Vidéo explicative sur les vecteurs et les coordonnées :</p>
+        <iframe
+          src="https://www.youtube.com/embed/LIEN_VIDEO"
+          title="Cours vidéo sur les vecteurs et les coordonnées"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>À retenir</h2>
+      <div class="tip-box">
+        <p>
+          Pour <span class="math">\(\overrightarrow{AB}\)</span>, calcule toujours
+          les coordonnées du point d’arrivée moins celles du point de départ.
+        </p>
+      </div>
+      <div class="tip-box">
+        <p>
+          Les formules de norme et de distance s’utilisent dans un repère
+          <strong>orthonormé</strong>.
+        </p>
+      </div>
+      <div class="tip-box">
+        <p>
+          Pour tester une colinéarité sans division, calcule le déterminant
+          <span class="math">\(xy'-yx'\)</span>.
+        </p>
+      </div>
+      <div class="tip-box">
+        <p>
+          Une figure aide à conjecturer ; les coordonnées et les égalités vectorielles
+          permettent de démontrer.
+        </p>
+      </div>
+
+      <div class="footer-nav">
+        <a href="geometrie.html" class="btn btn-secondary">← Retour</a>
+        <a href="index.html" class="btn btn-primary">Accueil</a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
