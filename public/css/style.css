@@ -985,6 +985,13 @@ textarea:focus-visible {
     flex-direction: column;
   }
 
+  /* En colonne, la base flexible de 160 px deviendrait la hauteur du bouton. */
+  .card-actions .btn {
+    flex: 0 0 auto;
+    height: auto;
+    min-height: 52px;
+  }
+
   .btn,
   .btn-small {
     width: 100%;

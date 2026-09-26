@@ -288,6 +288,9 @@ code {
   .btn,
   .back-link {
     width: 100%;
+    height: auto;
+    min-height: 52px;
+    flex: none;
     text-align: center;
   }
 }
