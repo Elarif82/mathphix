@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MathPhiX — Arithmétique</title>
+  <title>Arithmétique en Seconde : multiples, diviseurs et parité | MathPhiX</title>
+  <meta name="description" content="Cours d’arithmétique de Seconde : entiers naturels et relatifs, multiples, diviseurs, nombres pairs et impairs, fractions irréductibles, démonstrations, algorithmes et exercices." />
   <link rel="stylesheet" href="css/style2.css" />
 </head>
 
 <body>
-
   <header class="site-header">
     <div class="header-container">
       <div>
         <h1 class="site-title">MathPhiX</h1>
-        <p class="site-subtitle">Seconde — Arithmétique</p>
+        <p class="site-subtitle">Seconde - Arithmétique</p>
       </div>
       <a href="nombres-calculs.html" class="back-link">← Retour</a>
     </div>
@@ -23,236 +23,288 @@
     <div class="hero-card">
       <h1>Arithmétique</h1>
       <p>
-        Dans ce chapitre, tu vas réviser la divisibilité, les multiples, les diviseurs,
-        la division euclidienne et les nombres premiers.
+        Découvre comment reconnaître les multiples et les diviseurs, raisonner sur
+        les nombres pairs et impairs et rendre une fraction irréductible.
       </p>
-
       <div class="hero-tags">
-        <span class="tag">Cours</span>
-        <span class="tag">Exercices</span>
-        <span class="tag">Vidéo</span>
-        <span class="tag">Astuce</span>
+        <span class="tag">Entiers</span>
+        <span class="tag">Multiples</span>
+        <span class="tag">Parité</span>
+        <span class="tag">Fractions</span>
       </div>
     </div>
   </section>
 
   <main class="container">
-
-    <section class="section">
-      <h2>Cours</h2>
+    <section class="section" id="cours">
+      <h2>1. Entiers naturels et entiers relatifs</h2>
 
       <div class="lesson-box">
-        <h3>1. Multiple et diviseur</h3>
+        <h3>Les ensembles ℕ et ℤ</h3>
         <p>
-          Un nombre <span class="math">a</span> est un multiple de <span class="math">b</span>
-          s’il existe un entier <span class="math">k</span> tel que
-          <span class="math">a = b × k</span>.
+          L’ensemble <span class="math">ℕ</span> contient les entiers naturels :
+          <span class="math">ℕ = {0 ; 1 ; 2 ; 3 ; ...}</span>.
         </p>
         <p>
-          Dans ce cas, on dit aussi que <span class="math">b</span> est un diviseur de
-          <span class="math">a</span>.
+          L’ensemble <span class="math">ℤ</span> contient les entiers relatifs :
+          <span class="math">ℤ = {... ; -3 ; -2 ; -1 ; 0 ; 1 ; 2 ; 3 ; ...}</span>.
         </p>
+        <p>Tout entier naturel est un entier relatif : <span class="math">ℕ ⊂ ℤ</span>.</p>
+      </div>
+    </section>
+
+    <section class="section" id="multiples-diviseurs">
+      <h2>2. Multiples et diviseurs</h2>
+
+      <div class="lesson-box">
+        <h3>Définition</h3>
         <p>
-          Exemple : <span class="math">24 = 6 × 4</span>, donc 24 est un multiple de 6
-          et 6 est un diviseur de 24.
+          Soient <span class="math">a</span> et <span class="math">b</span> deux entiers,
+          avec <span class="math">b ≠ 0</span>. On dit que <span class="math">a</span> est
+          un <strong>multiple</strong> de <span class="math">b</span> s’il existe un entier
+          <span class="math">k</span> tel que :
         </p>
+        <p class="math">a = k × b.</p>
+        <p>Dans ce cas, <span class="math">b</span> est un <strong>diviseur</strong> de <span class="math">a</span>.</p>
       </div>
 
-      <div class="lesson-box">
-        <h3>2. Critères de divisibilité</h3>
+      <div class="example-box">
+        <h3>Exemples</h3>
         <ul>
-          <li>Un nombre est divisible par 2 s’il est pair.</li>
-          <li>Un nombre est divisible par 3 si la somme de ses chiffres est un multiple de 3.</li>
-          <li>Un nombre est divisible par 5 s’il se termine par 0 ou 5.</li>
-          <li>Un nombre est divisible par 9 si la somme de ses chiffres est un multiple de 9.</li>
-          <li>Un nombre est divisible par 10 s’il se termine par 0.</li>
+          <li><span class="math">21 = 7 × 3</span> : 21 est un multiple de 3 et 3 divise 21.</li>
+          <li><span class="math">-20 = (-4) × 5</span> : -20 est un multiple de 5.</li>
+          <li>11 n’est pas un multiple de 5 car aucun entier <span class="math">k</span> ne vérifie <span class="math">11 = 5k</span>.</li>
         </ul>
       </div>
 
       <div class="lesson-box">
-        <h3>3. Division euclidienne</h3>
+        <h3>Critères utiles</h3>
+        <ul>
+          <li>Un entier est divisible par 2 si son chiffre des unités est 0, 2, 4, 6 ou 8.</li>
+          <li>Il est divisible par 3 si la somme de ses chiffres est divisible par 3.</li>
+          <li>Il est divisible par 5 s’il se termine par 0 ou 5.</li>
+          <li>Il est divisible par 9 si la somme de ses chiffres est divisible par 9.</li>
+          <li>Il est divisible par 10 s’il se termine par 0.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="somme-multiples">
+      <h2>3. Somme de deux multiples</h2>
+
+      <div class="lesson-box">
+        <h3>Propriété</h3>
+        <p>La somme de deux multiples d’un même entier est encore un multiple de cet entier.</p>
+      </div>
+
+      <div class="example-box">
+        <h3>Démonstration pour les multiples de 7</h3>
         <p>
-          Effectuer la division euclidienne de <span class="math">a</span> par
-          <span class="math">b</span>, avec <span class="math">b ≠ 0</span>, consiste à écrire :
+          Soient <span class="math">u</span> et <span class="math">v</span> deux multiples de 7.
+          Il existe donc deux entiers <span class="math">k</span> et <span class="math">m</span> tels que :
         </p>
+        <p class="math">u = 7k et v = 7m.</p>
+        <p>Alors :</p>
+        <p class="math">u + v = 7k + 7m = 7(k + m).</p>
         <p>
-          <span class="math">a = b × q + r</span>
+          Comme <span class="math">k + m</span> est un entier, <span class="math">u + v</span>
+          est un multiple de 7.
         </p>
+      </div>
+
+      <div class="tip-box">
         <p>
-          avec <span class="math">0 ≤ r &lt; b</span>.
+          Cette propriété concerne des multiples d’un <strong>même entier</strong>.
+          Par exemple, 28 et 35 sont des multiples de 7, donc 63 est aussi un multiple de 7.
         </p>
+      </div>
+    </section>
+
+    <section class="section" id="parite">
+      <h2>4. Nombres pairs et nombres impairs</h2>
+
+      <div class="lesson-box">
+        <h3>Définitions</h3>
+        <p>Un entier <span class="math">n</span> est <strong>pair</strong> s’il existe un entier <span class="math">k</span> tel que :</p>
+        <p class="math">n = 2k.</p>
+        <p>Un entier <span class="math">n</span> est <strong>impair</strong> s’il existe un entier <span class="math">k</span> tel que :</p>
+        <p class="math">n = 2k + 1.</p>
+        <p>Exemples : <span class="math">42 = 2 × 21</span> est pair et <span class="math">35 = 2 × 17 + 1</span> est impair.</p>
+      </div>
+
+      <div class="example-box">
+        <h3>Démonstration : le carré d’un nombre impair est impair</h3>
+        <p>Soit <span class="math">n</span> un entier impair. Il existe un entier <span class="math">k</span> tel que :</p>
+        <p class="math">n = 2k + 1.</p>
+        <p>Alors :</p>
+        <p class="math">n² = (2k + 1)² = 4k² + 4k + 1 = 2(2k² + 2k) + 1.</p>
         <p>
-          <span class="math">q</span> est le quotient et <span class="math">r</span> est le reste.
-        </p>
-        <p>
-          Exemple : <span class="math">29 = 4 × 7 + 1</span>
+          Le nombre <span class="math">2k² + 2k</span> est entier. Ainsi,
+          <span class="math">n²</span> est de la forme <span class="math">2p + 1</span> : il est impair.
         </p>
       </div>
 
       <div class="lesson-box">
-        <h3>4. Nombres premiers</h3>
-        <p>
-          Un nombre premier est un entier naturel qui possède exactement deux diviseurs :
-          1 et lui-même.
-        </p>
-        <p>
-          Exemples : <span class="math">2, 3, 5, 7, 11, 13</span>
-        </p>
-        <p>
-          Le nombre <span class="math">1</span> n’est pas un nombre premier.
-        </p>
+        <h3>Quelques résultats de parité</h3>
+        <ul>
+          <li>pair + pair = pair ;</li>
+          <li>impair + impair = pair ;</li>
+          <li>pair + impair = impair ;</li>
+          <li>le produit de deux nombres impairs est impair ;</li>
+          <li>un produit contenant un facteur pair est pair.</li>
+        </ul>
       </div>
+    </section>
+
+    <section class="section" id="fractions-irreductibles">
+      <h2>5. Fractions irréductibles</h2>
 
       <div class="lesson-box">
-        <h3>5. Critère de primalité</h3>
+        <h3>Définition</h3>
         <p>
-          Pour savoir si un entier <span class="math">n</span> est premier, il suffit de tester
-          la divisibilité de <span class="math">n</span> par les nombres premiers inférieurs
-          ou égaux à <span class="math">√n</span>.
-        </p>
-        <p>
-          Si aucun de ces nombres premiers ne divise <span class="math">n</span>,
-          alors <span class="math">n</span> est premier.
-        </p>
-        <p>
-          Exemple : pour <span class="math">29</span>, on a
-          <span class="math">√29 ≈ 5,4</span>.
-        </p>
-        <p>
-          On teste donc <span class="math">2</span>, <span class="math">3</span> et
-          <span class="math">5</span>.
-        </p>
-        <p>
-          29 n’est divisible par aucun de ces nombres, donc
-          <span class="math">29</span> est premier.
-        </p>
-      </div>
-
-      <div class="lesson-box">
-        <h3>6. Décomposition en produit de facteurs premiers</h3>
-        <p>
-          Tout entier naturel supérieur ou égal à 2 peut s’écrire comme un produit de nombres premiers.
-        </p>
-        <p>
-          Exemple : <span class="math">60 = 2 × 2 × 3 × 5 = 2² × 3 × 5</span>
+          Deux entiers sont <strong>premiers entre eux</strong> lorsque leur seul diviseur positif commun est 1.
+          Une fraction est <strong>irréductible</strong> lorsque son numérateur et son dénominateur sont premiers entre eux.
         </p>
       </div>
 
       <div class="example-box">
-        <h3>Exemple</h3>
-        <p>Décomposons 84 en produit de facteurs premiers :</p>
-        <p><span class="math">84 = 2 × 42</span></p>
-        <p><span class="math">84 = 2 × 2 × 21</span></p>
-        <p><span class="math">84 = 2 × 2 × 3 × 7</span></p>
-        <p>Donc <span class="math">84 = 2² × 3 × 7</span></p>
+        <h3>Exemple 1</h3>
+        <p>Les diviseurs positifs de 20 sont <span class="math">1, 2, 4, 5, 10, 20</span>.</p>
+        <p>Les diviseurs positifs de 77 sont <span class="math">1, 7, 11, 77</span>.</p>
+        <p>Leur seul diviseur positif commun est 1 : la fraction <span class="math">20/77</span> est irréductible.</p>
+      </div>
+
+      <div class="example-box">
+        <h3>Exemple 2 - Rendre une fraction irréductible</h3>
+        <p>Le numérateur et le dénominateur de <span class="math">84/126</span> sont divisibles par 42 :</p>
+        <p class="math">84/126 = (42 × 2)/(42 × 3) = 2/3.</p>
+        <p>Comme 2 et 3 sont premiers entre eux, <span class="math">2/3</span> est irréductible.</p>
       </div>
     </section>
 
-    <section class="section">
-      <h2>Exercices</h2>
+    <section class="section" id="algorithmes">
+      <h2>6. Algorithmes</h2>
 
-      <div class="exercise-box">
-        <h3>Exercice 1</h3>
-        <p>Recopie puis complète :</p>
-        <ul>
-          <li>18 est un multiple de ...</li>
-          <li>4 est un diviseur de ...</li>
-          <li>25 est divisible par ...</li>
-        </ul>
+      <div class="lesson-box">
+        <h3>Tester si un entier est un multiple d’un autre</h3>
+        <p>
+          Le reste de la division euclidienne de <span class="math">a</span> par
+          <span class="math">b</span> est obtenu en Python avec <span class="math">a % b</span>.
+          Si ce reste vaut 0, alors <span class="math">a</span> est un multiple de <span class="math">b</span>.
+        </p>
+        <pre><code>def est_multiple(a, b):
+    return a % b == 0</code></pre>
+        <p>Par exemple, <span class="math">est_multiple(42, 7)</span> renvoie <span class="math">True</span>.</p>
       </div>
 
-      <div class="exercise-box">
-        <h3>Exercice 2</h3>
-        <p>Indique si les nombres suivants sont divisibles par 2, 3, 5, 9 ou 10 :</p>
-        <ul>
-          <li>36</li>
-          <li>75</li>
-          <li>128</li>
-          <li>450</li>
-        </ul>
-      </div>
-
-      <div class="exercise-box">
-        <h3>Exercice 3</h3>
-        <p>Effectue les divisions euclidiennes suivantes :</p>
-        <ul>
-          <li>35 par 6</li>
-          <li>48 par 7</li>
-          <li>92 par 9</li>
-        </ul>
-      </div>
-
-      <div class="exercise-box">
-        <h3>Exercice 4</h3>
-        <p>Parmi les nombres suivants, lesquels sont premiers ?</p>
-        <ul>
-          <li>2</li>
-          <li>9</li>
-          <li>13</li>
-          <li>24</li>
-          <li>31</li>
-        </ul>
-      </div>
-
-      <div class="exercise-box">
-        <h3>Exercice 5</h3>
-        <p>Déterminer si les nombres suivants sont premiers en utilisant le critère de primalité :</p>
-        <ul>
-          <li>17</li>
-          <li>21</li>
-          <li>37</li>
-          <li>41</li>
-        </ul>
-      </div>
-
-      <div class="exercise-box">
-        <h3>Exercice 6</h3>
-        <p>Décompose en produit de facteurs premiers :</p>
-        <ul>
-          <li>36</li>
-          <li>72</li>
-          <li>90</li>
-        </ul>
+      <div class="lesson-box">
+        <h3>Plus grand multiple de a inférieur ou égal à b</h3>
+        <p>Pour des entiers naturels <span class="math">a &gt; 0</span> et <span class="math">b</span> :</p>
+        <pre><code>def plus_grand_multiple(a, b):
+    quotient = b // a
+    return quotient * a</code></pre>
+        <p>Par exemple, le plus grand multiple de 7 inférieur ou égal à 50 est <span class="math">49</span>.</p>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" id="problemes">
+      <h2>7. Résoudre des problèmes</h2>
+
+      <div class="example-box">
+        <h3>Répartir des objets</h3>
+        <p>
+          On veut ranger 96 cahiers dans des lots contenant tous le même nombre de cahiers,
+          sans reste. Les tailles possibles des lots sont exactement les diviseurs de 96.
+        </p>
+        <p>
+          Par exemple, des lots de 8 conviennent car <span class="math">96 = 12 × 8</span>.
+          On obtient alors 12 lots.
+        </p>
+      </div>
+
+      <div class="example-box">
+        <h3>Raisonner avec la parité</h3>
+        <p>
+          La somme de trois entiers impairs est-elle paire ou impaire ?
+          Écrivons-les <span class="math">2a + 1</span>, <span class="math">2b + 1</span>
+          et <span class="math">2c + 1</span>.
+        </p>
+        <p class="math">(2a + 1) + (2b + 1) + (2c + 1) = 2(a + b + c + 1) + 1.</p>
+        <p>La somme est donc impaire.</p>
+      </div>
+    </section>
+
+    <section class="section" id="exercices">
+      <h2>Exercices d’entraînement</h2>
+
+      <div class="exercise-box">
+        <h3>Exercice 1 - Multiples et diviseurs</h3>
+        <ol>
+          <li>Montrer que 132 est un multiple de 11.</li>
+          <li>Déterminer si 7 divise 185.</li>
+          <li>Donner tous les diviseurs positifs de 36.</li>
+        </ol>
+      </div>
+
+      <div class="exercise-box">
+        <h3>Exercice 2 - Somme de multiples</h3>
+        <p>Les entiers <span class="math">u</span> et <span class="math">v</span> sont des multiples de 5. Démontrer que <span class="math">u + v</span> est un multiple de 5.</p>
+      </div>
+
+      <div class="exercise-box">
+        <h3>Exercice 3 - Parité</h3>
+        <ol>
+          <li>Démontrer que le carré d’un entier pair est pair.</li>
+          <li>Déterminer la parité de la somme de cinq entiers impairs.</li>
+          <li>Démontrer que le produit de deux entiers impairs est impair.</li>
+        </ol>
+      </div>
+
+      <div class="exercise-box">
+        <h3>Exercice 4 - Fractions irréductibles</h3>
+        <p>Écrire sous forme irréductible :</p>
+        <ul>
+          <li><span class="math">36/48</span></li>
+          <li><span class="math">90/126</span></li>
+          <li><span class="math">-72/120</span></li>
+        </ul>
+      </div>
+
+      <div class="exercise-box">
+        <h3>Exercice 5 - Problème</h3>
+        <p>
+          Une association dispose de 84 bouteilles d’eau et de 126 barres de céréales.
+          Elle veut préparer des lots identiques en utilisant tout le stock.
+          Quelles conditions doit vérifier le nombre de lots ? Proposer une répartition possible.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="video">
       <h2>Vidéo</h2>
-
       <div class="video-box">
-        <p>Vidéo explicative sur l’arithmétique :</p>
-
+        <p>Ajoutez ici votre vidéo sur les multiples, les diviseurs et la parité.</p>
         <iframe
           src="https://www.youtube.com/embed/LIEN_VIDEO"
+          title="Cours d’arithmétique en Seconde"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen>
         </iframe>
       </div>
     </section>
 
     <section class="section">
-      <h2>Astuce</h2>
-
-      <div class="tip-box">
-        <p>
-          Pour tester rapidement la divisibilité, pense d’abord aux critères simples :
-          2, 3, 5, 9 et 10.
-        </p>
-      </div>
-
-      <div class="tip-box">
-        <p>
-          Pour décomposer un nombre, commence par les plus petits nombres premiers :
-          2, puis 3, puis 5, puis 7.
-        </p>
-      </div>
+      <h2>À retenir</h2>
+      <div class="tip-box"><p><span class="math">a</span> est un multiple de <span class="math">b</span> lorsqu’on peut écrire <span class="math">a = kb</span> avec <span class="math">k</span> entier.</p></div>
+      <div class="tip-box"><p>Pour démontrer une propriété de parité, écris un entier pair sous la forme <span class="math">2k</span> et un entier impair sous la forme <span class="math">2k + 1</span>.</p></div>
+      <div class="tip-box"><p>Une fraction est irréductible lorsque son numérateur et son dénominateur n’ont aucun diviseur positif commun autre que 1.</p></div>
 
       <div class="footer-nav">
         <a href="nombres-calculs.html" class="btn btn-secondary">← Retour</a>
         <a href="index.html" class="btn btn-primary">Accueil</a>
       </div>
     </section>
-
   </main>
-
 </body>
 </html>

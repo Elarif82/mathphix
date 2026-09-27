@@ -3,17 +3,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MathPhiX — Inéquations</title>
+  <title>Inéquations en Seconde : cours, méthodes et exercices | MathPhiX</title>
+  <meta name="description" content="Cours de Seconde sur les inéquations : règles de calcul, intervalles, inéquations du premier degré, signe d’un produit ou d’un quotient, méthodes et exercices." />
   <link rel="stylesheet" href="css/style2.css" />
+  <style>
+    .latex-sign-table {
+      margin: 1.25rem 0;
+      overflow-x: auto;
+      padding: 1rem;
+      border: 1px solid #cbd5e1;
+      border-radius: 14px;
+      background: #fff;
+      text-align: center;
+    }
+    .latex-sign-table mjx-container { min-width: 680px; margin: 0 !important; }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 </head>
-
 <body>
-
 <header class="site-header">
   <div class="header-container">
     <div>
       <h1 class="site-title">MathPhiX</h1>
-      <p class="site-subtitle">Seconde — Inéquations</p>
+      <p class="site-subtitle">Seconde - Inéquations</p>
     </div>
     <a href="nombres-calculs.html" class="back-link">← Retour</a>
   </div>
@@ -22,177 +40,233 @@
 <section class="hero">
   <div class="hero-card">
     <h1>Inéquations</h1>
-    <p>
-      Dans ce chapitre, tu vas apprendre à résoudre des inéquations
-      et à exprimer les solutions sous forme d’intervalles.
-    </p>
-
+    <p>Comparer, résoudre et représenter : apprends à transformer une inégalité, à déterminer un ensemble de solutions et à l’écrire sous forme d’intervalle.</p>
     <div class="hero-tags">
-      <span class="tag">Cours</span>
-      <span class="tag">Exercices</span>
-      <span class="tag">Vidéo</span>
-      <span class="tag">Astuce</span>
+      <span class="tag">Inégalités</span><span class="tag">Premier degré</span>
+      <span class="tag">Tableaux de signes</span><span class="tag">Intervalles</span>
     </div>
   </div>
 </section>
 
 <main class="container">
+  <section class="section" id="cours">
+    <h2>1. Inégalités et inéquations</h2>
+    <div class="lesson-box">
+      <h3>Définition</h3>
+      <p>Une <strong>inéquation</strong> est une inégalité contenant une inconnue. La résoudre consiste à déterminer toutes les valeurs de l’inconnue pour lesquelles l’inégalité est vraie.</p>
+      <p>Exemple : <span class="math">2x + 3 ≥ 7</span>. La valeur <span class="math">x = 4</span> est une solution car <span class="math">2 × 4 + 3 = 11</span> et <span class="math">11 ≥ 7</span>.</p>
+    </div>
+    <div class="lesson-box">
+      <h3>Règle 1 - Ajouter ou soustraire</h3>
+      <p>Ajouter ou soustraire un même nombre aux deux membres d’une inégalité <strong>ne change pas son sens</strong>.</p>
+      <p class="math">Si A &lt; B, alors A + C &lt; B + C et A - C &lt; B - C.</p>
+      <p>Si <span class="math">-2 ≤ x &lt; 3</span>, alors, en soustrayant 5 aux trois membres :</p>
+      <p class="math">-7 ≤ x - 5 &lt; -2.</p>
+    </div>
+    <div class="lesson-box">
+      <h3>Règle 2 - Multiplier ou diviser</h3>
+      <ul>
+        <li>Par un nombre <strong>strictement positif</strong>, le sens ne change pas.</li>
+        <li>Par un nombre <strong>strictement négatif</strong>, le sens de l’inégalité <strong>s’inverse</strong>.</li>
+      </ul>
+      <p class="math">Si A &lt; B et C &gt; 0, alors AC &lt; BC.</p>
+      <p class="math">Si A &lt; B et C &lt; 0, alors AC &gt; BC.</p>
+    </div>
+    <div class="example-box">
+      <h3>Exemple avec un nombre négatif</h3>
+      <p>Résoudre <span class="math">-3x ≤ 6</span>.</p>
+      <p>On divise par <span class="math">-3</span>. Comme ce nombre est négatif, on inverse le sens :</p>
+      <p class="math">x ≥ -2.</p>
+      <p>Ensemble des solutions : <span class="math">S = [-2 ; +∞[</span>.</p>
+    </div>
+    <div class="lesson-box">
+      <h3>Règle 3 - Additionner deux inégalités</h3>
+      <p>On peut additionner membre à membre deux inégalités de même sens :</p>
+      <p class="math">si A &lt; B et C &lt; D, alors A + C &lt; B + D.</p>
+      <p>Si <span class="math">x &gt; -1</span> et <span class="math">y &gt; 4</span>, alors <span class="math">x + y &gt; 3</span>.</p>
+    </div>
+    <div class="tip-box"><p><strong>Attention :</strong> on ne peut pas, en général, soustraire membre à membre deux inégalités.</p></div>
+  </section>
 
-<!-- ===================== COURS ===================== -->
-<section class="section">
-  <h2>Cours</h2>
+  <section class="section" id="premier-degre">
+    <h2>2. Résoudre une inéquation du premier degré</h2>
+    <div class="lesson-box">
+      <h3>Méthode</h3>
+      <ol>
+        <li>Développer et réduire si nécessaire.</li>
+        <li>Regrouper les termes contenant <span class="math">x</span> dans un même membre.</li>
+        <li>Regrouper les nombres dans l’autre membre.</li>
+        <li>Diviser par le coefficient de <span class="math">x</span>, en inversant le sens s’il est négatif.</li>
+        <li>Écrire l’ensemble des solutions sous forme d’intervalle.</li>
+      </ol>
+    </div>
+    <div class="example-box">
+      <h3>Exemple détaillé</h3>
+      <p>Résoudre <span class="math">3x + 1 ≤ 12x - 4</span>.</p>
+      <p class="math">3x + 1 ≤ 12x - 4</p><p class="math">1 ≤ 9x - 4</p>
+      <p class="math">5 ≤ 9x</p><p class="math">5/9 ≤ x</p>
+      <p>Donc <span class="math">x ≥ 5/9</span> et <span class="math">S = [5/9 ; +∞[</span>.</p>
+    </div>
+    <div class="example-box">
+      <h3>Modéliser une situation</h3>
+      <p>Une salle facture 30 € de réservation puis 8 € par participant. Le budget maximal est de 150 €. Si <span class="math">x</span> désigne le nombre de participants :</p>
+      <p class="math">30 + 8x ≤ 150, puis 8x ≤ 120, donc x ≤ 15.</p>
+      <p>La salle peut accueillir au maximum <strong>15 participants</strong> avec ce budget.</p>
+    </div>
+  </section>
 
-  <div class="lesson-box">
-    <h3>1. Définition</h3>
-    <p>
-      Une inéquation est une inégalité contenant une inconnue.
-    </p>
-    <p>
-      Exemple : <span class="math">2x + 3 ≥ 7</span>
-    </p>
-  </div>
+  <section class="section" id="intervalles">
+    <h2>3. Traduire les solutions par un intervalle</h2>
+    <div class="lesson-box">
+      <ul>
+        <li><span class="math">x ≥ a</span> se note <span class="math">[a ; +∞[</span> ;</li>
+        <li><span class="math">x &gt; a</span> se note <span class="math">]a ; +∞[</span> ;</li>
+        <li><span class="math">x ≤ a</span> se note <span class="math">]-∞ ; a]</span> ;</li>
+        <li><span class="math">x &lt; a</span> se note <span class="math">]-∞ ; a[</span> ;</li>
+        <li><span class="math">a ≤ x &lt; b</span> se note <span class="math">[a ; b[</span>.</li>
+      </ul>
+      <p>Les symboles <span class="math">-∞</span> et <span class="math">+∞</span> ne sont jamais inclus : le crochet est toujours ouvert du côté de l’infini.</p>
+    </div>
+  </section>
 
-  <div class="lesson-box">
-    <h3>2. Règles de résolution</h3>
-    <ul>
-      <li>On peut ajouter ou soustraire un même nombre des deux côtés.</li>
-      <li>On peut multiplier ou diviser par un nombre positif.</li>
-      <li>
-        Si on multiplie ou divise par un nombre négatif,
-        on change le sens de l’inégalité.
-      </li>
-    </ul>
-  </div>
+  <section class="section" id="signe-affine">
+    <h2>4. Signe d’une expression affine</h2>
+    <div class="lesson-box">
+      <p>Pour <span class="math">ax + b</span> avec <span class="math">a ≠ 0</span>, le changement de signe se produit pour <span class="math">x = -b/a</span>.</p>
+      <ul>
+        <li>si <span class="math">a &gt; 0</span>, l’expression est négative avant la racine et positive après ;</li>
+        <li>si <span class="math">a &lt; 0</span>, l’expression est positive avant la racine et négative après.</li>
+      </ul>
+    </div>
+    <div class="example-box">
+      <h3>Exemple : signe de 2x + 4</h3>
+      <p><span class="math">2x + 4 = 0</span> équivaut à <span class="math">x = -2</span>.</p>
+      <p>Comme le coefficient de <span class="math">x</span> est positif, l’expression est négative sur <span class="math">]-∞ ; -2[</span>, nulle en <span class="math">-2</span>, puis positive sur <span class="math">]-2 ; +∞[</span>.</p>
+    </div>
+  </section>
 
-  <div class="lesson-box">
-    <h3>3. Résolution simple</h3>
-    <p>
-      Résoudre : <span class="math">2x + 3 ≥ 7</span>
-    </p>
-    <p>
-      <span class="math">2x ≥ 4</span>
-    </p>
-    <p>
-      <span class="math">x ≥ 2</span>
-    </p>
-  </div>
+  <section class="section" id="tableaux-signes">
+    <h2>5. Inéquations avec un produit ou un quotient</h2>
+    <div class="lesson-box">
+      <h3>Méthode du tableau de signes</h3>
+      <ol>
+        <li>Tout regrouper dans un même membre pour comparer l’expression à 0.</li>
+        <li>Factoriser si nécessaire.</li>
+        <li>Déterminer les zéros des facteurs et les valeurs interdites d’un quotient.</li>
+        <li>Étudier le signe de chaque facteur, puis celui du produit ou du quotient.</li>
+        <li>Sélectionner les intervalles correspondant au signe demandé.</li>
+      </ol>
+      <p>
+        Dans les tableaux ci-dessous, une barre verticale indique que la valeur de
+        <span class="math">x</span> placée sur la première ligne n’annule pas l’expression affine considérée.
+        Le nombre <span class="math">0</span> est écrit uniquement lorsque l’expression s’annule.
+      </p>
+    </div>
+    <div class="example-box">
+      <h3>Exemple 1 - Signe d’un produit</h3>
+      <p>Résoudre dans <span class="math">ℝ</span> : <span class="math">(2x - 6)(-x - 2) ≤ 0</span>.</p>
+      <p>
+        Le facteur <span class="math">2x - 6</span> s’annule pour <span class="math">x = 3</span>
+        et le facteur <span class="math">-x - 2</span> s’annule pour <span class="math">x = -2</span>.
+        On range les valeurs critiques dans l’ordre : <span class="math">-2 &lt; 3</span>.
+      </p>
+      <div class="latex-sign-table" role="img" aria-label="Tableau de signes du produit (2x moins 6) multiplié par (moins x moins 2)">
+        \[
+        \begin{array}{c|ccccccc}
+          x & -\infty & & -2 & & 3 & & +\infty \\
+          \hline
+          2x-6 & & - & \vert & - & 0 & + & \\
+          \hline
+          -x-2 & & + & 0 & - & \vert & - & \\
+          \hline
+          (2x-6)(-x-2) & & - & 0 & + & 0 & - &
+        \end{array}
+        \]
+      </div>
+      <p>On cherche un produit <strong>négatif ou nul</strong>. On conserve les zones portant le signe moins et les deux valeurs qui annulent le produit.</p>
+      <p class="math">S = ]-∞ ; -2] ∪ [3 ; +∞[.</p>
+    </div>
+    <div class="example-box">
+      <h3>Exemple 2 - Signe d’un quotient</h3>
+      <p>Résoudre dans <span class="math">ℝ</span> : <span class="math">(x + 1)/(2x - 4) ≥ 0</span>.</p>
+      <p>
+        Le numérateur s’annule pour <span class="math">x = -1</span>.
+        Le dénominateur s’annule pour <span class="math">x = 2</span> : cette valeur est
+        <strong>interdite</strong> et apparaît avec une double barre dans le tableau.
+      </p>
+      <div class="latex-sign-table" role="img" aria-label="Tableau de signes du quotient (x plus 1) sur (2x moins 4)">
+        \[
+        \begin{array}{c|ccccccc}
+          x & -\infty & & -1 & & 2 & & +\infty \\
+          \hline
+          x+1 & & - & 0 & + & \vert & + & \\
+          \hline
+          2x-4 & & - & \vert & - & 0 & + & \\
+          \hline
+          \dfrac{x+1}{2x-4} & & + & 0 & - & \Vert & + &
+        \end{array}
+        \]
+      </div>
+      <p>On cherche un quotient <strong>positif ou nul</strong>. On inclut <span class="math">-1</span>, qui annule seulement le numérateur, et on exclut <span class="math">2</span>, qui annule le dénominateur.</p>
+      <p class="math">S = ]-∞ ; -1] ∪ ]2 ; +∞[.</p>
+    </div>
+    <div class="tip-box"><p><strong>Point essentiel :</strong> un zéro du numérateur peut être inclus lorsque le signe contient « égal à 0 ». Un zéro du dénominateur est toujours exclu.</p></div>
+  </section>
 
-  <div class="lesson-box">
-    <h3>4. Résolution avec changement de sens</h3>
-    <p>
-      Résoudre : <span class="math">-3x ≤ 6</span>
-    </p>
-    <p>
-      <span class="math">x ≥ -2</span>
-    </p>
-  </div>
+  <section class="section">
+    <h2>6. Erreurs fréquentes</h2>
+    <div class="tip-box">
+      <ul>
+        <li>oublier d’inverser le signe après une multiplication ou une division par un nombre négatif ;</li>
+        <li>inclure une valeur qui annule le dénominateur ;</li>
+        <li>confondre une inégalité stricte avec une inégalité large ;</li>
+        <li>fermer un intervalle du côté de <span class="math">-∞</span> ou <span class="math">+∞</span> ;</li>
+        <li>lire le signe d’un produit sans étudier chacun de ses facteurs.</li>
+      </ul>
+    </div>
+  </section>
 
-  <div class="lesson-box">
-    <h3>5. Écriture des solutions</h3>
-    <p>
-      Les solutions s’écrivent sous forme d’intervalle.
-    </p>
-    <p>
-      Exemple :
-      <span class="math">x ≥ 2 → [2 ; +∞[</span>
-    </p>
-  </div>
+  <section class="section" id="exercices">
+    <h2>Exercices d’entraînement</h2>
+    <div class="exercise-box">
+      <h3>Exercice 1 - Automatismes</h3>
+      <p>Résoudre et donner l’ensemble des solutions sous forme d’intervalle :</p>
+      <ol><li><span class="math">x + 3 ≥ 7</span></li><li><span class="math">5x - 15 ≤ 0</span></li><li><span class="math">-2x &lt; 6</span></li><li><span class="math">3x + 1 ≤ 7x - 11</span></li></ol>
+    </div>
+    <div class="exercise-box">
+      <h3>Exercice 2 - Intervalles</h3>
+      <p>Traduire par une ou plusieurs inégalités :</p>
+      <ol><li><span class="math">[-3 ; 5]</span></li><li><span class="math">]2 ; +∞[</span></li><li><span class="math">]-∞ ; 4[</span></li></ol>
+    </div>
+    <div class="exercise-box">
+      <h3>Exercice 3 - Produit et quotient</h3>
+      <p>Résoudre à l’aide d’un tableau de signes :</p>
+      <ol><li><span class="math">(2x - 6)(x + 1) ≥ 0</span></li><li><span class="math">(5 - x)(3x + 6) &lt; 0</span></li><li><span class="math">(x - 4)/(2x + 2) ≤ 0</span></li></ol>
+    </div>
+    <div class="exercise-box">
+      <h3>Exercice 4 - Problème</h3>
+      <p>Un service coûte 18 € d’abonnement puis 6 € par utilisation. On dispose de 90 €. Modéliser la situation par une inéquation et déterminer le nombre maximal d’utilisations.</p>
+    </div>
+  </section>
 
-  <div class="example-box">
-    <h3>Exemple</h3>
-    <p>Résoudre : <span class="math">3x - 5 &lt; 10</span></p>
-    <p><span class="math">3x &lt; 15</span></p>
-    <p><span class="math">x &lt; 5</span></p>
-    <p>Solution : <span class="math">]-∞ ; 5[</span></p>
-  </div>
+  <section class="section" id="video">
+    <h2>Vidéo</h2>
+    <div class="video-box">
+      <p>Ajoutez ici votre vidéo explicative sur les inéquations et les tableaux de signes.</p>
+      <iframe src="https://www.youtube.com/embed/LIEN_VIDEO" title="Cours sur les inéquations en Seconde" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+  </section>
 
-</section>
-
-<!-- ===================== EXERCICES ===================== -->
-<section class="section">
-  <h2>Exercices</h2>
-
-  <div class="exercise-box">
-    <h3>Exercice 1</h3>
-    <p>Résoudre :</p>
-    <ul>
-      <li>x + 3 ≥ 7</li>
-      <li>2x ≤ 10</li>
-      <li>x - 5 &lt; 2</li>
-    </ul>
-  </div>
-
-  <div class="exercise-box">
-    <h3>Exercice 2</h3>
-    <p>Résoudre :</p>
-    <ul>
-      <li>3x + 2 ≥ 11</li>
-      <li>5x - 15 ≤ 0</li>
-    </ul>
-  </div>
-
-  <div class="exercise-box">
-    <h3>Exercice 3</h3>
-    <p>Résoudre :</p>
-    <ul>
-      <li>-2x &lt; 6</li>
-      <li>-4x ≥ 8</li>
-    </ul>
-  </div>
-
-  <div class="exercise-box">
-    <h3>Exercice 4</h3>
-    <p>Donner l’intervalle solution :</p>
-    <ul>
-      <li>x ≥ 3</li>
-      <li>x &lt; 1</li>
-      <li>-2 ≤ x ≤ 4</li>
-    </ul>
-  </div>
-
-</section>
-
-<!-- ===================== VIDEO ===================== -->
-<section class="section">
-  <h2>Vidéo</h2>
-
-  <div class="video-box">
-    <p>Vidéo explicative sur les inéquations :</p>
-
-    <iframe
-      src="https://www.youtube.com/embed/LIEN_VIDEO"
-      allowfullscreen>
-    </iframe>
-  </div>
-
-</section>
-
-<!-- ===================== ASTUCE ===================== -->
-<section class="section">
-  <h2>Astuce</h2>
-
-  <div class="tip-box">
-    <p>
-      Si tu multiplies ou divises par un nombre négatif,
-      n’oublie jamais d’inverser le signe !
-    </p>
-  </div>
-
-  <div class="tip-box">
-    <p>
-      Pense toujours à vérifier la cohérence de ton résultat
-      avec un exemple numérique.
-    </p>
-  </div>
-
-  <div class="footer-nav">
-    <a href="nombres-calculs.html" class="btn btn-secondary">← Retour</a>
-    <a href="index.html" class="btn btn-primary">Accueil</a>
-  </div>
-
-</section>
-
+  <section class="section">
+    <h2>À retenir</h2>
+    <div class="tip-box"><p>Quand tu multiplies ou divises par un nombre négatif, <strong>inverse toujours le sens de l’inégalité</strong>.</p></div>
+    <div class="tip-box"><p>Pour un quotient, commence par déterminer les valeurs interdites : un dénominateur ne doit jamais être nul.</p></div>
+    <div class="tip-box"><p>Vérifie ton résultat avec une valeur prise dans l’intervalle et une valeur prise en dehors.</p></div>
+    <div class="footer-nav">
+      <a href="nombres-calculs.html" class="btn btn-secondary">← Retour</a>
+      <a href="index.html" class="btn btn-primary">Accueil</a>
+    </div>
+  </section>
 </main>
-
 </body>
 </html>

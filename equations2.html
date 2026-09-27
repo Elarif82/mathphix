@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MathPhiX — Équations</title>
+  <title>Équations en Seconde : cours, méthodes et exercices | MathPhiX</title>
+  <meta name="description" content="Cours de Seconde sur les équations : équations du premier degré, produit nul, factorisation, équations quotient, modélisation et exercices." />
   <link rel="stylesheet" href="css/style2.css" />
 </head>
 
 <body>
-
 <header class="site-header">
   <div class="header-container">
     <div>
       <h1 class="site-title">MathPhiX</h1>
-      <p class="site-subtitle">Seconde — Équations</p>
+      <p class="site-subtitle">Seconde - Équations</p>
     </div>
     <a href="nombres-calculs.html" class="back-link">← Retour</a>
   </div>
@@ -23,328 +23,301 @@
   <div class="hero-card">
     <h1>Équations</h1>
     <p>
-      Dans ce chapitre, tu vas apprendre à résoudre des équations du premier degré,
-      des équations avec ou sans second membre, puis des équations-produit.
+      Résoudre, vérifier et modéliser : apprends à résoudre une équation du premier degré,
+      une équation produit nul et des équations se ramenant à ces formes.
     </p>
-
     <div class="hero-tags">
-      <span class="tag">Cours</span>
-      <span class="tag">Équation-produit</span>
-      <span class="tag">Exercices</span>
-      <span class="tag">Méthode</span>
+      <span class="tag">Premier degré</span>
+      <span class="tag">Produit nul</span>
+      <span class="tag">Factorisation</span>
+      <span class="tag">Modélisation</span>
     </div>
   </div>
 </section>
 
 <main class="container">
+  <section class="section" id="cours">
+    <h2>1. Équations et solutions</h2>
 
-<section class="section">
-  <h2>Cours</h2>
+    <div class="lesson-box">
+      <h3>Définition</h3>
+      <p>
+        Une <strong>équation</strong> est une égalité contenant une ou plusieurs inconnues.
+        Résoudre une équation consiste à déterminer toutes les valeurs de l’inconnue qui rendent l’égalité vraie.
+      </p>
+      <p>
+        Dans <span class="math">2x + 3 = 11</span>, le nombre <span class="math">4</span> est une solution,
+        car <span class="math">2 × 4 + 3 = 11</span>.
+      </p>
+    </div>
 
-  <div class="lesson-box">
-    <h3>1. Définition</h3>
-    <p>
-      Une équation est une égalité dans laquelle il y a une inconnue.
-    </p>
-    <p>
-      Exemple : <span class="math">2x + 3 = 11</span>
-    </p>
-  </div>
+    <div class="lesson-box">
+      <h3>Équations équivalentes</h3>
+      <p>Deux équations sont équivalentes lorsqu’elles ont exactement les mêmes solutions.</p>
+      <p>Pour transformer une équation en une équation équivalente, on peut :</p>
+      <ul>
+        <li>ajouter ou soustraire un même nombre aux deux membres ;</li>
+        <li>multiplier ou diviser les deux membres par un même nombre <strong>non nul</strong> ;</li>
+        <li>développer, réduire ou factoriser une expression sans en changer la valeur.</li>
+      </ul>
+    </div>
 
-  <div class="lesson-box">
-    <h3>2. Principe de résolution</h3>
-    <p>
-      Résoudre une équation, c’est trouver la ou les valeurs de l’inconnue
-      qui rendent l’égalité vraie.
-    </p>
-    <p>
-      On peut ajouter, soustraire, multiplier ou diviser les deux membres
-      par un même nombre non nul sans changer les solutions.
-    </p>
-  </div>
+    <div class="tip-box">
+      <p><strong>Vocabulaire :</strong> dans une égalité, les expressions situées à gauche et à droite du signe égal sont appelées les deux <strong>membres</strong>.</p>
+    </div>
+  </section>
 
-  <div class="lesson-box">
-    <h3>3. Résolution d’une équation simple</h3>
-    <p>
-      Résoudre : <span class="math">2x + 3 = 11</span>
-    </p>
-    <p><span class="math">2x = 8</span></p>
-    <p><span class="math">x = 4</span></p>
-  </div>
+  <section class="section" id="premier-degre">
+    <h2>2. Équations du premier degré</h2>
 
-  <div class="lesson-box">
-    <h3>4. Vérification</h3>
-    <p>
-      On remplace la valeur trouvée dans l’équation de départ.
-    </p>
-    <p>
-      Exemple :
-      <span class="math">2 × 4 + 3 = 8 + 3 = 11</span>
-    </p>
-    <p>
-      Donc <span class="math">x = 4</span> est bien solution.
-    </p>
-  </div>
+    <div class="lesson-box">
+      <h3>Méthode</h3>
+      <p>Pour résoudre une équation du type <span class="math">ax + b = cx + d</span> :</p>
+      <ol>
+        <li>développer et réduire chaque membre si nécessaire ;</li>
+        <li>regrouper les termes contenant <span class="math">x</span> dans un même membre ;</li>
+        <li>regrouper les nombres dans l’autre membre ;</li>
+        <li>diviser par le coefficient de <span class="math">x</span>, s’il est non nul ;</li>
+        <li>vérifier la valeur obtenue dans l’équation de départ.</li>
+      </ol>
+    </div>
 
-  <div class="lesson-box">
-    <h3>5. Cas particuliers</h3>
-    <p>
-      Certaines équations n’ont pas de solution.
-    </p>
-    <p>
-      Exemple : <span class="math">x + 2 = x + 5</span>
-    </p>
-    <p>
-      D’autres ont une infinité de solutions.
-    </p>
-    <p>
-      Exemple : <span class="math">2(x + 1) = 2x + 2</span>
-    </p>
-  </div>
+    <div class="example-box">
+      <h3>Exemple détaillé</h3>
+      <p>Résoudre dans <span class="math">ℝ</span> : <span class="math">5x + 16 = 8x + 7</span>.</p>
+      <p><span class="math">5x + 16 = 8x + 7</span></p>
+      <p><span class="math">5x - 8x = 7 - 16</span></p>
+      <p><span class="math">-3x = -9</span></p>
+      <p><span class="math">x = 3</span></p>
+      <p>
+        Vérification : <span class="math">5 × 3 + 16 = 31</span> et
+        <span class="math">8 × 3 + 7 = 31</span>.
+        Donc <span class="math">S = {3}</span>.
+      </p>
+    </div>
 
-  <div class="lesson-box">
-    <h3>6. Équation avec second membre nul</h3>
-    <p>
-      Une équation avec second membre nul est une équation de la forme :
-    </p>
-    <p>
-      <span class="math">expression = 0</span>
-    </p>
-    <p>
-      Exemple : <span class="math">3x - 12 = 0</span>
-    </p>
-    <p>
-      On résout comme une équation classique :
-    </p>
-    <p><span class="math">3x = 12</span></p>
-    <p><span class="math">x = 4</span></p>
-  </div>
+    <div class="example-box">
+      <h3>Exemple avec développement</h3>
+      <p>Résoudre : <span class="math">3(2x - 5) = 4x + 1</span>.</p>
+      <p><span class="math">6x - 15 = 4x + 1</span></p>
+      <p><span class="math">2x = 16</span></p>
+      <p><span class="math">x = 8</span>, donc <span class="math">S = {8}</span>.</p>
+    </div>
 
-  <div class="lesson-box">
-    <h3>7. Équation-produit</h3>
-    <p>
-      Une équation-produit est une équation dans laquelle un produit de facteurs
-      est égal à zéro.
-    </p>
-    <p>
-      Exemple : <span class="math">(x - 3)(x + 2) = 0</span>
-    </p>
-  </div>
+    <div class="lesson-box">
+      <h3>Cas particuliers</h3>
+      <ul>
+        <li><span class="math">x + 2 = x + 5</span> conduit à <span class="math">2 = 5</span> : aucune solution, donc <span class="math">S = ∅</span>.</li>
+        <li><span class="math">2(x + 1) = 2x + 2</span> conduit à <span class="math">2x + 2 = 2x + 2</span> : tous les réels conviennent, donc <span class="math">S = ℝ</span>.</li>
+      </ul>
+    </div>
+  </section>
 
-  <div class="lesson-box">
-    <h3>8. Propriété du produit nul</h3>
-    <p>
-      Si un produit est nul, alors au moins l’un de ses facteurs est nul.
-    </p>
-    <p>
-      Autrement dit :
-    </p>
-    <p>
-      <span class="math">A × B = 0</span> signifie que
-      <span class="math">A = 0</span> ou <span class="math">B = 0</span>.
-    </p>
-  </div>
+  <section class="section" id="produit-nul">
+    <h2>3. Équations produit nul</h2>
 
-  <div class="lesson-box">
-    <h3>9. Méthode pour résoudre une équation-produit</h3>
-    <p>Pour résoudre une équation-produit :</p>
-    <ol>
-      <li>Vérifier que l’équation est bien sous la forme d’un produit égal à zéro.</li>
-      <li>Écrire que chaque facteur peut être égal à zéro.</li>
-      <li>Résoudre les équations obtenues.</li>
-      <li>Donner l’ensemble des solutions.</li>
-    </ol>
-  </div>
+    <div class="lesson-box">
+      <h3>Propriété fondamentale</h3>
+      <p>Pour tous nombres réels <span class="math">A</span> et <span class="math">B</span> :</p>
+      <p class="math">A × B = 0 si et seulement si A = 0 ou B = 0.</p>
+      <p>Autrement dit, un produit est nul si et seulement si au moins l’un de ses facteurs est nul.</p>
+    </div>
 
-  <div class="example-box">
-    <h3>Exemple 1 — Équation-produit simple</h3>
-    <p>Résoudre : <span class="math">(x - 3)(x + 2) = 0</span></p>
-    <p>
-      D’après la propriété du produit nul :
-    </p>
-    <p>
-      <span class="math">x - 3 = 0</span> ou <span class="math">x + 2 = 0</span>
-    </p>
-    <p>
-      Donc :
-    </p>
-    <p>
-      <span class="math">x = 3</span> ou <span class="math">x = -2</span>
-    </p>
-    <p>
-      Les solutions sont donc :
-      <span class="math">S = {-2 ; 3}</span>
-    </p>
-  </div>
+    <div class="example-box">
+      <h3>Exemple - Produit déjà factorisé</h3>
+      <p>Résoudre : <span class="math">(6x - 2)(8x + 1) = 0</span>.</p>
+      <p>D’après la propriété du produit nul :</p>
+      <p><span class="math">6x - 2 = 0</span> ou <span class="math">8x + 1 = 0</span>.</p>
+      <p><span class="math">x = 1/3</span> ou <span class="math">x = -1/8</span>.</p>
+      <p>Donc <span class="math">S = {-1/8 ; 1/3}</span>.</p>
+    </div>
 
-  <div class="example-box">
-    <h3>Exemple 2 — Avec un facteur du premier degré</h3>
-    <p>Résoudre : <span class="math">(2x - 4)(x + 5) = 0</span></p>
-    <p>
-      <span class="math">2x - 4 = 0</span> ou <span class="math">x + 5 = 0</span>
-    </p>
-    <p>
-      <span class="math">2x = 4</span> ou <span class="math">x = -5</span>
-    </p>
-    <p>
-      <span class="math">x = 2</span> ou <span class="math">x = -5</span>
-    </p>
-    <p>
-      Les solutions sont :
-      <span class="math">S = {-5 ; 2}</span>
-    </p>
-  </div>
+    <div class="tip-box">
+      <p>
+        <strong>Condition indispensable :</strong> la propriété du produit nul s’applique seulement lorsque
+        le produit est égal à zéro. Elle ne s’applique pas directement à
+        <span class="math">(x - 2)(x + 3) = 5</span>.
+      </p>
+    </div>
+  </section>
 
-  <div class="example-box">
-    <h3>Exemple 3 — Attention au second membre</h3>
-    <p>Résoudre : <span class="math">(x - 1)(x + 4) = 0</span></p>
-    <p>
-      Ici, le second membre est bien égal à zéro. On peut donc utiliser
-      la propriété du produit nul.
-    </p>
-    <p>
-      <span class="math">x - 1 = 0</span> ou <span class="math">x + 4 = 0</span>
-    </p>
-    <p>
-      <span class="math">x = 1</span> ou <span class="math">x = -4</span>
-    </p>
-    <p>
-      Donc :
-      <span class="math">S = {-4 ; 1}</span>
-    </p>
-  </div>
+  <section class="section" id="factorisation">
+    <h2>4. Se ramener à un produit nul</h2>
 
-  <div class="tip-box">
-    <h3>Erreur fréquente</h3>
-    <p>
-      On ne peut utiliser la propriété du produit nul que si le produit est égal à zéro.
-    </p>
-    <p>
-      Par exemple, pour <span class="math">(x - 2)(x + 3) = 5</span>,
-      on ne peut pas écrire directement
-      <span class="math">x - 2 = 0</span> ou <span class="math">x + 3 = 0</span>.
-    </p>
-  </div>
+    <div class="lesson-box">
+      <h3>Méthode</h3>
+      <ol>
+        <li>tout regrouper dans un même membre pour obtenir une expression égale à zéro ;</li>
+        <li>factoriser l’expression ;</li>
+        <li>appliquer la propriété du produit nul ;</li>
+        <li>résoudre chaque équation obtenue.</li>
+      </ol>
+    </div>
 
-</section>
+    <div class="example-box">
+      <h3>Exemple - Factoriser avant de résoudre</h3>
+      <p>Résoudre : <span class="math">2x² - 3x = 0</span>.</p>
+      <p>On factorise par <span class="math">x</span> :</p>
+      <p><span class="math">x(2x - 3) = 0</span>.</p>
+      <p>Donc <span class="math">x = 0</span> ou <span class="math">2x - 3 = 0</span>.</p>
+      <p><span class="math">x = 0</span> ou <span class="math">x = 3/2</span>.</p>
+      <p>Ainsi, <span class="math">S = {0 ; 3/2}</span>.</p>
+    </div>
 
-<section class="section">
-  <h2>Exercices</h2>
+    <div class="example-box">
+      <h3>Exemple - Faire apparaître zéro</h3>
+      <p>Résoudre : <span class="math">x(x + 4) = 5x</span>.</p>
+      <p><span class="math">x(x + 4) - 5x = 0</span></p>
+      <p><span class="math">x(x - 1) = 0</span></p>
+      <p>Donc <span class="math">x = 0</span> ou <span class="math">x = 1</span>, et <span class="math">S = {0 ; 1}</span>.</p>
+    </div>
+  </section>
 
-  <div class="exercise-box">
-    <h3>Exercice 1</h3>
-    <p>Résoudre :</p>
-    <ul>
-      <li>x + 5 = 9</li>
-      <li>2x = 14</li>
-      <li>x - 3 = 8</li>
-    </ul>
-  </div>
+  <section class="section" id="quotient">
+    <h2>5. Équations quotient</h2>
 
-  <div class="exercise-box">
-    <h3>Exercice 2</h3>
-    <p>Résoudre :</p>
-    <ul>
-      <li>3x + 4 = 19</li>
-      <li>5x - 10 = 0</li>
-      <li>7x + 2 = 30</li>
-    </ul>
-  </div>
+    <div class="lesson-box">
+      <h3>Valeurs interdites</h3>
+      <p>
+        Une expression quotient n’est définie que lorsque son dénominateur est non nul.
+        Il faut donc déterminer les valeurs interdites avant de résoudre l’équation.
+      </p>
+    </div>
 
-  <div class="exercise-box">
-    <h3>Exercice 3</h3>
-    <p>Résoudre puis vérifier :</p>
-    <ul>
-      <li>3x + 5 = 2x + 11</li>
-      <li>4x - 7 = 2x + 9</li>
-      <li>5x + 2 = 3x - 6</li>
-    </ul>
-  </div>
+    <div class="example-box">
+      <h3>Exemple</h3>
+      <p>Résoudre : <span class="math">(2x + 1)/(x - 3) = 4</span>.</p>
+      <p>Condition d’existence : <span class="math">x ≠ 3</span>.</p>
+      <p>Pour <span class="math">x ≠ 3</span>, on multiplie par <span class="math">x - 3</span> :</p>
+      <p><span class="math">2x + 1 = 4(x - 3)</span></p>
+      <p><span class="math">2x + 1 = 4x - 12</span>, puis <span class="math">13 = 2x</span>.</p>
+      <p><span class="math">x = 13/2</span>. Cette valeur est autorisée, donc <span class="math">S = {13/2}</span>.</p>
+    </div>
+  </section>
 
-  <div class="exercise-box">
-    <h3>Exercice 4</h3>
-    <p>Dire si l’équation a une solution, aucune solution ou une infinité de solutions :</p>
-    <ul>
-      <li>x + 3 = x + 3</li>
-      <li>x + 2 = x + 7</li>
-    </ul>
-  </div>
+  <section class="section" id="modelisation">
+    <h2>6. Mettre un problème en équation</h2>
 
-  <div class="exercise-box">
-    <h3>Exercice 5 — Équations-produit</h3>
-    <p>Résoudre :</p>
-    <ul>
-      <li>(x - 4)(x + 1) = 0</li>
-      <li>(x + 6)(x - 2) = 0</li>
-      <li>(x - 7)(x - 3) = 0</li>
-    </ul>
-  </div>
+    <div class="lesson-box">
+      <h3>Démarche</h3>
+      <ol>
+        <li>choisir l’inconnue et préciser ce qu’elle représente ;</li>
+        <li>traduire les informations par une équation ;</li>
+        <li>résoudre l’équation ;</li>
+        <li>vérifier et interpréter la solution dans le contexte.</li>
+      </ol>
+    </div>
 
-  <div class="exercise-box">
-    <h3>Exercice 6 — Équations-produit avec coefficients</h3>
-    <p>Résoudre :</p>
-    <ul>
-      <li>(2x - 6)(x + 3) = 0</li>
-      <li>(5x + 10)(x - 1) = 0</li>
-      <li>(3x - 12)(2x + 8) = 0</li>
-    </ul>
-  </div>
+    <div class="example-box">
+      <h3>Exemple</h3>
+      <p>
+        Un club facture 25 € d’adhésion puis 8 € par séance. Une personne a payé 121 €.
+        On note <span class="math">n</span> le nombre de séances.
+      </p>
+      <p><span class="math">25 + 8n = 121</span></p>
+      <p><span class="math">8n = 96</span>, donc <span class="math">n = 12</span>.</p>
+      <p>La personne a participé à <strong>12 séances</strong>.</p>
+    </div>
+  </section>
 
-  <div class="exercise-box">
-    <h3>Exercice 7 — Reconnaître une équation-produit</h3>
-    <p>
-      Indiquer si l’on peut utiliser directement la propriété du produit nul :
-    </p>
-    <ul>
-      <li>(x - 2)(x + 5) = 0</li>
-      <li>(x + 1)(x - 4) = 7</li>
-      <li>3(x - 6)(x + 2) = 0</li>
-    </ul>
-  </div>
-</section>
+  <section class="section" id="erreurs">
+    <h2>7. Erreurs fréquentes</h2>
+    <div class="tip-box">
+      <ul>
+        <li>modifier un seul membre de l’équation ;</li>
+        <li>diviser par un nombre qui peut être nul ;</li>
+        <li>utiliser la propriété du produit nul lorsque le produit n’est pas égal à zéro ;</li>
+        <li>oublier de factoriser avant d’appliquer la propriété du produit nul ;</li>
+        <li>conserver une valeur interdite dans la solution d’une équation quotient ;</li>
+        <li>ne pas vérifier ou interpréter la solution obtenue.</li>
+      </ul>
+    </div>
+  </section>
 
-<section class="section">
-  <h2>Vidéo</h2>
+  <section class="section" id="exercices">
+    <h2>Exercices d’entraînement</h2>
 
-  <div class="video-box">
-    <p>Vidéo explicative sur les équations :</p>
+    <div class="exercise-box">
+      <h3>Exercice 1 - Automatismes</h3>
+      <p>Résoudre dans <span class="math">ℝ</span> :</p>
+      <ol>
+        <li><span class="math">x + 7 = 15</span></li>
+        <li><span class="math">5x - 4 = 21</span></li>
+        <li><span class="math">3x + 8 = x - 6</span></li>
+        <li><span class="math">4(2x - 3) = 5x + 9</span></li>
+      </ol>
+    </div>
 
-    <iframe
-      src="https://www.youtube.com/embed/LIEN_VIDEO"
-      allowfullscreen>
-    </iframe>
-  </div>
-</section>
+    <div class="exercise-box">
+      <h3>Exercice 2 - Vérifier et analyser</h3>
+      <ol>
+        <li>Vérifier si <span class="math">-2</span> est solution de <span class="math">3x + 4 = -2</span>.</li>
+        <li>Déterminer si <span class="math">2x + 5 = 2x - 1</span> possède une solution.</li>
+        <li>Déterminer l’ensemble des solutions de <span class="math">3(x + 2) = 3x + 6</span>.</li>
+      </ol>
+    </div>
 
-<section class="section">
-  <h2>Astuce</h2>
+    <div class="exercise-box">
+      <h3>Exercice 3 - Produit nul</h3>
+      <p>Résoudre :</p>
+      <ol>
+        <li><span class="math">(x - 4)(x + 7) = 0</span></li>
+        <li><span class="math">(3x + 6)(5x - 1) = 0</span></li>
+        <li><span class="math">x² - 9x = 0</span></li>
+        <li><span class="math">4x² - 12x = 0</span></li>
+      </ol>
+    </div>
 
-  <div class="tip-box">
-    <p>
-      Isole toujours l’inconnue progressivement, étape par étape.
-    </p>
-  </div>
+    <div class="exercise-box">
+      <h3>Exercice 4 - Équations quotient</h3>
+      <p>Déterminer d’abord la valeur interdite, puis résoudre :</p>
+      <ol>
+        <li><span class="math">(x + 5)/(x - 2) = 3</span></li>
+        <li><span class="math">(4x - 1)/(x + 3) = 2</span></li>
+      </ol>
+    </div>
 
-  <div class="tip-box">
-    <p>
-      Pour une équation-produit, vérifie toujours que le second membre est bien égal à zéro.
-    </p>
-  </div>
+    <div class="exercise-box">
+      <h3>Exercice 5 - Modélisation</h3>
+      <p>
+        Un service de location facture 18 € de frais fixes et 6 € par heure.
+        La facture s’élève à 72 €. Choisir une inconnue, mettre la situation en équation,
+        résoudre puis interpréter le résultat.
+      </p>
+    </div>
+  </section>
 
-  <div class="tip-box">
-    <p>
-      Pense à vérifier ton résultat dans l’équation de départ :
-      c’est le meilleur moyen d’éviter une erreur.
-    </p>
-  </div>
+  <section class="section" id="video">
+    <h2>Vidéo</h2>
+    <div class="video-box">
+      <p>Ajoutez ici votre vidéo explicative sur les équations du premier degré et les équations produit nul.</p>
+      <iframe
+        src="https://www.youtube.com/embed/LIEN_VIDEO"
+        title="Cours sur les équations en Seconde"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </section>
 
-  <div class="footer-nav">
-    <a href="nombres-calculs.html" class="btn btn-secondary">← Retour</a>
-    <a href="index.html" class="btn btn-primary">Accueil</a>
-  </div>
-</section>
+  <section class="section">
+    <h2>À retenir</h2>
+    <div class="tip-box">
+      <p>Isole l’inconnue par transformations équivalentes et vérifie toujours la solution dans l’équation de départ.</p>
+    </div>
+    <div class="tip-box">
+      <p>Pour une équation produit, fais d’abord apparaître un produit égal à zéro.</p>
+    </div>
+    <div class="tip-box">
+      <p>Pour une équation quotient, commence par exclure les valeurs qui annulent le dénominateur.</p>
+    </div>
 
+    <div class="footer-nav">
+      <a href="nombres-calculs.html" class="btn btn-secondary">← Retour</a>
+      <a href="index.html" class="btn btn-primary">Accueil</a>
+    </div>
+  </section>
 </main>
-
 </body>
 </html>
