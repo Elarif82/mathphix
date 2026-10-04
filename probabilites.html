@@ -3,234 +3,204 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MathPhiX — Probabilités</title>
+  <title>Probabilités en Seconde : cours, arbres et exercices | MathPhiX</title>
+  <meta name="description" content="Cours de Seconde : univers, événements, équiprobabilité, réunion, intersection, événement contraire, probabilités conditionnelles et arbres pondérés." />
   <link rel="stylesheet" href="css/style2.css" />
+  <style>
+    .prob-table-wrapper{overflow-x:auto;margin:1rem 0}.prob-table{width:100%;border-collapse:collapse;min-width:560px;background:#fff}.prob-table th,.prob-table td{border:1px solid #cbd5e1;padding:.75rem;text-align:center}.prob-table th{background:#eaf2ff;color:#173e79}.formula-box{margin:1rem 0;padding:1rem;border-left:4px solid #2454d3;background:#f8fafc;text-align:center}.weighted-tree{margin:1.25rem 0;padding:1rem;border:1px solid #d7e1ef;border-radius:14px;background:#fff;overflow-x:auto}.weighted-tree svg{display:block;width:100%;min-width:640px;height:auto}.tree-line{stroke:#335f9e;stroke-width:3;fill:none}.tree-dot{fill:#2454d3}.tree-event{font-size:17px;font-weight:700;fill:#173e79}.tree-weight{font-size:15px;font-weight:700;fill:#b45309}.tree-result{font-size:14px;fill:#475569}@media(max-width:650px){.weighted-tree{padding:.5rem}.weighted-tree svg{min-width:590px}}
+  </style>
 </head>
-
 <body>
-
   <header class="site-header">
     <div class="header-container container">
-      <div>
-        <h1 class="site-title">MathPhiX</h1>
-        <p class="site-subtitle">Seconde — Probabilités</p>
-      </div>
+      <div><h1 class="site-title">MathPhiX</h1><p class="site-subtitle">Seconde - Probabilités</p></div>
       <a href="statistiques-probabilites.html" class="back-link">← Retour</a>
     </div>
   </header>
 
-  <section class="hero">
-    <div class="container">
-      <div class="hero-card">
-        <h1>Probabilités</h1>
-        <p>
-          Dans ce chapitre, tu vas apprendre à décrire une expérience aléatoire,
-          reconnaître les issues et les événements, puis calculer des probabilités simples.
-        </p>
-
-        <div class="hero-tags">
-          <span class="tag">Cours</span>
-          <span class="tag">Exercices</span>
-          <span class="tag">Vidéo</span>
-          <span class="tag">Astuce</span>
-        </div>
-      </div>
-    </div>
-  </section>
+  <section class="hero"><div class="container"><div class="hero-card">
+    <h1>Probabilités</h1>
+    <p>Décrire le hasard, calculer une probabilité et interpréter un conditionnement : apprends à passer du langage courant aux ensembles, tableaux et arbres pondérés.</p>
+    <div class="hero-tags"><span class="tag">Événements</span><span class="tag">Équiprobabilité</span><span class="tag">Probabilité conditionnelle</span><span class="tag">Arbres pondérés</span></div>
+  </div></div></section>
 
   <main class="container">
-
-    <section class="section">
-      <h2>Cours</h2>
-
+    <section class="section" id="vocabulaire">
+      <h2>1. Vocabulaire des probabilités</h2>
       <div class="lesson-box">
-        <h3>1. Expérience aléatoire</h3>
-        <p>
-          Une expérience aléatoire est une expérience dont on ne peut pas prévoir
-          avec certitude le résultat.
-        </p>
-        <p>
-          Exemple : lancer un dé ou tirer une carte.
-        </p>
+        <h3>Expérience aléatoire, issue et univers</h3>
+        <ul>
+          <li>Une <strong>expérience aléatoire</strong> possède plusieurs résultats possibles et son résultat ne peut pas être prévu avec certitude.</li>
+          <li>Une <strong>issue</strong> est un résultat possible.</li>
+          <li>L’<strong>univers</strong>, noté <span class="math">Ω</span>, est l’ensemble de toutes les issues.</li>
+        </ul>
+        <p>Pour un lancer de dé à six faces : <span class="math">Ω = {1 ; 2 ; 3 ; 4 ; 5 ; 6}</span>.</p>
       </div>
-
       <div class="lesson-box">
-        <h3>2. Issue</h3>
-        <p>
-          Une issue est un résultat possible d’une expérience aléatoire.
-        </p>
-        <p>
-          Exemple : quand on lance un dé, les issues possibles sont
-          <span class="math">1 ; 2 ; 3 ; 4 ; 5 ; 6</span>.
-        </p>
+        <h3>Événements</h3>
+        <p>Un <strong>événement</strong> est une partie de l’univers. L’événement <span class="math">A</span> : « obtenir un nombre pair » s’écrit <span class="math">A = {2 ; 4 ; 6}</span>.</p>
+        <ul><li>un événement élémentaire contient une seule issue ;</li><li>l’événement impossible est <span class="math">∅</span> ;</li><li>l’événement certain est <span class="math">Ω</span>.</li></ul>
       </div>
+    </section>
 
+    <section class="section" id="operations">
+      <h2>2. Opérations sur les événements</h2>
       <div class="lesson-box">
-        <h3>3. Événement</h3>
-        <p>
-          Un événement est un ensemble d’issues.
-        </p>
-        <p>
-          Exemple : obtenir un nombre pair avec un dé correspond à l’événement
-          <span class="math">{2 ; 4 ; 6}</span>.
-        </p>
+        <h3>Événement contraire</h3>
+        <p>L’événement contraire de <span class="math">A</span>, noté <span class="math">A̅</span>, contient les issues de <span class="math">Ω</span> qui n’appartiennent pas à <span class="math">A</span>.</p>
+        <p>Si <span class="math">A = {2 ; 4 ; 6}</span>, alors <span class="math">A̅ = {1 ; 3 ; 5}</span>.</p>
       </div>
-
       <div class="lesson-box">
-        <h3>4. Probabilité</h3>
-        <p>
-          La probabilité d’un événement est un nombre compris entre 0 et 1.
-        </p>
-        <p>
-          <span class="math">0</span> signifie impossible et
-          <span class="math">1</span> signifie certain.
-        </p>
+        <h3>Réunion et intersection</h3>
+        <ul><li><span class="math">A ∪ B</span> signifie « A ou B », éventuellement les deux ;</li><li><span class="math">A ∩ B</span> signifie « A et B ».</li></ul>
+        <p>Avec <span class="math">A = {2 ; 4 ; 6}</span> et <span class="math">B = {4 ; 5 ; 6}</span> : <span class="math">A ∪ B = {2 ; 4 ; 5 ; 6}</span> et <span class="math">A ∩ B = {4 ; 6}</span>.</p>
+        <p>Si <span class="math">A ∩ B = ∅</span>, les événements sont <strong>incompatibles</strong>.</p>
       </div>
+      <div class="tip-box"><p><strong>Traduction :</strong> « ou » correspond à <span class="math">∪</span> ; « et » correspond à <span class="math">∩</span>.</p></div>
+    </section>
 
+    <section class="section" id="loi">
+      <h2>3. Loi de probabilité sur un univers fini</h2>
       <div class="lesson-box">
-        <h3>5. Cas d’équiprobabilité</h3>
-        <p>
-          Lorsque toutes les issues ont la même chance de se produire :
-        </p>
-        <p>
-          <span class="math">P(A) = nombre d’issues favorables / nombre total d’issues</span>
-        </p>
-        <p>
-          Exemple : avec un dé équilibré, la probabilité d’obtenir un nombre pair est :
-        </p>
-        <p>
-          <span class="math">3 / 6 = 1 / 2</span>
-        </p>
+        <h3>Propriétés</h3>
+        <ul><li><span class="math">0 ≤ P(A) ≤ 1</span> ;</li><li><span class="math">P(∅) = 0</span> et <span class="math">P(Ω) = 1</span> ;</li><li>la somme des probabilités des issues vaut 1 ;</li><li><span class="math">P(A)</span> est la somme des probabilités des issues de <span class="math">A</span>.</li></ul>
+        <p>L’ensemble des probabilités attribuées aux issues constitue une <strong>loi de probabilité</strong>.</p>
       </div>
-
-      <div class="lesson-box">
-        <h3>6. Événement impossible et événement certain</h3>
-        <p>
-          Un événement impossible a une probabilité égale à
-          <span class="math">0</span>.
-        </p>
-        <p>
-          Un événement certain a une probabilité égale à
-          <span class="math">1</span>.
-        </p>
-      </div>
-
       <div class="example-box">
-        <h3>Exemple</h3>
-        <p>
-          On lance un dé équilibré.
-        </p>
-        <p>
-          Événement A : « obtenir un nombre supérieur à 4 ».
-        </p>
-        <p>
-          Issues favorables : <span class="math">5 et 6</span>
-        </p>
-        <p>
-          Donc :
-          <span class="math">P(A) = 2 / 6 = 1 / 3</span>
-        </p>
+        <h3>Exemple - Loi non équiprobable</h3>
+        <div class="prob-table-wrapper"><table class="prob-table"><thead><tr><th>Issue</th><th>a</th><th>b</th><th>c</th><th>Total</th></tr></thead><tbody><tr><th>Probabilité</th><td>0,20</td><td>0,35</td><td>0,45</td><td>1</td></tr></tbody></table></div>
+        <p>Pour <span class="math">E = {a ; c}</span> : <span class="math">P(E) = 0,20 + 0,45 = 0,65</span>.</p>
       </div>
     </section>
+
+    <section class="section" id="equiprobabilite">
+      <h2>4. Équiprobabilité</h2>
+      <div class="lesson-box">
+        <h3>Définition et formule</h3>
+        <p>Il y a équiprobabilité lorsque toutes les issues ont la même probabilité.</p>
+        <div class="formula-box"><span class="math">P(A) = nombre de cas favorables / nombre de cas possibles = Card(A) / Card(Ω)</span></div>
+        <p>Cette formule s’utilise uniquement lorsque l’équiprobabilité est justifiée.</p>
+      </div>
+      <div class="example-box"><h3>Exemple</h3><p>Pour un dé équilibré, si <span class="math">A</span> est « obtenir un nombre pair », alors <span class="math">P(A) = 3/6 = 1/2</span>.</p></div>
+      <div class="tip-box"><p><strong>Modéliser :</strong> dire qu’un dé est équilibré ou qu’un tirage est effectué au hasard permet de choisir un modèle d’équiprobabilité. Ce choix est une hypothèse.</p></div>
+    </section>
+
+    <section class="section" id="calculs">
+      <h2>5. Calculer avec des événements</h2>
+      <div class="lesson-box"><h3>Événement contraire</h3><div class="formula-box"><span class="math">P(A̅) = 1 - P(A)</span></div><p>Si <span class="math">P(A) = 0,35</span>, alors <span class="math">P(A̅) = 0,65</span>.</p></div>
+      <div class="lesson-box">
+        <h3>Réunion de deux événements</h3>
+        <div class="formula-box"><span class="math">P(A ∪ B) = P(A) + P(B) - P(A ∩ B)</span></div>
+        <p>On retire l’intersection, comptée deux fois. Si <span class="math">A</span> et <span class="math">B</span> sont incompatibles, <span class="math">P(A ∪ B) = P(A) + P(B)</span>.</p>
+      </div>
+      <div class="example-box"><h3>Exemple</h3><p>Si <span class="math">P(A) = 1/2</span>, <span class="math">P(B) = 1/2</span> et <span class="math">P(A ∩ B) = 1/3</span>, alors <span class="math">P(A ∪ B) = 1/2 + 1/2 - 1/3 = 2/3</span>.</p></div>
+    </section>
+
+    <section class="section" id="frequences">
+      <h2>6. Fréquences et probabilité</h2>
+      <div class="lesson-box">
+        <h3>Version vulgarisée de la loi des grands nombres</h3>
+        <p>Lorsqu’une expérience est répétée un grand nombre de fois dans les mêmes conditions, la fréquence observée d’un événement est généralement proche de sa probabilité.</p>
+        <p>Une simulation sur calculatrice, tableur ou Python permet d’observer cette stabilisation, mais la fréquence expérimentale reste une approximation.</p>
+      </div>
+    </section>
+
+    <section class="section" id="conditionnelle">
+      <h2>7. Probabilité conditionnelle</h2>
+      <div class="lesson-box">
+        <h3>Définition</h3>
+        <p>Pour <span class="math">P(A) ≠ 0</span>, la probabilité de <span class="math">B</span> sachant <span class="math">A</span>, notée <span class="math">P<sub>A</sub>(B)</span>, est :</p>
+        <div class="formula-box"><span class="math">P<sub>A</sub>(B) = P(A ∩ B) / P(A)</span></div>
+        <p>On limite l’univers aux situations où <span class="math">A</span> est réalisé.</p>
+      </div>
+      <div class="example-box">
+        <h3>Exemple - Tableau croisé d’effectifs</h3>
+        <p>On choisit au hasard un élève parmi 200 élèves.</p>
+        <div class="prob-table-wrapper"><table class="prob-table"><thead><tr><th></th><th>En retard R</th><th>À l’heure R̅</th><th>Total</th></tr></thead><tbody><tr><th>Prend le bus B</th><td>20</td><td>60</td><td>80</td></tr><tr><th>Ne prend pas le bus B̅</th><td>10</td><td>110</td><td>120</td></tr><tr><th>Total</th><td>30</td><td>170</td><td>200</td></tr></tbody></table></div>
+        <p><span class="math">P<sub>B</sub>(R) = 20/80 = 0,25</span> : parmi les élèves prenant le bus, 25 % sont en retard.</p>
+        <p><span class="math">P<sub>R</sub>(B) = 20/30 = 2/3</span> : parmi les élèves en retard, deux tiers prennent le bus.</p>
+      </div>
+      <div class="tip-box"><p><strong>Attention au sens :</strong> <span class="math">P<sub>A</sub>(B)</span> et <span class="math">P<sub>B</sub>(A)</span> répondent à deux questions différentes.</p></div>
+    </section>
+
+    <section class="section" id="arbres">
+      <h2>8. Arbres pondérés</h2>
+      <div class="lesson-box">
+        <h3>Règles de lecture</h3>
+        <ul><li>les probabilités des branches issues d’un même nœud ont pour somme 1 ;</li><li>une probabilité sur une seconde branche est conditionnelle ;</li><li>la probabilité d’un chemin est le produit des probabilités de ses branches.</li></ul>
+      </div>
+      <div class="example-box">
+        <h3>Exemple : moyen de transport et retard</h3>
+        <p>Dans un lycée, 60 % des élèves viennent en bus. Parmi ceux qui prennent le bus, 30 % sont en retard. Parmi les autres élèves, 10 % sont en retard.</p>
+        <p>On note <span class="math">B</span> : « l'élève prend le bus » et <span class="math">R</span> : « l'élève est en retard ».</p>
+        <div class="weighted-tree">
+          <svg viewBox="0 0 760 390" role="img" aria-labelledby="tree-title tree-desc">
+            <title id="tree-title">Arbre pondéré à deux branches</title>
+            <desc id="tree-desc">Le premier niveau sépare les élèves qui prennent le bus et ceux qui ne le prennent pas. Chaque branche se sépare ensuite entre retard et absence de retard.</desc>
+
+            <path class="tree-line" d="M85 195 L300 95" />
+            <path class="tree-line" d="M85 195 L300 295" />
+            <path class="tree-line" d="M300 95 L550 45" />
+            <path class="tree-line" d="M300 95 L550 145" />
+            <path class="tree-line" d="M300 295 L550 245" />
+            <path class="tree-line" d="M300 295 L550 345" />
+
+            <circle class="tree-dot" cx="85" cy="195" r="6" />
+            <circle class="tree-dot" cx="300" cy="95" r="6" />
+            <circle class="tree-dot" cx="300" cy="295" r="6" />
+
+            <text class="tree-event" x="18" y="201">Départ</text>
+            <text class="tree-event" x="312" y="92">B</text>
+            <text class="tree-event" x="312" y="292">B̅</text>
+            <text class="tree-event" x="565" y="50">R</text>
+            <text class="tree-event" x="565" y="150">R̅</text>
+            <text class="tree-event" x="565" y="250">R</text>
+            <text class="tree-event" x="565" y="350">R̅</text>
+
+            <text class="tree-weight" x="180" y="125">0,60</text>
+            <text class="tree-weight" x="180" y="282">0,40</text>
+            <text class="tree-weight" x="410" y="55">0,30</text>
+            <text class="tree-weight" x="410" y="145">0,70</text>
+            <text class="tree-weight" x="410" y="252">0,10</text>
+            <text class="tree-weight" x="410" y="342">0,90</text>
+
+            <text class="tree-result" x="610" y="50">B ∩ R</text>
+            <text class="tree-result" x="610" y="150">B ∩ R̅</text>
+            <text class="tree-result" x="610" y="250">B̅ ∩ R</text>
+            <text class="tree-result" x="610" y="350">B̅ ∩ R̅</text>
+          </svg>
+        </div>
+        <p>Par exemple, le chemin <span class="math">B → R</span> correspond à « prendre le bus et être en retard » :</p>
+        <p class="math">P(B ∩ R) = P(B) × P<sub>B</sub>(R) = 0,60 × 0,30 = 0,18.</p>
+        <p>La probabilité qu'un élève soit en retard est la somme des deux chemins qui aboutissent à <span class="math">R</span> :</p>
+        <p class="math">P(R) = 0,60 × 0,30 + 0,40 × 0,10 = 0,22.</p>
+      </div>
+    </section>
+
+    <section class="section" id="erreurs">
+      <h2>9. Erreurs fréquentes</h2>
+      <div class="tip-box"><ul><li>supposer une équiprobabilité sans la justifier ;</li><li>confondre « et » avec « ou » ;</li><li>oublier de retirer l’intersection dans la formule de la réunion ;</li><li>confondre <span class="math">P(A ∩ B)</span>, <span class="math">P<sub>A</sub>(B)</span> et <span class="math">P<sub>B</sub>(A)</span> ;</li><li>additionner les probabilités le long d’un chemin ;</li><li>donner une probabilité hors de l’intervalle <span class="math">[0 ; 1]</span>.</li></ul></div>
+    </section>
+
+    <section class="section" id="exercices">
+      <h2>Exercices d’entraînement</h2>
+      <div class="exercise-box"><h3>Exercice 1 - Univers et événements</h3><p>On lance un dé équilibré. On note <span class="math">A</span> : « obtenir un multiple de 2 » et <span class="math">B</span> : « obtenir un nombre supérieur ou égal à 4 ».</p><ol><li>Écrire <span class="math">Ω</span>, <span class="math">A</span>, <span class="math">B</span> et <span class="math">A̅</span>.</li><li>Déterminer <span class="math">A ∩ B</span> et <span class="math">A ∪ B</span>.</li><li>Calculer leurs probabilités.</li></ol></div>
+      <div class="exercise-box"><h3>Exercice 2 - Loi de probabilité</h3><p>Une roue donne les gains 0 €, 2 € ou 5 € avec les probabilités 0,50 ; 0,35 et 0,15.</p><ol><li>Vérifier qu’il s’agit d’une loi de probabilité.</li><li>Calculer la probabilité de gagner au moins 2 €.</li></ol></div>
+      <div class="exercise-box"><h3>Exercice 3 - Réunion et contraire</h3><p>On sait que <span class="math">P(A) = 0,55</span>, <span class="math">P(B) = 0,40</span> et <span class="math">P(A ∩ B) = 0,20</span>.</p><ol><li>Calculer <span class="math">P(A̅)</span>.</li><li>Calculer <span class="math">P(A ∪ B)</span>.</li></ol></div>
+      <div class="exercise-box"><h3>Exercice 4 - Tableau croisé</h3><p>Reprendre le tableau des 200 élèves.</p><ol><li>Calculer <span class="math">P(B)</span>, <span class="math">P(R)</span> et <span class="math">P(B ∩ R)</span>.</li><li>Calculer <span class="math">P<sub>B</sub>(R)</span> et <span class="math">P<sub>R</sub>(B)</span>.</li><li>Interpréter les résultats.</li></ol></div>
+      <div class="exercise-box"><h3>Exercice 5 - Arbre pondéré</h3><p>Dans une entreprise, 70 % des salariés travaillent sur site. Parmi eux, 20 % utilisent le vélo.</p><ol><li>Commencer un arbre avec <span class="math">S</span> : « travailler sur site » et <span class="math">V</span> : « utiliser le vélo ».</li><li>Calculer <span class="math">P(S ∩ V)</span>.</li><li>Interpréter le résultat.</li></ol></div>
+      <div class="exercise-box"><h3>Exercice 6 - Simulation</h3><p>Simuler 100, puis 1 000 lancers d’une pièce équilibrée avec un tableur, une calculatrice ou Python. Comparer la fréquence de « pile » à la probabilité théorique <span class="math">0,5</span>.</p></div>
+    </section>
+
+    <section class="section" id="video"><h2>Vidéo</h2><div class="video-box"><p>Ajoutez ici votre vidéo sur les événements, les probabilités conditionnelles et les arbres pondérés.</p><iframe src="https://www.youtube.com/embed/LIEN_VIDEO" title="Cours sur les probabilités en Seconde" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></section>
 
     <section class="section">
-      <h2>Exercices</h2>
-
-      <div class="exercise-box">
-        <h3>Exercice 1</h3>
-        <p>
-          On lance un dé équilibré.
-        </p>
-        <ul>
-          <li>Donner l’univers de cette expérience.</li>
-          <li>Donner l’événement « obtenir un nombre impair ».</li>
-          <li>Calculer sa probabilité.</li>
-        </ul>
-      </div>
-
-      <div class="exercise-box">
-        <h3>Exercice 2</h3>
-        <p>
-          On tire au hasard une carte numérotée de 1 à 10.
-        </p>
-        <ul>
-          <li>Calculer la probabilité d’obtenir 7.</li>
-          <li>Calculer la probabilité d’obtenir un nombre pair.</li>
-        </ul>
-      </div>
-
-      <div class="exercise-box">
-        <h3>Exercice 3</h3>
-        <p>
-          Dans une urne, il y a 3 boules rouges, 2 boules bleues et 5 boules vertes.
-        </p>
-        <ul>
-          <li>Calculer la probabilité de tirer une boule rouge.</li>
-          <li>Calculer la probabilité de tirer une boule bleue.</li>
-          <li>Calculer la probabilité de tirer une boule verte.</li>
-        </ul>
-      </div>
-
-      <div class="exercise-box">
-        <h3>Exercice 4</h3>
-        <p>
-          Compléter :
-        </p>
-        <ul>
-          <li>La probabilité d’un événement certain est ...</li>
-          <li>La probabilité d’un événement impossible est ...</li>
-          <li>Une probabilité est toujours comprise entre ... et ...</li>
-        </ul>
-      </div>
+      <h2>À retenir</h2>
+      <div class="tip-box"><p>Définis d’abord clairement l’univers et les événements avant de calculer.</p></div>
+      <div class="tip-box"><p><span class="math">P(A̅) = 1 - P(A)</span> et <span class="math">P(A ∪ B) = P(A) + P(B) - P(A ∩ B)</span>.</p></div>
+      <div class="tip-box"><p><span class="math">P<sub>A</sub>(B) = P(A ∩ B)/P(A)</span> et, dans un arbre, les probabilités d’un chemin se multiplient.</p></div>
+      <div class="footer-nav"><a href="statistiques-probabilites.html" class="btn btn-secondary">← Retour</a><a href="index.html" class="btn btn-primary">Accueil</a></div>
     </section>
-
-    <section class="section">
-      <h2>Vidéo</h2>
-
-      <div class="video-box">
-        <p>Vidéo explicative sur les probabilités :</p>
-
-        <iframe
-          src="https://www.youtube.com/embed/LIEN_VIDEO"
-          title="Vidéo probabilités"
-          allowfullscreen>
-        </iframe>
-      </div>
-    </section>
-
-    <section class="section">
-      <h2>Astuce</h2>
-
-      <div class="tip-box">
-        <p>
-          En cas d’équiprobabilité, pense toujours à :
-        </p>
-        <p>
-          <span class="math">issues favorables / issues totales</span>
-        </p>
-      </div>
-
-      <div class="tip-box">
-        <p>
-          Avant de calculer une probabilité, commence par écrire clairement
-          toutes les issues possibles.
-        </p>
-      </div>
-
-      <div class="tip-box">
-        <p>
-          Vérifie toujours que ton résultat est entre
-          <span class="math">0</span> et <span class="math">1</span>.
-        </p>
-      </div>
-
-      <div class="footer-nav">
-        <a href="statistiques-probabilites.html" class="btn btn-secondary">← Retour</a>
-        <a href="index.html" class="btn btn-primary">Accueil</a>
-      </div>
-    </section>
-
   </main>
-
 </body>
 </html>

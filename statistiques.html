@@ -3,261 +3,79 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MathPhiX — Statistiques</title>
+  <title>Statistiques en Seconde : cours et exercices | MathPhiX</title>
+  <meta name="description" content="Cours de statistiques en Seconde : moyenne pondérée, médiane, quartiles, écart-type, histogramme, séries regroupées en classes et exercices." />
   <link rel="stylesheet" href="css/style2.css" />
+  <style>
+    .stat-table-wrapper{overflow-x:auto;margin:1rem 0}.stat-table{width:100%;min-width:560px;border-collapse:collapse;background:#fff}.stat-table th,.stat-table td{padding:.7rem;border:1px solid #cbd5e1;text-align:center}.stat-table th{background:#eaf2ff;color:#173e79}.formula-box{margin:1rem 0;padding:1rem;border-left:4px solid #2454d3;background:#f8fafc;text-align:center}.method-steps{counter-reset:step;list-style:none;padding-left:0}.method-steps li{counter-increment:step;margin:.65rem 0;padding-left:2.4rem;position:relative}.method-steps li::before{content:counter(step);position:absolute;left:0;top:-.1rem;width:1.7rem;height:1.7rem;border-radius:50%;display:grid;place-items:center;background:#2454d3;color:#fff;font-weight:700}.histogram{display:flex;align-items:flex-end;height:190px;margin:1.5rem auto .5rem;padding:0 1rem;border-left:2px solid #475569;border-bottom:2px solid #475569;max-width:620px}.hist-bar{position:relative;flex:1;margin:0 1px;background:#7db2f5;border:1px solid #2454d3}.hist-bar span{position:absolute;left:50%;transform:translateX(-50%);top:-1.5rem;font-weight:700;color:#173e79}.hist-labels{display:grid;grid-template-columns:repeat(5,1fr);max-width:620px;margin:0 auto;text-align:center;font-size:.85rem}.comparison-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}.comparison-card{padding:1rem;border:1px solid #cbd5e1;border-radius:12px;background:#fff}@media(max-width:650px){.comparison-grid{grid-template-columns:1fr}.histogram{height:155px;padding:0 .3rem}.hist-labels{font-size:.72rem}}
+  </style>
 </head>
-
 <body>
-
-  <header class="site-header">
-    <div class="header-container container">
-      <div>
-        <h1 class="site-title">MathPhiX</h1>
-        <p class="site-subtitle">Seconde — Statistiques</p>
-      </div>
-      <a href="statistiques-probabilites.html" class="back-link">← Retour</a>
-    </div>
-  </header>
-
-  <section class="hero">
-    <div class="container">
-      <div class="hero-card">
-        <h1>Statistiques</h1>
-        <p>
-          Dans ce chapitre, tu vas apprendre à lire une série statistique,
-          calculer des indicateurs comme la moyenne, la médiane, les quartiles
-          et l’étendue, puis interpréter les résultats.
-        </p>
-
-        <div class="hero-tags">
-          <span class="tag">Cours</span>
-          <span class="tag">Exercices</span>
-          <span class="tag">Vidéo</span>
-          <span class="tag">Astuce</span>
-        </div>
-      </div>
-    </div>
-  </section>
+  <header class="site-header"><div class="header-container container"><div><h1 class="site-title">MathPhiX</h1><p class="site-subtitle">Seconde - Statistiques</p></div><a href="statistiques-probabilites.html" class="back-link">← Retour</a></div></header>
+  <section class="hero"><div class="container"><div class="hero-card"><h1>Statistiques descriptives</h1><p>Organiser des données, calculer des indicateurs de position et de dispersion, puis comparer des séries statistiques.</p><div class="hero-tags"><span class="tag">Moyenne</span><span class="tag">Médiane</span><span class="tag">Quartiles</span><span class="tag">Écart-type</span><span class="tag">Histogramme</span></div></div></div></section>
 
   <main class="container">
-
-    <section class="section">
-      <h2>Cours</h2>
-
-      <div class="lesson-box">
-        <h3>1. Série statistique</h3>
-        <p>
-          Une série statistique est un ensemble de données recueillies
-          sur une population.
-        </p>
-        <p>
-          Exemple : les notes obtenues par les élèves d’une classe.
-        </p>
-      </div>
-
-      <div class="lesson-box">
-        <h3>2. Effectif</h3>
-        <p>
-          L’effectif d’une valeur est le nombre de fois où cette valeur apparaît.
-        </p>
-        <p>
-          Exemple : si la note 12 apparaît 4 fois, alors son effectif est 4.
-        </p>
-      </div>
-
-      <div class="lesson-box">
-        <h3>3. Fréquence</h3>
-        <p>
-          La fréquence d’une valeur est le quotient de son effectif
-          par l’effectif total.
-        </p>
-        <p>
-          <span class="math">fréquence = effectif / effectif total</span>
-        </p>
-      </div>
-
-      <div class="lesson-box">
-        <h3>4. Moyenne</h3>
-        <p>
-          La moyenne d’une série est la somme des valeurs
-          divisée par l’effectif total.
-        </p>
-        <p>
-          <span class="math">moyenne = somme des valeurs / effectif total</span>
-        </p>
-        <p>
-          Exemple : pour 8, 10 et 12,
-          <span class="math">(8 + 10 + 12) / 3 = 10</span>.
-        </p>
-      </div>
-
-      <div class="lesson-box">
-        <h3>5. Médiane</h3>
-        <p>
-          La médiane est une valeur qui partage la série ordonnée en deux parties.
-        </p>
-        <p>
-          La moitié des données est inférieure ou égale à la médiane
-          et l’autre moitié est supérieure ou égale.
-        </p>
-      </div>
-
-      <div class="lesson-box">
-        <h3>6. Quartiles</h3>
-        <p>
-          Les quartiles partagent la série ordonnée en quatre parties.
-        </p>
-        <p>
-          Le <strong>premier quartile</strong> <span class="math">Q1</span> est la plus petite valeur
-          de la série telle qu’au moins 25 % des données lui sont inférieures ou égales.
-        </p>
-        <p>
-          Le <strong>troisième quartile</strong> <span class="math">Q3</span> est la plus petite valeur
-          de la série telle qu’au moins 75 % des données lui sont inférieures ou égales.
-        </p>
-        <p>
-          Pour les déterminer, on commence toujours par ranger la série dans l’ordre croissant.
-        </p>
-      </div>
-
-      <div class="lesson-box">
-        <h3>7. Étendue</h3>
-        <p>
-          L’étendue mesure l’écart entre la plus grande et la plus petite valeur.
-        </p>
-        <p>
-          <span class="math">étendue = maximum - minimum</span>
-        </p>
-      </div>
-
-      <div class="example-box">
-        <h3>Exemple</h3>
-        <p>
-          Série : <span class="math">4 ; 7 ; 9 ; 9 ; 10 ; 12 ; 13 ; 15</span>
-        </p>
-        <p>
-          Moyenne :
-          <span class="math">(4 + 7 + 9 + 9 + 10 + 12 + 13 + 15) / 8 = 79 / 8 = 9,875</span>
-        </p>
-        <p>
-          Médiane :
-          <span class="math">(9 + 10) / 2 = 9,5</span>
-        </p>
-        <p>
-          <span class="math">Q1 = 7</span> car au moins 25 % des valeurs sont inférieures ou égales à 7.
-        </p>
-        <p>
-          <span class="math">Q3 = 12</span> car au moins 75 % des valeurs sont inférieures ou égales à 12.
-        </p>
-        <p>
-          Étendue :
-          <span class="math">15 - 4 = 11</span>
-        </p>
-      </div>
+    <section class="section" id="vocabulaire">
+      <h2>1. Vocabulaire et organisation des données</h2>
+      <div class="lesson-box"><ul><li>La <strong>population</strong> est l’ensemble étudié et un <strong>individu</strong> est un élément de cette population.</li><li>Le <strong>caractère</strong>, ou variable, est la propriété observée. Il peut être qualitatif ou quantitatif.</li><li>L’<strong>effectif</strong> d’une valeur est son nombre d’apparitions. La somme des effectifs est l’effectif total <span class="math">N</span>.</li><li>La <strong>fréquence</strong> d’une valeur est <span class="math">fᵢ = nᵢ/N</span>. La somme des fréquences vaut 1.</li></ul></div>
+      <div class="example-box"><h3>Exemple : notes d’un groupe</h3><div class="stat-table-wrapper"><table class="stat-table"><thead><tr><th>Note <span class="math">xᵢ</span></th><th>8</th><th>10</th><th>12</th><th>14</th><th>Total</th></tr></thead><tbody><tr><th>Effectif <span class="math">nᵢ</span></th><td>2</td><td>3</td><td>4</td><td>1</td><td>10</td></tr><tr><th>Fréquence <span class="math">fᵢ</span></th><td>0,20</td><td>0,30</td><td>0,40</td><td>0,10</td><td>1</td></tr></tbody></table></div></div>
     </section>
 
-    <section class="section">
-      <h2>Exercices</h2>
-
-      <div class="exercise-box">
-        <h3>Exercice 1</h3>
-        <p>On considère la série suivante :</p>
-        <p><span class="math">5 ; 7 ; 7 ; 8 ; 10 ; 10 ; 10 ; 12</span></p>
-        <ul>
-          <li>Donner l’effectif total.</li>
-          <li>Donner l’effectif de la valeur 10.</li>
-          <li>Donner la fréquence de la valeur 7.</li>
-        </ul>
-      </div>
-
-      <div class="exercise-box">
-        <h3>Exercice 2</h3>
-        <p>Calculer la moyenne de la série :</p>
-        <p><span class="math">6 ; 8 ; 9 ; 11 ; 16</span></p>
-      </div>
-
-      <div class="exercise-box">
-        <h3>Exercice 3</h3>
-        <p>Déterminer la médiane de la série :</p>
-        <p><span class="math">3 ; 5 ; 6 ; 8 ; 9 ; 11 ; 14</span></p>
-      </div>
-
-      <div class="exercise-box">
-        <h3>Exercice 4</h3>
-        <p>Déterminer les quartiles de la série :</p>
-        <p><span class="math">2 ; 4 ; 5 ; 7 ; 8 ; 9 ; 11 ; 13</span></p>
-        <ul>
-          <li>Donner <span class="math">Q1</span>.</li>
-          <li>Donner <span class="math">Q3</span>.</li>
-        </ul>
-      </div>
-
-      <div class="exercise-box">
-        <h3>Exercice 5</h3>
-        <p>Déterminer l’étendue de la série :</p>
-        <p><span class="math">12 ; 15 ; 18 ; 20 ; 23</span></p>
-      </div>
-
-      <div class="exercise-box">
-        <h3>Exercice 6</h3>
-        <p>
-          Les âges d’un groupe sont :
-          <span class="math">14 ; 14 ; 15 ; 15 ; 15 ; 16 ; 17</span>
-        </p>
-        <ul>
-          <li>Calculer la moyenne.</li>
-          <li>Déterminer la médiane.</li>
-          <li>Déterminer les quartiles.</li>
-          <li>Déterminer l’étendue.</li>
-        </ul>
-      </div>
+    <section class="section" id="moyenne">
+      <h2>2. Moyenne et moyenne pondérée</h2>
+      <div class="lesson-box"><p>Pour une série de <span class="math">N</span> valeurs :</p><div class="formula-box"><span class="math">x̄ = (x₁ + x₂ + ... + x<sub>N</sub>)/N</span></div><p>Lorsque la valeur <span class="math">xᵢ</span> a pour effectif <span class="math">nᵢ</span> :</p><div class="formula-box"><span class="math">x̄ = (n₁x₁ + n₂x₂ + ... + n<sub>p</sub>x<sub>p</sub>)/N</span></div></div>
+      <div class="example-box"><h3>Application</h3><p class="math">x̄ = (2×8 + 3×10 + 4×12 + 1×14)/10 = 108/10 = 10,8.</p></div>
+      <div class="lesson-box"><h3>Linéarité de la moyenne</h3><p>Si chaque valeur <span class="math">xᵢ</span> devient <span class="math">axᵢ+b</span>, la nouvelle moyenne est <span class="math">ax̄+b</span>.</p><p><strong>Exemple :</strong> une série de moyenne 12 à laquelle on ajoute 2 à chaque valeur a pour nouvelle moyenne 14.</p></div>
     </section>
 
-    <section class="section">
-      <h2>Vidéo</h2>
-
-      <div class="video-box">
-        <p>Vidéo explicative sur les statistiques :</p>
-
-        <iframe
-          src="https://www.youtube.com/embed/LIEN_VIDEO"
-          title="Vidéo statistiques"
-          allowfullscreen>
-        </iframe>
-      </div>
+    <section class="section" id="mediane-quartiles">
+      <h2>3. Médiane, quartiles et étendue</h2>
+      <div class="lesson-box"><h3>Médiane</h3><p>Après avoir rangé les valeurs dans l’ordre croissant, la médiane partage la série en deux groupes de même effectif.</p><ul><li>Si <span class="math">N=2p+1</span>, elle est la valeur de rang <span class="math">p+1</span>.</li><li>Si <span class="math">N=2p</span>, on prend généralement la moyenne des valeurs de rangs <span class="math">p</span> et <span class="math">p+1</span>.</li></ul></div>
+      <div class="lesson-box"><h3>Quartiles</h3><p><span class="math">Q₁</span> est la valeur de rang <span class="math">⌈N/4⌉</span> et <span class="math">Q₃</span> celle de rang <span class="math">⌈3N/4⌉</span>. Le symbole <span class="math">⌈x⌉</span> désigne l’entier immédiatement supérieur ou égal à <span class="math">x</span>.</p></div>
+      <div class="lesson-box"><h3>Indicateurs de dispersion</h3><p><span class="math">Étendue = maximum - minimum</span></p><p><span class="math">Écart interquartile = Q₃-Q₁</span>. Il mesure la dispersion des 50 % de valeurs centrales.</p></div>
+      <div class="example-box"><h3>Exemple complet</h3><p>Série ordonnée : <span class="math">4 ; 7 ; 9 ; 9 ; 10 ; 12 ; 13 ; 15</span>.</p><ul><li><span class="math">Me=(9+10)/2=9,5</span> ;</li><li><span class="math">Q₁=7</span> (rang 2) et <span class="math">Q₃=12</span> (rang 6) ;</li><li>écart interquartile : <span class="math">12-7=5</span> ;</li><li>étendue : <span class="math">15-4=11</span>.</li></ul></div>
     </section>
 
-    <section class="section">
-      <h2>Astuce</h2>
-
-      <div class="tip-box">
-        <p>
-          Pense toujours à ranger la série dans l’ordre croissant
-          avant de chercher la médiane ou les quartiles.
-        </p>
-      </div>
-
-      <div class="tip-box">
-        <p>
-          La moyenne tient compte de toutes les valeurs,
-          alors que la médiane et les quartiles dépendent surtout du rangement.
-        </p>
-      </div>
-
-      <div class="tip-box">
-        <p>
-          L’étendue se calcule très vite :
-          <span class="math">plus grande valeur - plus petite valeur</span>.
-        </p>
-      </div>
-
-      <div class="footer-nav">
-        <a href="statistiques-probabilites.html" class="btn btn-secondary">← Retour</a>
-        <a href="index.html" class="btn btn-primary">Accueil</a>
-      </div>
+    <section class="section" id="ecart-type">
+      <h2>4. Variance et écart-type</h2>
+      <div class="lesson-box"><p>La variance est la moyenne des carrés des écarts à la moyenne :</p><div class="formula-box"><span class="math">V = [n₁(x₁-x̄)² + ... + n<sub>p</sub>(x<sub>p</sub>-x̄)²]/N</span></div><p>L’écart-type est la racine carrée de la variance :</p><div class="formula-box"><span class="math">σ = √V</span></div><p>L’écart-type s’exprime dans la même unité que les données. Plus il est grand, plus les valeurs sont dispersées autour de la moyenne.</p></div>
+      <div class="tip-box"><p>La moyenne et l’écart-type sont sensibles aux valeurs extrêmes. La médiane et l’écart interquartile le sont généralement moins.</p></div>
     </section>
 
+    <section class="section" id="valeur-ajoutee">
+      <h2>5. Ajouter ou supprimer une valeur</h2>
+      <div class="lesson-box"><p>Pour prévoir l’évolution de la moyenne, compare la valeur ajoutée ou supprimée à la moyenne initiale.</p><ul><li>Ajouter une valeur supérieure à la moyenne la fait augmenter.</li><li>Ajouter une valeur inférieure à la moyenne la fait diminuer.</li><li>Ajouter une valeur égale à la moyenne ne la modifie pas.</li></ul></div>
+      <div class="example-box"><p>Une série de 10 valeurs a pour moyenne 12. Sa somme vaut <span class="math">10×12=120</span>. En ajoutant 18 :</p><p class="math">nouvelle moyenne = (120+18)/11 ≈ 12,55.</p></div>
+    </section>
+
+    <section class="section" id="classes">
+      <h2>6. Série regroupée en classes</h2>
+      <div class="lesson-box"><p>Pour une variable continue, on peut regrouper les valeurs en intervalles de même amplitude. Si la répartition est supposée uniforme dans chaque classe, on représente la classe par son centre pour estimer la moyenne.</p></div>
+      <div class="example-box"><h3>Exemple : durées d’un trajet</h3><div class="stat-table-wrapper"><table class="stat-table"><thead><tr><th>Durée (min)</th><th>[0 ; 10[</th><th>[10 ; 20[</th><th>[20 ; 30[</th><th>[30 ; 40[</th><th>[40 ; 50[</th></tr></thead><tbody><tr><th>Centre</th><td>5</td><td>15</td><td>25</td><td>35</td><td>45</td></tr><tr><th>Effectif</th><td>2</td><td>6</td><td>10</td><td>7</td><td>5</td></tr><tr><th>Effectif cumulé</th><td>2</td><td>8</td><td>18</td><td>25</td><td>30</td></tr></tbody></table></div><p>Moyenne estimée :</p><p class="math">x̄ ≈ (2×5+6×15+10×25+7×35+5×45)/30 ≈ 27,33 min.</p><p>Comme <span class="math">N/2=15</span>, la 15e valeur appartient à <span class="math">[20 ; 30[</span> : c’est la <strong>classe médiane</strong>.</p><p>En supposant une répartition uniforme dans cette classe, on peut estimer la médiane par interpolation :</p><p class="math">Me ≈ 20 + [(15-8)/10]×10 = 27 min.</p><p>Les fréquences cumulées peuvent aussi être représentées par un <strong>polygone des fréquences cumulées</strong>, qui permet de lire graphiquement une médiane approchée.</p>
+        <div class="histogram" role="img" aria-label="Histogramme des durées de trajet : effectifs 2, 6, 10, 7 et 5"><div class="hist-bar" style="height:20%"><span>2</span></div><div class="hist-bar" style="height:60%"><span>6</span></div><div class="hist-bar" style="height:100%"><span>10</span></div><div class="hist-bar" style="height:70%"><span>7</span></div><div class="hist-bar" style="height:50%"><span>5</span></div></div><div class="hist-labels"><span>[0;10[</span><span>[10;20[</span><span>[20;30[</span><span>[30;40[</span><span>[40;50[</span></div>
+      </div>
+      <div class="tip-box"><p>Dans un histogramme, l’aire des rectangles est proportionnelle à l’effectif ou à la fréquence. Avec des classes de même amplitude, on peut comparer directement leurs hauteurs.</p></div>
+    </section>
+
+    <section class="section" id="comparer">
+      <h2>7. Comparer deux séries</h2>
+      <div class="lesson-box"><p>On associe un indicateur de position à un indicateur de dispersion :</p></div><div class="comparison-grid"><div class="comparison-card"><h3>Moyenne et écart-type</h3><p>Adaptés pour étudier les valeurs autour de la moyenne.</p></div><div class="comparison-card"><h3>Médiane et écart interquartile</h3><p>Utiles lorsque des valeurs extrêmes risquent de déformer l’analyse.</p></div></div>
+      <div class="example-box"><p>Deux classes ont une moyenne de 12. La classe A a un écart-type de 1,8 et la classe B de 3,4. Les résultats de la classe A sont plus homogènes, même si les moyennes sont identiques.</p></div>
+    </section>
+
+    <section class="section" id="methode"><h2>Méthode : étudier une série</h2><div class="lesson-box"><ol class="method-steps"><li>Identifier la population, le caractère et l’effectif total.</li><li>Ordonner les valeurs ou construire un tableau d’effectifs.</li><li>Choisir les indicateurs adaptés à la question.</li><li>Effectuer les calculs en gardant les unités.</li><li>Interpréter les résultats dans le contexte.</li></ol></div></section>
+
+    <section class="section" id="exercices"><h2>Exercices d’entraînement</h2>
+      <div class="exercise-box"><h3>Exercice 1 - Effectifs et fréquences</h3><p>Série : <span class="math">5 ; 7 ; 7 ; 8 ; 10 ; 10 ; 10 ; 12</span>.</p><ol><li>Donner l’effectif total.</li><li>Construire le tableau des effectifs et des fréquences.</li></ol></div>
+      <div class="exercise-box"><h3>Exercice 2 - Indicateurs</h3><p>Série : <span class="math">3 ; 5 ; 6 ; 8 ; 9 ; 11 ; 14 ; 16</span>.</p><ol><li>Calculer la moyenne et la médiane.</li><li>Déterminer <span class="math">Q₁</span>, <span class="math">Q₃</span>, l’écart interquartile et l’étendue.</li></ol></div>
+      <div class="exercise-box"><h3>Exercice 3 - Moyenne pondérée</h3><p>Les notes 8, 10, 12, 14 et 16 ont pour effectifs 2, 4, 5, 3 et 1. Calculer la moyenne.</p></div>
+      <div class="exercise-box"><h3>Exercice 4 - Transformation</h3><p>Une série a pour moyenne 15. Chaque valeur est multipliée par 1,2 puis diminuée de 3. Déterminer la nouvelle moyenne.</p></div>
+      <div class="exercise-box"><h3>Exercice 5 - Séries regroupées</h3><p>Reprendre le tableau des durées.</p><ol><li>Vérifier la moyenne estimée.</li><li>Déterminer la classe médiane.</li><li>Calculer les fréquences cumulées.</li></ol></div>
+      <div class="exercise-box"><h3>Exercice 6 - Comparaison</h3><p>A : <span class="math">x̄=11,5</span> et <span class="math">σ=1,2</span> ; B : <span class="math">x̄=12</span> et <span class="math">σ=3,1</span>. Comparer leur niveau moyen et leur dispersion.</p></div>
+    </section>
+
+    <section class="section" id="video"><h2>Vidéo</h2><div class="video-box"><p>Ajoutez ici votre vidéo sur les indicateurs statistiques et les séries regroupées en classes.</p><iframe src="https://www.youtube.com/embed/LIEN_VIDEO" title="Cours de statistiques en Seconde" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></section>
+    <section class="section"><h2>À retenir</h2><div class="tip-box"><p>Pour la médiane et les quartiles, commence toujours par ordonner la série.</p></div><div class="tip-box"><p>La moyenne pondérée tient compte des effectifs ; l’écart-type mesure la dispersion autour de la moyenne.</p></div><div class="tip-box"><p>Pour comparer deux séries, utilise un couple cohérent : moyenne-écart-type ou médiane-écart interquartile.</p></div><div class="footer-nav"><a href="statistiques-probabilites.html" class="btn btn-secondary">← Retour</a><a href="index.html" class="btn btn-primary">Accueil</a></div></section>
   </main>
-
 </body>
 </html>

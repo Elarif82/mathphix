@@ -338,8 +338,8 @@ code {
   box-shadow: none;
 }
 
-.lesson-box svg,
-.example-box svg {
+.lesson-box > svg,
+.example-box > svg {
   display: block;
   max-width: 100%;
   height: auto;
@@ -404,10 +404,23 @@ code {
     font-size: 0.9rem;
   }
 
-  .lesson-box svg,
-  .example-box svg {
+  .lesson-box > svg,
+  .example-box > svg {
     min-width: 560px;
   }
+}
+
+/* Les formules MathJax sont aussi rendues en SVG : elles ne doivent jamais
+   hériter des dimensions prévues pour les grandes figures pédagogiques. */
+.lesson-box mjx-container svg,
+.example-box mjx-container svg,
+.mini-card mjx-container svg,
+.tip-box mjx-container svg,
+.exercise-box mjx-container svg {
+  display: inline;
+  min-width: 0;
+  max-width: none;
+  margin: 0;
 }
 
 /* ===== VECTEURS, COORDONNÉES ET FIGURES SVG ===== */
@@ -540,5 +553,174 @@ mjx-container[display="true"] {
   .single-line-title {
     font-size: 0.96rem;
     letter-spacing: -0.02em;
+  }
+}
+
+/* ===== DROITES DU PLAN ===== */
+
+.lesson-box,
+.example-box,
+.mini-card,
+.tip-box,
+.exercise-box {
+  text-align: left;
+}
+
+.lesson-box h3,
+.example-box h3,
+.mini-card h3,
+.exercise-box h3 {
+  margin-top: 0;
+  margin-bottom: 0.4rem;
+}
+
+.lesson-box p,
+.example-box p,
+.mini-card p,
+.tip-box p,
+.exercise-box p {
+  margin: 0.35rem 0;
+  line-height: 1.5;
+  text-align: left;
+  word-spacing: normal;
+}
+
+.lesson-box ul,
+.tip-box ul {
+  margin: 0.35rem 0 0;
+  padding-left: 1.35rem;
+}
+
+.lesson-box li,
+.tip-box li {
+  margin: 0.18rem 0;
+  line-height: 1.45;
+  text-align: left;
+  word-spacing: normal;
+}
+
+.lesson-box mjx-container,
+.example-box mjx-container,
+.mini-card mjx-container {
+  word-spacing: normal;
+}
+
+.formula-box {
+  margin: 0.75rem 0;
+  padding: 0.85rem 1rem;
+  overflow-x: auto;
+  border-left: 4px solid #2454d3;
+  background: #f8fafc;
+  text-align: center;
+}
+
+.equation-line {
+  margin: 0.6rem 0;
+  padding: 0.7rem 1rem;
+  overflow-x: auto;
+  border-radius: 10px;
+  background: #f8fafc;
+  text-align: center;
+}
+
+.coords {
+  white-space: nowrap;
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  word-spacing: normal;
+}
+
+.method-table-wrapper {
+  margin: 0.75rem 0;
+  overflow-x: auto;
+}
+
+.method-table {
+  width: 100%;
+  min-width: 620px;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+.method-table th,
+.method-table td {
+  padding: 0.75rem;
+  border: 1px solid #cbd5e1;
+  text-align: center;
+}
+
+.method-table th {
+  background: #eaf2ff;
+  color: #173e79;
+}
+
+.membership-table {
+  min-width: 560px;
+}
+
+.figure-box {
+  margin: 1rem auto;
+  padding: 1rem;
+  overflow-x: auto;
+  border: 1px solid #d7e1ef;
+  border-radius: 14px;
+  background: #fff;
+}
+
+.figure-box svg {
+  display: block;
+  width: 100%;
+  max-width: 700px;
+  min-width: 520px;
+  height: auto;
+  margin: auto;
+}
+
+.axis { stroke: #475569; stroke-width: 2; }
+.grid { stroke: #dbe4f0; stroke-width: 1; }
+.line-blue { fill: none; stroke: #2454d3; stroke-width: 4; }
+.line-orange { fill: none; stroke: #dc6b34; stroke-width: 3; }
+.helper { stroke: #64748b; stroke-width: 2; stroke-dasharray: 7 6; }
+.point { fill: #173e79; }
+.label { fill: #173e79; font: 700 17px Inter, Arial, sans-serif; }
+.accent-label { fill: #b45309; font: 700 16px Inter, Arial, sans-serif; }
+
+.two-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.mini-card {
+  padding: 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  background: #fff;
+}
+
+mjx-container[display="true"] {
+  margin: 0.35rem 0;
+}
+
+@media (max-width: 700px) {
+  .two-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .figure-box svg {
+    min-width: 480px;
+  }
+
+  .method-table th,
+  .method-table td {
+    padding: 0.6rem;
+  }
+
+  .lesson-box p,
+  .example-box p,
+  .mini-card p,
+  .tip-box p,
+  .exercise-box p {
+    line-height: 1.45;
   }
 }
