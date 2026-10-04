@@ -3,295 +3,78 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MathPhiX — Trigonométrie</title>
+  <title>Trigonométrie en Seconde : cours et exercices | MathPhiX</title>
+  <meta name="description" content="Cours de trigonométrie en Seconde : projeté orthogonal, hauteur, cosinus, sinus, tangente, relation fondamentale et exercices." />
   <link rel="stylesheet" href="css/style2.css" />
+  <style>
+    .formula-box{margin:1rem 0;padding:1rem;border-left:4px solid #2454d3;background:#f8fafc;text-align:center}.figure-box{margin:1rem auto;padding:1rem;border:1px solid #d7e1ef;border-radius:14px;background:#fff;overflow-x:auto}.figure-box svg{display:block;width:100%;max-width:660px;min-width:440px;height:auto;margin:auto}.geo-line{stroke:#254f87;stroke-width:3;fill:none}.geo-helper{stroke:#dc6b34;stroke-width:2.5;fill:none}.geo-point{fill:#2454d3}.geo-fill{fill:#eaf2ff;stroke:#2454d3;stroke-width:2}.right-angle{fill:#fff7ed;stroke:#dc6b34;stroke-width:2.5}.angle-sector{fill:#ffedd5;stroke:#dc6b34;stroke-width:2.5}.geo-label{font:700 18px Inter,Arial,sans-serif;fill:#173e79}.geo-angle{font:700 16px Inter,Arial,sans-serif;fill:#b45309}.ratios{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin:1rem 0}.ratio-card{padding:1rem;border:1px solid #cbd5e1;border-radius:12px;background:#fff;text-align:center}.ratio-card h3{color:#173e79}.method-table-wrapper{overflow-x:auto}.method-table{width:100%;min-width:600px;border-collapse:collapse;background:#fff}.method-table th,.method-table td{padding:.75rem;border:1px solid #cbd5e1;text-align:center}.method-table th{background:#eaf2ff;color:#173e79}@media(max-width:700px){.ratios{grid-template-columns:1fr}.figure-box svg{min-width:400px}}
+  </style>
 </head>
-
 <body>
+  <header class="site-header"><div class="header-container container"><div><h1 class="site-title">MathPhiX</h1><p class="site-subtitle">Seconde - Trigonométrie</p></div><a href="geometrie.html" class="back-link">← Retour</a></div></header>
 
-  <header class="site-header">
-    <div class="header-container container">
-      <div>
-        <h1 class="site-title">MathPhiX</h1>
-        <p class="site-subtitle">Seconde — Trigonométrie</p>
-      </div>
-      <a href="geometrie.html" class="back-link">← Retour</a>
-    </div>
-  </header>
-
-  <section class="hero">
-    <div class="container">
-      <div class="hero-card">
-        <h1>Trigonométrie dans le triangle rectangle</h1>
-        <p>
-          Dans ce chapitre, tu vas apprendre à utiliser le sinus, le cosinus
-          et la tangente d’un angle aigu dans un triangle rectangle pour calculer
-          des longueurs, des angles et des aires.
-        </p>
-
-        <div class="hero-tags">
-          <span class="tag">Cours</span>
-          <span class="tag">Exercices</span>
-          <span class="tag">Vidéo</span>
-          <span class="tag">Astuce</span>
-        </div>
-      </div>
-    </div>
-  </section>
+  <section class="hero"><div class="container"><div class="hero-card"><h1>Trigonométrie dans le triangle rectangle</h1><p>Identifier les côtés d’un triangle rectangle, choisir le bon rapport trigonométrique et calculer une longueur ou un angle.</p><div class="hero-tags"><span class="tag">Projeté orthogonal</span><span class="tag">Cosinus</span><span class="tag">Sinus</span><span class="tag">Tangente</span><span class="tag">Triangle rectangle</span></div></div></div></section>
 
   <main class="container">
-
-    <section class="section">
-      <h2>Cours</h2>
-
-      <div class="lesson-box">
-        <h3>1. Le triangle rectangle</h3>
-        <p>
-          La trigonométrie étudiée en seconde concerne le <strong>triangle rectangle</strong>.
-        </p>
-        <p>
-          Dans un triangle rectangle, le côté opposé à l’angle droit s’appelle
-          <strong>l’hypoténuse</strong>.
-        </p>
-      </div>
-
-      <div class="lesson-box">
-        <h3>2. Le vocabulaire par rapport à un angle</h3>
-        <p>
-          On se place par rapport à un angle aigu <span class="math">α</span>.
-        </p>
-        <ul>
-          <li>le côté <strong>opposé</strong> est en face de l’angle ;</li>
-          <li>le côté <strong>adjacent</strong> touche l’angle, sans être l’hypoténuse ;</li>
-          <li>l’<strong>hypoténuse</strong> est le plus grand côté du triangle rectangle.</li>
-        </ul>
-      </div>
-
-      <div class="lesson-box">
-        <h3>3. Les rapports trigonométriques</h3>
-        <p>
-          Dans un triangle rectangle :
-        </p>
-        <p><span class="math">cos(α) = côté adjacent / hypoténuse</span></p>
-        <p><span class="math">sin(α) = côté opposé / hypoténuse</span></p>
-        <p><span class="math">tan(α) = côté opposé / côté adjacent</span></p>
-        <p>
-          Ces trois formules permettent de relier un angle et les longueurs des côtés.
-        </p>
-      </div>
-
-      <div class="lesson-box">
-        <h3>4. Calculer une longueur</h3>
-        <p>
-          Pour calculer une longueur, on choisit la formule qui utilise
-          l’angle connu et les côtés utiles.
-        </p>
-        <p>
-          Exemple :
-          si <span class="math">cos(40°) = 4 / AB</span>, alors
-          <span class="math">AB = 4 / cos(40°)</span>.
-        </p>
-      </div>
-
-      <div class="lesson-box">
-        <h3>5. Calculer un angle</h3>
-        <p>
-          Si on connaît un rapport de longueurs, on peut calculer l’angle
-          avec la calculatrice en utilisant les fonctions inverses :
-        </p>
-        <p>
-          <span class="math">cos⁻¹</span>, <span class="math">sin⁻¹</span> ou
-          <span class="math">tan⁻¹</span>.
-        </p>
-        <p>
-          Exemple :
-          si <span class="math">sin(α) = 0,5</span>, alors
-          <span class="math">α ≈ 30°</span>.
-        </p>
-      </div>
-
-      <div class="lesson-box">
-        <h3>6. Hauteur et projeté orthogonal</h3>
-        <p>
-          Dans un triangle, la <strong>hauteur</strong> issue d’un sommet est le segment
-          perpendiculaire au côté opposé.
-        </p>
-        <p>
-          Le point d’intersection entre cette hauteur et le côté opposé
-          est appelé le <strong>projeté orthogonal</strong> du sommet sur ce côté.
-        </p>
-        <p>
-          Cette notion est utile pour calculer une aire.
-        </p>
-      </div>
-
-      <div class="lesson-box">
-        <h3>7. Aire d’un triangle</h3>
-        <p>
-          L’aire d’un triangle se calcule avec la formule :
-        </p>
-        <p>
-          <span class="math">Aire = (base × hauteur) / 2</span>
-        </p>
-        <p>
-          La hauteur choisie doit être <strong>perpendiculaire</strong> à la base.
-        </p>
-      </div>
-
-      <div class="example-box">
-        <h3>Exemple 1</h3>
-        <p>
-          Dans un triangle rectangle, on connaît un angle de
-          <span class="math">30°</span> et l’hypoténuse mesure
-          <span class="math">10</span>.
-        </p>
-        <p>
-          <span class="math">sin(30°) = opposé / 10</span>
-        </p>
-        <p>
-          Or <span class="math">sin(30°) = 0,5</span>, donc :
-        </p>
-        <p>
-          <span class="math">opposé = 10 × 0,5 = 5</span>
-        </p>
-      </div>
-
-      <div class="example-box">
-        <h3>Exemple 2</h3>
-        <p>
-          Un triangle a une base de <span class="math">12</span> cm
-          et une hauteur de <span class="math">5</span> cm.
-        </p>
-        <p>
-          Son aire vaut :
-        </p>
-        <p>
-          <span class="math">Aire = (12 × 5) / 2 = 30</span>
-        </p>
-      </div>
+    <section class="section" id="projection">
+      <h2>1. Projeté orthogonal et distance à une droite</h2>
+      <div class="lesson-box"><p>Soient un point <span class="math">A</span> et une droite <span class="math">d</span>. Le <strong>projeté orthogonal</strong> de <span class="math">A</span> sur <span class="math">d</span> est le point <span class="math">H</span> de <span class="math">d</span> tel que <span class="math">(AH) ⟂ d</span>.</p><p>La distance du point <span class="math">A</span> à la droite <span class="math">d</span> est la longueur <span class="math">AH</span>. C’est la plus courte distance entre <span class="math">A</span> et un point de <span class="math">d</span>.</p></div>
+      <div class="figure-box"><svg viewBox="0 0 660 280" role="img" aria-label="Le segment AH est perpendiculaire à la droite d en H"><line class="geo-line" x1="65" y1="220" x2="595" y2="220"/><line class="geo-helper" x1="315" y1="45" x2="315" y2="220"/><rect class="right-angle" x="315" y="198" width="22" height="22"/><circle class="geo-point" cx="315" cy="45" r="6"/><circle class="geo-point" cx="315" cy="220" r="6"/><text class="geo-label" x="290" y="35">A</text><text class="geo-label" x="286" y="246">H</text><text class="geo-label" x="600" y="226">d</text><text class="geo-angle" x="342" y="184">90°</text><text class="geo-angle" x="226" y="125">AH ⟂ d</text></svg></div>
+      <div class="lesson-box"><h3>Tangente à un cercle</h3><p>Si <span class="math">H</span> est le projeté orthogonal de <span class="math">A</span> sur <span class="math">d</span>, alors la droite <span class="math">d</span> est tangente en <span class="math">H</span> au cercle de centre <span class="math">A</span> et de rayon <span class="math">AH</span>.</p></div>
     </section>
 
-    <section class="section">
-      <h2>Exercices</h2>
-
-      <div class="exercise-box">
-        <h3>Exercice 1</h3>
-        <p>
-          Dans un triangle rectangle, identifier :
-        </p>
-        <ul>
-          <li>l’hypoténuse ;</li>
-          <li>le côté opposé à un angle donné ;</li>
-          <li>le côté adjacent à un angle donné.</li>
-        </ul>
-      </div>
-
-      <div class="exercise-box">
-        <h3>Exercice 2</h3>
-        <p>
-          Dans un triangle rectangle, l’angle aigu mesure
-          <span class="math">45°</span> et l’hypoténuse mesure
-          <span class="math">8</span>.
-        </p>
-        <ul>
-          <li>Écrire la relation avec le cosinus.</li>
-          <li>Calculer le côté adjacent.</li>
-        </ul>
-      </div>
-
-      <div class="exercise-box">
-        <h3>Exercice 3</h3>
-        <p>
-          Dans un triangle rectangle, le côté opposé à un angle mesure
-          <span class="math">6</span> et l’hypoténuse mesure
-          <span class="math">10</span>.
-        </p>
-        <ul>
-          <li>Calculer le sinus de l’angle.</li>
-          <li>En déduire une valeur approchée de l’angle.</li>
-        </ul>
-      </div>
-
-      <div class="exercise-box">
-        <h3>Exercice 4</h3>
-        <p>
-          Dans un triangle rectangle, le côté opposé mesure
-          <span class="math">5</span> et le côté adjacent mesure
-          <span class="math">12</span>.
-        </p>
-        <ul>
-          <li>Calculer la tangente de l’angle.</li>
-          <li>Déterminer l’angle au degré près.</li>
-        </ul>
-      </div>
-
-      <div class="exercise-box">
-        <h3>Exercice 5</h3>
-        <p>
-          Une base mesure <span class="math">14</span> cm
-          et la hauteur correspondante mesure <span class="math">9</span> cm.
-        </p>
-        <ul>
-          <li>Calculer l’aire du triangle.</li>
-        </ul>
-      </div>
-
-      <div class="exercise-box">
-        <h3>Exercice 6</h3>
-        <p>
-          Expliquer ce qu’est le projeté orthogonal d’un point sur une droite
-          ou sur un segment.
-        </p>
-      </div>
+    <section class="section" id="hauteur">
+      <h2>2. Hauteur d’un triangle</h2>
+      <div class="lesson-box"><p>Dans un triangle <span class="math">ABC</span>, la hauteur issue de <span class="math">A</span> est la droite passant par <span class="math">A</span> et perpendiculaire à <span class="math">(BC)</span>. Son pied <span class="math">H</span> est le projeté orthogonal de <span class="math">A</span> sur <span class="math">(BC)</span>.</p></div>
+      <div class="figure-box"><svg viewBox="0 0 660 310" role="img" aria-label="La hauteur AH est perpendiculaire au côté BC en H"><polygon class="geo-fill" points="330,40 90,245 580,245"/><line class="geo-helper" x1="330" y1="30" x2="330" y2="280"/><rect class="right-angle" x="308" y="223" width="22" height="22"/><circle class="geo-point" cx="330" cy="40" r="6"/><circle class="geo-point" cx="90" cy="245" r="6"/><circle class="geo-point" cx="580" cy="245" r="6"/><circle class="geo-point" cx="330" cy="245" r="6"/><text class="geo-label" x="338" y="38">A</text><text class="geo-label" x="65" y="267">B</text><text class="geo-label" x="588" y="267">C</text><text class="geo-label" x="338" y="270">H</text><text class="geo-angle" x="277" y="218">90°</text></svg></div>
+      <div class="tip-box"><p><strong>Approfondissement :</strong> les trois hauteurs d’un triangle sont concourantes. Leur point de concours est l’orthocentre.</p></div>
     </section>
 
-    <section class="section">
-      <h2>Vidéo</h2>
-
-      <div class="video-box">
-        <p>Vidéo explicative sur la trigonométrie :</p>
-
-        <iframe
-          src="https://www.youtube.com/embed/LIEN_VIDEO"
-          title="Vidéo trigonométrie"
-          allowfullscreen>
-        </iframe>
-      </div>
+    <section class="section" id="vocabulaire-triangle">
+      <h2>3. Repérer les côtés d’un triangle rectangle</h2>
+      <div class="lesson-box"><ul><li>L’<strong>hypoténuse</strong> est le côté opposé à l’angle droit ; c’est le plus long côté.</li><li>Le côté <strong>adjacent</strong> à un angle aigu touche cet angle, sans être l’hypoténuse.</li><li>Le côté <strong>opposé</strong> à un angle aigu ne touche pas cet angle.</li></ul></div>
+      <div class="figure-box"><svg viewBox="0 0 660 330" role="img" aria-label="Triangle ABC rectangle en A ; l’angle x est l’angle ACB au sommet C"><polygon class="geo-fill" points="150,270 150,55 555,270"/><rect class="right-angle" x="150" y="242" width="28" height="28"/><path class="angle-sector" d="M150 105 A50 50 0 0 0 194 78 L150 55 Z"/><circle class="geo-point" cx="150" cy="270" r="6"/><circle class="geo-point" cx="150" cy="55" r="6"/><circle class="geo-point" cx="555" cy="270" r="6"/><text class="geo-label" x="120" y="298">A</text><text class="geo-label" x="125" y="43">C</text><text class="geo-label" x="565" y="292">B</text><text class="geo-angle" x="167" y="91">x</text><text class="geo-angle" x="184" y="263">90°</text><text class="geo-label" x="315" y="150">hypoténuse CB</text><text class="geo-label" x="42" y="170">adjacent CA</text><text class="geo-label" x="310" y="305">opposé AB</text></svg></div>
     </section>
 
-    <section class="section">
-      <h2>Astuce</h2>
-
-      <div class="tip-box">
-        <p>
-          Commence toujours par repérer :
-          <strong>opposé, adjacent, hypoténuse</strong>.
-        </p>
-      </div>
-
-      <div class="tip-box">
-        <p>
-          Retenir :
-          <span class="math">cos = adjacent / hypoténuse</span>,
-          <span class="math">sin = opposé / hypoténuse</span>,
-          <span class="math">tan = opposé / adjacent</span>.
-        </p>
-      </div>
-
-      <div class="tip-box">
-        <p>
-          Pour l’aire d’un triangle, choisis une base puis la hauteur
-          <strong>perpendiculaire</strong> à cette base.
-        </p>
-      </div>
-
-      <div class="footer-nav">
-        <a href="geometrie.html" class="btn btn-secondary">← Retour</a>
-        <a href="index.html" class="btn btn-primary">Accueil</a>
-      </div>
+    <section class="section" id="rapports">
+      <h2>4. Cosinus, sinus et tangente</h2>
+      <div class="lesson-box"><p>Dans un triangle rectangle, pour un angle aigu <span class="math">x</span> :</p></div>
+      <div class="ratios"><div class="ratio-card"><h3>Cosinus</h3><p class="math">cos(x) = adjacent / hypoténuse</p></div><div class="ratio-card"><h3>Sinus</h3><p class="math">sin(x) = opposé / hypoténuse</p></div><div class="ratio-card"><h3>Tangente</h3><p class="math">tan(x) = opposé / adjacent</p></div></div>
+      <div class="tip-box"><p><strong>Moyen mnémotechnique :</strong> SOH - CAH - TOA : Sinus = Opposé/Hypoténuse, Cosinus = Adjacent/Hypoténuse, Tangente = Opposé/Adjacent.</p></div>
+      <div class="method-table-wrapper"><table class="method-table"><thead><tr><th>Côtés connus ou cherchés</th><th>Rapport adapté</th></tr></thead><tbody><tr><td>Adjacent et hypoténuse</td><td>Cosinus</td></tr><tr><td>Opposé et hypoténuse</td><td>Sinus</td></tr><tr><td>Opposé et adjacent</td><td>Tangente</td></tr></tbody></table></div>
     </section>
 
+    <section class="section" id="calculs">
+      <h2>5. Calculer une longueur ou un angle</h2>
+      <div class="example-box"><h3>Exemple 1 : calculer une longueur</h3><p>Dans le triangle <span class="math">ABC</span> rectangle en <span class="math">A</span>, on connaît <span class="math">AC=6 cm</span> et <span class="math">Ĉ=40°</span>. On cherche <span class="math">AB</span>, côté opposé à l’angle <span class="math">Ĉ</span>.</p><p class="math">tan(40°)=AB/AC=AB/6</p><p class="math">AB=6×tan(40°)≈5,0 cm.</p></div>
+      <div class="example-box"><h3>Exemple 2 : calculer un angle</h3><p>Dans un triangle rectangle, le côté opposé à l’angle <span class="math">x</span> mesure 7 cm et le côté adjacent 10 cm.</p><p class="math">tan(x)=7/10=0,7</p><p class="math">x=tan⁻¹(0,7)≈35°.</p><p>La calculatrice doit être réglée en mode <strong>degrés</strong>.</p></div>
+      <div class="lesson-box"><h3>Méthode</h3><ol><li>Repérer l’angle droit et l’hypoténuse.</li><li>Nommer les côtés opposé et adjacent par rapport à l’angle étudié.</li><li>Choisir cosinus, sinus ou tangente.</li><li>Écrire l’égalité avant de remplacer par les valeurs.</li><li>Calculer, arrondir raisonnablement et indiquer l’unité.</li></ol></div>
+    </section>
+
+    <section class="section" id="relation">
+      <h2>6. Relation fondamentale</h2>
+      <div class="lesson-box"><p>Pour tout angle aigu <span class="math">x</span> :</p><div class="formula-box"><span class="math">cos²(x) + sin²(x) = 1</span></div><p>Cette relation permet de calculer le sinus connaissant le cosinus, ou inversement.</p></div>
+      <div class="example-box"><h3>Démonstration dans un triangle rectangle</h3><p>Avec les notations de la figure précédente :</p><p class="math">cos(x)=CA/CB et sin(x)=AB/CB.</p><p class="math">cos²(x)+sin²(x)=(CA²+AB²)/CB².</p><p>D’après le théorème de Pythagore, <span class="math">CA²+AB²=CB²</span>. Ainsi :</p><p class="math">cos²(x)+sin²(x)=CB²/CB²=1.</p></div>
+    </section>
+
+    <section class="section" id="erreurs">
+      <h2>7. Erreurs fréquentes</h2>
+      <div class="tip-box"><ul><li>confondre le côté adjacent et l’hypoténuse ;</li><li>nommer les côtés sans préciser l’angle étudié ;</li><li>utiliser une relation trigonométrique dans un triangle non rectangle ;</li><li>oublier le mode degrés de la calculatrice ;</li><li>arrondir trop tôt au cours du calcul ;</li><li>écrire <span class="math">cos(x)+sin(x)=1</span> au lieu de <span class="math">cos²(x)+sin²(x)=1</span>.</li></ul></div>
+    </section>
+
+    <section class="section" id="exercices">
+      <h2>Exercices d’entraînement</h2>
+      <div class="exercise-box"><h3>Exercice 1 - Projeté orthogonal</h3><p>Tracer une droite <span class="math">d</span> et un point <span class="math">A</span> extérieur à <span class="math">d</span>. Construire le projeté orthogonal <span class="math">H</span> et expliquer pourquoi <span class="math">AH</span> représente la distance de <span class="math">A</span> à <span class="math">d</span>.</p></div>
+      <div class="exercise-box"><h3>Exercice 2 - Vocabulaire</h3><p>Dans un triangle <span class="math">RST</span> rectangle en <span class="math">R</span>, nommer l’hypoténuse et, par rapport à l’angle <span class="math">Ŝ</span>, les côtés opposé et adjacent.</p></div>
+      <div class="exercise-box"><h3>Exercice 3 - Longueur avec le cosinus</h3><p>Dans un triangle rectangle, l’hypoténuse mesure 12 cm et un angle aigu 35°. Calculer la longueur du côté adjacent à cet angle.</p></div>
+      <div class="exercise-box"><h3>Exercice 4 - Longueur avec le sinus</h3><p>Dans un triangle rectangle, l’hypoténuse mesure 15 cm et un angle aigu 52°. Calculer la longueur du côté opposé.</p></div>
+      <div class="exercise-box"><h3>Exercice 5 - Calcul d’un angle</h3><p>Les côtés opposé et adjacent à un angle aigu mesurent respectivement 8 cm et 11 cm. Déterminer cet angle au degré près.</p></div>
+      <div class="exercise-box"><h3>Exercice 6 - Relation fondamentale</h3><p>On sait que <span class="math">cos(x)=0,6</span> pour un angle aigu <span class="math">x</span>. Calculer <span class="math">sin(x)</span>.</p></div>
+    </section>
+
+    <section class="section" id="video"><h2>Vidéo</h2><div class="video-box"><p>Ajoutez ici votre vidéo sur la trigonométrie dans le triangle rectangle.</p><iframe src="https://www.youtube.com/embed/LIEN_VIDEO" title="Cours de trigonométrie en Seconde" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></section>
+
+    <section class="section"><h2>À retenir</h2><div class="tip-box"><p>L’hypoténuse est toujours le côté opposé à l’angle droit.</p></div><div class="tip-box"><p>Choisis le rapport trigonométrique à partir des deux côtés concernés : SOH - CAH - TOA.</p></div><div class="tip-box"><p>Pour un angle aigu : <span class="math">cos²(x)+sin²(x)=1</span>.</p></div><div class="footer-nav"><a href="geometrie.html" class="btn btn-secondary">← Retour</a><a href="index.html" class="btn btn-primary">Accueil</a></div></section>
   </main>
-
 </body>
 </html>

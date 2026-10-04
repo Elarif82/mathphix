@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MathPhiX — Information chiffrée</title>
+  <title>Information chiffrée en Seconde : proportions et évolutions | MathPhiX</title>
+  <meta name="description" content="Cours de Seconde sur l’information chiffrée : proportions, pourcentages de pourcentages, taux d’évolution, coefficients multiplicateurs, évolutions successives et réciproques." />
   <link rel="stylesheet" href="css/style2.css" />
 </head>
 
 <body>
-
   <header class="site-header">
     <div class="header-container container">
       <div>
         <h1 class="site-title">MathPhiX</h1>
-        <p class="site-subtitle">Seconde — Information chiffrée</p>
+        <p class="site-subtitle">Seconde - Information chiffrée</p>
       </div>
       <a href="statistiques-probabilites.html" class="back-link">← Retour</a>
     </div>
@@ -24,266 +24,301 @@
       <div class="hero-card">
         <h1>Information chiffrée</h1>
         <p>
-          Dans ce chapitre, tu vas apprendre à lire et interpréter des données
-          chiffrées, calculer une proportion, un pourcentage, un taux d’évolution
-          et utiliser un coefficient multiplicateur.
+          Proportions, pourcentages et évolutions : apprends à interpréter une information,
+          choisir la bonne formule et contrôler la cohérence d’un résultat.
         </p>
-
         <div class="hero-tags">
-          <span class="tag">Cours</span>
-          <span class="tag">Exercices</span>
-          <span class="tag">Vidéo</span>
-          <span class="tag">Astuce</span>
+          <span class="tag">Proportions</span>
+          <span class="tag">Pourcentages</span>
+          <span class="tag">Évolutions</span>
+          <span class="tag">Coefficients multiplicateurs</span>
         </div>
       </div>
     </div>
   </section>
 
   <main class="container">
-
-    <section class="section">
-      <h2>Cours</h2>
-
-      <div class="lesson-box">
-        <h3>1. Proportion</h3>
-        <p>
-          Une proportion compare une partie à un ensemble total.
-        </p>
-        <p>
-          On calcule une proportion avec la formule :
-          <span class="math">proportion = partie / total</span>.
-        </p>
-        <p>
-          Exemple : dans une classe de 30 élèves, 18 sont demi-pensionnaires.
-        </p>
-        <p>
-          La proportion de demi-pensionnaires est :
-          <span class="math">18 / 30 = 0,6</span>.
-        </p>
-      </div>
+    <section class="section" id="proportions">
+      <h2>1. Proportion et pourcentage</h2>
 
       <div class="lesson-box">
-        <h3>2. Pourcentage</h3>
+        <h3>Définition</h3>
         <p>
-          Un pourcentage est une proportion exprimée sur 100.
+          Une population contient <span class="math">N</span> individus. Une sous-population
+          contient <span class="math">n</span> individus, avec <span class="math">0 ≤ n ≤ N</span>.
+          Sa proportion dans la population totale est :
         </p>
-        <p>
-          Pour passer d’une proportion à un pourcentage, on multiplie par 100.
-        </p>
-        <p>
-          Exemple :
-          <span class="math">0,6 correspond à 60 %</span>.
-        </p>
-        <p>
-          Donc 60 % des élèves sont demi-pensionnaires.
-        </p>
-      </div>
-
-      <div class="lesson-box">
-        <h3>3. Évolution absolue</h3>
-        <p>
-          L’évolution absolue mesure la différence entre la valeur finale
-          et la valeur initiale.
-        </p>
-        <p>
-          Formule :
-          <span class="math">évolution absolue = valeur finale - valeur initiale</span>.
-        </p>
-        <p>
-          Exemple : un prix passe de 50 € à 58 €.
-        </p>
-        <p>
-          L’évolution absolue est :
-          <span class="math">58 - 50 = 8</span>.
-        </p>
-      </div>
-
-      <div class="lesson-box">
-        <h3>4. Taux d’évolution</h3>
-        <p>
-          Le taux d’évolution permet de mesurer l’évolution relativement à la valeur initiale.
-        </p>
-        <p>
-          Formule :
-          <span class="math">taux d’évolution = (valeur finale - valeur initiale) / valeur initiale</span>.
-        </p>
-        <p>
-          Exemple : un prix passe de 50 € à 58 €.
-        </p>
-        <p>
-          <span class="math">(58 - 50) / 50 = 8 / 50 = 0,16</span>
-        </p>
-        <p>
-          Donc le taux d’évolution est de <span class="math">16 %</span>.
-        </p>
-      </div>
-
-      <div class="lesson-box">
-        <h3>5. Coefficient multiplicateur</h3>
-        <p>
-          Le coefficient multiplicateur permet de passer directement
-          de la valeur initiale à la valeur finale.
-        </p>
-        <p>
-          Pour une hausse de <span class="math">t</span>,
-          le coefficient multiplicateur est :
-          <span class="math">1 + t</span>.
-        </p>
-        <p>
-          Pour une baisse de <span class="math">t</span>,
-          le coefficient multiplicateur est :
-          <span class="math">1 - t</span>.
-        </p>
-        <p>
-          Exemple : une hausse de 16 % correspond au coefficient multiplicateur
-          <span class="math">1,16</span>.
-        </p>
-      </div>
-
-      <div class="lesson-box">
-        <h3>6. Évolutions successives</h3>
-        <p>
-          Lorsqu’il y a plusieurs évolutions successives, on multiplie les coefficients multiplicateurs.
-        </p>
-        <p>
-          Exemple : une hausse de 10 % puis une hausse de 20 %.
-        </p>
-        <p>
-          Coefficient global :
-          <span class="math">1,10 × 1,20 = 1,32</span>.
-        </p>
-        <p>
-          Cela correspond à une hausse globale de <span class="math">32 %</span>.
-        </p>
+        <p class="math">p = n / N</p>
+        <p>Une proportion est un nombre compris entre <span class="math">0</span> et <span class="math">1</span>.</p>
       </div>
 
       <div class="example-box">
         <h3>Exemple</h3>
+        <p>Dans une classe de 30 élèves, 12 étudient l’allemand.</p>
+        <p><span class="math">p = 12/30 = 0,4</span>.</p>
+        <p>Comme <span class="math">0,4 × 100 = 40</span>, cette proportion correspond à <strong>40 %</strong>.</p>
+      </div>
+
+      <div class="lesson-box">
+        <h3>Passer d’une écriture à l’autre</h3>
+        <ul>
+          <li>proportion décimale vers pourcentage : multiplier par 100 ;</li>
+          <li>pourcentage vers proportion décimale : diviser par 100.</li>
+        </ul>
+        <p><span class="math">0,18 = 18 %</span> et <span class="math">7 % = 7/100 = 0,07</span>.</p>
+      </div>
+
+      <div class="lesson-box">
+        <h3>Calculer un effectif ou un effectif total</h3>
+        <p>À partir de <span class="math">p = n/N</span>, on obtient :</p>
+        <ul>
+          <li><span class="math">n = p × N</span> pour calculer l’effectif de la sous-population ;</li>
+          <li><span class="math">N = n/p</span> lorsque <span class="math">p ≠ 0</span>.</li>
+        </ul>
+        <p>Exemple : <span class="math">35 %</span> de 240 élèves représentent <span class="math">0,35 × 240 = 84</span> élèves.</p>
+      </div>
+    </section>
+
+    <section class="section" id="proportion-proportion">
+      <h2>2. Proportion de proportion</h2>
+
+      <div class="lesson-box">
+        <h3>Propriété</h3>
         <p>
-          Le nombre d’abonnés d’une chaîne passe de 250 à 300.
+          Une population <span class="math">P₂</span> est incluse dans <span class="math">P₁</span>,
+          elle-même incluse dans <span class="math">P</span>.
+          Si <span class="math">p₁</span> est la proportion de <span class="math">P₁</span> dans
+          <span class="math">P</span> et <span class="math">p₂</span> celle de <span class="math">P₂</span>
+          dans <span class="math">P₁</span>, alors :
+        </p>
+        <p class="math">proportion de P₂ dans P = p₁ × p₂</p>
+      </div>
+
+      <div class="example-box">
+        <h3>Exemple - Pourcentage de pourcentage</h3>
+        <p>Dans un lycée, 40 % des élèves étudient l’allemand. Parmi eux, 60 % sont des garçons.</p>
+        <p><span class="math">0,40 × 0,60 = 0,24</span>.</p>
+        <p>Les garçons étudiant l’allemand représentent donc <strong>24 % de l’ensemble du lycée</strong>.</p>
+      </div>
+
+      <div class="tip-box">
+        <p><strong>Attention :</strong> ici, on multiplie les proportions. On ne calcule ni <span class="math">40 + 60</span>, ni <span class="math">60 % de différence</span>.</p>
+      </div>
+    </section>
+
+    <section class="section" id="evolution">
+      <h2>3. Variation et taux d’évolution</h2>
+
+      <div class="lesson-box">
+        <h3>Variation absolue</h3>
+        <p>Une grandeur passe d’une valeur initiale <span class="math">Vᵢ</span> à une valeur finale <span class="math">V𝒇</span>.</p>
+        <p class="math">variation absolue = V𝒇 - Vᵢ</p>
+        <p>La variation absolue s’exprime dans la même unité que la grandeur étudiée.</p>
+      </div>
+
+      <div class="lesson-box">
+        <h3>Taux d’évolution</h3>
+        <p>Lorsque <span class="math">Vᵢ ≠ 0</span>, le taux d’évolution est :</p>
+        <p class="math">t = (V𝒇 - Vᵢ) / Vᵢ</p>
+        <ul>
+          <li>si <span class="math">t &gt; 0</span>, il s’agit d’une augmentation ;</li>
+          <li>si <span class="math">t &lt; 0</span>, il s’agit d’une diminution.</li>
+        </ul>
+        <p>Pour l’exprimer en pourcentage, on multiplie le taux décimal par 100.</p>
+      </div>
+
+      <div class="example-box">
+        <h3>Exemples</h3>
+        <p>
+          Une action passe de 50 € à 65 € :
+          <span class="math">t = (65 - 50)/50 = 0,30</span>, soit une hausse de <strong>30 %</strong>.
         </p>
         <p>
-          Évolution absolue :
-          <span class="math">300 - 250 = 50</span>
-        </p>
-        <p>
-          Taux d’évolution :
-          <span class="math">50 / 250 = 0,2 = 20 %</span>
-        </p>
-        <p>
-          Coefficient multiplicateur :
-          <span class="math">1,20</span>
+          Un ordinateur passe de 800 € à 600 € :
+          <span class="math">t = (600 - 800)/800 = -0,25</span>, soit une baisse de <strong>25 %</strong>.
         </p>
       </div>
     </section>
 
-    <section class="section">
-      <h2>Exercices</h2>
+    <section class="section" id="coefficient">
+      <h2>4. Coefficient multiplicateur</h2>
 
-      <div class="exercise-box">
-        <h3>Exercice 1</h3>
-        <p>
-          Dans un lycée de 800 élèves, 320 élèves prennent le bus.
-        </p>
+      <div class="lesson-box">
+        <h3>Relation entre taux et coefficient</h3>
+        <p>Une évolution de taux décimal <span class="math">t</span> correspond au coefficient multiplicateur :</p>
+        <p class="math">CM = 1 + t</p>
+        <p>On dispose alors des relations :</p>
+        <p class="math">V𝒇 = Vᵢ × CM &nbsp;&nbsp; et &nbsp;&nbsp; CM = V𝒇 / Vᵢ</p>
+      </div>
+
+      <div class="lesson-box">
+        <h3>Hausse ou baisse de r %</h3>
         <ul>
-          <li>Calculer la proportion d’élèves qui prennent le bus.</li>
-          <li>Exprimer cette proportion en pourcentage.</li>
+          <li>augmenter de <span class="math">r %</span> revient à multiplier par <span class="math">1 + r/100</span> ;</li>
+          <li>diminuer de <span class="math">r %</span> revient à multiplier par <span class="math">1 - r/100</span>.</li>
         </ul>
       </div>
 
-      <div class="exercise-box">
-        <h3>Exercice 2</h3>
-        <p>
-          Le prix d’un article passe de 40 € à 46 €.
-        </p>
+      <div class="example-box">
+        <h3>Exemples</h3>
+        <p>Après une hausse de 5 %, un prix de 400 € devient <span class="math">400 × 1,05 = 420 €</span>.</p>
+        <p>Après une baisse de 3 %, un prix de 50 € devient <span class="math">50 × 0,97 = 48,50 €</span>.</p>
+      </div>
+    </section>
+
+    <section class="section" id="distinction">
+      <h2>5. Proportion ou évolution ?</h2>
+
+      <div class="lesson-box">
+        <h3>Distinguer les deux situations</h3>
         <ul>
-          <li>Calculer l’évolution absolue.</li>
+          <li><strong>Proportion :</strong> on compare une partie à un ensemble de référence au même instant.</li>
+          <li><strong>Évolution :</strong> on compare une valeur finale à une valeur initiale.</li>
+        </ul>
+        <p>
+          « 30 % des élèves prennent le bus » exprime une proportion.
+          « Le nombre d’élèves prenant le bus a augmenté de 30 % » exprime une évolution.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="successives">
+      <h2>6. Évolutions successives</h2>
+
+      <div class="lesson-box">
+        <h3>Propriété</h3>
+        <p>
+          Le coefficient multiplicateur global de plusieurs évolutions successives est le produit
+          des coefficients multiplicateurs associés à chaque évolution.
+        </p>
+        <p class="math">CM global = CM₁ × CM₂ × ...</p>
+      </div>
+
+      <div class="example-box">
+        <h3>Exemple 1 - Deux augmentations</h3>
+        <p>Une hausse de 10 %, puis une hausse de 20 %, donnent :</p>
+        <p><span class="math">1,10 × 1,20 = 1,32</span>.</p>
+        <p>L’évolution globale est donc une hausse de <strong>32 %</strong>, et non de 30 %.</p>
+      </div>
+
+      <div class="example-box">
+        <h3>Exemple 2 - Baisse puis hausse</h3>
+        <p>Une baisse de 50 %, puis une hausse de 30 %, donnent :</p>
+        <p><span class="math">0,50 × 1,30 = 0,65</span>.</p>
+        <p>La valeur finale représente 65 % de la valeur initiale : la baisse globale est de <strong>35 %</strong>.</p>
+      </div>
+    </section>
+
+    <section class="section" id="reciproque">
+      <h2>7. Évolution réciproque</h2>
+
+      <div class="lesson-box">
+        <h3>Définition et propriété</h3>
+        <p>
+          L’évolution réciproque ramène la valeur finale à la valeur initiale.
+          Si l’évolution directe a pour coefficient <span class="math">CM ≠ 0</span>, alors :
+        </p>
+        <p class="math">CM réciproque = 1 / CM</p>
+        <p>Si le taux direct est <span class="math">t</span>, le taux réciproque vaut :</p>
+        <p class="math">t' = 1/(1 + t) - 1</p>
+      </div>
+
+      <div class="example-box">
+        <h3>Exemple</h3>
+        <p>Après une hausse de 15 %, le coefficient multiplicateur est <span class="math">1,15</span>.</p>
+        <p><span class="math">CM réciproque = 1/1,15 ≈ 0,8696</span>.</p>
+        <p>Il faut donc une baisse d’environ <strong>13,04 %</strong> pour revenir à la valeur initiale.</p>
+      </div>
+
+      <div class="tip-box">
+        <p><strong>Erreur fréquente :</strong> une hausse de 15 % n’est pas compensée par une baisse de 15 %, car les deux pourcentages ne s’appliquent pas à la même valeur de référence.</p>
+      </div>
+    </section>
+
+    <section class="section" id="exercices">
+      <h2>Exercices d’entraînement</h2>
+
+      <div class="exercise-box">
+        <h3>Exercice 1 - Effectifs et proportions</h3>
+        <p>Dans un lycée de 800 élèves, 320 prennent le bus.</p>
+        <ol>
+          <li>Calculer la proportion correspondante.</li>
+          <li>L’exprimer en pourcentage.</li>
+          <li>Parmi les élèves prenant le bus, 35 % habitent à plus de 10 km. Quel pourcentage du lycée représentent-ils ?</li>
+        </ol>
+      </div>
+
+      <div class="exercise-box">
+        <h3>Exercice 2 - Retrouver un effectif</h3>
+        <ol>
+          <li>Calculer 18 % de 450.</li>
+          <li>Dans un établissement, 126 élèves représentent 28 % de l’effectif total. Déterminer cet effectif.</li>
+        </ol>
+      </div>
+
+      <div class="exercise-box">
+        <h3>Exercice 3 - Taux d’évolution</h3>
+        <p>Le prix d’un article passe de 40 € à 46 €.</p>
+        <ol>
+          <li>Calculer la variation absolue.</li>
           <li>Calculer le taux d’évolution.</li>
           <li>Donner le coefficient multiplicateur.</li>
-        </ul>
+        </ol>
       </div>
 
       <div class="exercise-box">
-        <h3>Exercice 3</h3>
-        <p>
-          Un vêtement subit une baisse de 15 %.
-        </p>
-        <ul>
-          <li>Quel est le coefficient multiplicateur associé ?</li>
-          <li>Quel est le nouveau prix si le prix initial était 60 € ?</li>
-        </ul>
+        <h3>Exercice 4 - Calculer une valeur finale</h3>
+        <p>Un vêtement coûte 60 € et bénéficie d’une réduction de 15 %.</p>
+        <ol>
+          <li>Donner le coefficient multiplicateur.</li>
+          <li>Calculer le prix soldé.</li>
+        </ol>
       </div>
 
       <div class="exercise-box">
-        <h3>Exercice 4</h3>
-        <p>
-          Une population augmente de 8 % la première année, puis de 5 % la deuxième année.
-        </p>
-        <ul>
+        <h3>Exercice 5 - Évolutions successives</h3>
+        <p>Une population augmente de 8 % la première année, puis de 5 % la deuxième année.</p>
+        <ol>
           <li>Calculer le coefficient multiplicateur global.</li>
           <li>En déduire le taux d’évolution global.</li>
-        </ul>
+          <li>Expliquer pourquoi il n’est pas exactement égal à 13 %.</li>
+        </ol>
       </div>
 
       <div class="exercise-box">
-        <h3>Exercice 5</h3>
-        <p>
-          Le chiffre d’affaires d’une entreprise passe de 12 000 € à 10 800 €.
-        </p>
-        <ul>
-          <li>Calculer l’évolution absolue.</li>
-          <li>Calculer le taux d’évolution.</li>
-          <li>Dire s’il s’agit d’une hausse ou d’une baisse.</li>
-        </ul>
+        <h3>Exercice 6 - Évolution réciproque</h3>
+        <p>Après une baisse de 20 %, un article coûte 96 €.</p>
+        <ol>
+          <li>Retrouver son prix initial.</li>
+          <li>Calculer le taux d’évolution permettant de passer de 96 € au prix initial.</li>
+        </ol>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" id="video">
       <h2>Vidéo</h2>
-
       <div class="video-box">
-        <p>Vidéo explicative sur l’information chiffrée :</p>
-
+        <p>Ajoutez ici votre vidéo sur les proportions, les pourcentages et les évolutions.</p>
         <iframe
           src="https://www.youtube.com/embed/LIEN_VIDEO"
-          title="Vidéo information chiffrée"
+          title="Cours sur l’information chiffrée en Seconde"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen>
         </iframe>
       </div>
     </section>
 
     <section class="section">
-      <h2>Astuce</h2>
-
+      <h2>À retenir</h2>
       <div class="tip-box">
-        <p>
-          Pour ne pas confondre :
-        </p>
-        <p>
-          <span class="math">évolution absolue = différence</span>
-        </p>
-        <p>
-          <span class="math">taux d’évolution = différence / valeur initiale</span>
-        </p>
+        <p><span class="math">proportion = partie / total</span> ; une proportion de proportion se calcule par un produit.</p>
       </div>
-
       <div class="tip-box">
-        <p>
-          Retenir :
-        </p>
-        <p>
-          <span class="math">+10 % → coefficient 1,10</span>
-        </p>
-        <p>
-          <span class="math">-10 % → coefficient 0,90</span>
-        </p>
+        <p><span class="math">t = (V𝒇 - Vᵢ)/Vᵢ</span> et <span class="math">CM = 1 + t = V𝒇/Vᵢ</span>.</p>
       </div>
-
       <div class="tip-box">
-        <p>
-          Pour des évolutions successives, on ne doit pas additionner les pourcentages :
-          on multiplie les coefficients multiplicateurs.
-        </p>
+        <p>Pour des évolutions successives, on multiplie les coefficients. Pour l’évolution réciproque, on prend l’inverse du coefficient.</p>
       </div>
 
       <div class="footer-nav">
@@ -291,8 +326,6 @@
         <a href="index.html" class="btn btn-primary">Accueil</a>
       </div>
     </section>
-
   </main>
-
 </body>
 </html>

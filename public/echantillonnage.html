@@ -3,212 +3,85 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MathPhiX — Échantillonnage</title>
+  <title>Échantillonnage en Seconde : cours et simulation | MathPhiX</title>
+  <meta name="description" content="Cours de Seconde sur l’échantillonnage, la fluctuation des fréquences, la loi des grands nombres et la simulation avec Python." />
   <link rel="stylesheet" href="css/style2.css" />
+  <style>
+    .sample-table-wrapper{overflow-x:auto;margin:1rem 0}.sample-table{width:100%;min-width:540px;border-collapse:collapse;background:#fff}.sample-table th,.sample-table td{padding:.75rem;border:1px solid #cbd5e1;text-align:center}.sample-table th{background:#eaf2ff;color:#173e79}.formula-box{margin:1rem 0;padding:1rem;border-left:4px solid #2454d3;background:#f8fafc;text-align:center}.code-box{overflow-x:auto;margin:1rem 0;padding:1rem;border-radius:12px;background:#101827;color:#e5edf8}.code-box code{font-family:Consolas,Monaco,monospace;white-space:pre;font-size:.95rem}.simulation-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.8rem;margin:1rem 0}.simulation-card{padding:1rem;border:1px solid #cbd5e1;border-radius:12px;background:#fff;text-align:center}.simulation-card strong{display:block;color:#173e79;font-size:1.1rem}.comparison{display:grid;grid-template-columns:1fr 1fr;gap:1rem}.comparison>div{padding:1rem;border-radius:12px;background:#f8fafc;border:1px solid #d7e1ef}@media(max-width:650px){.simulation-grid,.comparison{grid-template-columns:1fr}}
+  </style>
 </head>
-
 <body>
+  <header class="site-header"><div class="header-container container"><div><h1 class="site-title">MathPhiX</h1><p class="site-subtitle">Seconde - Échantillonnage</p></div><a href="statistiques-probabilites.html" class="back-link">← Retour</a></div></header>
 
-  <header class="site-header">
-    <div class="header-container container">
-      <div>
-        <h1 class="site-title">MathPhiX</h1>
-        <p class="site-subtitle">Seconde — Échantillonnage</p>
-      </div>
-      <a href="statistiques-probabilites.html" class="back-link">← Retour</a>
-    </div>
-  </header>
-
-  <section class="hero">
-    <div class="container">
-      <div class="hero-card">
-        <h1>Échantillonnage</h1>
-        <p>
-          Dans ce chapitre, tu vas comprendre ce qu’est un échantillon,
-          observer des fréquences et voir pourquoi elles se rapprochent
-          d’une probabilité quand le nombre d’essais augmente.
-        </p>
-
-        <div class="hero-tags">
-          <span class="tag">Cours</span>
-          <span class="tag">Exercices</span>
-          <span class="tag">Vidéo</span>
-          <span class="tag">Astuce</span>
-        </div>
-      </div>
-    </div>
-  </section>
+  <section class="hero"><div class="container"><div class="hero-card"><h1>Échantillonnage et fluctuation</h1><p>Comprendre pourquoi les fréquences varient d’un échantillon à l’autre et observer leur stabilisation lorsque le nombre d’essais augmente.</p><div class="hero-tags"><span class="tag">Échantillon</span><span class="tag">Fréquence</span><span class="tag">Fluctuation</span><span class="tag">Simulation</span><span class="tag">Python</span></div></div></div></section>
 
   <main class="container">
-
-    <section class="section">
-      <h2>Cours</h2>
-
-      <div class="lesson-box">
-        <h3>1. Échantillon</h3>
-        <p>
-          Un échantillon est un ensemble de résultats obtenus
-          en répétant plusieurs fois une même expérience aléatoire.
-        </p>
-        <p>
-          Exemple : on lance 100 fois une pièce.
-        </p>
-      </div>
-
-      <div class="lesson-box">
-        <h3>2. Fréquence</h3>
-        <p>
-          La fréquence d’apparition d’un événement est :
-        </p>
-        <p>
-          <span class="math">fréquence = nombre de réalisations de l’événement / nombre total d’essais</span>
-        </p>
-      </div>
-
-      <div class="lesson-box">
-        <h3>3. Fluctuation</h3>
-        <p>
-          D’un échantillon à un autre, la fréquence observée peut varier.
-        </p>
-        <p>
-          Cette variation s’appelle la fluctuation d’échantillonnage.
-        </p>
-      </div>
-
-      <div class="lesson-box">
-        <h3>4. Stabilisation des fréquences</h3>
-        <p>
-          Quand on augmente le nombre d’essais,
-          la fréquence observée tend à se rapprocher d’une valeur stable.
-        </p>
-        <p>
-          Cette valeur stable correspond à la probabilité théorique.
-        </p>
-      </div>
-
-      <div class="lesson-box">
-        <h3>5. Interprétation</h3>
-        <p>
-          Sur un petit nombre d’essais, les résultats peuvent être très irréguliers.
-        </p>
-        <p>
-          Sur un grand nombre d’essais, les fréquences deviennent plus stables.
-        </p>
-      </div>
-
-      <div class="example-box">
-        <h3>Exemple</h3>
-        <p>
-          On lance une pièce équilibrée.
-        </p>
-        <p>
-          La probabilité d’obtenir pile vaut <span class="math">1 / 2</span>.
-        </p>
-        <p>
-          Sur 10 lancers, la fréquence de pile peut être
-          <span class="math">0,3</span> ou <span class="math">0,7</span>.
-        </p>
-        <p>
-          Sur 1000 lancers, elle sera souvent plus proche de
-          <span class="math">0,5</span>.
-        </p>
-      </div>
+    <section class="section" id="echantillon">
+      <h2>1. Notion d’échantillon</h2>
+      <div class="lesson-box"><p>Un <strong>échantillon de taille <span class="math">n</span></strong> est la collection des <span class="math">n</span> résultats obtenus après <span class="math">n</span> répétitions indépendantes d’une même expérience aléatoire.</p><p>Les conditions de l’expérience restent les mêmes à chaque répétition et le résultat d’un essai n’influence pas le suivant.</p></div>
+      <div class="example-box"><h3>Exemple : 100 lancers d’un dé</h3><div class="sample-table-wrapper"><table class="sample-table"><thead><tr><th>Face</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>Total</th></tr></thead><tbody><tr><th>Effectif</th><td>15</td><td>21</td><td>17</td><td>13</td><td>16</td><td>18</td><td>100</td></tr><tr><th>Fréquence</th><td>0,15</td><td>0,21</td><td>0,17</td><td>0,13</td><td>0,16</td><td>0,18</td><td>1</td></tr></tbody></table></div><p>Ces 100 résultats forment un échantillon de taille <span class="math">n=100</span>.</p></div>
     </section>
 
-    <section class="section">
-      <h2>Exercices</h2>
-
-      <div class="exercise-box">
-        <h3>Exercice 1</h3>
-        <p>
-          On lance une pièce 20 fois et on obtient 12 fois pile.
-        </p>
-        <ul>
-          <li>Calculer la fréquence de pile.</li>
-          <li>Comparer cette fréquence à la probabilité théorique.</li>
-        </ul>
-      </div>
-
-      <div class="exercise-box">
-        <h3>Exercice 2</h3>
-        <p>
-          On lance un dé 60 fois. Le nombre 6 apparaît 8 fois.
-        </p>
-        <ul>
-          <li>Calculer la fréquence d’apparition de 6.</li>
-          <li>Comparer à la probabilité théorique <span class="math">1/6</span>.</li>
-        </ul>
-      </div>
-
-      <div class="exercise-box">
-        <h3>Exercice 3</h3>
-        <p>Compléter :</p>
-        <ul>
-          <li>Quand le nombre d’essais augmente, la fréquence devient plus ...</li>
-          <li>La fréquence observée peut ... d’un échantillon à l’autre.</li>
-          <li>La valeur théorique attendue est la ...</li>
-        </ul>
-      </div>
-
-      <div class="exercise-box">
-        <h3>Exercice 4</h3>
-        <p>
-          Expliquer pourquoi deux séries de 30 lancers d’une même pièce
-          peuvent donner des fréquences différentes de pile.
-        </p>
-      </div>
+    <section class="section" id="frequence">
+      <h2>2. Probabilité et fréquence observée</h2>
+      <div class="comparison"><div><h3>Probabilité <span class="math">p</span></h3><p>Valeur théorique fixée par le modèle de l’expérience.</p></div><div><h3>Fréquence <span class="math">f</span></h3><p>Valeur calculée à partir des résultats effectivement obtenus.</p></div></div>
+      <div class="formula-box"><span class="math">f = nombre de réalisations de l’événement / nombre total d’essais = k/n</span></div>
+      <div class="example-box"><p>Dans le tableau, la face 6 est apparue 18 fois sur 100 :</p><p class="math">f=18/100=0,18.</p><p>Pour un dé équilibré, la probabilité théorique est <span class="math">p=1/6≈0,167</span>. La fréquence est proche de la probabilité, mais elle ne lui est pas nécessairement égale.</p></div>
     </section>
 
-    <section class="section">
-      <h2>Vidéo</h2>
-
-      <div class="video-box">
-        <p>Vidéo explicative sur l’échantillonnage :</p>
-
-        <iframe
-          src="https://www.youtube.com/embed/LIEN_VIDEO"
-          title="Vidéo échantillonnage"
-          allowfullscreen>
-        </iframe>
-      </div>
+    <section class="section" id="fluctuation">
+      <h2>3. Fluctuation d’échantillonnage</h2>
+      <div class="lesson-box"><p>Deux échantillons de même taille obtenus dans les mêmes conditions ne donnent généralement pas exactement les mêmes résultats. La variation des fréquences observées s’appelle la <strong>fluctuation d’échantillonnage</strong>.</p></div>
+      <div class="example-box"><h3>Trois séries de 20 lancers d’une pièce</h3><div class="simulation-grid"><div class="simulation-card"><strong>Échantillon 1</strong><span class="math">f(P)=0,40</span></div><div class="simulation-card"><strong>Échantillon 2</strong><span class="math">f(P)=0,55</span></div><div class="simulation-card"><strong>Échantillon 3</strong><span class="math">f(P)=0,65</span></div></div><p>Ces différences ne prouvent pas que la pièce est truquée : elles peuvent être dues au hasard.</p></div>
     </section>
 
-    <section class="section">
-      <h2>Astuce</h2>
-
-      <div class="tip-box">
-        <p>
-          Ne confonds pas :
-        </p>
-        <p>
-          <span class="math">probabilité</span> = valeur théorique
-        </p>
-        <p>
-          <span class="math">fréquence</span> = valeur observée
-        </p>
-      </div>
-
-      <div class="tip-box">
-        <p>
-          Plus l’échantillon est grand,
-          plus la fréquence observée est souvent proche de la probabilité.
-        </p>
-      </div>
-
-      <div class="tip-box">
-        <p>
-          Une différence entre fréquence et probabilité n’est pas forcément une erreur :
-          c’est souvent l’effet du hasard.
-        </p>
-      </div>
-
-      <div class="footer-nav">
-        <a href="statistiques-probabilites.html" class="btn btn-secondary">← Retour</a>
-        <a href="index.html" class="btn btn-primary">Accueil</a>
-      </div>
+    <section class="section" id="grands-nombres">
+      <h2>4. Stabilisation des fréquences</h2>
+      <div class="lesson-box"><p><strong>Version vulgarisée de la loi des grands nombres :</strong> lorsque <span class="math">n</span> est grand, sauf exception, la fréquence observée <span class="math">f</span> est proche de la probabilité <span class="math">p</span>.</p><p>Cela ne signifie pas que la fréquence devient exactement égale à la probabilité, ni qu’elle se rapproche de façon régulière à chaque nouvel essai.</p></div>
+      <div class="example-box"><h3>Exemple du cours</h3><p>Sur 1 000 lancers d’un dé équilibré, la face 6 apparaît 159 fois :</p><p class="math">f=159/1000=0,159 et p=1/6≈0,167.</p><p class="math">|f-p|≈|0,159-0,167|≈0,008.</p><p>La fréquence observée est donc proche de la probabilité théorique.</p></div>
+      <div class="tip-box"><p><strong>Repère pratique issu du cours :</strong> pour un échantillon assez grand, on compare parfois l’écart <span class="math">|f-p|</span> à <span class="math">1/√n</span>. Ce repère aide à apprécier un résultat, mais ne constitue pas une garantie absolue pour chaque échantillon.</p></div>
     </section>
 
+    <section class="section" id="simulation">
+      <h2>5. Observer la fluctuation avec Python</h2>
+      <div class="lesson-box"><p>Le programme suivant simule <span class="math">n</span> lancers d’un dé et renvoie la fréquence d’apparition de la face 6.</p></div>
+      <pre class="code-box"><code>from random import randint
+
+def frequence_six(n):
+    compteur = 0
+    for _ in range(n):
+        if randint(1, 6) == 6:
+            compteur = compteur + 1
+    return compteur / n
+
+for taille in (10, 100, 1000, 10000):
+    print(taille, frequence_six(taille))</code></pre>
+      <div class="example-box"><h3>Que faut-il observer ?</h3><ol><li>Exécuter plusieurs fois le programme pour une même taille.</li><li>Constater que les fréquences changent d’une exécution à l’autre.</li><li>Comparer les résultats pour <span class="math">n=10</span>, 100, 1 000 puis 10 000.</li><li>Observer qu’avec de grands échantillons les fréquences sont généralement plus proches de <span class="math">1/6</span>.</li></ol></div>
+    </section>
+
+    <section class="section" id="methode">
+      <h2>6. Méthode pour étudier un échantillon</h2>
+      <div class="lesson-box"><ol><li>Identifier l’événement étudié et sa probabilité théorique <span class="math">p</span>.</li><li>Repérer la taille <span class="math">n</span> de l’échantillon et l’effectif <span class="math">k</span> observé.</li><li>Calculer la fréquence <span class="math">f=k/n</span>.</li><li>Calculer et interpréter l’écart <span class="math">|f-p|</span>.</li><li>Conclure avec prudence : un écart peut résulter de la fluctuation due au hasard.</li></ol></div>
+    </section>
+
+    <section class="section" id="erreurs">
+      <h2>7. Erreurs fréquentes</h2>
+      <div class="tip-box"><ul><li>confondre la probabilité théorique <span class="math">p</span> et la fréquence observée <span class="math">f</span> ;</li><li>croire que deux échantillons de même taille doivent être identiques ;</li><li>conclure trop vite à partir d’un petit échantillon ;</li><li>penser que la loi des grands nombres garantit une égalité exacte ;</li><li>oublier que les répétitions doivent être effectuées dans les mêmes conditions et être indépendantes.</li></ul></div>
+    </section>
+
+    <section class="section" id="exercices">
+      <h2>Exercices d’entraînement</h2>
+      <div class="exercise-box"><h3>Exercice 1 - Fréquence observée</h3><p>On lance une pièce équilibrée 40 fois et on obtient 23 fois pile.</p><ol><li>Donner <span class="math">n</span>, <span class="math">k</span> et <span class="math">p</span>.</li><li>Calculer la fréquence de pile.</li><li>Calculer <span class="math">|f-p|</span> et interpréter.</li></ol></div>
+      <div class="exercise-box"><h3>Exercice 2 - Dé équilibré</h3><p>Sur 600 lancers, la face 6 apparaît 108 fois.</p><ol><li>Calculer la fréquence observée.</li><li>La comparer à <span class="math">1/6</span>.</li><li>Calculer <span class="math">1/√600</span> puis comparer cette valeur à <span class="math">|f-p|</span>.</li></ol></div>
+      <div class="exercise-box"><h3>Exercice 3 - Contrôle d’une affirmation</h3><p>Une urne contient 75 % de boules rouges. Après 60 tirages avec remise, Cyril annonce 35 boules rouges.</p><ol><li>Calculer la fréquence observée.</li><li>Calculer l’écart à 0,75.</li><li>Comparer à <span class="math">1/√60</span> et commenter avec prudence.</li></ol></div>
+      <div class="exercise-box"><h3>Exercice 4 - Fluctuation</h3><p>Trois élèves simulent chacun 50 lancers d’une pièce et obtiennent les fréquences 0,42 ; 0,54 et 0,60.</p><ol><li>Expliquer pourquoi les résultats diffèrent.</li><li>Peut-on conclure qu’une simulation est fausse ? Justifier.</li></ol></div>
+      <div class="exercise-box"><h3>Exercice 5 - Lecture de programme</h3><p>Expliquer le rôle des variables <code>compteur</code> et <code>n</code> dans la fonction Python. Modifier le programme pour étudier l’événement « obtenir un nombre pair ».</p></div>
+      <div class="exercise-box"><h3>Exercice 6 - Expérimentation</h3><p>Exécuter dix fois la fonction pour <span class="math">n=20</span>, puis pour <span class="math">n=2000</span>. Comparer l’étendue des fréquences obtenues dans les deux séries.</p></div>
+    </section>
+
+    <section class="section" id="video"><h2>Vidéo</h2><div class="video-box"><p>Ajoutez ici votre vidéo sur la fluctuation d’échantillonnage et la simulation.</p><iframe src="https://www.youtube.com/embed/LIEN_VIDEO" title="Cours sur l’échantillonnage en Seconde" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></section>
+
+    <section class="section"><h2>À retenir</h2><div class="tip-box"><p>Un échantillon rassemble les résultats de répétitions indépendantes d’une même expérience.</p></div><div class="tip-box"><p>La fréquence varie d’un échantillon à l’autre : c’est la fluctuation d’échantillonnage.</p></div><div class="tip-box"><p>Lorsque la taille de l’échantillon augmente, la fréquence observée est généralement plus proche de la probabilité.</p></div><div class="footer-nav"><a href="statistiques-probabilites.html" class="btn btn-secondary">← Retour</a><a href="index.html" class="btn btn-primary">Accueil</a></div></section>
   </main>
-
 </body>
 </html>
