@@ -7,7 +7,7 @@
   <meta name="description" content="Cours de Seconde : univers, événements, équiprobabilité, réunion, intersection, événement contraire, probabilités conditionnelles et arbres pondérés." />
   <link rel="stylesheet" href="css/style2.css" />
   <style>
-    .prob-table-wrapper{overflow-x:auto;margin:1rem 0}.prob-table{width:100%;border-collapse:collapse;min-width:560px;background:#fff}.prob-table th,.prob-table td{border:1px solid #cbd5e1;padding:.75rem;text-align:center}.prob-table th{background:#eaf2ff;color:#173e79}.formula-box{margin:1rem 0;padding:1rem;border-left:4px solid #2454d3;background:#f8fafc;text-align:center}.weighted-tree{margin:1.25rem 0;padding:1rem;border:1px solid #d7e1ef;border-radius:14px;background:#fff;overflow-x:auto}.weighted-tree svg{display:block;width:100%;min-width:640px;height:auto}.tree-line{stroke:#335f9e;stroke-width:3;fill:none}.tree-dot{fill:#2454d3}.tree-event{font-size:17px;font-weight:700;fill:#173e79}.tree-weight{font-size:15px;font-weight:700;fill:#b45309}.tree-result{font-size:14px;fill:#475569}@media(max-width:650px){.weighted-tree{padding:.5rem}.weighted-tree svg{min-width:590px}}
+    .prob-table-wrapper{overflow-x:auto;margin:1rem 0}.prob-table{width:100%;border-collapse:collapse;min-width:560px;background:#fff}.prob-table th,.prob-table td{border:1px solid #cbd5e1;padding:.75rem;text-align:center}.prob-table th{background:#eaf2ff;color:#173e79}.formula-box{margin:1rem 0;padding:1rem;border-left:4px solid #2454d3;background:#f8fafc;text-align:center}.event-complement{display:inline-block;line-height:1;text-decoration-line:overline;text-decoration-thickness:2px;text-decoration-skip-ink:none}.weighted-tree{margin:1.25rem 0;padding:1rem;border:1px solid #d7e1ef;border-radius:14px;background:#fff;overflow-x:auto}.weighted-tree svg{display:block;width:100%;min-width:640px;height:auto}.tree-line{stroke:#335f9e;stroke-width:3;fill:none}.tree-dot{fill:#2454d3}.tree-event{font-size:17px;font-weight:700;fill:#173e79}.tree-weight{font-size:15px;font-weight:700;fill:#b45309}.tree-result{font-size:14px;fill:#475569}.tree-overline{stroke:#173e79;stroke-width:1.8;stroke-linecap:round}@media(max-width:650px){.weighted-tree{padding:.5rem}.weighted-tree svg{min-width:590px}}
   </style>
 </head>
 <body>
@@ -47,8 +47,8 @@
       <h2>2. Opérations sur les événements</h2>
       <div class="lesson-box">
         <h3>Événement contraire</h3>
-        <p>L’événement contraire de <span class="math">A</span>, noté <span class="math">A̅</span>, contient les issues de <span class="math">Ω</span> qui n’appartiennent pas à <span class="math">A</span>.</p>
-        <p>Si <span class="math">A = {2 ; 4 ; 6}</span>, alors <span class="math">A̅ = {1 ; 3 ; 5}</span>.</p>
+        <p>L’événement contraire de <span class="math">A</span>, noté <span class="math"><span class="event-complement">A</span></span>, contient les issues de <span class="math">Ω</span> qui n’appartiennent pas à <span class="math">A</span>.</p>
+        <p>Si <span class="math">A = {2 ; 4 ; 6}</span>, alors <span class="math"><span class="event-complement">A</span> = {1 ; 3 ; 5}</span>.</p>
       </div>
       <div class="lesson-box">
         <h3>Réunion et intersection</h3>
@@ -87,7 +87,7 @@
 
     <section class="section" id="calculs">
       <h2>5. Calculer avec des événements</h2>
-      <div class="lesson-box"><h3>Événement contraire</h3><div class="formula-box"><span class="math">P(A̅) = 1 - P(A)</span></div><p>Si <span class="math">P(A) = 0,35</span>, alors <span class="math">P(A̅) = 0,65</span>.</p></div>
+      <div class="lesson-box"><h3>Événement contraire</h3><div class="formula-box"><span class="math">P(<span class="event-complement">A</span>) = 1 - P(A)</span></div><p>Si <span class="math">P(A) = 0,35</span>, alors <span class="math">P(<span class="event-complement">A</span>) = 0,65</span>.</p></div>
       <div class="lesson-box">
         <h3>Réunion de deux événements</h3>
         <div class="formula-box"><span class="math">P(A ∪ B) = P(A) + P(B) - P(A ∩ B)</span></div>
@@ -116,7 +116,7 @@
       <div class="example-box">
         <h3>Exemple - Tableau croisé d’effectifs</h3>
         <p>On choisit au hasard un élève parmi 200 élèves.</p>
-        <div class="prob-table-wrapper"><table class="prob-table"><thead><tr><th></th><th>En retard R</th><th>À l’heure R̅</th><th>Total</th></tr></thead><tbody><tr><th>Prend le bus B</th><td>20</td><td>60</td><td>80</td></tr><tr><th>Ne prend pas le bus B̅</th><td>10</td><td>110</td><td>120</td></tr><tr><th>Total</th><td>30</td><td>170</td><td>200</td></tr></tbody></table></div>
+        <div class="prob-table-wrapper"><table class="prob-table"><thead><tr><th></th><th>En retard R</th><th>À l’heure <span class="event-complement">R</span></th><th>Total</th></tr></thead><tbody><tr><th>Prend le bus B</th><td>20</td><td>60</td><td>80</td></tr><tr><th>Ne prend pas le bus <span class="event-complement">B</span></th><td>10</td><td>110</td><td>120</td></tr><tr><th>Total</th><td>30</td><td>170</td><td>200</td></tr></tbody></table></div>
         <p><span class="math">P<sub>B</sub>(R) = 20/80 = 0,25</span> : parmi les élèves prenant le bus, 25 % sont en retard.</p>
         <p><span class="math">P<sub>R</sub>(B) = 20/30 = 2/3</span> : parmi les élèves en retard, deux tiers prennent le bus.</p>
       </div>
@@ -151,11 +151,14 @@
 
             <text class="tree-event" x="18" y="201">Départ</text>
             <text class="tree-event" x="312" y="92">B</text>
-            <text class="tree-event" x="312" y="292">B̅</text>
+            <text class="tree-event" x="312" y="292">B</text>
+            <path class="tree-overline" d="M312 274 L325 274" />
             <text class="tree-event" x="565" y="50">R</text>
-            <text class="tree-event" x="565" y="150">R̅</text>
+            <text class="tree-event" x="565" y="150">R</text>
+            <path class="tree-overline" d="M565 132 L578 132" />
             <text class="tree-event" x="565" y="250">R</text>
-            <text class="tree-event" x="565" y="350">R̅</text>
+            <text class="tree-event" x="565" y="350">R</text>
+            <path class="tree-overline" d="M565 332 L578 332" />
 
             <text class="tree-weight" x="180" y="125">0,60</text>
             <text class="tree-weight" x="180" y="282">0,40</text>
@@ -165,9 +168,13 @@
             <text class="tree-weight" x="410" y="342">0,90</text>
 
             <text class="tree-result" x="610" y="50">B ∩ R</text>
-            <text class="tree-result" x="610" y="150">B ∩ R̅</text>
-            <text class="tree-result" x="610" y="250">B̅ ∩ R</text>
-            <text class="tree-result" x="610" y="350">B̅ ∩ R̅</text>
+            <text class="tree-result" x="610" y="150">B ∩ R</text>
+            <path class="tree-overline" d="M640 136 L650 136" />
+            <text class="tree-result" x="610" y="250">B ∩ R</text>
+            <path class="tree-overline" d="M610 236 L620 236" />
+            <text class="tree-result" x="610" y="350">B ∩ R</text>
+            <path class="tree-overline" d="M610 336 L620 336" />
+            <path class="tree-overline" d="M640 336 L650 336" />
           </svg>
         </div>
         <p>Par exemple, le chemin <span class="math">B → R</span> correspond à « prendre le bus et être en retard » :</p>
@@ -184,9 +191,9 @@
 
     <section class="section" id="exercices">
       <h2>Exercices d’entraînement</h2>
-      <div class="exercise-box"><h3>Exercice 1 - Univers et événements</h3><p>On lance un dé équilibré. On note <span class="math">A</span> : « obtenir un multiple de 2 » et <span class="math">B</span> : « obtenir un nombre supérieur ou égal à 4 ».</p><ol><li>Écrire <span class="math">Ω</span>, <span class="math">A</span>, <span class="math">B</span> et <span class="math">A̅</span>.</li><li>Déterminer <span class="math">A ∩ B</span> et <span class="math">A ∪ B</span>.</li><li>Calculer leurs probabilités.</li></ol></div>
+      <div class="exercise-box"><h3>Exercice 1 - Univers et événements</h3><p>On lance un dé équilibré. On note <span class="math">A</span> : « obtenir un multiple de 2 » et <span class="math">B</span> : « obtenir un nombre supérieur ou égal à 4 ».</p><ol><li>Écrire <span class="math">Ω</span>, <span class="math">A</span>, <span class="math">B</span> et <span class="math"><span class="event-complement">A</span></span>.</li><li>Déterminer <span class="math">A ∩ B</span> et <span class="math">A ∪ B</span>.</li><li>Calculer leurs probabilités.</li></ol></div>
       <div class="exercise-box"><h3>Exercice 2 - Loi de probabilité</h3><p>Une roue donne les gains 0 €, 2 € ou 5 € avec les probabilités 0,50 ; 0,35 et 0,15.</p><ol><li>Vérifier qu’il s’agit d’une loi de probabilité.</li><li>Calculer la probabilité de gagner au moins 2 €.</li></ol></div>
-      <div class="exercise-box"><h3>Exercice 3 - Réunion et contraire</h3><p>On sait que <span class="math">P(A) = 0,55</span>, <span class="math">P(B) = 0,40</span> et <span class="math">P(A ∩ B) = 0,20</span>.</p><ol><li>Calculer <span class="math">P(A̅)</span>.</li><li>Calculer <span class="math">P(A ∪ B)</span>.</li></ol></div>
+      <div class="exercise-box"><h3>Exercice 3 - Réunion et contraire</h3><p>On sait que <span class="math">P(A) = 0,55</span>, <span class="math">P(B) = 0,40</span> et <span class="math">P(A ∩ B) = 0,20</span>.</p><ol><li>Calculer <span class="math">P(<span class="event-complement">A</span>)</span>.</li><li>Calculer <span class="math">P(A ∪ B)</span>.</li></ol></div>
       <div class="exercise-box"><h3>Exercice 4 - Tableau croisé</h3><p>Reprendre le tableau des 200 élèves.</p><ol><li>Calculer <span class="math">P(B)</span>, <span class="math">P(R)</span> et <span class="math">P(B ∩ R)</span>.</li><li>Calculer <span class="math">P<sub>B</sub>(R)</span> et <span class="math">P<sub>R</sub>(B)</span>.</li><li>Interpréter les résultats.</li></ol></div>
       <div class="exercise-box"><h3>Exercice 5 - Arbre pondéré</h3><p>Dans une entreprise, 70 % des salariés travaillent sur site. Parmi eux, 20 % utilisent le vélo.</p><ol><li>Commencer un arbre avec <span class="math">S</span> : « travailler sur site » et <span class="math">V</span> : « utiliser le vélo ».</li><li>Calculer <span class="math">P(S ∩ V)</span>.</li><li>Interpréter le résultat.</li></ol></div>
       <div class="exercise-box"><h3>Exercice 6 - Simulation</h3><p>Simuler 100, puis 1 000 lancers d’une pièce équilibrée avec un tableur, une calculatrice ou Python. Comparer la fréquence de « pile » à la probabilité théorique <span class="math">0,5</span>.</p></div>
@@ -197,7 +204,7 @@
     <section class="section">
       <h2>À retenir</h2>
       <div class="tip-box"><p>Définis d’abord clairement l’univers et les événements avant de calculer.</p></div>
-      <div class="tip-box"><p><span class="math">P(A̅) = 1 - P(A)</span> et <span class="math">P(A ∪ B) = P(A) + P(B) - P(A ∩ B)</span>.</p></div>
+      <div class="tip-box"><p><span class="math">P(<span class="event-complement">A</span>) = 1 - P(A)</span> et <span class="math">P(A ∪ B) = P(A) + P(B) - P(A ∩ B)</span>.</p></div>
       <div class="tip-box"><p><span class="math">P<sub>A</sub>(B) = P(A ∩ B)/P(A)</span> et, dans un arbre, les probabilités d’un chemin se multiplient.</p></div>
       <div class="footer-nav"><a href="statistiques-probabilites.html" class="btn btn-secondary">← Retour</a><a href="index.html" class="btn btn-primary">Accueil</a></div>
     </section>
