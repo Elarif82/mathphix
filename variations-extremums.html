@@ -3,245 +3,162 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Cours de seconde sur les variations, les extremums, le taux d'accroissement et les variations des fonctions de référence." />
   <title>MathPhiX — Variations et extremums</title>
   <link rel="stylesheet" href="css/style2.css" />
-
+  <style>
+    .math-display{overflow-x:auto;padding:.25rem 0}.variation-latex{overflow-x:auto;margin:1rem 0;padding:1rem .5rem;border:1px solid #dbe4f0;border-radius:12px;background:#f8fbff;text-align:center}.variation-latex mjx-container{margin:0!important;min-width:max-content}.method-list{padding-left:1.35rem}.method-list li+li{margin-top:.5rem}.warning-box{margin-top:1rem;padding:.85rem 1rem;border-left:4px solid #f59e0b;border-radius:8px;background:#fffbeb}.graph-card{margin-top:1rem;padding:.5rem;border:1px solid #dbe4f0;border-radius:16px;background:#fff}.graph-card svg{display:block;width:100%;height:auto;max-height:410px}.graph-caption{text-align:center;color:#475569;font-size:.94rem}.reference-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}.reference-grid .lesson-box{margin:0}@media(max-width:700px){.reference-grid{grid-template-columns:1fr}.variation-latex{padding:.8rem .2rem}.graph-card{padding:.2rem}}
+  </style>
   <script>
-    window.MathJax = {
-      tex: {
-        inlineMath: [['\\(', '\\)'], ['$', '$']]
-      },
-      svg: {
-        fontCache: 'global'
-      }
-    };
+    window.MathJax={tex:{inlineMath:[['\\(','\\)'],['$','$']],displayMath:[['\\[','\\]']]},svg:{fontCache:'global'}};
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 </head>
-
 <body>
-
   <header class="site-header">
     <div class="header-container container">
-      <div>
-        <h1 class="site-title">MathPhiX</h1>
-        <p class="site-subtitle">Seconde — Variations et extremums</p>
-      </div>
+      <div><h1 class="site-title">MathPhiX</h1><p class="site-subtitle">Seconde — Variations et extremums</p></div>
       <a href="fonctions.html" class="back-link">← Retour</a>
     </div>
   </header>
 
-  <section class="hero">
-    <div class="container">
-      <div class="hero-card">
-        <h1>Variations et extremums</h1>
-        <p>
-          Dans ce chapitre, tu vas apprendre à étudier le sens de variation
-          d’une fonction et à repérer ses maximums et minimums.
-        </p>
-
-        <div class="hero-tags">
-          <span class="tag">Cours</span>
-          <span class="tag">Exercices</span>
-          <span class="tag">Vidéo</span>
-          <span class="tag">Astuce</span>
-        </div>
-      </div>
-    </div>
-  </section>
+  <section class="hero"><div class="container"><div class="hero-card">
+    <h1>Variations et extremums</h1>
+    <p>Décrire l’évolution d’une fonction, construire et lire un tableau de variations, déterminer un maximum ou un minimum et étudier les fonctions de référence.</p>
+    <div class="hero-tags"><span class="tag">Variations</span><span class="tag">Extremums</span><span class="tag">Tableaux</span><span class="tag">Méthodes</span></div>
+  </div></div></section>
 
   <main class="container">
-
     <section class="section">
-      <h2>Cours</h2>
-
+      <h2>1. Sens de variation d’une fonction</h2>
       <div class="lesson-box">
-        <h3>1. Sens de variation</h3>
-        <p>
-          Une fonction est <strong>croissante</strong> sur un intervalle
-          lorsque, quand <span class="math">\(x\)</span> augmente,
-          <span class="math">\(f(x)\)</span> augmente.
-        </p>
-        <p>
-          Elle est <strong>décroissante</strong> lorsque, quand
-          <span class="math">\(x\)</span> augmente,
-          <span class="math">\(f(x)\)</span> diminue.
-        </p>
-        <p>
-          On parle de <strong>monotonie</strong> lorsqu’une fonction
-          est soit croissante, soit décroissante sur un intervalle.
-        </p>
-      </div>
-
-      <div class="lesson-box">
-        <h3>2. Extremums</h3>
-        <p>
-          Un <strong>maximum</strong> est la plus grande valeur prise
-          par la fonction sur un intervalle.
-        </p>
-        <p>
-          Un <strong>minimum</strong> est la plus petite valeur prise
-          par la fonction sur un intervalle.
-        </p>
-      </div>
-
-      <div class="lesson-box">
-        <h3>3. Fonction carré</h3>
-        <p>
-          La fonction carré
-          <span class="math">\(x \mapsto x^2\)</span>
-          est :
-        </p>
+        <h3>Définitions</h3>
+        <p>Soit <span class="math">\(f\)</span> une fonction définie sur un intervalle <span class="math">\(I\)</span>. Pour tous réels <span class="math">\(a,b\in I\)</span> tels que <span class="math">\(a&lt;b\)</span> :</p>
         <ul>
-          <li>décroissante sur <span class="math">\(]-\infty ; 0]\)</span> ;</li>
-          <li>croissante sur <span class="math">\([0 ; +\infty[\)</span>.</li>
+          <li><span class="math">\(f\)</span> est <strong>croissante</strong> sur <span class="math">\(I\)</span> si <span class="math">\(f(a)\leq f(b)\)</span> : elle conserve l’ordre ;</li>
+          <li><span class="math">\(f\)</span> est <strong>décroissante</strong> sur <span class="math">\(I\)</span> si <span class="math">\(f(a)\geq f(b)\)</span> : elle inverse l’ordre ;</li>
+          <li><span class="math">\(f\)</span> est <strong>constante</strong> sur <span class="math">\(I\)</span> si <span class="math">\(f(a)=f(b)\)</span>.</li>
         </ul>
-        <p>
-          Elle admet un minimum égal à <span class="math">\(0\)</span> en
-          <span class="math">\(x=0\)</span>.
-        </p>
-      </div>
-
-      <div class="lesson-box">
-        <h3>4. Fonction inverse</h3>
-        <p>
-          La fonction inverse
-          <span class="math">\(x \mapsto \dfrac{1}{x}\)</span>
-          est décroissante sur
-          <span class="math">\(]-\infty ; 0[\)</span>
-          et sur
-          <span class="math">\(]0 ; +\infty[\)</span>.
-        </p>
-      </div>
-
-      <div class="lesson-box">
-        <h3>5. Fonction racine carrée</h3>
-        <p>
-          La fonction racine carrée
-          <span class="math">\(x \mapsto \sqrt{x}\)</span>
-          est croissante sur
-          <span class="math">\([0 ; +\infty[\)</span>.
-        </p>
-      </div>
-
-      <div class="lesson-box">
-        <h3>6. Fonction cube</h3>
-        <p>
-          La fonction cube
-          <span class="math">\(x \mapsto x^3\)</span>
-          est croissante sur
-          <span class="math">\(\mathbb{R}\)</span>.
-        </p>
-      </div>
-
-      <div class="lesson-box">
-        <h3>7. Fonction affine</h3>
-        <p>
-          Pour une fonction affine
-          <span class="math">\(f(x)=mx+p\)</span> :
-        </p>
-        <ul>
-          <li>si <span class="math">\(m&gt;0\)</span>, elle est croissante ;</li>
-          <li>si <span class="math">\(m&lt;0\)</span>, elle est décroissante ;</li>
-          <li>si <span class="math">\(m=0\)</span>, elle est constante.</li>
-        </ul>
+        <p>Une fonction est <strong>monotone</strong> sur un intervalle lorsqu’elle y est croissante ou décroissante.</p>
+        <div class="warning-box"><strong>Attention :</strong> on compare toujours deux nombres <span class="math">\(a&lt;b\)</span> appartenant au même intervalle de monotonie.</div>
       </div>
 
       <div class="example-box">
+        <h3>Exemple graphique</h3>
+        <p>On considère sur <span class="math">\([0\,;5]\)</span> la fonction <span class="math">\(f(x)=-(x-2{,}5)^2+6{,}25\)</span>.</p>
+        <div class="graph-card">
+          <svg viewBox="0 0 720 400" role="img" aria-labelledby="graph-title graph-desc">
+            <title id="graph-title">Courbe croissante puis décroissante</title><desc id="graph-desc">La fonction croît de zéro à deux virgule cinq, atteint six virgule vingt-cinq, puis décroît jusqu'à cinq.</desc>
+            <defs><pattern id="grid-v" width="60" height="45" patternUnits="userSpaceOnUse"><path d="M60 0L0 0 0 45" fill="none" stroke="#dbe4f0"/></pattern><marker id="arrow-v" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5 0 10z" fill="#334155"/></marker></defs>
+            <rect x="70" y="25" width="560" height="315" rx="10" fill="url(#grid-v)"/><line x1="70" y1="340" x2="645" y2="340" stroke="#334155" stroke-width="2" marker-end="url(#arrow-v)"/><line x1="90" y1="360" x2="90" y2="18" stroke="#334155" stroke-width="2" marker-end="url(#arrow-v)"/>
+            <path d="M90 340 Q360 -220 630 340" fill="none" stroke="#2563eb" stroke-width="5" stroke-linecap="round"/>
+            <line x1="360" y1="340" x2="360" y2="58" stroke="#f59e0b" stroke-width="3" stroke-dasharray="8 7"/><line x1="90" y1="58" x2="360" y2="58" stroke="#f59e0b" stroke-width="3" stroke-dasharray="8 7"/><circle cx="360" cy="58" r="7" fill="#dc2626"/>
+            <g fill="#475569" font-size="16" font-family="Arial"><text x="82" y="362">0</text><text x="347" y="362">2,5</text><text x="624" y="362">5</text><text x="51" y="64">6,25</text><text x="652" y="346">x</text><text x="99" y="20">y</text></g>
+            <text x="375" y="50" fill="#991b1b" font-size="17" font-weight="700" font-family="Arial">maximum</text>
+          </svg>
+          <p class="graph-caption"><span class="math">\(f\)</span> est croissante sur <span class="math">\([0\,;2{,}5]\)</span>, puis décroissante sur <span class="math">\([2{,}5\,;5]\)</span>.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>2. Maximum, minimum et extremum</h2>
+      <div class="lesson-box">
+        <h3>Définitions</h3>
+        <p>Soit <span class="math">\(a\in I\)</span>.</p>
+        <ul>
+          <li><span class="math">\(f\)</span> admet un <strong>maximum en <span class="math">\(a\)</span></strong> sur <span class="math">\(I\)</span> si, pour tout <span class="math">\(x\in I\)</span>, <span class="math">\(f(x)\leq f(a)\)</span> ;</li>
+          <li><span class="math">\(f\)</span> admet un <strong>minimum en <span class="math">\(a\)</span></strong> sur <span class="math">\(I\)</span> si, pour tout <span class="math">\(x\in I\)</span>, <span class="math">\(f(x)\geq f(a)\)</span>.</li>
+        </ul>
+        <p>Un maximum ou un minimum est un <strong>extremum</strong>. Il faut distinguer la valeur de l’extremum, <span class="math">\(f(a)\)</span>, et l’endroit où il est atteint, <span class="math">\(x=a\)</span>.</p>
+      </div>
+      <div class="example-box">
         <h3>Exemple</h3>
-        <p>
-          La fonction
-          <span class="math">\(f(x)=x^2\)</span>
-          admet un minimum égal à
-          <span class="math">\(0\)</span>.
-        </p>
-        <p>
-          La fonction
-          <span class="math">\(g(x)=2x+1\)</span>
-          est croissante car son coefficient directeur vaut
-          <span class="math">\(2\)</span>.
-        </p>
+        <p>Sur <span class="math">\([0\,;5]\)</span>, la fonction précédente admet le maximum <span class="math">\(6{,}25\)</span>, atteint pour <span class="math">\(x=2{,}5\)</span>, car :</p>
+        <p class="math-display">\[\forall x\in[0\,;5],\qquad f(x)\leq f(2{,}5)=6{,}25.\]</p>
+        <p>Une fonction n’admet pas nécessairement d’extremum sur un intervalle, notamment si une borne est exclue.</p>
       </div>
     </section>
 
     <section class="section">
-      <h2>Exercices</h2>
-
-      <div class="exercise-box">
-        <h3>Exercice 1</h3>
-        <p>
-          Dire si la fonction
-          <span class="math">\(f(x)=3x-2\)</span>
-          est croissante, décroissante ou constante.
-        </p>
+      <h2>3. Tableau de variations</h2>
+      <div class="lesson-box">
+        <p>Un tableau de variations résume les intervalles de monotonie et les valeurs importantes de la fonction.</p>
+        <div class="variation-latex" role="img" aria-label="La fonction f croît de 0 à 6,25 entre 0 et 2,5, puis décroît de 6,25 à 0 entre 2,5 et 5.">
+          \[
+          \begin{array}{c|ccccc}
+            x    & 0 & & 2{,}5 & & 5 \\
+            \hline
+            f(x) & 0 & \nearrow & \mathbf{6{,}25} & \searrow & 0
+          \end{array}
+          \]
+        </div>
+        <p><strong>Lecture :</strong> quand <span class="math">\(x\)</span> va de <span class="math">\(0\)</span> à <span class="math">\(2{,}5\)</span>, <span class="math">\(f(x)\)</span> monte de <span class="math">\(0\)</span> à <span class="math">\(6{,}25\)</span>. Elle redescend ensuite jusqu’à <span class="math">\(0\)</span>.</p>
       </div>
-
-      <div class="exercise-box">
-        <h3>Exercice 2</h3>
-        <p>
-          Donner les intervalles de variation de la fonction carré.
-        </p>
-      </div>
-
-      <div class="exercise-box">
-        <h3>Exercice 3</h3>
-        <p>
-          Donner les variations de la fonction inverse.
-        </p>
-      </div>
-
-      <div class="exercise-box">
-        <h3>Exercice 4</h3>
-        <p>
-          Quel extremum possède la fonction carré ?
-        </p>
-      </div>
-
-      <div class="exercise-box">
-        <h3>Exercice 5</h3>
-        <p>
-          Indiquer les variations des fonctions cube et racine carrée.
-        </p>
+      <div class="lesson-box">
+        <h3>Méthode : construire un tableau</h3>
+        <ol class="method-list"><li>Repérer l’ensemble de définition.</li><li>Découper cet ensemble aux abscisses où le sens de variation change.</li><li>Calculer ou lire les images aux bornes et aux changements de variation.</li><li>Tracer une flèche montante ou descendante sur chaque intervalle.</li></ol>
       </div>
     </section>
 
     <section class="section">
-      <h2>Vidéo</h2>
-
-      <div class="video-box">
-        <p>Vidéo explicative sur les variations et extremums :</p>
-        <iframe
-          src="https://www.youtube.com/embed/LIEN_VIDEO"
-          title="Vidéo variations et extremums"
-          allowfullscreen>
-        </iframe>
+      <h2>4. Taux d’accroissement et fonctions affines</h2>
+      <div class="lesson-box">
+        <h3>Taux d’accroissement</h3>
+        <p>Pour <span class="math">\(a,b\in I\)</span> avec <span class="math">\(a&lt;b\)</span>, le taux d’accroissement de <span class="math">\(f\)</span> entre <span class="math">\(a\)</span> et <span class="math">\(b\)</span> est :</p>
+        <p class="math-display">\[\frac{f(b)-f(a)}{b-a}.\]</p>
+        <p>Il est égal au coefficient directeur de la droite passant par <span class="math">\(A(a\,;f(a))\)</span> et <span class="math">\(B(b\,;f(b))\)</span>.</p>
+      </div>
+      <div class="example-box">
+        <h3>Exemple</h3>
+        <p>Pour <span class="math">\(g(x)=x^2+1\)</span>, entre <span class="math">\(1\)</span> et <span class="math">\(3\)</span> :</p>
+        <p class="math-display">\[\frac{g(3)-g(1)}{3-1}=\frac{10-2}{2}=4.\]</p>
+      </div>
+      <div class="lesson-box">
+        <h3>Variations d’une fonction affine</h3>
+        <p>Pour <span class="math">\(f(x)=mx+p\)</span>, le taux d’accroissement est toujours <span class="math">\(m\)</span>. Ainsi :</p>
+        <ul><li>si <span class="math">\(m&gt;0\)</span>, <span class="math">\(f\)</span> est strictement croissante sur <span class="math">\(\mathbb R\)</span> ;</li><li>si <span class="math">\(m&lt;0\)</span>, elle est strictement décroissante ;</li><li>si <span class="math">\(m=0\)</span>, elle est constante.</li></ul>
       </div>
     </section>
 
     <section class="section">
-      <h2>Astuce</h2>
-
-      <div class="tip-box">
-        <p>
-          Pour une fonction affine, regarde d’abord le signe du coefficient directeur.
-        </p>
-      </div>
-
-      <div class="tip-box">
-        <p>
-          Pour la fonction carré, le point clé est
-          <span class="math">\(x=0\)</span> :
-          elle descend puis elle monte.
-        </p>
-      </div>
-
-      <div class="footer-nav">
-        <a href="fonctions.html" class="btn btn-secondary">← Retour</a>
-        <a href="index.html" class="btn btn-primary">Accueil</a>
+      <h2>5. Variations des fonctions usuelles</h2>
+      <div class="reference-grid">
+        <div class="lesson-box"><h3>Fonction valeur absolue</h3><p><span class="math">\(x\mapsto |x|\)</span> est strictement décroissante sur <span class="math">\(]-\infty\,;0]\)</span>, puis strictement croissante sur <span class="math">\([0\,;+\infty[\)</span>. Son minimum sur <span class="math">\(\mathbb R\)</span> est <span class="math">\(0\)</span>, atteint pour <span class="math">\(x=0\)</span>.</p></div>
+        <div class="lesson-box"><h3>Fonction carré</h3><p><span class="math">\(x\mapsto x^2\)</span> est strictement décroissante sur <span class="math">\(]-\infty\,;0]\)</span>, puis strictement croissante sur <span class="math">\([0\,;+\infty[\)</span>. Son minimum sur <span class="math">\(\mathbb R\)</span> est <span class="math">\(0\)</span>, atteint en <span class="math">\(0\)</span>.</p></div>
+        <div class="lesson-box"><h3>Fonction racine carrée</h3><p><span class="math">\(x\mapsto\sqrt{x}\)</span> est strictement croissante sur son ensemble de définition <span class="math">\([0\,;+\infty[\)</span>.</p></div>
+        <div class="lesson-box"><h3>Fonction cube</h3><p><span class="math">\(x\mapsto x^3\)</span> est strictement croissante sur <span class="math">\(\mathbb R\)</span>.</p></div>
+        <div class="lesson-box"><h3>Fonction inverse</h3><p><span class="math">\(x\mapsto\dfrac1x\)</span> est strictement décroissante sur chacun des intervalles <span class="math">\(]-\infty\,;0[\)</span> et <span class="math">\(]0\,;+\infty[\)</span>.</p><div class="warning-box">On ne peut pas dire qu’elle est décroissante sur <span class="math">\(\mathbb R^*\)</span>, car cet ensemble n’est pas un intervalle.</div></div>
       </div>
     </section>
 
+    <section class="section">
+      <h2>6. Comparer des images et résoudre un problème</h2>
+      <div class="lesson-box">
+        <h3>Comparer <span class="math">\(f(a)\)</span> et <span class="math">\(f(b)\)</span></h3>
+        <ol class="method-list"><li>Vérifier que <span class="math">\(a\)</span> et <span class="math">\(b\)</span> appartiennent au même intervalle de monotonie.</li><li>Comparer <span class="math">\(a\)</span> et <span class="math">\(b\)</span>.</li><li>Conserver l’ordre si la fonction est croissante ; l’inverser si elle est décroissante.</li></ol>
+      </div>
+      <div class="lesson-box"><h3>Optimisation</h3><p>Dans un problème concret, on traduit la situation par une fonction, on précise l’intervalle admissible, puis on utilise son tableau de variations pour déterminer une valeur maximale ou minimale et l’endroit où elle est atteinte.</p></div>
+    </section>
+
+    <section class="section">
+      <h2>Exercices d’entraînement</h2>
+      <div class="exercise-box"><h3>Exercice 1 — Fonction affine</h3><p>Déterminer les variations de <span class="math">\(f(x)=-3x+5\)</span> sur <span class="math">\(\mathbb R\)</span>, puis comparer <span class="math">\(f(-2)\)</span> et <span class="math">\(f(4)\)</span> sans les calculer.</p></div>
+      <div class="exercise-box"><h3>Exercice 2 — Tableau de variations</h3><p>Une fonction <span class="math">\(g\)</span> est croissante sur <span class="math">\([-4\,;1]\)</span>, puis décroissante sur <span class="math">\([1\,;6]\)</span>. On sait que <span class="math">\(g(-4)=-2\)</span>, <span class="math">\(g(1)=5\)</span> et <span class="math">\(g(6)=0\)</span>. Construire son tableau de variations et donner son maximum.</p></div>
+      <div class="exercise-box"><h3>Exercice 3 — Fonctions de référence</h3><p>Comparer sans calculatrice : <span class="math">\((-3{,}2)^2\)</span> et <span class="math">\((-2{,}7)^2\)</span>, puis <span class="math">\(\sqrt{7}\)</span> et <span class="math">\(\sqrt{11}\)</span>.</p></div>
+      <div class="exercise-box"><h3>Exercice 4 — Taux d’accroissement</h3><p>Calculer le taux d’accroissement de <span class="math">\(h(x)=x^2-2x\)</span> entre <span class="math">\(1\)</span> et <span class="math">\(4\)</span>.</p></div>
+      <div class="exercise-box"><h3>Exercice 5 — Optimisation</h3><p>Un rectangle a un périmètre de <span class="math">\(20\)</span> cm. Si un côté mesure <span class="math">\(x\)</span> cm, exprimer son aire en fonction de <span class="math">\(x\)</span>, préciser l’intervalle d’étude, puis déterminer l’aire maximale à l’aide des variations.</p></div>
+    </section>
+
+    <section class="section"><h2>Vidéo</h2><div class="video-box"><p>Vidéo explicative sur les variations et les extremums :</p><iframe src="https://www.youtube.com/embed/LIEN_VIDEO" title="Vidéo variations et extremums" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></section>
+
+    <section class="section">
+      <h2>À retenir</h2>
+      <div class="tip-box"><p><strong>Croissante :</strong> les images conservent l’ordre. <strong>Décroissante :</strong> elles inversent l’ordre.</p></div>
+      <div class="tip-box"><p><strong>Extremum :</strong> toujours préciser sa valeur, l’abscisse où il est atteint et l’intervalle étudié.</p></div>
+      <div class="tip-box"><p><strong>Fonction affine :</strong> le signe du coefficient directeur donne immédiatement le sens de variation.</p></div>
+      <div class="footer-nav"><a href="fonctions.html" class="btn btn-secondary">← Retour</a><a href="index.html" class="btn btn-primary">Accueil</a></div>
+    </section>
   </main>
-
 </body>
 </html>

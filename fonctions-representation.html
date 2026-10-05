@@ -3,201 +3,145 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MathPhiX — Représentations graphiques</title>
+  <meta name="description" content="Cours de seconde : représentations des fonctions, images, antécédents et lecture graphique." />
+  <title>MathPhiX — Représentation des fonctions</title>
   <link rel="stylesheet" href="css/style2.css" />
-
+  <style>
+    .formula-line{display:flex;flex-wrap:wrap;align-items:center;gap:.45rem}.method-steps{padding-left:1.4rem}.method-steps li+li{margin-top:.5rem}.table-wrap{width:100%;overflow-x:auto;margin:1rem 0}.value-table{width:100%;min-width:430px;border-collapse:collapse;text-align:center}.value-table th,.value-table td{border:1px solid #cbd5e1;padding:.7rem .55rem}.value-table th{background:#eff6ff;color:#1d4ed8}.graph-card{margin-top:1rem;padding:.65rem;border:1px solid #dbe4f0;border-radius:16px;background:#fff}.graph-card svg{display:block;width:100%;height:auto;max-height:430px}.graph-caption{margin:.65rem .3rem .2rem;color:#475569;font-size:.95rem;text-align:center}.note-box{margin-top:1rem;padding:.85rem 1rem;border-left:4px solid #f59e0b;border-radius:8px;background:#fffbeb}.comparison-list li+li{margin-top:.65rem}@media(max-width:640px){.formula-line{gap:.2rem .35rem}.graph-card{padding:.25rem;margin-left:-.2rem;margin-right:-.2rem}.graph-caption{font-size:.86rem}.value-table th,.value-table td{padding:.55rem .4rem}}
+  </style>
   <script>
-    window.MathJax = {
-      tex: {
-        inlineMath: [['\\(', '\\)'], ['$', '$']]
-      },
-      svg: {
-        fontCache: 'global'
-      }
-    };
+    window.MathJax={tex:{inlineMath:[['\\(','\\)'],['$','$']],displayMath:[['\\[','\\]']]},svg:{fontCache:'global'}};
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 </head>
-
 <body>
-
   <header class="site-header">
     <div class="header-container container">
-      <div>
-        <h1 class="site-title">MathPhiX</h1>
-        <p class="site-subtitle">Seconde — Représentations graphiques</p>
-      </div>
+      <div><h1 class="site-title">MathPhiX</h1><p class="site-subtitle">Seconde — Représentation des fonctions</p></div>
       <a href="fonctions.html" class="back-link">← Retour</a>
     </div>
   </header>
 
-  <section class="hero">
-    <div class="container">
-      <div class="hero-card">
-        <h1>Courbes représentatives</h1>
-        <p>
-          Dans ce chapitre, tu vas apprendre à lire une courbe représentative
-          et à résoudre graphiquement des équations et des inéquations.
-        </p>
-
-        <div class="hero-tags">
-          <span class="tag">Cours</span>
-          <span class="tag">Exercices</span>
-          <span class="tag">Vidéo</span>
-          <span class="tag">Astuce</span>
-        </div>
-      </div>
-    </div>
-  </section>
+  <section class="hero"><div class="container"><div class="hero-card">
+    <h1>Fonctions : représentations et lecture graphique</h1>
+    <p>Passer d’une formule à un tableau ou à une courbe, lire une image et des antécédents, puis résoudre graphiquement des équations et des inéquations.</p>
+    <div class="hero-tags"><span class="tag">Vocabulaire</span><span class="tag">Courbes</span><span class="tag">Méthodes</span><span class="tag">Exercices</span></div>
+  </div></div></section>
 
   <main class="container">
-
     <section class="section">
-      <h2>Cours</h2>
-
+      <h2>1. Notion de fonction</h2>
       <div class="lesson-box">
-        <h3>1. Courbe représentative d’une fonction</h3>
-        <p>
-          La courbe représentative d’une fonction
-          <span class="math">\(f\)</span> est l’ensemble des points du plan
-          de coordonnées <span class="math">\((x ; f(x))\)</span>.
-        </p>
-        <p>
-          À chaque valeur de <span class="math">\(x\)</span> dans l’intervalle de définition
-          correspond un point de la courbe.
-        </p>
+        <h3>Définition</h3>
+        <p>Une fonction <span class="math">\(f\)</span> associe à chaque réel <span class="math">\(x\)</span> d’un ensemble <span class="math">\(D\)</span> un unique réel, noté <span class="math">\(f(x)\)</span>. L’ensemble <span class="math">\(D\)</span> est l’<strong>ensemble de définition</strong> de <span class="math">\(f\)</span>.</p>
+        <p class="formula-line"><span class="math">\(f:D\longrightarrow\mathbb R\)</span><span>et</span><span class="math">\(x\longmapsto f(x)\)</span>.</p>
       </div>
-
-      <div class="lesson-box">
-        <h3>2. Lire graphiquement une image</h3>
-        <p>
-          Pour lire l’image de <span class="math">\(a\)</span>,
-          on repère le point de la courbe d’abscisse <span class="math">\(a\)</span>,
-          puis on lit son ordonnée.
-        </p>
-        <p>
-          Cette ordonnée est <span class="math">\(f(a)\)</span>.
-        </p>
-      </div>
-
-      <div class="lesson-box">
-        <h3>3. Lire graphiquement un antécédent</h3>
-        <p>
-          Pour chercher les antécédents de <span class="math">\(b\)</span>,
-          on trace mentalement ou réellement la droite horizontale
-          d’équation <span class="math">\(y=b\)</span>.
-        </p>
-        <p>
-          Les abscisses des points d’intersection avec la courbe
-          sont les antécédents de <span class="math">\(b\)</span>.
-        </p>
-      </div>
-
-      <div class="lesson-box">
-        <h3>4. Résolution graphique d’une équation</h3>
-        <p>
-          Résoudre graphiquement l’équation
-          <span class="math">\(f(x)=k\)</span>,
-          c’est chercher les abscisses des points de la courbe
-          où l’ordonnée vaut <span class="math">\(k\)</span>.
-        </p>
-      </div>
-
-      <div class="lesson-box">
-        <h3>5. Résolution graphique d’une inéquation</h3>
-        <p>
-          Résoudre graphiquement une inéquation du type
-          <span class="math">\(f(x) \le k\)</span> ou
-          <span class="math">\(f(x) \ge k\)</span>,
-          c’est repérer les parties de la courbe situées en dessous
-          ou au-dessus de la droite d’équation <span class="math">\(y=k\)</span>.
-        </p>
-      </div>
-
       <div class="example-box">
         <h3>Exemple</h3>
-        <p>
-          Si la courbe coupe la droite
-          <span class="math">\(y=3\)</span> aux abscisses
-          <span class="math">\(-2\)</span> et <span class="math">\(4\)</span>,
-          alors les solutions de
-          <span class="math">\(f(x)=3\)</span>
-          sont
-          <span class="math">\(-2\)</span> et <span class="math">\(4\)</span>.
-        </p>
+        <p>On considère la fonction affine <span class="math">\(f\)</span> définie sur <span class="math">\([-2\,;2]\)</span> par <span class="math">\(f(x)=2x+1\)</span>.</p>
+        <p class="math">\[f(1)=2\times1+1=3 \qquad\text{et}\qquad f(0)=2\times0+1=1.\]</p>
+        <ul><li><span class="math">\(3\)</span> est l’<strong>image</strong> de <span class="math">\(1\)</span> ;</li><li><span class="math">\(1\)</span> est un <strong>antécédent</strong> de <span class="math">\(3\)</span>.</li></ul>
+        <div class="note-box">Un nombre de l’ensemble de définition possède une seule image. Un nombre peut, en revanche, avoir aucun, un ou plusieurs antécédents.</div>
+      </div>
+      <div class="lesson-box">
+        <h3>Quatre modes de représentation</h3>
+        <ul><li>une <strong>expression algébrique</strong> ;</li><li>un <strong>tableau de valeurs</strong> ;</li><li>une <strong>courbe</strong> dans un repère ;</li><li>un <strong>programme de calcul</strong> ou un algorithme.</li></ul>
+        <div class="table-wrap"><table class="value-table">
+          <thead><tr><th><span class="math">\(x\)</span></th><th>−2</th><th>−1</th><th>0</th><th>1</th><th>2</th></tr></thead>
+          <tbody><tr><th><span class="math">\(f(x)=2x+1\)</span></th><td>−3</td><td>−1</td><td>1</td><td>3</td><td>5</td></tr></tbody>
+        </table></div>
       </div>
     </section>
 
     <section class="section">
-      <h2>Exercices</h2>
-
-      <div class="exercise-box">
-        <h3>Exercice 1</h3>
-        <p>
-          Expliquer comment lire graphiquement l’image d’un nombre.
-        </p>
+      <h2>2. Courbe représentative</h2>
+      <div class="lesson-box">
+        <h3>Définition et appartenance d’un point</h3>
+        <p>La courbe <span class="math">\(\mathcal C_f\)</span> est l’ensemble des points <span class="math">\(M(x\,;f(x))\)</span>, pour <span class="math">\(x\in D\)</span>. Elle a pour équation <span class="math">\(y=f(x)\)</span>.</p>
+        <p class="math">\[M(a\,;b)\in\mathcal C_f\quad\Longleftrightarrow\quad b=f(a).\]</p>
       </div>
-
-      <div class="exercise-box">
-        <h3>Exercice 2</h3>
-        <p>
-          Expliquer comment trouver graphiquement les antécédents d’un nombre.
-        </p>
+      <div class="graph-card">
+        <svg viewBox="0 0 720 500" role="img" aria-labelledby="graph-title graph-desc">
+          <title id="graph-title">Droite représentative de la fonction affine deux x plus un</title><desc id="graph-desc">Droite de la fonction f définie par f de x égale deux x plus un sur moins deux à deux, avec le point A de coordonnées un et trois et les traits de lecture.</desc>
+          <defs><pattern id="grid" width="70" height="50" patternUnits="userSpaceOnUse"><path d="M70 0L0 0 0 50" fill="none" stroke="#dbe4f0"/></pattern><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5 0 10z" fill="#334155"/></marker></defs>
+          <rect x="55" y="10" width="610" height="450" rx="10" fill="url(#grid)"/>
+          <line x1="55" y1="260" x2="674" y2="260" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/><line x1="335" y1="465" x2="335" y2="8" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+          <g fill="#475569" font-size="16" font-family="Arial" text-anchor="middle"><text x="195" y="284">−2</text><text x="265" y="284">−1</text><text x="405" y="284">1</text><text x="475" y="284">2</text><text x="690" y="266">x</text><text x="344" y="18">y</text></g>
+          <g fill="#475569" font-size="16" font-family="Arial" text-anchor="end"><text x="325" y="414">−3</text><text x="325" y="364">−2</text><text x="325" y="314">−1</text><text x="325" y="214">1</text><text x="325" y="164">2</text><text x="325" y="114">3</text><text x="325" y="64">4</text><text x="325" y="18">5</text></g>
+          <line x1="195" y1="410" x2="475" y2="10" stroke="#2563eb" stroke-width="5" stroke-linecap="round"/>
+          <line x1="405" y1="260" x2="405" y2="110" stroke="#f59e0b" stroke-width="3" stroke-dasharray="8 7"/><line x1="335" y1="110" x2="405" y2="110" stroke="#f59e0b" stroke-width="3" stroke-dasharray="8 7"/>
+          <circle cx="405" cy="110" r="7" fill="#dc2626"/><text x="420" y="98" fill="#991b1b" font-size="18" font-weight="700" font-family="Arial">A(1 ; 3)</text><text x="485" y="35" fill="#1d4ed8" font-size="19" font-weight="700" font-family="Arial">𝒞f</text>
+        </svg>
+        <p class="graph-caption">La courbe de la fonction affine <span class="math">\(f(x)=2x+1\)</span> est une droite. Le point <span class="math">\(A(1\,;3)\)</span> lui appartient car <span class="math">\(f(1)=3\)</span>.</p>
       </div>
+    </section>
 
-      <div class="exercise-box">
-        <h3>Exercice 3</h3>
-        <p>
-          Que signifie graphiquement résoudre l’équation
-          <span class="math">\(f(x)=2\)</span> ?
-        </p>
+    <section class="section">
+      <h2>3. Lire et résoudre graphiquement</h2>
+      <div class="lesson-box">
+        <h3>Lire l’image de <span class="math">\(a\)</span></h3>
+        <ol class="method-steps"><li>Partir de <span class="math">\(a\)</span> sur l’axe des abscisses.</li><li>Se déplacer verticalement jusqu’à la courbe.</li><li>Lire l’ordonnée obtenue : c’est <span class="math">\(f(a)\)</span>.</li></ol>
       </div>
+      <div class="lesson-box">
+        <h3>Lire les antécédents de <span class="math">\(b\)</span></h3>
+        <ol class="method-steps"><li>Partir de <span class="math">\(b\)</span> sur l’axe des ordonnées.</li><li>Tracer la droite horizontale <span class="math">\(y=b\)</span>.</li><li>Lire les abscisses de tous les points d’intersection.</li></ol>
+        <p>Pour <span class="math">\(f(x)=2x+1\)</span>, l’antécédent de <span class="math">\(3\)</span> est <span class="math">\(1\)</span>.</p>
+      </div>
+      <div class="lesson-box">
+        <h3>Équations et inéquations</h3>
+        <ul>
+          <li><span class="math">\(f(x)=k\)</span> : abscisses des intersections de <span class="math">\(\mathcal C_f\)</span> et <span class="math">\(y=k\)</span> ;</li>
+          <li><span class="math">\(f(x)&lt;k\)</span> : abscisses des points où <span class="math">\(\mathcal C_f\)</span> est sous <span class="math">\(y=k\)</span> ;</li>
+          <li><span class="math">\(f(x)=g(x)\)</span> : abscisses des intersections de <span class="math">\(\mathcal C_f\)</span> et <span class="math">\(\mathcal C_g\)</span> ;</li>
+          <li><span class="math">\(f(x)&lt;g(x)\)</span> : abscisses où <span class="math">\(\mathcal C_f\)</span> est sous <span class="math">\(\mathcal C_g\)</span>.</li>
+        </ul>
+        <div class="note-box">Une lecture graphique donne souvent des valeurs approchées. Les solutions se lisent toujours sur l’axe des abscisses.</div>
+      </div>
+    </section>
 
-      <div class="exercise-box">
-        <h3>Exercice 4</h3>
-        <p>
-          Que signifie graphiquement résoudre l’inéquation
-          <span class="math">\(f(x)\le 1\)</span> ?
-        </p>
+    <section class="section">
+      <h2>4. Symétries : fonctions paires et impaires</h2>
+      <div class="lesson-box"><h3>Fonction paire</h3><p>Si <span class="math">\(D\)</span> est symétrique par rapport à <span class="math">\(0\)</span> et si <span class="math">\(f(-x)=f(x)\)</span>, alors <span class="math">\(f\)</span> est <strong>paire</strong>. Sa courbe est symétrique par rapport à l’axe des ordonnées. Exemple : <span class="math">\(f(x)=x^2\)</span>.</p></div>
+      <div class="lesson-box"><h3>Fonction impaire</h3><p>Si <span class="math">\(D\)</span> est symétrique par rapport à <span class="math">\(0\)</span> et si <span class="math">\(f(-x)=-f(x)\)</span>, alors <span class="math">\(f\)</span> est <strong>impaire</strong>. Sa courbe est symétrique par rapport à l’origine. Exemple : <span class="math">\(f(x)=x^3\)</span>.</p></div>
+    </section>
+
+    <section class="section">
+      <h2>5. Positions relatives de <span class="math">\(y=x\)</span>, <span class="math">\(y=x^2\)</span> et <span class="math">\(y=x^3\)</span></h2>
+      <div class="example-box">
+        <ul class="comparison-list"><li>Si <span class="math">\(0\leq x\leq1\)</span>, alors <span class="math">\(0\leq x^3\leq x^2\leq x\leq1\)</span>.</li><li>Si <span class="math">\(x\geq1\)</span>, alors <span class="math">\(1\leq x\leq x^2\leq x^3\)</span>.</li></ul>
+        <p>La plus petite valeur correspond à la courbe située le plus bas.</p>
       </div>
+    </section>
+
+    <section class="section">
+      <h2>Exercices d’entraînement</h2>
+      <div class="exercise-box"><h3>Exercice 1 — Images et antécédents</h3><p>Soit <span class="math">\(f(x)=2x+1\)</span> sur <span class="math">\([-2\,;2]\)</span>.</p><ol><li>Calculer <span class="math">\(f(-2)\)</span>, <span class="math">\(f(0)\)</span> et <span class="math">\(f(1{,}5)\)</span>.</li><li>Déterminer l’antécédent de <span class="math">\(5\)</span>.</li><li>Le point <span class="math">\(B(-1\,;-1)\)</span> appartient-il à <span class="math">\(\mathcal C_f\)</span> ? Justifier.</li></ol></div>
+      <div class="exercise-box"><h3>Exercice 2 — Lecture graphique</h3><p>À l’aide de la droite du cours :</p><ol><li>lire l’image de <span class="math">\(1\)</span> ;</li><li>lire l’antécédent de <span class="math">\(3\)</span> ;</li><li>résoudre graphiquement <span class="math">\(f(x)\leq3\)</span> sur <span class="math">\([-2\,;2]\)</span>.</li></ol></div>
+      <div class="exercise-box"><h3>Exercice 3 — Deux fonctions</h3><p>On considère <span class="math">\(f(x)=x^2\)</span> et <span class="math">\(g(x)=x\)</span> sur <span class="math">\([0\,;2]\)</span>.</p><ol><li>Résoudre <span class="math">\(f(x)=g(x)\)</span>.</li><li>Résoudre <span class="math">\(f(x)\leq g(x)\)</span>.</li><li>Interpréter graphiquement les réponses.</li></ol></div>
+      <div class="exercise-box"><h3>Exercice 4 — Symétrie</h3><p>Déterminer si les fonctions suivantes sont paires, impaires ou ni l’une ni l’autre : <span class="math">\(u(x)=x^2+3\)</span>, <span class="math">\(v(x)=x^3-2x\)</span> et <span class="math">\(w(x)=x^2+x\)</span>.</p></div>
     </section>
 
     <section class="section">
       <h2>Vidéo</h2>
-
       <div class="video-box">
-        <p>Vidéo explicative sur les courbes représentatives :</p>
+        <p>Vidéo explicative sur la représentation graphique des fonctions :</p>
         <iframe
           src="https://www.youtube.com/embed/LIEN_VIDEO"
-          title="Vidéo courbes représentatives"
+          title="Vidéo sur la représentation graphique des fonctions"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen>
         </iframe>
       </div>
     </section>
 
     <section class="section">
-      <h2>Astuce</h2>
-
-      <div class="tip-box">
-        <p>
-          Image : on part de <span class="math">\(x\)</span> sur l’axe horizontal,
-          puis on lit la hauteur de la courbe.
-        </p>
-      </div>
-
-      <div class="tip-box">
-        <p>
-          Antécédent : on part de l’ordonnée et on cherche les abscisses correspondantes.
-        </p>
-      </div>
-
-      <div class="footer-nav">
-        <a href="fonctions.html" class="btn btn-secondary">← Retour</a>
-        <a href="index.html" class="btn btn-primary">Accueil</a>
-      </div>
+      <h2>À retenir</h2>
+      <div class="tip-box"><p><strong>Image :</strong> on part de l’abscisse et on lit l’ordonnée.</p></div>
+      <div class="tip-box"><p><strong>Antécédent :</strong> on part de l’ordonnée et on lit une ou plusieurs abscisses.</p></div>
+      <div class="tip-box"><p><strong>Appartenance :</strong> <span class="math">\(M(a\,;b)\in\mathcal C_f\)</span> exactement lorsque <span class="math">\(b=f(a)\)</span>.</p></div>
+      <div class="footer-nav"><a href="fonctions.html" class="btn btn-secondary">← Retour</a><a href="index.html" class="btn btn-primary">Accueil</a></div>
     </section>
-
   </main>
-
 </body>
 </html>
