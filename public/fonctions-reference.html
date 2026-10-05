@@ -3,263 +3,89 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MathPhiX — Fonctions de référence</title>
+  <title>Fonctions de référence en Seconde : cours et exercices | MathPhiX</title>
+  <meta name="description" content="Cours de Seconde sur les fonctions affines et les fonctions de référence : valeur absolue, carré, inverse, racine carrée et cube. Définitions, courbes, variations, signe et résolution graphique." />
   <link rel="stylesheet" href="css/style2.css" />
-
+  <style>
+    .formula-box{margin:1rem 0;padding:1rem;border-left:4px solid #2454d3;background:#f8fafc;text-align:center}.table-wrapper{overflow-x:auto;margin:1rem 0}.reference-table{width:100%;min-width:620px;border-collapse:collapse;background:#fff}.reference-table th,.reference-table td{padding:.7rem;border:1px solid #cbd5e1;text-align:center}.reference-table th{background:#eaf2ff;color:#173e79}.graph-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem;margin:1rem 0}.function-graph{padding:.75rem;border:1px solid #d7e1ef;border-radius:14px;background:#fff;text-align:center}.function-graph svg{display:block;width:100%;height:auto;max-height:240px}.axis{stroke:#475569;stroke-width:1.5}.grid-line{stroke:#dbe5f2;stroke-width:1}.curve{fill:none;stroke:#2454d3;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}.curve-secondary{fill:none;stroke:#dc6b34;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}.label{fill:#173e79;font-size:13px;font-weight:700}.method-steps{margin:.75rem 0 0;padding-left:1.25rem}.method-steps li{margin:.45rem 0}@media(max-width:650px){.reference-table{min-width:540px}.formula-box{padding:.8rem}.function-graph{padding:.5rem}}
+  </style>
   <script>
-    window.MathJax = {
-      tex: {
-        inlineMath: [['\\(', '\\)'], ['$', '$']]
-      },
-      svg: {
-        fontCache: 'global'
-      }
-    };
+    window.MathJax={tex:{inlineMath:[['\\(','\\)'],['$','$']],displayMath:[['\\[','\\]']]},svg:{fontCache:'global'}};
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 </head>
-
 <body>
+  <header class="site-header"><div class="header-container container"><div><h1 class="site-title">MathPhiX</h1><p class="site-subtitle">Seconde - Fonctions de référence</p></div><a href="fonctions.html" class="back-link">← Retour</a></div></header>
 
-  <header class="site-header">
-    <div class="header-container container">
-      <div>
-        <h1 class="site-title">MathPhiX</h1>
-        <p class="site-subtitle">Seconde — Fonctions de référence</p>
-      </div>
-      <a href="fonctions.html" class="back-link">← Retour</a>
-    </div>
-  </header>
-
-  <section class="hero">
-    <div class="container">
-      <div class="hero-card">
-        <h1>Fonctions de référence</h1>
-        <p>
-          Dans ce chapitre, tu vas revoir la notion de fonction et découvrir
-          les fonctions de référence du programme de seconde :
-          affine, carré, cube, racine carrée et inverse.
-        </p>
-
-        <div class="hero-tags">
-          <span class="tag">Cours</span>
-          <span class="tag">Exercices</span>
-          <span class="tag">Vidéo</span>
-          <span class="tag">Astuce</span>
-        </div>
-      </div>
-    </div>
-  </section>
+  <section class="hero"><div class="container"><div class="hero-card">
+    <h1>Fonctions de référence</h1>
+    <p>Comprendre une fonction, connaitre les courbes de référence et utiliser leurs propriétés pour calculer, comparer et résoudre des équations ou des inéquations.</p>
+    <div class="hero-tags"><span class="tag">Images et antécédents</span><span class="tag">Courbes</span><span class="tag">Variations</span><span class="tag">Équations et inéquations</span></div>
+  </div></div></section>
 
   <main class="container">
-
-    <section class="section">
-      <h2>Cours</h2>
-
-      <div class="lesson-box">
-        <h3>1. Notion de fonction</h3>
-        <p>
-          Une fonction associe à un nombre <span class="math">\(x\)</span>
-          un unique nombre noté <span class="math">\(f(x)\)</span>.
-        </p>
-        <p>
-          L’<strong>ensemble de définition</strong> est l’ensemble des valeurs de
-          <span class="math">\(x\)</span> pour lesquelles la fonction est définie.
-        </p>
-        <p>
-          L’<strong>image</strong> d’un nombre <span class="math">\(a\)</span> est
-          le nombre <span class="math">\(f(a)\)</span>.
-        </p>
-        <p>
-          Un <strong>antécédent</strong> d’un nombre <span class="math">\(b\)</span>
-          est un nombre <span class="math">\(x\)</span> tel que
-          <span class="math">\(f(x)=b\)</span>.
-        </p>
+    <section class="section" id="notion-fonction">
+      <h2>1. Notion de fonction</h2>
+      <div class="lesson-box"><h3>Définition</h3>
+        <p>Une fonction <span class="math">\(f\)</span> associe à chaque nombre <span class="math">\(x\)</span> de son ensemble de définition un unique nombre noté <span class="math">\(f(x)\)</span>.</p>
+        <ul><li><span class="math">\(f(x)\)</span> est l’<strong>image</strong> de <span class="math">\(x\)</span> par <span class="math">\(f\)</span> ;</li><li>si <span class="math">\(f(x)=y\)</span>, alors <span class="math">\(x\)</span> est un <strong>antécédent</strong> de <span class="math">\(y\)</span> ;</li><li>l’<strong>ensemble de définition</strong>, noté <span class="math">\(D_f\)</span>, contient les valeurs de <span class="math">\(x\)</span> pour lesquelles <span class="math">\(f(x)\)</span> existe.</li></ul>
       </div>
+      <div class="lesson-box"><h3>Courbe représentative</h3><p>Dans un repère, la courbe <span class="math">\(\mathcal C_f\)</span> d’équation <span class="math">\(y=f(x)\)</span> est l’ensemble des points <span class="math">\(M(x;y)\)</span> tels que <span class="math">\(y=f(x)\)</span>.</p><p>Ainsi, <span class="math">\(M(a;b)\in\mathcal C_f\)</span> si et seulement si <span class="math">\(b=f(a)\)</span>.</p></div>
+      <div class="example-box"><h3>Exemple</h3><p>Pour <span class="math">\(f(x)=-2x+3\)</span>, l’image de <span class="math">\(2\)</span> est <span class="math">\(f(2)=-1\)</span>. Un antécédent de <span class="math">\(7\)</span> vérifie <span class="math">\(-2x+3=7\)</span>, donc <span class="math">\(x=-2\)</span>.</p></div>
+    </section>
 
-      <div class="lesson-box">
-        <h3>2. Fonction affine</h3>
-        <p>
-          Une fonction affine est une fonction de la forme :
-        </p>
-        <p>
-          <span class="math">\(f(x)=mx+p\)</span>
-        </p>
-        <p>
-          Le nombre <span class="math">\(m\)</span> s’appelle le coefficient directeur
-          et <span class="math">\(p\)</span> l’ordonnée à l’origine.
-        </p>
-        <p>
-          Sa représentation graphique est une droite.
-        </p>
-      </div>
+    <section class="section" id="fonction-affine">
+      <h2>2. Fonction affine</h2>
+      <div class="lesson-box"><h3>Définition et représentation</h3><p>Une fonction affine est définie sur <span class="math">\(\mathbb R\)</span> par :</p><div class="formula-box"><span class="math">\[f(x)=mx+p\]</span></div><p>Sa représentation est la droite d’équation <span class="math">\(y=mx+p\)</span>. Le nombre <span class="math">\(m\)</span> est le coefficient directeur et <span class="math">\(p\)</span> l’ordonnée à l’origine.</p><ul><li>si <span class="math">\(m=0\)</span>, la fonction est constante ;</li><li>si <span class="math">\(p=0\)</span>, la fonction est linéaire et sa droite passe par l’origine.</li></ul></div>
+      <div class="lesson-box"><h3>Variations et signe</h3><ul><li>si <span class="math">\(m&gt;0\)</span>, la fonction est strictement croissante ;</li><li>si <span class="math">\(m&lt;0\)</span>, elle est strictement décroissante ;</li><li>si <span class="math">\(m\neq0\)</span>, elle s’annule en <span class="math">\(x=-\dfrac{p}{m}\)</span>.</li></ul></div>
+      <div class="example-box"><h3>Exemple : construire une droite</h3><p>Pour <span class="math">\(f(x)=2x-2\)</span>, on obtient <span class="math">\(f(0)=-2\)</span> et <span class="math">\(f(1)=0\)</span>. La droite passe donc par <span class="math">\(A(0;-2)\)</span> et <span class="math">\(B(1;0)\)</span>.</p></div>
+    </section>
 
-      <div class="lesson-box">
-        <h3>3. Fonction carré</h3>
-        <p>
-          La fonction carré est définie sur
-          <span class="math">\(\mathbb{R}\)</span> par :
-        </p>
-        <p>
-          <span class="math">\(f(x)=x^2\)</span>
-        </p>
-        <p>
-          Elle associe à chaque réel son carré.
-        </p>
-      </div>
+    <section class="section" id="fonctions-reference">
+      <h2>3. Les fonctions de référence</h2>
+      <div class="table-wrapper"><table class="reference-table"><thead><tr><th>Fonction</th><th>Expression</th><th>Ensemble de définition</th><th>Propriété essentielle</th></tr></thead><tbody>
+        <tr><th>Valeur absolue</th><td><span class="math">\(f(x)=|x|\)</span></td><td><span class="math">\(\mathbb R\)</span></td><td>paire, minimum 0 en 0</td></tr>
+        <tr><th>Carré</th><td><span class="math">\(f(x)=x^2\)</span></td><td><span class="math">\(\mathbb R\)</span></td><td>paire et positive</td></tr>
+        <tr><th>Inverse</th><td><span class="math">\(f(x)=\dfrac1x\)</span></td><td><span class="math">\(\mathbb R\setminus\{0\}\)</span></td><td>impaire, 0 interdit</td></tr>
+        <tr><th>Racine carrée</th><td><span class="math">\(f(x)=\sqrt{x}\)</span></td><td><span class="math">\([0;+\infty[\)</span></td><td>positive et croissante</td></tr>
+        <tr><th>Cube</th><td><span class="math">\(f(x)=x^3\)</span></td><td><span class="math">\(\mathbb R\)</span></td><td>impaire et croissante</td></tr>
+      </tbody></table></div>
 
-      <div class="lesson-box">
-        <h3>4. Fonction cube</h3>
-        <p>
-          La fonction cube est définie sur
-          <span class="math">\(\mathbb{R}\)</span> par :
-        </p>
-        <p>
-          <span class="math">\(f(x)=x^3\)</span>
-        </p>
-      </div>
-
-      <div class="lesson-box">
-        <h3>5. Fonction racine carrée</h3>
-        <p>
-          La fonction racine carrée est définie sur
-          <span class="math">\([0 ; +\infty[\)</span> par :
-        </p>
-        <p>
-          <span class="math">\(f(x)=\sqrt{x}\)</span>
-        </p>
-        <p>
-          Elle n’est pas définie pour les nombres négatifs.
-        </p>
-      </div>
-
-      <div class="lesson-box">
-        <h3>6. Fonction inverse</h3>
-        <p>
-          La fonction inverse est définie sur
-          <span class="math">\(\mathbb{R}\setminus\{0\}\)</span> par :
-        </p>
-        <p>
-          <span class="math">\(f(x)=\dfrac{1}{x}\)</span>
-        </p>
-        <p>
-          Elle n’est pas définie en <span class="math">\(0\)</span>.
-        </p>
-      </div>
-
-      <div class="example-box">
-        <h3>Exemple 1</h3>
-        <p>
-          Si <span class="math">\(f(x)=2x+3\)</span>, alors :
-        </p>
-        <ul>
-          <li>l’image de <span class="math">\(4\)</span> est <span class="math">\(f(4)=11\)</span> ;</li>
-          <li>un antécédent de <span class="math">\(7\)</span> est <span class="math">\(2\)</span> car <span class="math">\(f(2)=7\)</span>.</li>
-        </ul>
-      </div>
-
-      <div class="example-box">
-        <h3>Exemple 2</h3>
-        <p>
-          Pour la fonction carré, l’image de
-          <span class="math">\(-3\)</span> est
-          <span class="math">\(9\)</span>.
-        </p>
-        <p>
-          Pour la fonction racine carrée,
-          <span class="math">\(f(16)=4\)</span>.
-        </p>
+      <div class="graph-grid">
+        <div class="function-graph"><h3>Valeur absolue : <span class="math">\(y=|x|\)</span></h3><svg viewBox="0 0 260 200" role="img" aria-label="Courbe de la fonction valeur absolue"><path class="grid-line" d="M20 40H240M20 80H240M20 120H240M20 160H240M50 20V180M90 20V180M130 20V180M170 20V180M210 20V180"/><path class="axis" d="M20 160H245M130 185V15"/><path class="curve" d="M30 60L130 160L230 60"/><text class="label" x="220" y="53">|x|</text></svg><p>Décroissante sur <span class="math">\(]-\infty;0]\)</span>, puis croissante sur <span class="math">\([0;+\infty[\)</span>.</p></div>
+        <div class="function-graph"><h3>Carré : <span class="math">\(y=x^2\)</span></h3><svg viewBox="0 0 260 200" role="img" aria-label="Parabole de la fonction carré"><path class="grid-line" d="M20 40H240M20 80H240M20 120H240M20 160H240M50 20V180M90 20V180M130 20V180M170 20V180M210 20V180"/><path class="axis" d="M20 160H245M130 185V15"/><path class="curve" d="M50 30C78 115 103 160 130 160C157 160 182 115 210 30"/><text class="label" x="204" y="25">x²</text></svg><p>Décroissante sur <span class="math">\(]-\infty;0]\)</span>, puis croissante sur <span class="math">\([0;+\infty[\)</span>.</p></div>
+        <div class="function-graph"><h3>Inverse : <span class="math">\(y=\dfrac1x\)</span></h3><svg viewBox="0 0 260 200" role="img" aria-label="Hyperbole de la fonction inverse"><path class="grid-line" d="M20 40H240M20 80H240M20 120H240M20 160H240M50 20V180M90 20V180M130 20V180M170 20V180M210 20V180"/><path class="axis" d="M20 100H245M130 185V15"/><path class="curve" d="M25 77C55 75 84 69 102 52C115 40 121 26 125 18M135 182C139 160 145 145 158 133C176 116 205 108 235 106"/><text class="label" x="210" y="126">1/x</text></svg><p>Décroissante sur chacun des intervalles <span class="math">\(]-\infty;0[\)</span> et <span class="math">\(]0;+\infty[\)</span>.</p></div>
+        <div class="function-graph"><h3>Racine carrée : <span class="math">\(y=\sqrt{x}\)</span></h3><svg viewBox="0 0 260 200" role="img" aria-label="Courbe de la fonction racine carrée"><path class="grid-line" d="M20 40H240M20 80H240M20 120H240M20 160H240M50 20V180M90 20V180M130 20V180M170 20V180M210 20V180"/><path class="axis" d="M20 160H245M50 185V15"/><path class="curve" d="M50 160C68 125 91 105 120 90C151 74 187 63 230 55"/><text class="label" x="214" y="49">√x</text></svg><p>Elle est définie et croissante sur <span class="math">\([0;+\infty[\)</span>.</p></div>
+        <div class="function-graph"><h3>Cube : <span class="math">\(y=x^3\)</span></h3><svg viewBox="0 0 260 200" role="img" aria-label="Courbe de la fonction cube"><path class="grid-line" d="M20 40H240M20 80H240M20 120H240M20 160H240M50 20V180M90 20V180M130 20V180M170 20V180M210 20V180"/><path class="axis" d="M20 100H245M130 185V15"/><path class="curve" d="M35 178C78 173 105 146 122 112C126 104 128 101 130 100C132 99 134 96 138 88C155 54 182 27 225 22"/><text class="label" x="215" y="19">x³</text></svg><p>Elle est définie et strictement croissante sur <span class="math">\(\mathbb R\)</span>.</p></div>
       </div>
     </section>
 
-    <section class="section">
-      <h2>Exercices</h2>
-
-      <div class="exercise-box">
-        <h3>Exercice 1</h3>
-        <p>
-          Soit <span class="math">\(f(x)=3x-2\)</span>.
-        </p>
-        <ul>
-          <li>Calculer l’image de <span class="math">\(5\)</span>.</li>
-          <li>Trouver un antécédent de <span class="math">\(7\)</span>.</li>
-        </ul>
-      </div>
-
-      <div class="exercise-box">
-        <h3>Exercice 2</h3>
-        <p>
-          Donner l’ensemble de définition des fonctions suivantes :
-        </p>
-        <ul>
-          <li><span class="math">\(x \mapsto x^2\)</span></li>
-          <li><span class="math">\(x \mapsto \sqrt{x}\)</span></li>
-          <li><span class="math">\(x \mapsto \dfrac{1}{x}\)</span></li>
-        </ul>
-      </div>
-
-      <div class="exercise-box">
-        <h3>Exercice 3</h3>
-        <p>
-          Calculer :
-        </p>
-        <ul>
-          <li><span class="math">\(2^2\)</span></li>
-          <li><span class="math">\((-3)^3\)</span></li>
-          <li><span class="math">\(\sqrt{25}\)</span></li>
-          <li><span class="math">\(\dfrac{1}{4}\)</span></li>
-        </ul>
-      </div>
-
-      <div class="exercise-box">
-        <h3>Exercice 4</h3>
-        <p>
-          Soit <span class="math">\(f(x)=x^2\)</span>.
-        </p>
-        <ul>
-          <li>Donner l’image de <span class="math">\(-2\)</span>.</li>
-          <li>Donner les antécédents éventuels de <span class="math">\(9\)</span>.</li>
-        </ul>
-      </div>
+    <section class="section" id="proprietes">
+      <h2>4. Signe, variations et symétries</h2>
+      <div class="lesson-box"><h3>Fonctions paires et impaires</h3><ul><li><span class="math">\(|-x|=|x|\)</span> et <span class="math">\((-x)^2=x^2\)</span> : les fonctions valeur absolue et carré sont paires ; leurs courbes sont symétriques par rapport à l’axe des ordonnées.</li><li><span class="math">\((-x)^3=-x^3\)</span> et <span class="math">\(\dfrac1{-x}=-\dfrac1x\)</span> : les fonctions cube et inverse sont impaires ; leurs courbes sont symétriques par rapport à l’origine.</li></ul></div>
+      <div class="lesson-box"><h3>Signe</h3><ul><li><span class="math">\(|x|\geq0\)</span>, <span class="math">\(x^2\geq0\)</span> et <span class="math">\(\sqrt{x}\geq0\)</span> sur leurs ensembles de définition ;</li><li><span class="math">\(x^3\)</span> a le même signe que <span class="math">\(x\)</span> ;</li><li><span class="math">\(\dfrac1x\)</span> a le même signe que <span class="math">\(x\)</span>, avec <span class="math">\(x\neq0\)</span>.</li></ul></div>
+      <div class="tip-box"><p><strong>Comparer :</strong> commence par repérer l’intervalle. Sur <span class="math">\([0;+\infty[\)</span>, la fonction carré est croissante : si <span class="math">\(0\leq a&lt;b\)</span>, alors <span class="math">\(a^2&lt;b^2\)</span>.</p></div>
     </section>
 
-    <section class="section">
-      <h2>Vidéo</h2>
-
-      <div class="video-box">
-        <p>Vidéo explicative sur les fonctions de référence :</p>
-        <iframe
-          src="https://www.youtube.com/embed/LIEN_VIDEO"
-          title="Vidéo fonctions de référence"
-          allowfullscreen>
-        </iframe>
-      </div>
+    <section class="section" id="resolution-graphique">
+      <h2>5. Résoudre graphiquement</h2>
+      <div class="lesson-box"><h3>Équation <span class="math">\(f(x)=k\)</span></h3><p>Les solutions sont les abscisses des points d’intersection de <span class="math">\(\mathcal C_f\)</span> avec la droite horizontale d’équation <span class="math">\(y=k\)</span>.</p></div>
+      <div class="lesson-box"><h3>Inéquation <span class="math">\(f(x)&lt;k\)</span></h3><p>Les solutions sont les abscisses des points de <span class="math">\(\mathcal C_f\)</span> situés strictement sous la droite d’équation <span class="math">\(y=k\)</span>. Pour <span class="math">\(f(x)\geq k\)</span>, on retient les points situés sur ou au-dessus.</p></div>
+      <div class="example-box"><h3>Exemple avec la fonction carré</h3><ul><li><span class="math">\(x^2=9\)</span> a pour solutions <span class="math">\(-3\)</span> et <span class="math">\(3\)</span> ;</li><li><span class="math">\(x^2&lt;9\)</span> a pour solutions <span class="math">\(]-3;3[\)</span> ;</li><li><span class="math">\(x^2\geq9\)</span> a pour solutions <span class="math">\(]-\infty;-3]\cup[3;+\infty[\)</span>.</li></ul></div>
+      <div class="method-box"><h3>Méthode</h3><ol class="method-steps"><li>Identifier la ou les courbes à utiliser.</li><li>Repérer les points d’intersection.</li><li>Lire leurs abscisses.</li><li>Pour une inéquation, sélectionner les intervalles où la courbe est au-dessus ou en dessous.</li><li>Écrire la réponse sous forme d’ensemble ou d’intervalles.</li></ol></div>
     </section>
 
-    <section class="section">
-      <h2>Astuce</h2>
-
-      <div class="tip-box">
-        <p>
-          Pour une fonction, pense toujours à distinguer :
-          <strong>ensemble de définition, image, antécédent</strong>.
-        </p>
-      </div>
-
-      <div class="tip-box">
-        <p>
-          La fonction racine carrée n’accepte que des nombres positifs ou nuls,
-          et la fonction inverse n’accepte jamais <span class="math">\(0\)</span>.
-        </p>
-      </div>
-
-      <div class="footer-nav">
-        <a href="fonctions.html" class="btn btn-secondary">← Retour</a>
-        <a href="index.html" class="btn btn-primary">Accueil</a>
-      </div>
+    <section class="section" id="exercices">
+      <h2>Exercices d’entraînement</h2>
+      <div class="exercise-box"><h3>Exercice 1 - Images et antécédents</h3><p>Soit <span class="math">\(f(x)=3x-2\)</span>.</p><ol><li>Calculer <span class="math">\(f(5)\)</span>.</li><li>Déterminer l’antécédent de <span class="math">\(7\)</span>.</li><li>Le point <span class="math">\(A(4;10)\)</span> appartient-il à <span class="math">\(\mathcal C_f\)</span> ?</li></ol></div>
+      <div class="exercise-box"><h3>Exercice 2 - Ensembles de définition</h3><p>Donner l’ensemble de définition de <span class="math">\(x\mapsto x^2\)</span>, <span class="math">\(x\mapsto\sqrt{x}\)</span>, <span class="math">\(x\mapsto\dfrac1x\)</span> et <span class="math">\(x\mapsto|x|\)</span>.</p></div>
+      <div class="exercise-box"><h3>Exercice 3 - Valeurs et symétries</h3><ol><li>Calculer <span class="math">\((-3)^2\)</span>, <span class="math">\((-3)^3\)</span>, <span class="math">\(|-3|\)</span> et <span class="math">\(\sqrt{25}\)</span>.</li><li>Préciser quelles fonctions sont paires ou impaires.</li><li>En déduire les symétries de leurs courbes.</li></ol></div>
+      <div class="exercise-box"><h3>Exercice 4 - Équations et inéquations</h3><p>Résoudre dans <span class="math">\(\mathbb R\)</span> :</p><ol><li><span class="math">\(x^2=16\)</span> ;</li><li><span class="math">\(|x|=5\)</span> ;</li><li><span class="math">\(x^2&lt;4\)</span> ;</li><li><span class="math">\(\dfrac1x&gt;0\)</span>.</li></ol></div>
+      <div class="exercise-box"><h3>Exercice 5 - Comparer</h3><ol><li>Comparer <span class="math">\(2{,}7^2\)</span> et <span class="math">\(3{,}1^2\)</span> sans les calculer.</li><li>Comparer <span class="math">\(\sqrt7\)</span> et <span class="math">\(\sqrt{11}\)</span>.</li><li>Comparer <span class="math">\(\dfrac12\)</span> et <span class="math">\(\dfrac15\)</span> grâce aux variations de la fonction inverse sur <span class="math">\(]0;+\infty[\)</span>.</li></ol></div>
     </section>
 
+    <section class="section" id="video"><h2>Vidéo</h2><div class="video-box"><p>Vidéo explicative sur les fonctions de référence :</p><iframe src="https://www.youtube.com/embed/LIEN_VIDEO" title="Cours sur les fonctions de référence en Seconde" loading="lazy" allowfullscreen></iframe></div></section>
+    <section class="section"><h2>À retenir</h2><div class="tip-box"><p>Toujours commencer par déterminer l’ensemble de définition avant de calculer ou de résoudre.</p></div><div class="tip-box"><p>Connaitre l’allure, le signe et les variations des courbes de référence permet de résoudre rapidement de nombreux problèmes.</p></div><div class="tip-box"><p>Pour une résolution graphique, les valeurs lues sont généralement approchées ; une résolution algébrique donne des résultats exacts lorsqu’elle est possible.</p></div><div class="footer-nav"><a href="fonctions.html" class="btn btn-secondary">← Retour</a><a href="index.html" class="btn btn-primary">Accueil</a></div></section>
   </main>
-
 </body>
 </html>

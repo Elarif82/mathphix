@@ -3,17 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MathPhiX — Applications de Python en maths</title>
+  <title>MathPhiX — Applications de Python en mathématiques</title>
   <link rel="stylesheet" href="css/style2.css" />
 </head>
-
 <body>
-
   <header class="site-header">
     <div class="header-container container">
       <div>
         <h1 class="site-title">MathPhiX</h1>
-        <p class="site-subtitle">Seconde — Applications de Python en maths</p>
+        <p class="site-subtitle">Seconde — Applications de Python en mathématiques</p>
       </div>
       <a href="algorithme-programmation.html" class="back-link">← Retour</a>
     </div>
@@ -24,250 +22,235 @@
       <div class="hero-card">
         <h1>Applications de Python en mathématiques</h1>
         <p>
-          Dans ce chapitre, tu vas voir comment utiliser Python dans les notions
-          du programme de seconde : calculs numériques, équations, fonctions,
-          statistiques, géométrie, probabilités et simulation.
+          En seconde, l’algorithmique est travaillée dans tous les domaines des
+          mathématiques. Python sert à expérimenter, calculer, représenter, simuler,
+          conjecturer et vérifier, sans remplacer le raisonnement ni la démonstration.
         </p>
-
         <div class="hero-tags">
-          <span class="tag">Cours</span>
-          <span class="tag">Exercices</span>
-          <span class="tag">Vidéo</span>
-          <span class="tag">Astuce</span>
+          <span class="tag">Calculer</span>
+          <span class="tag">Modéliser</span>
+          <span class="tag">Simuler</span>
+          <span class="tag">Vérifier</span>
         </div>
       </div>
     </div>
   </section>
 
   <main class="container">
-
     <section class="section">
       <h2>Cours</h2>
 
       <div class="lesson-box">
-        <h3>1. Calculs numériques</h3>
+        <h3>1. Information chiffrée : appliquer une évolution</h3>
         <p>
-          Python permet d’automatiser des calculs de pourcentages,
-          de puissances ou d’expressions numériques.
+          Pour augmenter une valeur de <em>t</em> %, on la multiplie par
+          <code>1 + t / 100</code>. La fonction suivante peut traiter une hausse ou une baisse.
         </p>
-<pre><code>prix_initial = 80
-prix_final = prix_initial * 1.15
-print(prix_final)
+<pre><code>def valeur_finale(valeur, taux):
+    return valeur * (1 + taux / 100)
+
+print(valeur_finale(80, 15))
+print(valeur_finale(80, -15))
 </code></pre>
-        <p>
-          On obtient ici <strong>92.0</strong>.
-        </p>
-<pre><code>print(2 ** 5)
-</code></pre>
-        <p>
-          Le symbole <strong>**</strong> permet d’écrire une puissance.
-        </p>
+        <p>Le premier appel renvoie 92. Le second modélise une baisse de 15 %.</p>
       </div>
 
       <div class="lesson-box">
-        <h3>2. Résolution d’équations</h3>
+        <h3>2. Fonctions : calculer des images</h3>
         <p>
-          Python peut aider à étudier l’équation
-          <strong>x² = a</strong>.
-        </p>
-<pre><code>import math
-
-a = float(input("Entrez une valeur pour a : "))
-
-if a &gt; 0:
-    x1 = math.sqrt(a)
-    x2 = -math.sqrt(a)
-    print("Deux solutions :", x1, "et", x2)
-
-elif a == 0:
-    print("Une seule solution : x = 0")
-
-else:
-    print("Aucune solution réelle")
-</code></pre>
-        <p>
-          Ce programme distingue les trois cas :
-          <strong>a &gt; 0</strong>, <strong>a = 0</strong> et <strong>a &lt; 0</strong>.
-        </p>
-      </div>
-
-      <div class="lesson-box">
-        <h3>3. Fonctions et images</h3>
-        <p>
-          Python permet de calculer rapidement des images par une fonction.
-        </p>
-<pre><code>x = 3
-image = 2 * x + 1
-print(image)
-</code></pre>
-        <p>
-          On obtient <strong>7</strong>.
+          Une fonction Python peut traduire une fonction mathématique. On peut ensuite
+          produire un tableau de valeurs.
         </p>
 <pre><code>def f(x):
-    return 2 * x + 1
+    return x ** 2 - 3 * x + 2
 
-print(f(3))
-print(f(5))
-</code></pre>
-      </div>
-
-      <div class="lesson-box">
-        <h3>4. Statistiques</h3>
-        <p>
-          Python peut traiter une série de données et calculer une moyenne.
-        </p>
-<pre><code>notes = [8, 10, 12, 14, 16]
-moyenne = sum(notes) / len(notes)
-print(moyenne)
+for x in range(-2, 5):
+    print(x, f(x))
 </code></pre>
         <p>
-          <strong>sum(notes)</strong> calcule la somme
-          et <strong>len(notes)</strong> donne l’effectif.
+          Le programme affiche les images des entiers de −2 à 4. Ces valeurs peuvent
+          aider à conjecturer des variations ou des extremums, qui doivent ensuite être justifiés.
         </p>
       </div>
 
       <div class="lesson-box">
-        <h3>5. Géométrie</h3>
-        <p>
-          Python permet aussi d’effectuer des calculs géométriques simples.
-        </p>
-<pre><code>longueur = 8
-largeur = 5
-aire = longueur * largeur
-print(aire)
+        <h3>3. Algèbre : chercher une valeur approchée</h3>
+        <p>Une boucle <code>while</code> permet d’obtenir un encadrement de √2 par balayage.</p>
+<pre><code>x = 1.0
+pas = 0.01
+
+while (x + pas) ** 2 &lt;= 2:
+    x = x + pas
+
+print(x, x + pas)
 </code></pre>
         <p>
-          On obtient l’aire d’un rectangle : <strong>40</strong>.
-        </p>
-<pre><code>xA = 2
-xB = 9
-distance = abs(xB - xA)
-print(distance)
-</code></pre>
-        <p>
-          La fonction <strong>abs()</strong> donne la valeur absolue.
+          Le programme donne deux centièmes consécutifs qui encadrent √2. Diminuer le pas
+          améliore la précision, mais augmente le nombre d’itérations.
         </p>
       </div>
 
       <div class="lesson-box">
-        <h3>6. Probabilités et simulation</h3>
+        <h3>4. Géométrie repérée : tester un alignement</h3>
         <p>
-          Python peut simuler des expériences aléatoires.
+          Les points A, B et C sont alignés si les vecteurs AB et AC sont colinéaires,
+          c’est-à-dire si leur déterminant est nul.
+        </p>
+<pre><code>def sont_alignes(xA, yA, xB, yB, xC, yC):
+    determinant = (xB - xA) * (yC - yA) \
+                  - (yB - yA) * (xC - xA)
+    return determinant == 0
+
+print(sont_alignes(0, 1, 2, 5, 3, 7))
+</code></pre>
+        <p>
+          La fonction renvoie un booléen : <code>True</code> si les trois points sont
+          alignés et <code>False</code> sinon.
+        </p>
+      </div>
+
+      <div class="lesson-box">
+        <h3>5. Statistiques : calculer une moyenne</h3>
+        <p>
+          Le programme suivant calcule une moyenne à partir d’une série de valeurs.
+          Les listes sont utilisées ici comme support ; leur connaissance détaillée
+          n’est pas exigible en seconde.
+        </p>
+<pre><code>def moyenne(valeurs):
+    total = 0
+    for valeur in valeurs:
+        total = total + valeur
+    return total / len(valeurs)
+
+donnees = [8, 10, 12, 14, 16]
+print(moyenne(donnees))
+</code></pre>
+        <p>
+          Lire un programme calculant une moyenne ou un écart type fait partie des
+          capacités attendues, même si l’écriture complète avec des listes n’est pas exigée.
+        </p>
+      </div>
+
+      <div class="lesson-box">
+        <h3>6. Probabilités : simuler une expérience aléatoire</h3>
+        <p>
+          Une fonction peut renvoyer le résultat numérique d’une expérience aléatoire.
+          La répétition permet d’observer la fluctuation d’une fréquence.
         </p>
 <pre><code>from random import randint
 
-for i in range(10):
-    tirage = randint(0, 1)
-    if tirage == 0:
-        print("Pile")
-    else:
-        print("Face")
+def lancer_de():
+    return randint(1, 6)
+
+def frequence_six(n):
+    succes = 0
+    for i in range(n):
+        if lancer_de() == 6:
+            succes = succes + 1
+    return succes / n
+
+print(frequence_six(1000))
 </code></pre>
         <p>
-          Ce programme simule 10 lancers d’une pièce.
-        </p>
-        <p>
-          On peut ainsi faire le lien entre probabilités théoriques
-          et fréquences observées.
+          Le résultat varie d’une exécution à l’autre et tend à se rapprocher de 1/6
+          lorsque le nombre de lancers augmente.
         </p>
       </div>
 
       <div class="example-box">
-        <h3>Exemple</h3>
+        <h3>Méthode : passer des mathématiques au programme</h3>
         <p>
-          Python ne remplace pas le raisonnement mathématique,
-          mais il aide à tester, vérifier, simuler et automatiser des calculs.
+          1. Identifier les données et le résultat attendu. 2. Décrire l’algorithme en
+          langage naturel. 3. Choisir les variables, conditions, boucles et fonctions.
+          4. Traduire en Python. 5. Tester sur des cas simples. 6. Interpréter le résultat
+          dans le contexte du problème.
         </p>
       </div>
     </section>
 
     <section class="section">
-      <h2>Exercices</h2>
-
+      <h2>Exercices d’entraînement</h2>
       <div class="exercise-box">
-        <h3>Exercice 1</h3>
+        <h3>Exercice 1 — Pourcentages</h3>
         <p>
-          Écrire un programme qui calcule le prix final après une hausse de 20 %.
+          Utiliser puis modifier <code>valeur_finale</code> pour calculer le prix d’un
+          article de 120 € après une remise de 25 %. Vérifier le résultat par un calcul.
         </p>
       </div>
-
       <div class="exercise-box">
-        <h3>Exercice 2</h3>
+        <h3>Exercice 2 — Tableau de valeurs</h3>
         <p>
-          Modifier le programme sur l’équation <strong>x² = a</strong>
-          pour tester la valeur <strong>a = 16</strong>.
+          Écrire une fonction correspondant à <em>g</em>(<em>x</em>) = 3<em>x</em> − 4,
+          puis afficher <em>g</em>(<em>x</em>) pour tous les entiers de −5 à 5.
         </p>
       </div>
-
       <div class="exercise-box">
-        <h3>Exercice 3</h3>
+        <h3>Exercice 3 — Encadrement</h3>
         <p>
-          Écrire une fonction Python qui calcule l’image de
-          <strong>x</strong> par <strong>f(x)=3x-4</strong>.
+          Modifier le programme d’encadrement afin d’obtenir deux millièmes consécutifs
+          qui encadrent √5. Expliquer les deux changements effectués.
         </p>
       </div>
-
       <div class="exercise-box">
-        <h3>Exercice 4</h3>
+        <h3>Exercice 4 — Géométrie</h3>
         <p>
-          Écrire un programme qui calcule la moyenne d’une liste de 4 notes.
+          Utiliser la fonction <code>sont_alignes</code> avec A(1 ; 2), B(3 ; 5) et
+          C(7 ; 11), puis contrôler le résultat à l’aide d’un calcul de déterminant.
         </p>
       </div>
-
       <div class="exercise-box">
-        <h3>Exercice 5</h3>
+        <h3>Exercice 5 — Lire et modifier</h3>
         <p>
-          Écrire un programme qui calcule l’aire d’un triangle
-          à partir de sa base et de sa hauteur.
+          Expliquer le rôle des variables <code>total</code> et <code>valeur</code> dans la
+          fonction <code>moyenne</code>. Modifier les données, puis prévoir le résultat avant
+          d’exécuter le programme.
         </p>
       </div>
-
       <div class="exercise-box">
-        <h3>Exercice 6</h3>
+        <h3>Exercice 6 — Simulation</h3>
         <p>
-          Simuler 20 lancers d’un dé et afficher les résultats.
+          Modifier <code>frequence_six</code> pour estimer la fréquence d’obtention d’un
+          nombre pair. Comparer les résultats pour 20, 200 puis 2 000 lancers.
+        </p>
+      </div>
+      <div class="exercise-box">
+        <h3>Exercice 7 — Défi de programmation</h3>
+        <p>
+          Écrire une fonction qui renvoie le nombre de lancers nécessaires pour obtenir
+          un premier 6. Répéter plusieurs fois l’expérience et commenter les résultats.
         </p>
       </div>
     </section>
 
     <section class="section">
       <h2>Vidéo</h2>
-
       <div class="video-box">
-        <p>Vidéo explicative sur les applications de Python en maths :</p>
-        <iframe
-          src="https://www.youtube.com/embed/LIEN_VIDEO"
-          title="Vidéo applications Python maths"
-          allowfullscreen>
-        </iframe>
+        <p>Vidéo explicative sur les applications de Python en mathématiques :</p>
+        <iframe src="https://www.youtube.com/embed/LIEN_VIDEO"
+          title="Vidéo applications Python maths" allowfullscreen></iframe>
       </div>
     </section>
 
     <section class="section">
-      <h2>Astuce</h2>
-
+      <h2>À retenir</h2>
       <div class="tip-box">
         <p>
-          Quand tu écris un programme de maths, commence toujours par te demander :
-          quelles sont les données d’entrée, quel calcul faut-il faire,
-          quel résultat faut-il afficher ?
+          Un résultat numérique n’est pas une preuve. Il peut suggérer une conjecture,
+          fournir une approximation ou vérifier un cas, mais il faut toujours revenir au
+          sens mathématique du problème.
         </p>
       </div>
-
       <div class="tip-box">
         <p>
-          Teste toujours ton programme avec une valeur simple
-          dont tu connais déjà le résultat.
+          Tester systématiquement les cas limites, contrôler les types des variables et
+          vérifier la cohérence du résultat font partie du travail de programmation.
         </p>
       </div>
-
       <div class="footer-nav">
-        <a href="algorithme-programmation.html" class="btn btn-secondary">← Retour</a>
+        <a href="base-python.html" class="btn btn-secondary">← Bases de Python</a>
         <a href="index.html" class="btn btn-primary">Accueil</a>
       </div>
     </section>
-
   </main>
-
 </body>
 </html>
