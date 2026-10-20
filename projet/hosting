@@ -43,7 +43,7 @@ Ton workflow actuel est donc :
 git add .
 git commit -m "Mise à jour du site"
 git push origin main
-npm run deploy
+
 
 Les trois premières commandes sauvegardent ton code sur main, et :
 
