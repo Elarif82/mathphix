@@ -1,57 +1,59 @@
 // =====================================================
-// server.js — MathPhiX FAQ intelligente
+// server.js — API de la FAQ intelligente MathPhiX
 // =====================================================
 
-// 🔥 1. Charger les variables d'environnement EN PREMIER
 require("dotenv").config();
 
 const express = require("express");
 const cors = require("cors");
-const path = require("path");
 
-// 🔥 2. Import des routes APRÈS dotenv
 const faqRoutes = require("./routes/faq");
 
 const app = express();
 
-// 🔎 3. Debug temporaire
-console.log(
-  "OPENAI_API_KEY =",
-  process.env.OPENAI_API_KEY ? "chargée ✅" : "absente ❌"
-);
-
-// 🔧 4. Middlewares
 app.use(cors());
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(express.json({ limit: "16kb" }));
+app.use(express.urlencoded({ extended: true, limit: "16kb" }));
 
-// 📁 5. Dossier frontend
-app.use(express.static(path.join(__dirname, "../public")));
-
-// 🔗 6. Routes API
-app.use("/api/faq", faqRoutes);
-
-// 🏠 7. Page d'accueil
+// Vérification du fonctionnement du serveur
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "../public/index.html"));
-});
-
-// ❌ 8. Route introuvable API
-app.use("/api", (req, res) => {
-  res.status(404).json({
-    success: false,
-    error: "Route API introuvable",
+  res.json({
+    success: true,
+    message: "API MathPhiX opérationnelle",
   });
 });
 
-// 🌐 9. Fallback frontend
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "../public/index.html"));
+app.get("/health", (req, res) => {
+  res.json({ success: true });
 });
 
-// 🚀 10. Lancement serveur
+// Routes de la FAQ
+app.use("/api/faq", faqRoutes);
+
+// Route introuvable
+app.use((req, res) => {
+  res.status(404).json({
+    success: false,
+    error: "Route introuvable",
+  });
+});
+
+// Gestion des erreurs
+app.use((err, req, res, next) => {
+  console.error("Erreur serveur :", {
+    name: err.name,
+    status: err.status || 500,
+  });
+
+  res.status(err.status || 500).json({
+    success: false,
+    error: "Une erreur est survenue côté serveur.",
+  });
+});
+
+// Démarrage compatible avec Render
 const PORT = process.env.PORT || 3000;
 
-app.listen(PORT, () => {
-  console.log(`🚀 Serveur MathPhiX lancé sur http://localhost:${PORT}`);
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`API MathPhiX démarrée sur le port ${PORT}`);
 });
