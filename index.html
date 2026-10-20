@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>MathPhiX — Progresser en maths au lycée</title>
+    <meta name="description" content="Choisis ton parcours MathPhiX : parcours de maths en Seconde et Première spécialité, futurs niveaux de Terminale, conseils et orientation après le bac.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="logo" aria-label="MathPhiX, accueil"><span>MathPhiX</span></a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mainNav">☰</button>
+        <nav class="main-nav" id="mainNav" aria-label="Navigation principale">
+          <div class="nav-dropdown">
+            <button class="dropdown-toggle" type="button" aria-expanded="false" aria-controls="menuNiveaux">
+              Niveaux <span aria-hidden="true">▾</span>
+            </button>
+            <div class="dropdown-menu" id="menuNiveaux">
+              <a href="seconde/index.html">Seconde</a>
+              <a href="premiere-specialite/index.html">Première spécialité maths</a>
+              <a href="#terminale-specialite">Terminale spécialité maths — À venir</a>
+              <a href="#maths-expertes">Maths expertes — À venir</a>
+              <a href="#maths-complementaires">Maths complémentaires — À venir</a>
+              <a href="#niveaux">Voir tous les niveaux</a>
+            </div>
+          </div>
+          <a href="orientation.html">Orientation</a>
+          <a href="#apropos">À propos</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="home-hero">
+        <div class="container">
+          <p class="eyebrow">Mathématiques au lycée • Comprendre et progresser</p>
+          <h1>Un parcours en maths pour chaque étape du lycée</h1>
+          <p class="hero-description">Prends le temps de comprendre, entraîne-toi et avance à ton rythme. Retrouve le parcours Seconde et découvre les thèmes de Première spécialité, dont les ressources seront enrichies progressivement.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#niveaux">Choisir mon niveau</a>
+            <a class="btn btn-secondary" href="orientation.html">Explorer mon orientation</a>
+          </div>
+        </div>
+      </section>
+      <section class="section alt-section" id="niveaux">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-tag">Tes parcours</p>
+            <h2>Où en es-tu dans ton parcours ?</h2>
+            <p>Les parcours Seconde et Première spécialité sont accessibles. Les ressources de Première seront ajoutées progressivement ; les autres niveaux ouvriront par la suite.</p>
+          </div>
+          <div class="levels-grid">
+            <article class="card level-card">
+              <h3>Seconde</h3>
+              <p><strong>Consolider les bases et avancer avec confiance.</strong></p>
+              <p>Passerelle 3e → 2de, cours, exercices progressifs et quiz.</p>
+              <a class="btn btn-primary" href="seconde/index.html">Accéder à la Seconde</a>
+            </article>
+            <article class="card level-card">
+              <h3>Première spécialité maths</h3>
+              <p><strong>Approfondir les notions et développer le raisonnement.</strong></p>
+              <p>Algèbre, analyse, géométrie, probabilités et statistiques, algorithmique et programmation.</p>
+              <a class="btn btn-primary" href="premiere-specialite/index.html">Accéder à la Première spécialité</a>
+            </article>
+            <article class="card level-card" id="terminale-specialite">
+              <h3>Terminale spécialité maths</h3>
+              <p><strong>Poursuivre le parcours et préparer le baccalauréat.</strong></p>
+              <p>Un parcours qui sera enrichi après la Première.</p>
+              <span class="level-status">À venir</span>
+            </article>
+            <article class="card level-card" id="maths-expertes">
+              <h3>Maths expertes</h3>
+              <p><strong>Aller plus loin dans les mathématiques.</strong></p>
+              <p>Un espace distinct pour cet enseignement optionnel de Terminale.</p>
+              <span class="level-status">À venir</span>
+            </article>
+            <article class="card level-card" id="maths-complementaires">
+              <h3>Maths complémentaires</h3>
+              <p><strong>Poursuivre les maths selon son projet d’études.</strong></p>
+              <p>Un futur parcours dédié à cet enseignement optionnel de Terminale.</p>
+              <span class="level-status">À venir</span>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-tag">Orientation</p>
+            <h2>Construire ton projet, étape par étape</h2>
+            <p>Retrouve les conseils pour le lycée et les études après le bac dans un espace commun à tous les niveaux.</p>
+          </div>
+          <a class="btn btn-primary" href="orientation.html">Conseils et orientation</a>
+        </div>
+      </section>
+      <section class="section alt-section" id="apropos">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Comprendre avant d’aller plus loin</h2>
+            <p>MathPhiX propose une progression par étapes : reprendre les bases, découvrir les notions, s’entraîner puis vérifier sa compréhension. Choisis ton niveau pour retrouver les ressources adaptées.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <h3>MathPhiX</h3>
+          <p>Avancer en maths, à son rythme.</p>
+        </div>
+        <div>
+          <h3>Parcours</h3>
+          <div class="footer-links">
+            <a href="seconde/index.html">Seconde</a>
+            <a href="premiere-specialite/index.html">Première spécialité maths</a>
+            <a href="#niveaux">Les prochains niveaux</a>
+          </div>
+        </div>
+        <div>
+          <h3>Préparer la suite</h3>
+          <div class="footer-links">
+            <a href="orientation.html">Orientation</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>

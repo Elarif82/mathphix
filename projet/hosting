@@ -1,0 +1,52 @@
+Parfait. Votre dépôt GitHub est maintenant propre et allégé.
+
+Les dossiers suivants ne sont plus suivis par GitHub :
+
+* `prompts/`
+* `scripts/`
+* `hosting/`
+
+mais ils restent bien présents localement sur votre PC grâce au `.gitignore`.
+
+Votre projet GitHub contient désormais essentiellement :
+
+```text id="2bj08h"
+mathphix/
+│
+├── public/comme vrai dossier frontend
+├── server/pour le backend
+├── .gitignore
+└── ...
+```
+
+C’est une structure beaucoup plus propre pour :
+
+* GitHub
+* Vercel
+* Render
+* CI/CD
+* déploiement production.
+
+Vous êtes maintenant prêt pour :
+
+1. déployer le frontend `public`
+2. connecter un domaine OVH
+3. déployer le backend Node/OpenAI sur Render
+4. connecter frontend ↔ backend IA MathPhiX.
+
+/**************************************************************************/
+
+Pour les prochaines mises à jour
+
+Ton workflow actuel est donc :
+
+git add .
+git commit -m "Mise à jour du site"
+git push origin main
+npm run deploy
+
+Les trois premières commandes sauvegardent ton code sur main, et :
+
+npm run deploy
+
+publie le contenu de public/ sur gh-pages, donc sur mathphix.fr.
