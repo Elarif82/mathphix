@@ -1,0 +1,85 @@
+/* MathPhiX — feuille commune aux pages thématiques de Première.
+   Réutiliser les mêmes classes dans analyse.html, geometrie.html, etc. */
+:root {
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --text: #0f172a;
+  --muted: #475569;
+  --surface: #ffffff;
+  --background: #f8fafc;
+  --border: #dbeafe;
+  --radius: 20px;
+  --shadow: 0 12px 35px rgba(15, 23, 42, .07);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: var(--text);
+  background: var(--background);
+  line-height: 1.65;
+}
+a { color: inherit; }
+a:focus-visible, summary:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 4px;
+}
+.container { width: min(1160px, calc(100% - 2rem)); margin-inline: auto; }
+.skip-link { position: absolute; top: -100px; left: 1rem; padding: 1rem; background: white; z-index: 100; }
+.skip-link:focus { top: 1rem; }
+.site-header { background: white; border-bottom: 1px solid var(--border); }
+.header-inner { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; padding-block: 1.1rem; }
+.logo { font-size: 1.45rem; font-weight: 800; color: var(--primary); text-decoration: none; }
+.main-nav { display: flex; align-items: center; gap: 1.3rem; flex-wrap: wrap; }
+.main-nav a { font-size: .95rem; font-weight: 600; text-decoration: none; }
+.main-nav a:hover, .main-nav a[aria-current="page"] { color: var(--primary); }
+.programme-menu { position: relative; }
+.programme-menu summary { cursor: pointer; font-weight: 600; }
+.programme-links { position: absolute; right: 0; top: calc(100% + .8rem); width: 280px; padding: .7rem; background: white; border: 1px solid var(--border); border-radius: 14px; box-shadow: var(--shadow); z-index: 10; }
+.programme-links a { display: block; padding: .65rem; border-radius: 8px; }
+.programme-links a:hover { background: #eff6ff; }
+.theme-hero { padding: 2rem 0 3.2rem; background: linear-gradient(120deg, #eff6ff, #f8fafc); }
+.breadcrumb { color: var(--muted); font-size: .88rem; margin-bottom: 2rem; }
+.breadcrumb a { text-decoration: none; }
+.eyebrow, .chapter-number { color: var(--primary); font-size: .85rem; font-weight: 750; letter-spacing: .06em; text-transform: uppercase; }
+h1 { font-size: clamp(2.5rem, 6vw, 4rem); line-height: 1.1; letter-spacing: -.04em; margin: .6rem 0 1rem; }
+h2 { font-size: clamp(1.6rem, 3vw, 2rem); line-height: 1.25; margin-top: 0; }
+h3 { line-height: 1.35; }
+.hero-description { max-width: 760px; color: var(--muted); font-size: 1.12rem; }
+.hero-actions, .chapter-actions { display: flex; gap: .75rem; flex-wrap: wrap; margin-top: 1.5rem; }
+.btn { display: inline-block; padding: .75rem 1.1rem; border-radius: 11px; text-decoration: none; font-weight: 650; }
+.btn-primary { background: var(--primary); color: white; }
+.btn-primary:hover { background: var(--primary-dark); }
+.btn-secondary { background: white; color: var(--primary); border: 1px solid var(--border); }
+.section { padding: 3.5rem 0; }
+.section-alt { background: #eff6ff; }
+.section-heading { max-width: 760px; margin-bottom: 1.8rem; }
+.section-heading p, .card p, .chapter-intro { color: var(--muted); }
+.cards-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.3rem; }
+.card { background: white; border: 1px solid var(--border); border-radius: var(--radius); padding: 1.6rem; box-shadow: var(--shadow); }
+.chapter-card { display: flex; flex-direction: column; }
+.chapter-card .chapter-actions { margin-top: auto; padding-top: 1rem; }
+.card ul { padding-left: 1.2rem; color: var(--muted); }
+.chapter-section { scroll-margin-top: 1rem; padding-block: 2rem; border-top: 1px solid var(--border); }
+.chapter-layout { display: grid; grid-template-columns: 1.15fr 1fr; gap: 1.6rem; }
+.chapter-layout h3 { font-size: 1.05rem; }
+.formula { padding: 1rem; border-radius: 12px; background: #eff6ff; overflow-wrap: anywhere; font-family: "Cambria Math", Georgia, serif; font-size: 1.08rem; }
+.example { background: white; border: 1px solid var(--border); padding: 1.3rem; border-radius: 14px; }
+.correction { margin-top: 1rem; border-top: 1px solid var(--border); padding-top: 1rem; }
+.correction summary { cursor: pointer; color: var(--primary); font-weight: 650; }
+.notice { padding: 1rem 1.3rem; border-left: 4px solid var(--primary); background: white; border-radius: 10px; }
+.site-footer { padding: 2rem 0; background: #0f172a; color: #e2e8f0; }
+.footer-inner { display: flex; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; }
+.footer-links { display: flex; gap: 1.2rem; flex-wrap: wrap; }
+.footer-links a { text-decoration: none; }
+@media (max-width: 850px) {
+  .cards-grid, .chapter-layout { grid-template-columns: 1fr; }
+  .header-inner { align-items: flex-start; flex-direction: column; gap: .8rem; }
+  .main-nav { gap: .8rem 1.2rem; }
+  .programme-links { left: 0; right: auto; width: min(280px, calc(100vw - 2rem)); }
+  .section { padding-block: 2.5rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}

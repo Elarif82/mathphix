@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Algèbre — Première spécialité maths | MathPhiX</title>
+    <meta name="description" content="Le parcours Algèbre en Première spécialité : second degré, suites numériques, suites arithmétiques et géométriques. Repères, méthodes et exemples corrigés.">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="../index.html">MathPhiX</a>
+        <nav class="main-nav" aria-label="Navigation principale">
+          <a href="index.html">Accueil Première</a>
+          <details class="programme-menu">
+            <summary>Programme</summary>
+            <div class="programme-links">
+              <a href="algebre.html" aria-current="page">Algèbre</a>
+              <a href="index.html#analyse">Analyse</a>
+              <a href="index.html#geometrie">Géométrie</a>
+              <a href="index.html#probabilites-statistiques">Probabilités et statistiques</a>
+              <a href="index.html#algorithme-programmation">Algorithmique et programmation</a>
+            </div>
+          </details>
+          <a href="index.html#automatismes">Automatismes</a>
+          <a href="../orientation.html">Orientation</a>
+        </nav>
+      </div>
+    </header>
+    <main id="contenu">
+      <section class="theme-hero">
+        <div class="container">
+          <p class="eyebrow">Première spécialité maths • Algèbre</p>
+          <h1>Du second degré aux suites</h1>
+          <p class="hero-description">Choisis un chapitre, retrouve les notions essentielles et commence par un exemple guidé. Un parcours pour calculer avec méthode et modéliser des situations.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#chapitres">Explorer les trois chapitres</a>
+            <a class="btn btn-secondary" href="index.html#automatismes">Travailler les automatismes</a>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="chapitres">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Le parcours Algèbre</p>
+            <h2>Trois chapitres pour organiser ton travail</h2>
+            <p>Cette page propose une entrée dans chaque chapitre : notions, repères de méthode et un exemple corrigé.</p>
+          </div>
+          <div class="cards-grid">
+            <article class="card chapter-card">
+              <h3>Second degré</h3>
+              <p>Reconnaître les différentes formes d’un trinôme et choisir celle qui convient pour résoudre un problème.</p>
+              <ul>
+                <li>Formes développée, canonique et factorisée.</li>
+                <li>Discriminant, racines, factorisation et signe.</li>
+                <li>Équations et inéquations du second degré.</li>
+              </ul>
+              <div class="chapter-actions">
+                <a class="btn btn-primary" href="#second-degre">Découvrir le chapitre</a>
+              </div>
+            </article>
+            <article class="card chapter-card">
+              <h3>Suites numériques</h3>
+              <p>Décrire une évolution discrète et passer d’un mode de définition à un autre.</p>
+              <ul>
+                <li>Terme, indice et premiers termes.</li>
+                <li>Définition explicite et relation de récurrence.</li>
+                <li>Sens de variation et recherche de seuil.</li>
+              </ul>
+              <div class="chapter-actions">
+                <a class="btn btn-primary" href="#suites-numeriques">Découvrir le chapitre</a>
+              </div>
+            </article>
+            <article class="card chapter-card">
+              <h3>Suites arithmétiques et géométriques</h3>
+              <p>Reconnaître une évolution à écart constant ou à taux constant et exploiter le modèle adapté.</p>
+              <ul>
+                <li>Reconnaître une suite et déterminer sa raison.</li>
+                <li>Exprimer le terme général et calculer une somme.</li>
+                <li>Modéliser des évolutions et comparer les modèles.</li>
+              </ul>
+              <div class="chapter-actions">
+                <a class="btn btn-primary" href="#suites-arithmetiques-geometriques">Découvrir le chapitre</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="section section-alt" aria-labelledby="reperes">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Comprendre et s’entraîner</p>
+            <h2 id="reperes">Les premiers repères</h2>
+            <p>Les exemples ci-dessous servent de point de départ. Ils ne remplacent pas un cours complet ni un entraînement progressif.</p>
+          </div>
+          <article class="chapter-section" id="second-degre">
+            <h2>Second degré</h2>
+            <div class="chapter-layout">
+              <div>
+                <p class="chapter-intro">Un trinôme s’écrit f(x) = ax² + bx + c, avec a ≠ 0. Ses différentes formes donnent accès à ses racines, à son signe ou à son extremum.</p>
+                <h3>La méthode à retenir</h3>
+                <ol>
+                  <li>Identifier les coefficients a, b et c.</li>
+                  <li>Chercher une factorisation simple ; sinon calculer le discriminant.</li>
+                  <li>Déterminer les racines réelles, puis utiliser le signe de a pour étudier le signe du trinôme.</li>
+                </ol>
+              </div>
+              <div class="example">
+                <h3>À toi de chercher</h3>
+                <p>Résoudre x² − 5x + 6 = 0, puis déterminer le signe de x² − 5x + 6.</p>
+                <details class="correction">
+                  <summary>Voir la correction</summary>
+                  <p>Δ = (−5)² − 4 × 1 × 6 = 1. Les racines sont 2 et 3.</p>
+                  <p>x² − 5x + 6 = (x − 2)(x − 3).</p>
+                  <p>Le trinôme est strictement positif pour x &lt; 2 ou x &gt; 3, nul en 2 et 3, et strictement négatif pour 2 &lt; x &lt; 3.</p>
+                </details>
+              </div>
+            </div>
+          </article>
+          <article class="chapter-section" id="suites-numeriques">
+            <h2>Suites numériques</h2>
+            <div class="chapter-layout">
+              <div>
+                <p class="chapter-intro">Une suite associe un nombre uₙ à chaque indice entier n de son domaine. Il faut toujours préciser le premier indice.</p>
+                <h3>Deux modes de définition</h3>
+                <ul>
+                  <li><strong>Explicite :</strong> uₙ est donné directement en fonction de n, par exemple uₙ = n² + 1.</li>
+                  <li><strong>Par récurrence :</strong> on donne un premier terme puis une règle pour calculer le suivant, par exemple u₀ = 2 et uₙ₊₁ = 2uₙ + 1.</li>
+                </ul>
+                <p class="formula">Pour étudier les variations, on peut chercher le signe de uₙ₊₁ − uₙ pour tous les indices concernés.</p>
+                <p>Une observation sur quelques termes permet de conjecturer une propriété ; elle ne suffit pas à la démontrer pour tous les indices.</p>
+              </div>
+              <div class="example">
+                <h3>À toi de chercher</h3>
+                <p>Pour n ≥ 0, on définit uₙ = n² + 1. Calculer u₀, u₁ et u₂, puis étudier les variations de la suite.</p>
+                <details class="correction">
+                  <summary>Voir la correction</summary>
+                  <p>u₀ = 1, u₁ = 2 et u₂ = 5.</p>
+                  <p>uₙ₊₁ − uₙ = (n + 1)² + 1 − (n² + 1) = 2n + 1.</p>
+                  <p>Pour tout entier n ≥ 0, 2n + 1 &gt; 0 : la suite est strictement croissante.</p>
+                </details>
+              </div>
+            </div>
+          </article>
+          <article class="chapter-section" id="suites-arithmetiques-geometriques">
+            <h2>Suites arithmétiques et géométriques</h2>
+            <div class="chapter-layout">
+              <div>
+                <p class="chapter-intro">Une suite arithmétique traduit un écart constant ; une suite géométrique traduit une multiplication par un même nombre à chaque étape.</p>
+                <h3>Reconnaître et calculer</h3>
+                <p class="formula">Arithmétique : uₙ₊₁ = uₙ + r et uₙ = u₀ + nr, pour n ≥ 0.</p>
+                <p class="formula">Géométrique : vₙ₊₁ = qvₙ et vₙ = v₀qⁿ, pour n ≥ 1 ; v₀ est le terme initial.</p>
+                <p>Une hausse de t % correspond au coefficient multiplicateur 1 + t/100. Une baisse de t % correspond à 1 − t/100.</p>
+                <h3>Calculer une somme</h3>
+                <p>Pour une suite arithmétique : nombre de termes × (premier terme + dernier terme)/2.</p>
+                <p>Pour n ≥ 0 et q ≠ 1 : 1 + q + … + qⁿ = (1 − qⁿ⁺¹)/(1 − q). Si q = 1, la somme vaut n + 1.</p>
+              </div>
+              <div class="example">
+                <h3>À toi de chercher</h3>
+                <p>Un capital initial de 500 € augmente de 4 % par an. On note Cₙ sa valeur après n années, sans versement ni retrait. Déterminer sa nature et calculer C₃.</p>
+                <details class="correction">
+                  <summary>Voir la correction</summary>
+                  <p>Le coefficient multiplicateur annuel vaut 1,04. Donc C₀ = 500 et Cₙ₊₁ = 1,04Cₙ.</p>
+                  <p>La suite est géométrique de raison 1,04. Pour n ≥ 0, Cₙ = 500 × 1,04ⁿ.</p>
+                  <p>C₃ = 562,432, soit 562,43 € au centime près.</p>
+                </details>
+              </div>
+            </div>
+          </article>
+          <p class="notice">Pour travailler efficacement : tente l’exemple avant d’ouvrir sa correction, explique chaque étape et reprends les calculs qui te posent problème.</p>
+          <a class="btn btn-secondary" href="#chapitres">Revenir aux chapitres</a>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <strong>MathPhiX · Première spécialité</strong>
+        <nav class="footer-links" aria-label="Navigation de pied de page">
+          <a href="index.html">Accueil Première</a>
+          <a href="../index.html">Accueil général</a>
+          <a href="#chapitres">Chapitres d’algèbre</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>
