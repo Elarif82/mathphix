@@ -93,3 +93,48 @@ h3 { line-height: 1.35; }
 
 /* Suites : construction de motifs et cartes Python. */
 .lesson-page .motif-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin:1.5rem 0}.lesson-page .motif-card{min-width:0;margin:0}.lesson-page .motif-card > svg{width:100%;height:auto}.lesson-page .python-card{margin:1.4rem 0;padding:1.2rem;border:1px solid var(--border);border-radius:16px;background:#f8fafc}.lesson-page .python-card-header{display:flex;align-items:center;gap:.75rem}.lesson-page .python-card-header h3{margin:.3rem 0}.lesson-page .python-badge{display:grid;place-items:center;width:42px;height:42px;flex-shrink:0;border-radius:12px;background:#dbeafe;color:#1d4ed8;font-weight:800}.lesson-page .python-code{padding:1.2rem;border-radius:12px;background:#14243c;color:#f1f5f9;overflow-x:auto;font: .95rem/1.7 Consolas,monospace;tab-size:4;white-space:pre}.lesson-page .python-result{padding:1rem;border-left:4px solid #2563eb;background:#eff6ff;border-radius:8px}.lesson-page .python-result pre{margin:.65rem 0 0;overflow-x:auto;font:.93rem/1.6 Consolas,monospace;white-space:pre}@media(max-width:640px){.lesson-page .motif-grid{grid-template-columns:1fr}.lesson-page .motif-card > svg{max-width:360px;margin:auto}.lesson-page .python-card{padding:.85rem}}
+
+/* Mobile : contenir les contenus mathématiques sans élargir la page. */
+body.lesson-page {
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-x: clip;
+}
+.lesson-page .container,
+.lesson-page .lesson-section,
+.lesson-page .lesson-box,
+.lesson-page .lesson-example,
+.lesson-page .graph-grid > *,
+.lesson-page .header-inner > *,
+.lesson-page .python-card {
+  min-width: 0;
+}
+.lesson-page .lesson-section {
+  overflow-wrap: anywhere;
+}
+.lesson-page .math-scroll,
+.lesson-page .python-code,
+.lesson-page .python-result pre {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+}
+.lesson-page mjx-container[display="true"] {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-block: .25rem;
+  overscroll-behavior-x: contain;
+}
+.lesson-page mjx-container:not([display="true"]) {
+  display: inline-block;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  vertical-align: middle;
+  overscroll-behavior-x: contain;
+}
+.lesson-page .video-frame { max-width: 100%; }
