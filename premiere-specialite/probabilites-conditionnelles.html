@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Probabilités conditionnelles en première spé | MathPhiX</title>
+    <meta name="description" content="Probabilités conditionnelles en première spécialité : arbres pondérés, probabilités totales, indépendance et épreuves de Bernoulli. Cours et exercices corrigés.">
+    <link rel="canonical" href="https://mathphix.fr/premiere-specialite/probabilites-conditionnelles.html">
+    <link rel="stylesheet" href="css/style.css">
+    <script>window.MathJax={tex:{inlineMath:[['\\(','\\)']],displayMath:[['\\[','\\]']]},svg:{fontCache:'global'}};</script>
+    <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+  </head>
+  <body class="lesson-page">
+    <a class="skip-link" href="#cours">Aller au cours</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="../index.html">MathPhiX</a>
+        <nav class="main-nav" aria-label="Navigation principale">
+          <a href="index.html">Première spécialité</a>
+          <a href="probabilites-statistiques.html">Probabilités et statistiques</a>
+          <a href="#exercices">Exercices</a>
+          <a href="#video">Vidéo</a>
+        </nav>
+      </div>
+    </header>
+    <div class="theme-hero">
+      <div class="container">
+        <p class="eyebrow">Première spécialité • Probabilités</p>
+        <h1>Probabilités conditionnelles et indépendance</h1>
+        <p class="hero-description">Comprendre « sachant que », construire un arbre pondéré et choisir la bonne formule. Un cours progressif avec exemples et exercices corrigés.</p>
+        <ul class="lesson-toc">
+          <li>
+            <a href="#conditionnelle">Définition</a>
+          </li>
+          <li>
+            <a href="#arbres">Arbres pondérés</a>
+          </li>
+          <li>
+            <a href="#totales">Probabilités totales</a>
+          </li>
+          <li>
+            <a href="#independance">Indépendance</a>
+          </li>
+          <li>
+            <a href="#bernoulli">Bernoulli</a>
+          </li>
+          <li>
+            <a href="#exercices">Exercices</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <main class="container lesson-main" id="cours">
+      <section class="lesson-section">
+        <h2>Avant de commencer</h2>
+        <p>
+          <strong>Prérequis :</strong> événements, intersection, complémentaire, fractions, pourcentages et tableaux d’effectifs.</p>
+        <p>
+          <strong>Objectifs :</strong> calculer des probabilités conditionnelles, utiliser les probabilités totales, justifier une indépendance et étudier des répétitions indépendantes jusqu’à quatre épreuves.</p>
+      </section>
+      <section class="lesson-section" id="conditionnelle">
+        <h2>1. Comprendre « sachant que »</h2>
+        <p>On considère un univers fini \(\Omega\) et deux événements \(A\) et \(B\). Savoir que \(A\) est réalisé revient à restreindre l’univers aux issues de \(A\).</p>
+        <div class="lesson-box">
+          <p>Si \(P(A)\gt0\), la probabilité de \(B\) sachant \(A\) est :</p>
+          <div class="math-scroll">\[P_A(B)=P(B\mid A)=\frac{P(A\cap B)}{P(A)}.\]</div>
+        </div>
+        <p>Le conditionnement porte sur l’événement indiqué en indice ou après la barre. On distingue \(P_A(B)\), \(P_B(A)\) et \(P(A\cap B)\).</p>
+        <div class="lesson-example">
+          <h3>Exemple : un jeu de 32 cartes</h3>
+          <p>On tire une carte uniformément. Soit \(R\) : « tirer un roi » et \(T\) : « tirer un trèfle ». Il y a huit trèfles, dont un roi.</p>
+          <div class="math-scroll">\[P_T(R)=\frac{1/32}{8/32}=\frac18,\qquad P_R(T)=\frac{1/32}{4/32}=\frac14.\]</div>
+          <p>Ces deux probabilités ne répondent pas à la même question.</p>
+        </div>
+      </section>
+      <section class="lesson-section" id="tableau">
+        <h2>2. Lire un tableau d’effectifs</h2>
+        <p>Parmi 200 élèves, 80 pratiquent un sport en club (\(S\)). Parmi eux, 50 viennent à vélo (\(V\)). Parmi les 120 autres élèves, 30 viennent à vélo. On choisit un élève uniformément.</p>
+        <div class="math-scroll">
+          <table class="lesson-table">
+            <thead>
+              <tr>
+                <th>Effectifs</th>
+                <th>Vélo V</th>
+                <th>Pas de vélo</th>
+                <th>Total</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>Sport S</th>
+                <td>50</td>
+                <td>30</td>
+                <td>80</td>
+              </tr>
+              <tr>
+                <th>Pas de sport</th>
+                <td>30</td>
+                <td>90</td>
+                <td>120</td>
+              </tr>
+              <tr>
+                <th>Total</th>
+                <td>80</td>
+                <td>120</td>
+                <td>200</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="math-scroll">\[P(S\cap V)=\frac{50}{200}=0{,}25,\qquad P_S(V)=\frac{50}{80}=0{,}625.\]</div>
+        <p>Pour la probabilité conditionnelle, le dénominateur est l’effectif du groupe sur lequel on conditionne : ici, les 80 sportifs.</p>
+      </section>
+      <section class="lesson-section" id="regles">
+        <h2>3. Complémentaire et intersection</h2>
+        <div class="lesson-box">
+          <p>Si \(P(A)\gt0\) :</p>
+          <div class="math-scroll">\[0\le P_A(B)\le1,\qquad P_A(\overline B)=1-P_A(B).\]</div>
+          <div class="math-scroll">\[P(A\cap B)=P(A)\,P_A(B).\]</div>
+        </div>
+        <p>Le complément porte sur \(B\), en conservant la même condition \(A\).</p>
+        <div class="lesson-example">
+          <p>Si \(P(A)=0{,}6\) et \(P_A(B)=0{,}25\), alors \(P_A(\overline B)=0{,}75\) et \(P(A\cap B)=0{,}6\times0{,}25=0{,}15\).</p>
+        </div>
+      </section>
+      <section class="lesson-section" id="arbres">
+        <h2>4. Construire et lire un arbre pondéré</h2>
+        <p>Une entreprise utilise deux machines : \(A\) désigne « la pièce vient de la première machine », avec \(P(A)=0{,}6\). On note \(B\) : « la pièce est contrôlée ». On sait que \(P_A(B)=0{,}25\) et \(P_{\overline A}(B)=0{,}1\).</p>
+        <ol>
+          <li>Au premier niveau, placer \(A\) et \(\overline A\), avec 0,6 et 0,4.</li>
+          <li>Après \(A\), placer \(B\) et \(\overline B\), avec 0,25 et 0,75.</li>
+          <li>Après \(\overline A\), placer \(B\) et \(\overline B\), avec 0,1 et 0,9.</li>
+        </ol>
+        <figure>
+          <svg viewBox="0 0 800 440" role="img" aria-label="Arbre pondéré : A de probabilité 0,6, puis B de probabilité 0,25 sachant A et 0,1 sachant non A">
+            <title>Arbre pondéré à deux niveaux</title>
+            <line x1="65" y1="220" x2="300" y2="110" stroke="#94a3b8" stroke-width="2"></line>
+            <rect x="157.5" y="149.0" width="54" height="25" rx="5" fill="white"></rect>
+            <text x="184.5" y="167.0" text-anchor="middle" fill="#1d4ed8" font-size="18">0,6</text>
+            <line x1="65" y1="220" x2="300" y2="330" stroke="#94a3b8" stroke-width="2"></line>
+            <rect x="157.5" y="259.0" width="54" height="25" rx="5" fill="white"></rect>
+            <text x="184.5" y="277.0" text-anchor="middle" fill="#1d4ed8" font-size="18">0,4</text>
+            <line x1="340" y1="110" x2="580" y2="55" stroke="#94a3b8" stroke-width="2"></line>
+            <rect x="435.0" y="66.5" width="54" height="25" rx="5" fill="white"></rect>
+            <text x="462.0" y="84.5" text-anchor="middle" fill="#1d4ed8" font-size="18">0,25</text>
+            <line x1="340" y1="110" x2="580" y2="165" stroke="#94a3b8" stroke-width="2"></line>
+            <rect x="435.0" y="121.5" width="54" height="25" rx="5" fill="white"></rect>
+            <text x="462.0" y="139.5" text-anchor="middle" fill="#1d4ed8" font-size="18">0,75</text>
+            <line x1="340" y1="330" x2="580" y2="275" stroke="#94a3b8" stroke-width="2"></line>
+            <rect x="435.0" y="286.5" width="54" height="25" rx="5" fill="white"></rect>
+            <text x="462.0" y="304.5" text-anchor="middle" fill="#1d4ed8" font-size="18">0,1</text>
+            <line x1="340" y1="330" x2="580" y2="385" stroke="#94a3b8" stroke-width="2"></line>
+            <rect x="435.0" y="341.5" width="54" height="25" rx="5" fill="white"></rect>
+            <text x="462.0" y="359.5" text-anchor="middle" fill="#1d4ed8" font-size="18">0,9</text>
+            <text x="40" y="225" fill="#173c75" font-size="21">Ω</text>
+            <text x="310" y="115" fill="#173c75" font-size="21">A</text>
+            <text x="305" y="335" fill="#173c75" font-size="21">Ā</text>
+            <text x="590" y="60" fill="#173c75" font-size="21">B</text>
+            <text x="590" y="170" fill="#173c75" font-size="21">B̄</text>
+            <text x="590" y="280" fill="#173c75" font-size="21">B</text>
+            <text x="590" y="390" fill="#173c75" font-size="21">B̄</text>
+            <text x="635" y="60" font-size="16" fill="#475569">A ∩ B : 0,15</text>
+            <text x="635" y="170" font-size="16" fill="#475569">A ∩ B̄ : 0,45</text>
+            <text x="635" y="280" font-size="16" fill="#475569">Ā ∩ B : 0,04</text>
+            <text x="635" y="390" font-size="16" fill="#475569">Ā ∩ B̄ : 0,36</text>
+          </svg>
+          <figcaption>Les probabilités du deuxième niveau sont conditionnelles. Ā et B̄ désignent les événements complémentaires.</figcaption>
+        </figure>
+        <div class="lesson-box">
+          <ul>
+            <li>
+              <strong>À un nœud :</strong> la somme des probabilités sortantes vaut 1.</li>
+            <li>
+              <strong>Le long d’un chemin :</strong> multiplier les probabilités.</li>
+            <li>
+              <strong>Pour plusieurs chemins disjoints :</strong> additionner les probabilités des chemins.</li>
+          </ul>
+        </div>
+        <div class="math-scroll">\[P(A\cap B)=0{,}6\times0{,}25=0{,}15,\quad P(\overline A\cap B)=0{,}4\times0{,}1=0{,}04.\]</div>
+      </section>
+      <section class="lesson-section" id="totales">
+        <h2>5. Formule des probabilités totales</h2>
+        <p>Une partition de \(\Omega\) est une famille d’événements non vides, <strong>deux à deux disjoints</strong>, dont la réunion est \(\Omega\). Chaque issue appartient à exactement une partie.</p>
+        <div class="lesson-box">
+          <div class="math-scroll">\[P(B)=\sum_{i=1}^k P(A_i\cap B).\]</div>
+          <p>Si toutes les parties ont une probabilité strictement positive :</p>
+          <div class="math-scroll">\[P(B)=\sum_{i=1}^k P(A_i)P_{A_i}(B).\]</div>
+        </div>
+        <p>Dans le cas de \(A\) et \(\overline A\), avec \(0\lt P(A)\lt1\) :</p>
+        <div class="math-scroll">\[P(B)=P(A)P_A(B)+P(\overline A)P_{\overline A}(B).\]</div>
+        <div class="lesson-example">
+          <p>Dans l’exemple des machines, \(P(B)=0{,}15+0{,}04=0{,}19\). Ainsi, 19 % des pièces sont contrôlées dans ce modèle.</p>
+        </div>
+        <details>
+          <summary>Pourquoi additionne-t-on ces probabilités ?</summary>
+          <p>Les événements \(A_i\cap B\) sont deux à deux disjoints et leur réunion est \(B\). L’additivité des probabilités donne la formule.</p>
+        </details>
+      </section>
+      <section class="lesson-section" id="inverse">
+        <h2>6. Inverser le conditionnement</h2>
+        <p>On connaît parfois \(P_A(B)\) mais on cherche \(P_B(A)\). Il faut d’abord calculer l’intersection, puis la probabilité de l’événement qui devient la condition.</p>
+        <div class="math-scroll">\[P_B(A)=\frac{P(A\cap B)}{P(B)}\quad\text{si }P(B)\gt0.\]</div>
+        <div class="lesson-example">
+          <p>Une pièce est contrôlée. Quelle est la probabilité qu’elle provienne de la première machine ?</p>
+          <div class="math-scroll">\[P_B(A)=\frac{0{,}15}{0{,}19}=\frac{15}{19}\approx0{,}7895.\]</div>
+          <p>La probabilité demandée est environ 78,95 %, et non 25 %.</p>
+        </div>
+        <p class="lesson-warning">Le « sachant » détermine le dénominateur. On ne peut pas intervertir la condition et l’événement sans refaire le calcul.</p>
+      </section>
+      <section class="lesson-section" id="independance">
+        <h2>7. Indépendance de deux événements</h2>
+        <div class="lesson-box">
+          <p>Deux événements \(A\) et \(B\) sont indépendants lorsque :</p>
+          <div class="math-scroll">\[P(A\cap B)=P(A)P(B).\]</div>
+        </div>
+        <p>Cette définition reste valable même si une probabilité est nulle. Si \(P(A)\gt0\), l’indépendance équivaut à \(P_A(B)=P(B)\). Si \(P(B)\gt0\), elle équivaut à \(P_B(A)=P(A)\).</p>
+        <details>
+          <summary>Justifier l’équivalence</summary>
+          <div class="math-scroll">\[P_A(B)=P(B)\iff\frac{P(A\cap B)}{P(A)}=P(B)\iff P(A\cap B)=P(A)P(B).\]</div>
+          <p>On a utilisé \(P(A)\gt0\) pour diviser.</p>
+        </details>
+        <div class="lesson-example">
+          <h3>Les cartes : roi et trèfle</h3>
+          <div class="math-scroll">\[P(R\cap T)=\frac1{32}=\frac4{32}\times\frac8{32}=P(R)P(T).\]</div>
+          <p>Les événements sont indépendants.</p>
+          <h3>Les machines : origine et contrôle</h3>
+          <p>\(P_A(B)=0{,}25\) diffère de \(P(B)=0{,}19\) : les événements ne sont pas indépendants.</p>
+        </div>
+        <p class="lesson-warning">
+          <strong>Indépendants</strong> ne signifie pas <strong>incompatibles</strong>. Deux événements incompatibles de probabilités non nulles ne sont pas indépendants : leur intersection est vide alors que le produit de leurs probabilités est positif.</p>
+        <h3>Complémentaires et indépendance</h3>
+        <p>Si \(A\) et \(B\) sont indépendants, alors \(A\) et \(\overline B\) le sont aussi, car :</p>
+        <div class="math-scroll">\[P(A\cap\overline B)=P(A)-P(A\cap B)=P(A)(1-P(B)).\]</div>
+      </section>
+      <section class="lesson-section" id="epreuves">
+        <h2>8. Deux épreuves indépendantes</h2>
+        <p>On suppose que deux tirages sont effectués au hasard, avec remise et mélange, dans une urne contenant trois boules blanches et deux noires. On modélise les tirages comme indépendants. À chaque tirage, la probabilité d’une boule blanche vaut \(\frac35\).</p>
+        <div class="lesson-example">
+          <p>
+            <strong>Deux blanches :</strong> \(P(B_1\cap B_2)=\frac35\times\frac35=\frac9{25}\).</p>
+          <p>
+            <strong>Exactement une blanche :</strong> les deux chemins possibles sont blanche-noire et noire-blanche.</p>
+          <div class="math-scroll">\[P(\text{exactement une blanche})=\frac35\frac25+\frac25\frac35=\frac{12}{25}.\]</div>
+        </div>
+        <p>Sans remise, la composition change après le premier tirage. Par exemple, la probabilité de deux blanches devient \(\frac35\times\frac24=\frac3{10}\). Les tirages ne sont alors pas indépendants dans ce modèle.</p>
+      </section>
+      <section class="lesson-section" id="bernoulli">
+        <h2>9. Répéter une épreuve de Bernoulli</h2>
+        <p>Une épreuve de Bernoulli a deux issues : un succès \(S\), de probabilité \(p\), et un échec \(\overline S\), de probabilité \(1-p\).</p>
+        <p>On répète la même épreuve de façon indépendante. À chaque nœud de l’arbre, les poids sont les mêmes : \(p\) et \(1-p\). En première, on travaille ici sur au plus quatre répétitions, en calculant les chemins.</p>
+        <figure>
+          <svg viewBox="0 0 900 550" role="img" aria-label="Arbre de trois épreuves de Bernoulli indépendantes avec succès de probabilité 0,7">
+            <title>Trois épreuves de Bernoulli : les huit chemins</title>
+            <line x1="47" y1="270" x2="244" y2="142.0" stroke="#94a3b8" stroke-width="2"></line>
+            <rect x="125.5" y="192.0" width="44" height="23" fill="white"></rect>
+            <text x="147.5" y="209.0" text-anchor="middle" font-size="16" fill="#1d4ed8">0,7</text>
+            <text x="260" y="147.0" text-anchor="middle" font-size="18">S</text>
+            <line x1="272" y1="142.0" x2="469" y2="78.0" stroke="#94a3b8" stroke-width="2"></line>
+            <rect x="350.5" y="96.0" width="44" height="23" fill="white"></rect>
+            <text x="372.5" y="113.0" text-anchor="middle" font-size="16" fill="#1d4ed8">0,7</text>
+            <text x="485" y="83.0" text-anchor="middle" font-size="18">S</text>
+            <line x1="497" y1="78.0" x2="694" y2="46.0" stroke="#94a3b8" stroke-width="2"></line>
+            <rect x="575.5" y="48.0" width="44" height="23" fill="white"></rect>
+            <text x="597.5" y="65.0" text-anchor="middle" font-size="16" fill="#1d4ed8">0,7</text>
+            <text x="710" y="51.0" text-anchor="middle" font-size="18">S</text>
+            <text x="735" y="51.0" font-size="17" fill="#173c75">SSS</text>
+            <line x1="497" y1="78.0" x2="694" y2="110.0" stroke="#94a3b8" stroke-width="2"></line>
+            <rect x="575.5" y="80.0" width="44" height="23" fill="white"></rect>
+            <text x="597.5" y="97.0" text-anchor="middle" font-size="16" fill="#1d4ed8">0,3</text>
+            <text x="710" y="115.0" text-anchor="middle" font-size="18">E</text>
+            <text x="735" y="115.0" font-size="17" fill="#173c75">SSE</text>
+            <line x1="272" y1="142.0" x2="469" y2="206.0" stroke="#94a3b8" stroke-width="2"></line>
+            <rect x="350.5" y="160.0" width="44" height="23" fill="white"></rect>
+            <text x="372.5" y="177.0" text-anchor="middle" font-size="16" fill="#1d4ed8">0,3</text>
+            <text x="485" y="211.0" text-anchor="middle" font-size="18">E</text>
+            <line x1="497" y1="206.0" x2="694" y2="174.0" stroke="#94a3b8" stroke-width="2"></line>
+            <rect x="575.5" y="176.0" width="44" height="23" fill="white"></rect>
+            <text x="597.5" y="193.0" text-anchor="middle" font-size="16" fill="#1d4ed8">0,7</text>
+            <text x="710" y="179.0" text-anchor="middle" font-size="18">S</text>
+            <text x="735" y="179.0" font-size="17" fill="#173c75">SES</text>
+            <line x1="497" y1="206.0" x2="694" y2="238.0" stroke="#94a3b8" stroke-width="2"></line>
+            <rect x="575.5" y="208.0" width="44" height="23" fill="white"></rect>
+            <text x="597.5" y="225.0" text-anchor="middle" font-size="16" fill="#1d4ed8">0,3</text>
+            <text x="710" y="243.0" text-anchor="middle" font-size="18">E</text>
+            <text x="735" y="243.0" font-size="17" fill="#173c75">SEE</text>
+            <line x1="47" y1="270" x2="244" y2="398.0" stroke="#94a3b8" stroke-width="2"></line>
+            <rect x="125.5" y="320.0" width="44" height="23" fill="white"></rect>
+            <text x="147.5" y="337.0" text-anchor="middle" font-size="16" fill="#1d4ed8">0,3</text>
+            <text x="260" y="403.0" text-anchor="middle" font-size="18">E</text>
+            <line x1="272" y1="398.0" x2="469" y2="334.0" stroke="#94a3b8" stroke-width="2"></line>
+            <rect x="350.5" y="352.0" width="44" height="23" fill="white"></rect>
+            <text x="372.5" y="369.0" text-anchor="middle" font-size="16" fill="#1d4ed8">0,7</text>
+            <text x="485" y="339.0" text-anchor="middle" font-size="18">S</text>
+            <line x1="497" y1="334.0" x2="694" y2="302.0" stroke="#94a3b8" stroke-width="2"></line>
+            <rect x="575.5" y="304.0" width="44" height="23" fill="white"></rect>
+            <text x="597.5" y="321.0" text-anchor="middle" font-size="16" fill="#1d4ed8">0,7</text>
+            <text x="710" y="307.0" text-anchor="middle" font-size="18">S</text>
+            <text x="735" y="307.0" font-size="17" fill="#173c75">ESS</text>
+            <line x1="497" y1="334.0" x2="694" y2="366.0" stroke="#94a3b8" stroke-width="2"></line>
+            <rect x="575.5" y="336.0" width="44" height="23" fill="white"></rect>
+            <text x="597.5" y="353.0" text-anchor="middle" font-size="16" fill="#1d4ed8">0,3</text>
+            <text x="710" y="371.0" text-anchor="middle" font-size="18">E</text>
+            <text x="735" y="371.0" font-size="17" fill="#173c75">ESE</text>
+            <line x1="272" y1="398.0" x2="469" y2="462.0" stroke="#94a3b8" stroke-width="2"></line>
+            <rect x="350.5" y="416.0" width="44" height="23" fill="white"></rect>
+            <text x="372.5" y="433.0" text-anchor="middle" font-size="16" fill="#1d4ed8">0,3</text>
+            <text x="485" y="467.0" text-anchor="middle" font-size="18">E</text>
+            <line x1="497" y1="462.0" x2="694" y2="430.0" stroke="#94a3b8" stroke-width="2"></line>
+            <rect x="575.5" y="432.0" width="44" height="23" fill="white"></rect>
+            <text x="597.5" y="449.0" text-anchor="middle" font-size="16" fill="#1d4ed8">0,7</text>
+            <text x="710" y="435.0" text-anchor="middle" font-size="18">S</text>
+            <text x="735" y="435.0" font-size="17" fill="#173c75">EES</text>
+            <line x1="497" y1="462.0" x2="694" y2="494.0" stroke="#94a3b8" stroke-width="2"></line>
+            <rect x="575.5" y="464.0" width="44" height="23" fill="white"></rect>
+            <text x="597.5" y="481.0" text-anchor="middle" font-size="16" fill="#1d4ed8">0,3</text>
+            <text x="710" y="499.0" text-anchor="middle" font-size="18">E</text>
+            <text x="735" y="499.0" font-size="17" fill="#173c75">EEE</text>
+          </svg>
+          <figcaption>À chaque nœud : S avec probabilité 0,7 et E avec probabilité 0,3. Lire le chemin de gauche à droite.</figcaption>
+        </figure>
+        <div class="lesson-example">
+          <h3>Trois répétitions avec \(p=0{,}7\)</h3>
+          <p>Les huit chemins sont listés ci-dessous : cette liste représente les feuilles de l’arbre. Chaque mot indique l’ordre des issues.</p>
+          <div class="math-scroll">
+            <table class="lesson-table">
+              <thead>
+                <tr>
+                  <th>Chemins</th>
+                  <th>Probabilité de chaque chemin</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>SSS</td>
+                  <td>\(0{,}7^3=0{,}343\)</td>
+                </tr>
+                <tr>
+                  <td>SSE, SES, ESS</td>
+                  <td>\(0{,}7^2\times0{,}3=0{,}147\)</td>
+                </tr>
+                <tr>
+                  <td>SEE, ESE, EES</td>
+                  <td>\(0{,}7\times0{,}3^2=0{,}063\)</td>
+                </tr>
+                <tr>
+                  <td>EEE</td>
+                  <td>\(0{,}3^3=0{,}027\)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Exactement deux succès correspondent à SSE, SES et ESS :</p>
+          <div class="math-scroll">\[P(\text{exactement deux succès})=3\times0{,}147=0{,}441.\]</div>
+          <p>Pour au moins un succès, on utilise le complémentaire :</p>
+          <div class="math-scroll">\[P(\text{au moins un succès})=1-P(EEE)=1-0{,}027=0{,}973.\]</div>
+          <p>Pour quatre répétitions, le même arbre se prolonge d’un niveau : il possède seize chemins. Le chemin SSSS a pour probabilité \(p^4\), et EEEE a pour probabilité \((1-p)^4\).</p>
+        </div>
+      </section>
+      <section class="lesson-section" id="methode">
+        <h2>10. Une méthode pour résoudre les problèmes</h2>
+        <ol>
+          <li>Nommer les événements et leurs complémentaires.</li>
+          <li>Traduire les données en distinguant probabilités simples et conditionnelles.</li>
+          <li>Construire un arbre ou un tableau, et compléter les poids manquants.</li>
+          <li>Repérer l’événement demandé : intersection, réunion de chemins, conditionnement inversé.</li>
+          <li>Choisir produit, somme ou quotient.</li>
+          <li>Vérifier que le résultat appartient à \([0;1]\) et répondre dans le contexte.</li>
+        </ol>
+      </section>
+      <section class="lesson-section" id="exercices">
+        <h2>11. Exercices avec corrections</h2>
+        <article class="exercise">
+          <h3>Exercice 1 — Tableau</h3>
+          <p>Reprendre les 200 élèves du paragraphe 2. Calculer \(P_{\overline S}(V)\) et \(P_V(S)\).</p>
+          <details>
+            <summary>Afficher la correction</summary>
+            <p>\(P_{\overline S}(V)=30/120=0{,}25\) et \(P_V(S)=50/80=0{,}625\).</p>
+          </details>
+        </article>
+        <article class="exercise">
+          <h3>Exercice 2 — Arbre et total</h3>
+          <p>\(P(A)=0{,}3\), \(P_A(B)=0{,}8\), \(P_{\overline A}(B)=0{,}2\). Calculer \(P(A\cap B)\) et \(P(B)\).</p>
+          <details>
+            <summary>Afficher la correction</summary>
+            <p>\(P(A\cap B)=0{,}24\) et \(P(B)=0{,}3\times0{,}8+0{,}7\times0{,}2=0{,}38\).</p>
+          </details>
+        </article>
+        <article class="exercise">
+          <h3>Exercice 3 — Conditionnement inversé</h3>
+          <p>Avec les données précédentes, calculer \(P_B(A)\).</p>
+          <details>
+            <summary>Afficher la correction</summary>
+            <p>\(P_B(A)=0{,}24/0{,}38=12/19\approx0{,}6316\).</p>
+          </details>
+        </article>
+        <article class="exercise">
+          <h3>Exercice 4 — Indépendance</h3>
+          <p>\(P(A)=0{,}4\), \(P(B)=0{,}5\), \(P(A\cap B)=0{,}2\). Les événements sont-ils indépendants ?</p>
+          <details>
+            <summary>Afficher la correction</summary>
+            <p>Oui : \(0{,}2=0{,}4\times0{,}5\).</p>
+          </details>
+        </article>
+        <article class="exercise">
+          <h3>Exercice 5 — Sans remise</h3>
+          <p>Une urne contient quatre rouges et six bleues. Deux tirages sans remise : calculer la probabilité de deux rouges.</p>
+          <details>
+            <summary>Afficher la correction</summary>
+            <p>\(\frac4{10}\times\frac39=\frac2{15}\). La probabilité conditionnelle du deuxième rouge est \(3/9\), pas \(4/10\).</p>
+          </details>
+        </article>
+        <article class="exercise">
+          <h3>Exercice 6 — Trois Bernoulli</h3>
+          <p>Trois épreuves indépendantes ont chacune une probabilité de succès \(0{,}2\). Calculer la probabilité d’exactement un succès.</p>
+          <details>
+            <summary>Afficher la correction</summary>
+            <p>Les chemins SEE, ESE et EES ont chacun pour probabilité \(0{,}2\times0{,}8^2=0{,}128\). Leur somme vaut \(0{,}384\).</p>
+          </details>
+        </article>
+        <article class="exercise">
+          <h3>Exercice 7 — Quatre Bernoulli</h3>
+          <p>Quatre épreuves indépendantes ont chacune une probabilité de succès \(0{,}6\). Calculer la probabilité d’au moins un succès.</p>
+          <details>
+            <summary>Afficher la correction</summary>
+            <p>\(1-0{,}4^4=1-0{,}0256=0{,}9744\).</p>
+          </details>
+        </article>
+      </section>
+      <section class="lesson-section" id="video">
+        <h2>12. Le cours en vidéo</h2>
+        <div class="video-box">
+          <h3>Probabilités conditionnelles et indépendance</h3>
+          <p>Retrouve ici la vidéo explicative du chapitre.</p>
+          <!-- Remplacer LIEN_VIDEO par l’identifiant réel de la vidéo YouTube. -->
+          <iframe class="video-frame" src="https://www.youtube.com/embed/LIEN_VIDEO" title="Probabilités conditionnelles en première spécialité : cours vidéo" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container">
+        <p>
+          <strong>À retenir :</strong> multiplier le long d’un chemin, additionner les chemins disjoints et diviser par la probabilité de la condition.</p>
+        <a href="probabilites-statistiques.html">← Retour aux probabilités et statistiques</a> · <a href="index.html">Accueil de première spécialité</a>
+      </div>
+    </footer>
+  </body>
+</html>

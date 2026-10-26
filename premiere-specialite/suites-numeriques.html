@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Suites numériques en première spé : cours et exercices | MathPhiX</title>
+    <meta name="description" content="Comprenez les suites numériques en première spécialité : formule explicite, récurrence, variations et Python. Cours, graphiques et exercices corrigés.">
+    <link rel="canonical" href="https://mathphix.fr/premiere-specialite/suites-numeriques.html">
+    <link rel="stylesheet" href="css/style.css">
+    <script>window.MathJax={tex:{inlineMath:[['\\(','\\)']],displayMath:[['\\[','\\]']]},svg:{fontCache:'global'}};</script>
+    <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+  </head>
+  <body class="lesson-page">
+    <a class="skip-link" href="#cours">Aller au cours</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="../index.html">MathPhiX</a>
+        <nav class="main-nav" aria-label="Navigation principale">
+          <a href="index.html">Première spécialité</a>
+          <a href="algebre.html">Algèbre</a>
+          <a href="#exercices">Exercices</a>
+          <a href="#video">Vidéo</a>
+        </nav>
+      </div>
+    </header>
+    <div class="theme-hero">
+      <div class="container">
+        <p class="eyebrow">Première spécialité • Algèbre</p>
+        <h1>Comprendre les suites numériques</h1>
+        <p class="hero-description">Définir une suite, calculer ses termes, représenter ses valeurs et étudier son sens de variation : un cours progressif avec Python et exercices corrigés.</p>
+        <ul class="lesson-toc">
+          <li>
+            <a href="#explicite">Formule explicite</a>
+          </li>
+          <li>
+            <a href="#recurrence">Récurrence</a>
+          </li>
+          <li>
+            <a href="#graphique">Graphique</a>
+          </li>
+          <li>
+            <a href="#variations">Variations</a>
+          </li>
+          <li>
+            <a href="#python">Python</a>
+          </li>
+          <li>
+            <a href="#exercices">Exercices</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <main class="container lesson-main" id="cours">
+      <section class="lesson-section">
+        <h2>Avant de commencer</h2>
+        <p>
+          <strong>Prérequis :</strong> calcul littéral, fonctions, variations, fractions et boucles en Python.</p>
+        <p>
+          <strong>Objectifs :</strong> passer de la langue naturelle à une formule, calculer des termes, représenter une suite, justifier ses variations et explorer son comportement à long terme.</p>
+      </section>
+      <section class="lesson-section" id="notion">
+        <h2>1. Qu’est-ce qu’une suite numérique ?</h2>
+        <p>Une suite numérique est une fonction définie sur les entiers naturels, ou à partir d’un certain entier, et à valeurs réelles. Ici, \(\mathbb N=\{0,1,2,\ldots\}\).</p>
+        <div class="lesson-box">
+          <p>\((u_n)\) désigne la <strong>suite</strong> ; \(u_n\) est son <strong>terme d’indice n</strong>. L’indice indique une position, le terme est un nombre.</p>
+        </div>
+        <div class="lesson-example">
+          <p>Si \(u_n=2n+3\), alors \(u_0=3\), \(u_1=5\) et \(u_2=7\). La suite commence à l’indice 0 : \(u_2\) est donc le troisième terme.</p>
+        </div>
+        <p class="lesson-warning">\(u_{n+1}\) est le terme suivant ; \(u_n+1\) est le terme courant auquel on ajoute 1. Ce sont deux expressions différentes.</p>
+      </section>
+      <section class="lesson-section" id="explicite">
+        <h2>2. Définir une suite par une formule explicite</h2>
+        <p>Une formule explicite exprime directement \(u_n\) en fonction de \(n\). On peut calculer un terme sans calculer les précédents.</p>
+        <div class="lesson-example">
+          <p>Pour \(u_n=n^2+2\), on obtient \(u_0=2\), \(u_1=3\), \(u_2=6\), \(u_3=11\), et \(u_{20}=402\).</p>
+        </div>
+        <div class="math-scroll">\[u_{n+1}=(n+1)^2+2=n^2+2n+3,\qquad u_n+1=n^2+3.\]</div>
+        <p>Pour \(v_n=\frac1n\), la suite n’est définie que pour \(n\ge1\). Toujours préciser les indices autorisés avant de calculer.</p>
+        <h3>Méthode</h3>
+        <ol>
+          <li>Repérer l’indice demandé.</li>
+          <li>Remplacer toutes les occurrences de \(n\), avec des parenthèses si nécessaire.</li>
+          <li>Effectuer le calcul et distinguer valeur exacte et valeur approchée.</li>
+        </ol>
+      </section>
+      <section class="lesson-section" id="recurrence">
+        <h2>3. Définir une suite par récurrence</h2>
+        <p>Une définition par récurrence précise un terme initial et une règle permettant de calculer le terme suivant à partir du terme courant.</p>
+        <div class="lesson-box">
+          <div class="math-scroll">\[u_0=5,\qquad u_{n+1}=2u_n-1\quad(n\in\mathbb N).\]</div>
+        </div>
+        <div class="lesson-example">
+          <p>\(u_1=2\times5-1=9\), puis \(u_2=2\times9-1=17\), et \(u_3=33\). Pour obtenir \(u_3\), on a utilisé successivement les termes précédents.</p>
+        </div>
+        <p>Le terme initial est indispensable : avec la même règle mais \(v_0=1\), tous les termes valent 1.</p>
+        <p class="lesson-warning">Dans \(u_{n+1}=2u_n-1\), on remplace \(u_n\) par sa valeur connue, pas par l’indice \(n\). Une définition par récurrence ne doit pas être confondue avec une démonstration par récurrence.</p>
+      </section>
+      <section class="lesson-section" id="modeliser">
+        <h2>4. Passer d’un modèle à une suite</h2>
+        <h3>Un motif géométrique</h3>
+        <p>On aligne des carrés avec des allumettes. Le premier carré nécessite quatre allumettes ; chaque carré supplémentaire partage un côté et en nécessite trois de plus. Pour \(n\ge1\), notons \(a_n\) le nombre d’allumettes.</p>
+        <div class="motif-grid">
+          <figure class="motif-card">
+            <svg viewBox="0 0 260 130" role="img" aria-label="Motif 1 : 1 carré(s), 4 allumettes">
+              <title>Motif 1 : 4 allumettes</title>
+              <line x1="25" y1="30" x2="95" y2="30" stroke="#2563eb" stroke-width="6" stroke-linecap="round"></line>
+              <line x1="25" y1="100" x2="95" y2="100" stroke="#2563eb" stroke-width="6" stroke-linecap="round"></line>
+              <line x1="25" y1="30" x2="25" y2="100" stroke="#2563eb" stroke-width="6" stroke-linecap="round"></line>
+              <line x1="95" y1="30" x2="95" y2="100" stroke="#2563eb" stroke-width="6" stroke-linecap="round"></line>
+            </svg>
+            <figcaption>
+              <strong>Motif 1</strong> : 1 carré(s), <strong>4 allumettes</strong>.</figcaption>
+          </figure>
+          <figure class="motif-card">
+            <svg viewBox="0 0 260 130" role="img" aria-label="Motif 2 : 2 carré(s), 7 allumettes">
+              <title>Motif 2 : 7 allumettes</title>
+              <line x1="25" y1="30" x2="95" y2="30" stroke="#2563eb" stroke-width="6" stroke-linecap="round"></line>
+              <line x1="25" y1="100" x2="95" y2="100" stroke="#2563eb" stroke-width="6" stroke-linecap="round"></line>
+              <line x1="95" y1="30" x2="165" y2="30" stroke="#ea580c" stroke-width="6" stroke-linecap="round"></line>
+              <line x1="95" y1="100" x2="165" y2="100" stroke="#ea580c" stroke-width="6" stroke-linecap="round"></line>
+              <line x1="25" y1="30" x2="25" y2="100" stroke="#2563eb" stroke-width="6" stroke-linecap="round"></line>
+              <line x1="95" y1="30" x2="95" y2="100" stroke="#2563eb" stroke-width="6" stroke-linecap="round"></line>
+              <line x1="165" y1="30" x2="165" y2="100" stroke="#ea580c" stroke-width="6" stroke-linecap="round"></line>
+            </svg>
+            <figcaption>
+              <strong>Motif 2</strong> : 2 carré(s), <strong>7 allumettes</strong>.</figcaption>
+          </figure>
+          <figure class="motif-card">
+            <svg viewBox="0 0 260 130" role="img" aria-label="Motif 3 : 3 carré(s), 10 allumettes">
+              <title>Motif 3 : 10 allumettes</title>
+              <line x1="25" y1="30" x2="95" y2="30" stroke="#2563eb" stroke-width="6" stroke-linecap="round"></line>
+              <line x1="25" y1="100" x2="95" y2="100" stroke="#2563eb" stroke-width="6" stroke-linecap="round"></line>
+              <line x1="95" y1="30" x2="165" y2="30" stroke="#2563eb" stroke-width="6" stroke-linecap="round"></line>
+              <line x1="95" y1="100" x2="165" y2="100" stroke="#2563eb" stroke-width="6" stroke-linecap="round"></line>
+              <line x1="165" y1="30" x2="235" y2="30" stroke="#ea580c" stroke-width="6" stroke-linecap="round"></line>
+              <line x1="165" y1="100" x2="235" y2="100" stroke="#ea580c" stroke-width="6" stroke-linecap="round"></line>
+              <line x1="25" y1="30" x2="25" y2="100" stroke="#2563eb" stroke-width="6" stroke-linecap="round"></line>
+              <line x1="95" y1="30" x2="95" y2="100" stroke="#2563eb" stroke-width="6" stroke-linecap="round"></line>
+              <line x1="165" y1="30" x2="165" y2="100" stroke="#2563eb" stroke-width="6" stroke-linecap="round"></line>
+              <line x1="235" y1="30" x2="235" y2="100" stroke="#ea580c" stroke-width="6" stroke-linecap="round"></line>
+            </svg>
+            <figcaption>
+              <strong>Motif 3</strong> : 3 carré(s), <strong>10 allumettes</strong>.</figcaption>
+          </figure>
+        </div>
+        <p>En orange : les trois nouvelles allumettes. Le côté partagé existe déjà : on ne le compte pas deux fois.</p>
+        <div class="math-scroll">\[a_1=4,\qquad a_{n+1}=a_n+3,\qquad a_n=4+3(n-1)=3n+1.\]</div>
+        <p>On obtient deux descriptions de la même suite : récurrence et formule explicite. Ainsi, dix carrés nécessitent \(a_{10}=31\) allumettes.</p>
+        <h3>Une évolution annuelle</h3>
+        <p>Un capital initial de 500 € augmente de 4 % par an, sans versement supplémentaire. Avec \(C_n\) le capital après \(n\) années :</p>
+        <div class="math-scroll">\[C_0=500,\qquad C_{n+1}=1{,}04C_n,\qquad C_n=500\times1{,}04^n.\]</div>
+        <p>Les suites obtenues en ajoutant toujours le même nombre ou en multipliant toujours par le même facteur seront étudiées en détail dans le chapitre sur les suites arithmétiques et géométriques.</p>
+      </section>
+      <section class="lesson-section" id="graphique">
+        <h2>5. Représenter une suite</h2>
+        <p>On place les points de coordonnées \((n;u_n)\). Les indices sont entiers : la représentation est un <strong>nuage de points</strong>, et non une courbe continue.</p>
+        <div class="math-scroll">\[\begin{array}{c|rrrrrrr}n&amp;0&amp;1&amp;2&amp;3&amp;4&amp;5&amp;6\\\hline u_n=n^2+2&amp;2&amp;3&amp;6&amp;11&amp;18&amp;27&amp;38\end{array}\]</div>
+        <figure>
+          <svg viewBox="0 0 720 420" role="img" aria-label="Nuage de sept points de la suite u n égale n carré plus deux, avec lecture du point de coordonnées 3 et 11">
+            <title>Suite u_n = n² + 2 : points distincts et lecture des coordonnées</title>
+            <desc>Les sept points ont pour coordonnées (0,2), (1,3), (2,6), (3,11), (4,18), (5,27), (6,38). Ils ne sont pas reliés.</desc>
+            <line x1="70" y1="350.0" x2="640" y2="350.0" stroke="#dce5ef"></line>
+            <text x="55" y="355.0" text-anchor="end" font-size="16" fill="#475569">0</text>
+            <line x1="70" y1="312.5" x2="640" y2="312.5" stroke="#dce5ef"></line>
+            <text x="55" y="317.5" text-anchor="end" font-size="16" fill="#475569">5</text>
+            <line x1="70" y1="275.0" x2="640" y2="275.0" stroke="#dce5ef"></line>
+            <text x="55" y="280.0" text-anchor="end" font-size="16" fill="#475569">10</text>
+            <line x1="70" y1="237.5" x2="640" y2="237.5" stroke="#dce5ef"></line>
+            <text x="55" y="242.5" text-anchor="end" font-size="16" fill="#475569">15</text>
+            <line x1="70" y1="200.0" x2="640" y2="200.0" stroke="#dce5ef"></line>
+            <text x="55" y="205.0" text-anchor="end" font-size="16" fill="#475569">20</text>
+            <line x1="70" y1="162.5" x2="640" y2="162.5" stroke="#dce5ef"></line>
+            <text x="55" y="167.5" text-anchor="end" font-size="16" fill="#475569">25</text>
+            <line x1="70" y1="125.0" x2="640" y2="125.0" stroke="#dce5ef"></line>
+            <text x="55" y="130.0" text-anchor="end" font-size="16" fill="#475569">30</text>
+            <line x1="70" y1="87.5" x2="640" y2="87.5" stroke="#dce5ef"></line>
+            <text x="55" y="92.5" text-anchor="end" font-size="16" fill="#475569">35</text>
+            <line x1="70" y1="50.0" x2="640" y2="50.0" stroke="#dce5ef"></line>
+            <text x="55" y="55.0" text-anchor="end" font-size="16" fill="#475569">40</text>
+            <line x1="70" y1="50" x2="70" y2="350" stroke="#e8eef6"></line>
+            <text x="70" y="377" text-anchor="middle" font-size="16" fill="#475569">0</text>
+            <line x1="160" y1="50" x2="160" y2="350" stroke="#e8eef6"></line>
+            <text x="160" y="377" text-anchor="middle" font-size="16" fill="#475569">1</text>
+            <line x1="250" y1="50" x2="250" y2="350" stroke="#e8eef6"></line>
+            <text x="250" y="377" text-anchor="middle" font-size="16" fill="#475569">2</text>
+            <line x1="340" y1="50" x2="340" y2="350" stroke="#e8eef6"></line>
+            <text x="340" y="377" text-anchor="middle" font-size="16" fill="#475569">3</text>
+            <line x1="430" y1="50" x2="430" y2="350" stroke="#e8eef6"></line>
+            <text x="430" y="377" text-anchor="middle" font-size="16" fill="#475569">4</text>
+            <line x1="520" y1="50" x2="520" y2="350" stroke="#e8eef6"></line>
+            <text x="520" y="377" text-anchor="middle" font-size="16" fill="#475569">5</text>
+            <line x1="610" y1="50" x2="610" y2="350" stroke="#e8eef6"></line>
+            <text x="610" y="377" text-anchor="middle" font-size="16" fill="#475569">6</text>
+            <path d="M70 32V350H667" fill="none" stroke="#334155" stroke-width="2"></path>
+            <path d="M65 42L70 32L75 42 M657 345L667 350L657 355" fill="none" stroke="#334155" stroke-width="2"></path>
+            <text x="680" y="355" font-size="18">n</text>
+            <text x="35" y="30" font-size="18">uₙ</text>
+            <path d="M340 350V267.5H70" stroke="#ea580c" stroke-width="2" stroke-dasharray="7 5" fill="none"></path>
+            <circle cx="70" cy="335.0" r="6" fill="#2563eb" stroke="white" stroke-width="2"></circle>
+            <text x="80" y="323.0" font-size="15" fill="#173c75">(0 ; 2)</text>
+            <circle cx="160" cy="327.5" r="6" fill="#2563eb" stroke="white" stroke-width="2"></circle>
+            <circle cx="250" cy="305.0" r="6" fill="#2563eb" stroke="white" stroke-width="2"></circle>
+            <text x="260" y="293.0" font-size="15" fill="#173c75">(2 ; 6)</text>
+            <circle cx="340" cy="267.5" r="6" fill="#ea580c" stroke="white" stroke-width="2"></circle>
+            <circle cx="430" cy="215.0" r="6" fill="#2563eb" stroke="white" stroke-width="2"></circle>
+            <text x="440" y="203.0" font-size="15" fill="#173c75">(4 ; 18)</text>
+            <circle cx="520" cy="147.5" r="6" fill="#2563eb" stroke="white" stroke-width="2"></circle>
+            <text x="530" y="135.5" font-size="15" fill="#173c75">(5 ; 27)</text>
+            <circle cx="610" cy="65.0" r="6" fill="#2563eb" stroke="white" stroke-width="2"></circle>
+            <text x="620" y="53.0" font-size="15" fill="#173c75">(6 ; 38)</text>
+            <rect x="354" y="221.5" width="140" height="34" rx="7" fill="#fff7ed"></rect>
+            <text x="364" y="243.5" font-size="16" fill="#9a3412">A(3 ; 11)</text>
+          </svg>
+          <figcaption>Chaque point représente un terme. Le point orange A(3 ; 11) montre que le terme d’indice 3 vaut 11. Les pointillés servent uniquement à lire ses coordonnées.</figcaption>
+        </figure>
+        <p>Si \(u_n=f(n)\), les points appartiennent à la courbe de \(f\), mais seules les abscisses entières correspondant aux indices sont utilisées.</p>
+        <p class="lesson-warning">Quelques points permettent de conjecturer un comportement ; ils ne prouvent pas une propriété pour tous les indices.</p>
+      </section>
+      <section class="lesson-section" id="variations">
+        <h2>6. Définir le sens de variation</h2>
+        <div class="lesson-box">
+          <p>Pour tout entier \(n\ge k\) :</p>
+          <ul>
+            <li>\(u_{n+1}\ge u_n\) : suite croissante à partir du rang \(k\) ;</li>
+            <li>\(u_{n+1}\le u_n\) : suite décroissante à partir du rang \(k\) ;</li>
+            <li>\(u_{n+1}=u_n\) : suite constante à partir du rang \(k\).</li>
+          </ul>
+          <p>Avec des inégalités strictes à tous les rangs concernés, on parle de croissance ou de décroissance <strong>stricte</strong>. Une suite monotone est croissante ou décroissante.</p>
+        </div>
+        <div class="lesson-example">
+          <p>\(u_n=(-1)^n\) prend successivement les valeurs \(1,-1,1,-1,\ldots\). Elle n’est ni croissante ni décroissante.</p>
+        </div>
+      </section>
+      <section class="lesson-section" id="difference">
+        <h2>7. Méthode : étudier la différence de deux termes</h2>
+        <p>Calculer \(u_{n+1}-u_n\), simplifier, puis en étudier le signe pour tous les indices concernés.</p>
+        <div class="lesson-example">
+          <h3>Une suite strictement croissante</h3>
+          <p>Pour \(u_n=n^2+2\) :</p>
+          <div class="math-scroll">\[u_{n+1}-u_n=(n+1)^2+2-(n^2+2)=2n+1\gt0\quad(n\ge0).\]</div>
+          <p>La suite est strictement croissante sur \(\mathbb N\).</p>
+          <h3>Une suite strictement décroissante</h3>
+          <p>Pour \(v_n=\frac1{n+1}\) :</p>
+          <div class="math-scroll">\[v_{n+1}-v_n=\frac1{n+2}-\frac1{n+1}=-\frac1{(n+1)(n+2)}\lt0.\]</div>
+          <p>Les deux facteurs du dénominateur sont positifs pour \(n\ge0\). La suite est donc strictement décroissante.</p>
+          <h3>Un changement de sens de variation</h3>
+          <p>Pour \(w_n=n^2-6n+8\), on trouve \(w_{n+1}-w_n=2n-5\). Cette différence est négative pour les entiers 0, 1 et 2, puis positive pour tout entier \(n\ge3\).</p>
+          <div class="math-scroll">\[\begin{array}{c|ccccc}n&amp;0&amp;&amp;3&amp;&amp;+\infty\\\hline w_n&amp;8&amp;\searrow&amp;-1&amp;\nearrow&amp;+\infty\end{array}\]</div>
+          <p>La suite décroît de l’indice 0 à l’indice 3, puis croît à partir de 3. Son minimum est \(w_3=-1\). Les flèches résument l’évolution des termes aux indices entiers.</p>
+        </div>
+      </section>
+      <section class="lesson-section" id="fonction">
+        <h2>8. Méthode : utiliser une fonction associée</h2>
+        <p>Si \(u_n=f(n)\) et si \(f\) est croissante sur \([k;+\infty[\), alors \(n\le n+1\) entraîne \(f(n)\le f(n+1)\). La suite est donc croissante à partir de \(k\). Le même raisonnement s’applique à la décroissance et aux variations strictes.</p>
+        <div class="lesson-example">
+          <p>\(u_n=(n-2)^2+1\). La fonction \(f(x)=(x-2)^2+1\) décroît sur \([0;2]\), puis croît sur \([2;+\infty[\). La suite décroît donc jusqu’au rang 2, puis croît à partir de 2 ; son minimum vaut 1.</p>
+        </div>
+        <p class="lesson-warning">Cette méthode exige d’étudier la fonction sur un intervalle contenant les indices. Elle ne s’applique pas directement à une suite donnée par \(u_{n+1}=f(u_n)\). La réciproque n’est pas générale : une suite peut être croissante sans que la fonction choisie soit croissante entre les entiers.</p>
+      </section>
+      <section class="lesson-section" id="python">
+        <h2>9. Calculer des termes et chercher un seuil avec Python</h2>
+        <p>Pour la suite \(u_0=5\), \(u_{n+1}=2u_n-1\), le programme suivant calcule le terme d’indice \(n\), pour un entier \(n\ge0\).</p>
+        <article class="python-card">
+          <div class="python-card-header">
+            <span class="python-badge">Py</span>
+            <h3>Calculer un terme</h3>
+          </div>
+          <p>La variable u contient le terme courant. Chaque tour de boucle calcule le suivant.</p>
+          <pre class="python-code"><code>def terme(n):
+    u = 5
+    for i in range(n):
+        u = 2 * u - 1
+    return u
+</code></pre>
+          <div class="python-result">
+            <strong>Résultat attendu</strong>
+            <pre>&gt;&gt;&gt; terme(0)
+5
+&gt;&gt;&gt; terme(3)
+33</pre>
+          </div>
+        </article>
+        <p>La boucle effectue exactement \(n\) mises à jour. Le programme suivant renvoie le premier indice pour lequel \(u_n\ge1000\).</p>
+        <article class="python-card">
+          <div class="python-card-header">
+            <span class="python-badge">Py</span>
+            <h3>Trouver le premier dépassement</h3>
+          </div>
+          <p>La boucle continue tant que le terme reste inférieur à 1 000.</p>
+          <pre class="python-code"><code>def premier_seuil():
+    n, u = 0, 5
+    while u &lt; 1000:
+        u = 2 * u - 1
+        n = n + 1
+    return n, u
+</code></pre>
+          <div class="python-result">
+            <strong>Résultat attendu</strong>
+            <pre>&gt;&gt;&gt; premier_seuil()
+(8, 1025)</pre>
+          </div>
+        </article>
+        <p>On vérifie \(u_7=513\lt1000\) et \(u_8=1025\ge1000\). Ici, la suite admet la formule \(u_n=4\times2^n+1\), cohérente avec le terme initial et la relation de récurrence ; elle dépasse tout seuil fixé, donc la boucle se termine.</p>
+      </section>
+      <section class="lesson-section" id="limites">
+        <h2>10. Approcher intuitivement la notion de limite</h2>
+        <p>En première spécialité, on observe et on conjecture les comportements à long terme, sans définition formelle de limite ni théorèmes généraux de convergence.</p>
+        <h3>Se rapprocher d’un nombre</h3>
+        <p>Pour \(a_n=2+\frac1{n+1}\), on obtient \(a_9=2{,}1\), \(a_{99}=2{,}01\), \(a_{999}=2{,}001\). Les termes se rapprochent de 2 ; on exprime ce comportement en disant que la suite tend vers 2.</p>
+        <h3>Grandir sans borne</h3>
+        <p>Pour \(b_n=n^2\), les termes deviennent aussi grands qu’on le souhaite lorsque l’indice est suffisamment grand : on dit que la suite tend vers \(+\infty\).</p>
+        <h3>Ne pas avoir de limite</h3>
+        <p>\(c_n=(-1)^n\) alterne entre 1 et −1 : ses termes ne se rapprochent d’aucun nombre et ne tendent pas vers un infini.</p>
+        <p class="lesson-warning">Une observation numérique seule ne suffit pas à prouver un comportement général. Une suite strictement croissante ne tend pas nécessairement vers \(+\infty\) : par exemple \(1-\frac1{n+1}\) se rapproche de 1.</p>
+      </section>
+      <section class="lesson-section" id="exercices">
+        <h2>11. Exercices avec corrections</h2>
+        <article class="exercise">
+          <h3>Exercice 1 — Calcul direct</h3>
+          <p>Pour \(u_n=3n^2-n+1\), calculer \(u_0,u_2,u_5\).</p>
+          <details>
+            <summary>Afficher la correction</summary>
+            <p>\(u_0=1\), \(u_2=12-2+1=11\), \(u_5=75-5+1=71\).</p>
+          </details>
+        </article>
+        <article class="exercise">
+          <h3>Exercice 2 — Récurrence</h3>
+          <p>\(v_0=2\), \(v_{n+1}=3v_n+1\). Calculer les quatre premiers termes.</p>
+          <details>
+            <summary>Afficher la correction</summary>
+            <p>\(v_0=2\), \(v_1=7\), \(v_2=22\), \(v_3=67\).</p>
+          </details>
+        </article>
+        <article class="exercise">
+          <h3>Exercice 3 — Indices</h3>
+          <p>Pour \(u_n=n^2+2\), comparer \(u_{n+1}\) et \(u_n+1\).</p>
+          <details>
+            <summary>Afficher la correction</summary>
+            <p>\(u_{n+1}=n^2+2n+3\), alors que \(u_n+1=n^2+3\). La différence vaut \(2n\) ; ces valeurs sont égales seulement pour \(n=0\).</p>
+          </details>
+        </article>
+        <article class="exercise">
+          <h3>Exercice 4 — Variations</h3>
+          <p>Étudier \(a_n=\frac3{n+2}\) pour \(n\ge0\).</p>
+          <details>
+            <summary>Afficher la correction</summary>
+            <p>\(a_{n+1}-a_n=-\frac3{(n+2)(n+3)}\lt0\). La suite est strictement décroissante.</p>
+          </details>
+        </article>
+        <article class="exercise">
+          <h3>Exercice 5 — Changement de sens</h3>
+          <p>Étudier \(b_n=n^2-4n+7\).</p>
+          <details>
+            <summary>Afficher la correction</summary>
+            <p>\(b_{n+1}-b_n=2n-3\), négatif pour \(n=0,1\), positif pour \(n\ge2\). Minimum au rang 2 : \(b_2=3\).</p>
+          </details>
+        </article>
+        <article class="exercise">
+          <h3>Exercice 6 — Modélisation</h3>
+          <p>Une salle comporte 12 sièges au premier rang et 2 sièges de plus à chaque rang suivant. Exprimer le nombre \(s_n\) de sièges du rang \(n\ge1\).</p>
+          <details>
+            <summary>Afficher la correction</summary>
+            <p>\(s_1=12\), \(s_{n+1}=s_n+2\). Donc \(s_n=12+2(n-1)=2n+10\). Le dixième rang comporte 30 sièges.</p>
+          </details>
+        </article>
+        <article class="exercise">
+          <h3>Exercice 7 — Seuil</h3>
+          <p>Pour \(u_n=n^2+2\), trouver le premier indice tel que \(u_n\gt100\).</p>
+          <details>
+            <summary>Afficher la correction</summary>
+            <p>Il faut \(n^2\gt98\). Or \(u_9=83\) et \(u_{10}=102\). La croissance prouvée au cours garantit que le premier indice est 10.</p>
+          </details>
+        </article>
+      </section>
+      <section class="lesson-section" id="video">
+        <h2>12. Le cours en vidéo</h2>
+        <div class="video-box">
+          <h3>Suites numériques et sens de variation</h3>
+          <p>Retrouve ici la vidéo explicative du chapitre.</p>
+          <!-- Remplacer LIEN_VIDEO par l’identifiant réel de la vidéo YouTube. -->
+          <iframe class="video-frame" src="https://www.youtube.com/embed/LIEN_VIDEO" title="Suites numériques en première spécialité : cours vidéo" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container">
+        <p>
+          <strong>À retenir :</strong> toujours préciser le premier indice, distinguer indice et valeur, puis justifier les variations sur tous les rangs concernés.</p>
+        <a href="algebre.html">← Retour à l’algèbre</a> · <a href="index.html">Accueil de première spécialité</a>
+      </div>
+    </footer>
+  </body>
+</html>
