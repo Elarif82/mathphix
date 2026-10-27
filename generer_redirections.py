@@ -38,11 +38,7 @@ for destination in sorted(DOSSIER.glob("*.html")):
   <link rel="canonical" href="{url}">
   <meta http-equiv="refresh" content="0; url={url}">
 </head>
-<body>
-  <p>Cette page a changé d’adresse.
-    <a href="{url}">Consulter le cours</a>.
-  </p>
-</body>
+<body></body>
 </html>
 """
 
