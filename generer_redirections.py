@@ -2,35 +2,32 @@ from pathlib import Path
 from html import escape
 
 RACINE = Path(__file__).resolve().parent
-DOSSIER = RACINE / "seconde"
 DOMAINE = "https://mathphix.fr"
-MARQUEUR = "<!-- Redirection generee MathPhiX -->"
 
-if not DOSSIER.is_dir():
-    raise SystemExit("Le dossier seconde est introuvable.")
+# Ancienne adresse : nouvelle adresse
+REDIRECTIONS = {
+    "ensembles.html": "seconde/ensembles.html",
+    "fonctions.html": "seconde/fonctions.html",
+    "puissances.html": "seconde/puissances.html",
+    "geometrie.html": "seconde/geometrie.html",
+}
 
-nombre = 0
+for ancienne, nouvelle in REDIRECTIONS.items():
+    source = RACINE / ancienne
+    destination = RACINE / nouvelle
 
-for destination in sorted(DOSSIER.glob("*.html")):
-    if destination.name.lower() == "index.html":
+    if not destination.is_file():
+        print(f"IGNORÉ : destination absente → {nouvelle}")
         continue
 
-    ancienne = RACINE / destination.name
+    # Ne pas écraser un fichier existant.
+    if source.exists():
+        print(f"IGNORÉ : fichier déjà présent → {ancienne}")
+        continue
 
-    # Préserver les vrais fichiers déjà présents à la racine.
-    if ancienne.exists():
-        contenu_existant = ancienne.read_text(encoding="utf-8")
-        if MARQUEUR not in contenu_existant:
-            print(f"À VÉRIFIER : {ancienne.name} existe déjà, non modifié.")
-            continue
-
-    url = escape(
-        f"{DOMAINE}/seconde/{destination.name}",
-        quote=True
-    )
+    url = escape(f"{DOMAINE}/{nouvelle}", quote=True)
 
     contenu = f"""<!DOCTYPE html>
-{MARQUEUR}
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
@@ -42,8 +39,7 @@ for destination in sorted(DOSSIER.glob("*.html")):
 </html>
 """
 
-    ancienne.write_text(contenu, encoding="utf-8")
-    nombre += 1
-    print(f"PRÊT : /{ancienne.name} → /seconde/{destination.name}")
+    source.parent.mkdir(parents=True, exist_ok=True)
+    source.write_text(contenu, encoding="utf-8")
+    print(f"CRÉÉ : {ancienne} → {nouvelle}")
 
-print(f"\n{nombre} fichiers de redirection préparés.")
