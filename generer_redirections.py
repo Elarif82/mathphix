@@ -2,32 +2,35 @@ from pathlib import Path
 from html import escape
 
 RACINE = Path(__file__).resolve().parent
+DOSSIER = RACINE / "seconde"
 DOMAINE = "https://mathphix.fr"
+MARQUEUR = "<!-- Redirection generee MathPhiX -->"
 
-# Ancienne adresse : nouvelle adresse
-REDIRECTIONS = {
-    "ensembles.html": "seconde/ensembles.html",
-    "fonctions.html": "seconde/fonctions.html",
-    "puissances.html": "seconde/puissances.html",
-    "geometrie.html": "seconde/geometrie.html",
-}
+if not DOSSIER.is_dir():
+    raise SystemExit("Le dossier seconde est introuvable.")
 
-for ancienne, nouvelle in REDIRECTIONS.items():
-    source = RACINE / ancienne
-    destination = RACINE / nouvelle
+nombre = 0
 
-    if not destination.is_file():
-        print(f"IGNORÉ : destination absente → {nouvelle}")
+for destination in sorted(DOSSIER.glob("*.html")):
+    if destination.name.lower() == "index.html":
         continue
 
-    # Ne pas écraser un fichier existant.
-    if source.exists():
-        print(f"IGNORÉ : fichier déjà présent → {ancienne}")
-        continue
+    ancienne = RACINE / destination.name
 
-    url = escape(f"{DOMAINE}/{nouvelle}", quote=True)
+    # Préserver les vrais fichiers déjà présents à la racine.
+    if ancienne.exists():
+        contenu_existant = ancienne.read_text(encoding="utf-8")
+        if MARQUEUR not in contenu_existant:
+            print(f"À VÉRIFIER : {ancienne.name} existe déjà, non modifié.")
+            continue
+
+    url = escape(
+        f"{DOMAINE}/seconde/{destination.name}",
+        quote=True
+    )
 
     contenu = f"""<!DOCTYPE html>
+{MARQUEUR}
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
@@ -39,7 +42,8 @@ for ancienne, nouvelle in REDIRECTIONS.items():
 </html>
 """
 
-    source.parent.mkdir(parents=True, exist_ok=True)
-    source.write_text(contenu, encoding="utf-8")
-    print(f"CRÉÉ : {ancienne} → {nouvelle}")
+    ancienne.write_text(contenu, encoding="utf-8")
+    nombre += 1
+    print(f"PRÊT : /{ancienne.name} → /seconde/{destination.name}")
 
+print(f"\n{nombre} fichiers de redirection préparés.")
