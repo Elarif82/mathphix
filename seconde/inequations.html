@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Inéquations en seconde : méthodes et tableaux de signes | MathPhiX</title>
-  <meta name="description" content="Résolvez les inéquations en seconde : premier degré, intervalles, produits et quotients avec tableaux de signes. Cours, exemples et exercices." />
+  <title>Inéquations en seconde : cours et exercices corrigés | MathPhiX</title>
+  <meta name="description" content="Résolvez les inéquations en seconde : premier degré, produits, quotients et tableaux de signes. Cours et quatre exercices corrigés avec intervalles solutions." />
   <link rel="stylesheet" href="css/style2.css" />
   <style>
     .latex-sign-table {
@@ -233,20 +233,54 @@
       <h3>Exercice 1 - Automatismes</h3>
       <p>Résoudre et donner l’ensemble des solutions sous forme d’intervalle :</p>
       <ol><li><span class="math">x + 3 ≥ 7</span></li><li><span class="math">5x - 15 ≤ 0</span></li><li><span class="math">-2x &lt; 6</span></li><li><span class="math">3x + 1 ≤ 7x - 11</span></li></ol>
+      <details class="exercise-correction"><summary>Afficher la correction</summary><ol><li>On soustrait 3 : <span class="math">x ≥ 4</span>. Donc <span class="math">S = [4 ; +∞[</span>. La borne 4 est incluse.</li><li>On ajoute 15 : <span class="math">5x ≤ 15</span>, puis on divise par 5, positif : <span class="math">x ≤ 3</span>. Donc <span class="math">S = ]−∞ ; 3]</span>.</li><li>On divise par −2, négatif : <strong>on inverse le sens</strong>, ce qui donne <span class="math">x &gt; −3</span>. Donc <span class="math">S = ]−3 ; +∞[</span>. La borne −3 est exclue car l’inégalité est stricte.</li><li>On soustrait 3x et on ajoute 11 : <span class="math">12 ≤ 4x</span>. En divisant par 4, on obtient <span class="math">x ≥ 3</span>. Donc <span class="math">S = [3 ; +∞[</span>.</li></ol></details>
     </div>
     <div class="exercise-box">
       <h3>Exercice 2 - Intervalles</h3>
       <p>Traduire par une ou plusieurs inégalités :</p>
       <ol><li><span class="math">[-3 ; 5]</span></li><li><span class="math">]2 ; +∞[</span></li><li><span class="math">]-∞ ; 4[</span></li></ol>
+      <details class="exercise-correction"><summary>Afficher la correction</summary><ol><li><span class="math">x ∈ [−3 ; 5]</span> équivaut à <span class="math">−3 ≤ x ≤ 5</span>. Les deux bornes sont incluses.</li><li><span class="math">x ∈ ]2 ; +∞[</span> équivaut à <span class="math">x &gt; 2</span>. La borne 2 est exclue.</li><li><span class="math">x ∈ ]−∞ ; 4[</span> équivaut à <span class="math">x &lt; 4</span>. La borne 4 est exclue. L’infini n’est jamais une valeur incluse.</li></ol></details>
     </div>
     <div class="exercise-box">
       <h3>Exercice 3 - Produit et quotient</h3>
       <p>Résoudre à l’aide d’un tableau de signes :</p>
       <ol><li><span class="math">(2x - 6)(x + 1) ≥ 0</span></li><li><span class="math">(5 - x)(3x + 6) &lt; 0</span></li><li><span class="math">(x - 4)/(2x + 2) ≤ 0</span></li></ol>
+      <details class="exercise-correction"><summary>Afficher la correction</summary><h4>1. Produit positif ou nul</h4><p>Les facteurs s’annulent en 3 et −1. Leurs coefficients directeurs sont positifs : chaque facteur est négatif avant son zéro et positif après.</p><div class="latex-sign-table" role="img" aria-label="Signes du produit (2x moins 6) fois (x plus 1)">\[
+\begin{array}{c|ccccccc}
+x & -\infty & & -1 & & 3 & & +\infty  \\
+\hline
+2x-6 & & - & \vert & - & 0 & + &  \\
+\hline
+x+1 & & - & 0 & + & \vert & + &  \\
+\hline
+(2x-6)(x+1) & & + & 0 & - & 0 & + &  \\
+\end{array}
+\]</div><p>On retient les zones positives et les deux zéros : <span class="math">S = ]−∞ ; −1] ∪ [3 ; +∞[</span>.</p><h4>2. Produit strictement négatif</h4><p>Les facteurs s’annulent en 5 et −2. Le facteur 5 − x est positif avant 5, puis négatif. Le facteur 3x + 6 est négatif avant −2, puis positif.</p><div class="latex-sign-table" role="img" aria-label="Signes du produit (5 moins x) fois (3x plus 6)">\[
+\begin{array}{c|ccccccc}
+x & -\infty & & -2 & & 5 & & +\infty  \\
+\hline
+5-x & & + & \vert & + & 0 & - &  \\
+\hline
+3x+6 & & - & 0 & + & \vert & + &  \\
+\hline
+(5-x)(3x+6) & & - & 0 & + & 0 & - &  \\
+\end{array}
+\]</div><p>On retient les zones négatives. L’inégalité est stricte : les zéros sont exclus. Donc <span class="math">S = ]−∞ ; −2[ ∪ ]5 ; +∞[</span>.</p><h4>3. Quotient négatif ou nul</h4><p>Le dénominateur s’annule en −1 : <strong>−1 est une valeur interdite</strong>. Le numérateur s’annule en 4. La double barre signale que le quotient n’est pas défini.</p><div class="latex-sign-table" role="img" aria-label="Signes du quotient (x moins 4) sur (2x plus 2)">\[
+\begin{array}{c|ccccccc}
+x & -\infty & & -1 & & 4 & & +\infty  \\
+\hline
+x-4 & & - & \vert & - & 0 & + &  \\
+\hline
+2x+2 & & - & 0 & + & \vert & + &  \\
+\hline
+\dfrac{x-4}{2x+2} & & + & \Vert & - & 0 & + &  \\
+\end{array}
+\]</div><p>On retient la zone négative et le zéro du numérateur 4 ; −1 reste exclu. Donc <span class="math">S = ]−1 ; 4]</span>.</p></details>
     </div>
     <div class="exercise-box">
       <h3>Exercice 4 - Problème</h3>
       <p>Un service coûte 18 € d’abonnement puis 6 € par utilisation. On dispose de 90 €. Modéliser la situation par une inéquation et déterminer le nombre maximal d’utilisations.</p>
+      <details class="exercise-correction"><summary>Afficher la correction</summary><ol><li>On note n le nombre d’utilisations : n est un entier positif ou nul.</li><li>Le coût total est <span class="math">18 + 6n</span> euros. Le budget impose <span class="math">18 + 6n ≤ 90</span>.</li><li>On soustrait 18 : <span class="math">6n ≤ 72</span>. On divise par 6, positif : <span class="math">n ≤ 12</span>. Les nombres possibles sont donc les entiers de 0 à 12.</li><li>Pour 12 utilisations, <span class="math">18 + 6 × 12 = 90</span> €. Pour 13 utilisations, le coût serait de 96 €, au-dessus du budget. Le maximum est donc <strong>12 utilisations</strong>.</li></ol></details>
     </div>
   </section>
 

@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MathPhiX — Bases de Python en seconde</title>
+  <title>Bases de Python en seconde : cours et exercices corrigés | MathPhiX</title>
+  <meta name="description" content="Apprenez Python en seconde : variables, conditions, boucles for et while, fonctions. Cours et six exercices corrigés avec programmes expliqués et testés." />
+  <link rel="canonical" href="https://mathphix.fr/seconde/base-python.html" />
   <link rel="stylesheet" href="css/style2.css" />
 </head>
 <body>
@@ -175,36 +177,56 @@ print(mystere(4))
           Donner le type et la valeur finale de chaque variable après l’exécution :
           <code>a = 4</code>, <code>b = 2.5</code>, <code>a = a + 3</code>,
           <code>test = a &gt; b</code>.
-        </p>
+        </p><details class="exercise-correction"><summary>Afficher la correction</summary><p>Les instructions sont exécutées dans l’ordre : <code>a</code> reçoit 4, <code>b</code> reçoit 2.5, puis <code>a</code> est remplacé par 4 + 3 = 7. La comparaison <code>a &gt; b</code> devient donc <code>7 &gt; 2.5</code>.</p><p>Les valeurs finales sont <strong>a = 7</strong>, de type <code>int</code> ; <strong>b = 2.5</strong>, de type <code>float</code> ; <strong>test = True</strong>, de type <code>bool</code>. <code>test</code> mémorise le résultat de la comparaison, pas les nombres comparés.</p></details>
       </div>
       <div class="exercise-box">
         <h3>Exercice 2 — Condition</h3>
-        <p>Écrire un programme qui demande un nombre et indique s’il appartient à l’intervalle [−2 ; 5].</p>
+        <p>Écrire un programme qui demande un nombre et indique s’il appartient à l’intervalle [−2 ; 5].</p><details class="exercise-correction"><summary>Afficher la correction</summary><p>L’intervalle est fermé : les deux bornes doivent être incluses. On traduit donc l’appartenance par <code>-2 &lt;= x &lt;= 5</code>, équivalent à <code>x &gt;= -2 and x &lt;= 5</code>.</p><pre><code class="language-python">x = float(input(&quot;Nombre : &quot;))
+
+if -2 &lt;= x &lt;= 5:
+    print(&quot;Le nombre appartient a [-2 ; 5].&quot;)
+else:
+    print(&quot;Le nombre n&#x27;appartient pas a [-2 ; 5].&quot;)</code></pre><p>Les entrées −2 et 5 sont acceptées, de même que 0. Les entrées −2,1 et 5,1 sont refusées. Lors de la saisie Python, on utilise un point pour les décimaux, par exemple <code>5.1</code>.</p></details>
       </div>
       <div class="exercise-box">
         <h3>Exercice 3 — Boucle bornée</h3>
-        <p>Écrire une boucle qui affiche les dix premiers multiples de 7.</p>
+        <p>Écrire une boucle qui affiche les dix premiers multiples de 7.</p><details class="exercise-correction"><summary>Afficher la correction</summary><p>On choisit ici les <strong>dix premiers multiples strictement positifs</strong> de 7. La variable i prend les valeurs de 1 à 10 : la borne finale de <code>range(1, 11)</code> est exclue.</p><pre><code class="language-python">for i in range(1, 11):
+    print(7 * i)</code></pre><p>Le programme affiche <strong>7, 14, 21, 28, 35, 42, 49, 56, 63 et 70</strong>, un nombre par ligne. Si l’on inclut 0 parmi les premiers multiples naturels, on utilise <code>range(10)</code> et on obtient 0, 7, …, 63. L’énoncé ne précisait pas cette convention.</p></details>
       </div>
       <div class="exercise-box">
         <h3>Exercice 4 — Boucle non bornée</h3>
         <p>
           Compléter un programme qui cherche le plus petit entier <em>n</em> tel que
           <em>n</em><sup>3</sup> soit supérieur ou égal à 1 000.
-        </p>
+        </p><details class="exercise-correction"><summary>Afficher la correction</summary><p>On part de 0 et on augmente n tant que son cube est strictement inférieur à 1 000. Le test d’arrêt doit autoriser l’égalité.</p><pre><code class="language-python">n = 0
+
+while n ** 3 &lt; 1000:
+    n = n + 1
+
+print(n)</code></pre><p>Le programme affiche <strong>10</strong>. Vérification : 9³ = 729 &lt; 1 000 et 10³ = 1 000. La fonction cube étant strictement croissante, 10 est bien le plus petit entier qui convient. Un test <code>&lt;= 1000</code> ferait une itération de trop.</p></details>
       </div>
       <div class="exercise-box">
         <h3>Exercice 5 — Fonction</h3>
         <p>
           Écrire une fonction <code>aire_rectangle(longueur, largeur)</code> qui renvoie
           l’aire d’un rectangle, puis l’appeler avec 8 et 3,5.
-        </p>
+        </p><details class="exercise-correction"><summary>Afficher la correction</summary><p>L’aire est le produit de la longueur par la largeur. La fonction reçoit deux dimensions positives et <code>return</code> renvoie le résultat.</p><pre><code class="language-python">def aire_rectangle(longueur, largeur):
+    return longueur * largeur
+
+print(aire_rectangle(8, 3.5))</code></pre><p>L’appel renvoie <strong>28.0</strong>, car 8 × 3,5 = 28. Si les dimensions sont en centimètres, l’aire est de <strong>28 cm²</strong>. <code>print</code> affiche la valeur renvoyée ; la fonction, elle, ne fait que la calculer.</p></details>
       </div>
       <div class="exercise-box">
         <h3>Exercice 6 — Comprendre et modifier</h3>
         <p>
           Expliquer ce que renvoie la fonction <code>mystere</code> du cours. La modifier
           pour qu’elle calcule la somme des carrés des entiers de 1 à <em>n</em>.
-        </p>
+        </p><details class="exercise-correction"><summary>Afficher la correction</summary><p>Pour un entier n positif ou nul, <code>mystere(n)</code> renvoie la somme 1 + 2 + … + n ; pour n = 0, la boucle ne s’exécute pas et la somme vaut 0. Pour additionner les carrés, on remplace <code>i</code> par <code>i ** 2</code> dans l’accumulation.</p><pre><code class="language-python">def somme_carres(n):
+    resultat = 0
+    for i in range(1, n + 1):
+        resultat = resultat + i ** 2
+    return resultat
+
+print(somme_carres(4))</code></pre><p>Pour n = 4, le programme affiche <strong>30</strong>, car 1² + 2² + 3² + 4² = 1 + 4 + 9 + 16 = 30. Le <code>return</code> reste en dehors de la boucle pour renvoyer la somme après toutes les additions. Pour n = 0, la fonction renvoie 0.</p></details>
       </div>
     </section>
 

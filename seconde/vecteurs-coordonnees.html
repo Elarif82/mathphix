@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Calculez les coordonnées d’un vecteur en seconde : norme, distance, milieu et déterminant. Cours, exemples et exercices sur l’alignement et le parallélisme." />
-  <title>Coordonnées de vecteurs en seconde : cours et exercices | MathPhiX</title>
+  <meta name="description" content="Calculez les coordonnées, la norme, la distance et le milieu en seconde. Cours et huit exercices corrigés : déterminant, alignement et parallélisme." />
+  <title>Coordonnées de vecteurs en seconde : exercices corrigés | MathPhiX</title>
   <link rel="stylesheet" href="css/style2.css" />
 
   <style>
@@ -511,7 +511,7 @@
     </section>
 
     <section class="section" id="exercices">
-      <h2>Exercices</h2>
+      <h2>Exercices d'entrainement</h2>
 
       <div class="exercise-box">
         <h3>Exercice 1 — Coordonnées d’un vecteur</h3>
@@ -520,6 +520,7 @@
           <li>Calculer <span class="math">\(\overrightarrow{AB}\)</span>, <span class="math">\(\overrightarrow{AC}\)</span> et <span class="math">\(\overrightarrow{BC}\)</span>.</li>
           <li>Vérifier la relation de Chasles.</li>
         </ol>
+<details class="exercise-correction"><summary>Afficher la correction</summary><p>On applique « arrivée moins départ » à chaque coordonnée.</p><ol><li>Pour \(\overrightarrow{AB}\), on calcule \(2-(-3)=5\) et \(-1-2=-3\) : ses coordonnées sont \(\boxed{(5\,;-3)}\). Pour \(\overrightarrow{AC}\), \(5-(-3)=8\) et \(4-2=2\) : ses coordonnées sont \(\boxed{(8\,;2)}\). Pour \(\overrightarrow{BC}\), \(5-2=3\) et \(4-(-1)=5\) : ses coordonnées sont \(\boxed{(3\,;5)}\).</li><li>Le vecteur \(\overrightarrow{AB}+\overrightarrow{BC}\) a pour coordonnées \((5+3\,;-3+5)\), soit \((8\,;2)\). Ce sont celles de \(\overrightarrow{AC}\). On vérifie donc \(\boxed{\overrightarrow{AB}+\overrightarrow{BC}=\overrightarrow{AC}}\).</li></ol></details>
       </div>
 
       <div class="exercise-box">
@@ -529,6 +530,7 @@
           <li>Calculer <span class="math">\(\vec{u}+\vec{v}\)</span> et <span class="math">\(\vec{u}-\vec{v}\)</span>.</li>
           <li>Calculer <span class="math">\(3\vec{u}-2\vec{v}\)</span>.</li>
         </ol>
+<details class="exercise-correction"><summary>Afficher la correction</summary><p>Les opérations s’effectuent coordonnée par coordonnée.</p><ol><li>Le vecteur \(\vec u+\vec v\) a pour coordonnées \((4+(-2)\,;-3+5)\), soit \(\boxed{(2\,;2)}\). Le vecteur \(\vec u-\vec v\) a pour coordonnées \((4-(-2)\,;-3-5)\), soit \(\boxed{(6\,;-8)}\).</li><li>Le vecteur \(3\vec u\) a pour coordonnées \((12\,;-9)\), et \(2\vec v\) a pour coordonnées \((-4\,;10)\). Ainsi, \(3\vec u-2\vec v\) a pour coordonnées \((12-(-4)\,;-9-10)\), soit \(\boxed{(16\,;-19)}\).</li></ol></details>
       </div>
 
       <div class="exercise-box">
@@ -537,6 +539,7 @@
           <li>Calculer la norme du vecteur <span class="math">\(\vec{w}(-5\,;\,12)\)</span>.</li>
           <li>Calculer la distance entre <span class="math">\(E(-2\,;\,1)\)</span> et <span class="math">\(F(4\,;\,9)\)</span>.</li>
         </ol>
+<details class="exercise-correction"><summary>Afficher la correction</summary><p>On se place dans un <strong>repère orthonormé</strong>, condition nécessaire pour utiliser ces formules.</p><ol><li>\(\|\vec w\|=\sqrt{(-5)^2+12^2}=\sqrt{25+144}=\sqrt{169}=\boxed{13}\).</li><li>Le vecteur \(\overrightarrow{EF}\) a pour coordonnées \((4-(-2)\,;9-1)\), soit \((6\,;8)\). Donc \(EF=\sqrt{6^2+8^2}=\sqrt{36+64}=\sqrt{100}=\boxed{10}\).</li></ol><p>Ces résultats sont exacts et s’expriment dans l’unité de longueur du repère.</p></details>
       </div>
 
       <div class="exercise-box">
@@ -546,6 +549,7 @@
           <li>Calculer les coordonnées du milieu <span class="math">\(I\)</span> de <span class="math">\([AB]\)</span>.</li>
           <li>Vérifier par le calcul que <span class="math">\(\overrightarrow{AI}=\overrightarrow{IB}\)</span>.</li>
         </ol>
+<details class="exercise-correction"><summary>Afficher la correction</summary><ol><li>Les coordonnées du milieu sont les moyennes des coordonnées des extrémités : \(x_I=\dfrac{-4+6}{2}=1\) et \(y_I=\dfrac{3+(-5)}2=-1\). Le milieu est donc \(\boxed{I(1\,;-1)}\).</li><li>Le vecteur \(\overrightarrow{AI}\) a pour coordonnées \((1-(-4)\,;-1-3)\), soit \((5\,;-4)\). Le vecteur \(\overrightarrow{IB}\) a pour coordonnées \((6-1\,;-5-(-1))\), soit également \((5\,;-4)\). Donc \(\boxed{\overrightarrow{AI}=\overrightarrow{IB}}\), ce qui confirme que I est le milieu de [AB].</li></ol></details>
       </div>
 
       <div class="exercise-box">
@@ -555,6 +559,7 @@
           <li><span class="math">\(\vec{u}(3\,;\,2)\)</span> et <span class="math">\(\vec{v}(-6\,;\,-4)\)</span> ;</li>
           <li><span class="math">\(\vec{a}(1\,;\,5)\)</span> et <span class="math">\(\vec{b}(3\,;\,14)\)</span>.</li>
         </ol>
+<details class="exercise-correction"><summary>Afficher la correction</summary><p>Pour deux vecteurs de coordonnées \((x\,;y)\) et \((x'\,;y')\), on calcule \(xy'-yx'\).</p><ol><li>\(\det(\vec u,\vec v)=3\times(-4)-2\times(-6)=-12+12=\boxed0\). Les vecteurs sont <strong>colinéaires</strong>. On retrouve \(\vec v=-2\vec u\).</li><li>\(\det(\vec a,\vec b)=1\times14-5\times3=14-15=\boxed{-1}\). Ce déterminant n’est pas nul : les vecteurs <strong>ne sont pas colinéaires</strong>.</li></ol></details>
       </div>
 
       <div class="exercise-box">
@@ -565,6 +570,7 @@
           <span class="math">\(C(5\,;\,8)\)</span> sont-ils alignés ?
           Justifier avec un déterminant.
         </p>
+<details class="exercise-correction"><summary>Afficher la correction</summary><p>On choisit deux vecteurs de même origine :</p><ul><li>\(\overrightarrow{AB}\) a pour coordonnées \((2-(-1)\,;5-2)\), soit \((3\,;3)\) ;</li><li>\(\overrightarrow{AC}\) a pour coordonnées \((5-(-1)\,;8-2)\), soit \((6\,;6)\).</li></ul><p>Leur déterminant vaut \(\det(\overrightarrow{AB},\overrightarrow{AC})=3\times6-3\times6=0\).</p><p>Les vecteurs sont colinéaires : <strong>A, B et C sont alignés</strong>. On peut également remarquer que \(\overrightarrow{AC}=2\overrightarrow{AB}\) : B est le milieu de [AC].</p></details>
       </div>
 
       <div class="exercise-box">
@@ -577,6 +583,7 @@
           Déterminer si les droites <span class="math">\((AB)\)</span> et
           <span class="math">\((CD)\)</span> sont parallèles.
         </p>
+<details class="exercise-correction"><summary>Afficher la correction</summary><p>Les points A et B sont distincts, de même que C et D. On choisit un vecteur directeur de chaque droite :</p><ul><li>\(\overrightarrow{AB}\) a pour coordonnées \((4-1\,;5-(-1))\), soit \((3\,;6)\) ;</li><li>\(\overrightarrow{CD}\) a pour coordonnées \((0-(-2)\,;7-3)\), soit \((2\,;4)\).</li></ul><p>Leur déterminant vaut \(\det(\overrightarrow{AB},\overrightarrow{CD})=3\times4-6\times2=12-12=0\).</p><p>Ces vecteurs directeurs sont colinéaires : <strong>(AB) et (CD) sont parallèles</strong>.</p><p>Pour préciser leur position, \(\overrightarrow{AC}\) a pour coordonnées \((-2-1\,;3-(-1))\), soit \((-3\,;4)\). On calcule \(\det(\overrightarrow{AB},\overrightarrow{AC})=3\times4-6\times(-3)=30\ne0\). C n’appartient donc pas à (AB) : les droites sont <strong>strictement parallèles</strong>.</p></details>
       </div>
 
       <div class="exercise-box">
@@ -591,6 +598,7 @@
           <li>Démontrer que <span class="math">\(ABCD\)</span> est un parallélogramme à l’aide des vecteurs.</li>
           <li>Vérifier le résultat en calculant les milieux des diagonales.</li>
         </ol>
+<details class="exercise-correction"><summary>Afficher la correction</summary><ol><li>On calcule les coordonnées de deux vecteurs correspondant aux côtés opposés :<ul><li>\(\overrightarrow{AB}\) a pour coordonnées \((5-0\,;2-1)\), soit \((5\,;1)\) ;</li><li>\(\overrightarrow{DC}\) a pour coordonnées \((7-2\,;6-5)\), soit \((5\,;1)\).</li></ul>Ces vecteurs ont les mêmes coordonnées, donc \(\overrightarrow{AB}=\overrightarrow{DC}\). Ainsi, <strong>ABCD est un parallélogramme</strong>.</li><li>On calcule les coordonnées du milieu de chaque diagonale. Pour le milieu I de [AC] : \(x_I=\dfrac{0+7}{2}=\dfrac72\) et \(y_I=\dfrac{1+6}{2}=\dfrac72\), soit \(I\left(\dfrac72\,;\dfrac72\right)\). Pour le milieu J de [BD] : \(x_J=\dfrac{5+2}{2}=\dfrac72\) et \(y_J=\dfrac{2+5}{2}=\dfrac72\), soit \(J\left(\dfrac72\,;\dfrac72\right)\). Les diagonales ont le même milieu : cela confirme que <strong>ABCD est un parallélogramme</strong>.</li></ol></details>
       </div>
 
     </section>

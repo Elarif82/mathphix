@@ -724,3 +724,17 @@ mjx-container[display="true"] {
     line-height: 1.45;
   }
 }
+
+/* Corrigés repliables, réutilisables dans les cours de seconde. */
+.exercise-correction{margin-top:1.2rem;border-top:1px solid var(--border);padding-top:1rem}
+.exercise-correction summary{cursor:pointer;font-weight:700;color:var(--primary-dark);padding:.4rem 0}
+.exercise-correction summary:focus-visible{outline:3px solid var(--primary);outline-offset:4px}
+.exercise-correction li{margin:.65rem 0;line-height:1.6}
+/* Ensembles : styles de la page centralisés et débordements contenus. */
+.ensembles-page .ensembles-scroll{max-width:100%;overflow-x:auto;margin:1.2rem 0;overscroll-behavior-x:contain}
+.ensembles-page .ensembles-number-line{min-width:620px;width:100%;height:auto;display:block}
+.ensembles-page .ensembles-table{width:100%;min-width:480px;border-collapse:collapse;margin-top:1rem}
+.ensembles-page .ensembles-table th,.ensembles-page .ensembles-table td{padding:.6rem;border:1px solid #cbd5e1;text-align:left}
+.ensembles-page .ensembles-table th{background:#173e79;color:white}
+.ensembles-page .lesson-box,.ensembles-page .example-box,.ensembles-page .exercise-box,.ensembles-page .tip-box{min-width:0;overflow-wrap:anywhere}
+.ensembles-page .math{max-width:100%;white-space:normal;overflow-wrap:anywhere}

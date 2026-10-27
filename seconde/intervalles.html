@@ -1,245 +1,384 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MathPhiX — Intervalles</title>
-  <link rel="stylesheet" href="css/style2.css" />
-</head>
-<body>
-  <header class="site-header">
-    <div class="header-container container">
-      <div>
-        <h1 class="site-title">MathPhiX</h1>
-        <p class="site-subtitle">Seconde — Intervalles</p>
-      </div>
-      <a href="nombres-calculs.html" class="back-link">← Retour</a>
-    </div>
-  </header>
-
-  <main class="container">
-    <section class="section">
-      <h2>Cours</h2>
-
-      <div class="lesson-box">
-        <h3>1. Les intervalles de ℝ</h3>
-        <p>Un <strong>intervalle</strong> est un ensemble de nombres réels vérifiant une ou deux inégalités. Il se représente par une partie continue de la droite réelle.</p>
-        <p><strong>ℝ = ]−∞ ; +∞[</strong>.</p>
-      </div>
-
-      <div class="lesson-box">
-        <h3>2. Intervalles bornés</h3>
-        <div style="overflow-x:auto">
-          <table style="width:100%; border-collapse:collapse">
-            <thead><tr><th>Condition sur x</th><th>Intervalle</th><th>Bornes</th></tr></thead>
-            <tbody>
-              <tr><td>a ≤ x ≤ b</td><td>[a ; b]</td><td>a et b incluses</td></tr>
-              <tr><td>a &lt; x &lt; b</td><td>]a ; b[</td><td>a et b exclues</td></tr>
-              <tr><td>a ≤ x &lt; b</td><td>[a ; b[</td><td>a incluse, b exclue</td></tr>
-              <tr><td>a &lt; x ≤ b</td><td>]a ; b]</td><td>a exclue, b incluse</td></tr>
-            </tbody>
-          </table>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intervalles en seconde : cours et exercices corrigés | MathPhiX</title>
+    <link rel="stylesheet" href="css/style2.css">
+    <meta name="description" content="Maîtrisez les intervalles en seconde : inégalités, appartenance, valeur absolue, distances, intersection et réunion. Cours et exercices corrigés pas à pas.">
+    <link rel="canonical" href="https://mathphix.fr/seconde/intervalles.html">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-container container">
+        <div>
+          <h1 class="site-title">MathPhiX</h1>
+          <p class="site-subtitle">Seconde — Intervalles</p>
         </div>
-        <p><strong>Lecture des crochets :</strong> une borne est incluse lorsque l’inégalité comporte ≤ ou ≥ ; elle est exclue lorsque l’inégalité comporte &lt; ou &gt;.</p>
+        <a href="nombres-calculs.html" class="back-link">← Retour</a>
       </div>
-
-      <div class="example-box">
-        <h3>Exemple : ]−1 ; 3]</h3>
-        <p>]−1 ; 3] est l’ensemble des réels <em>x</em> tels que <strong>−1 &lt; x ≤ 3</strong>.</p>
-        <p>Donc −1 ∉ ]−1 ; 3] et 3 ∈ ]−1 ; 3].</p>
-        <div style="overflow-x:auto; margin:1.2rem 0;">
-          <svg
-            aria-label="Représentation de l’intervalle ouvert en moins un et fermé en trois"
-            role="img"
-            style="min-width:620px; width:100%; height:auto;"
-            viewBox="0 0 760 150"
-          >
-            <line stroke="currentColor" stroke-width="2" x1="70" x2="690" y1="78" y2="78"></line>
-            <polygon fill="currentColor" points="690,78 678,72 678,84"></polygon>
-            <line stroke="#2563eb" stroke-width="7" x1="250" x2="550" y1="78" y2="78"></line>
-
-            <!-- Crochet ouvert en −1 : tourné vers l'extérieur de l'intervalle -->
-            <path d="M235 57 H250 V99 H235" fill="none" stroke="#2563eb" stroke-width="4"></path>
-
-            <!-- Crochet fermé en 3 : tourné vers l'intérieur de l'intervalle -->
-            <path d="M535 57 H550 V99 H535" fill="none" stroke="#2563eb" stroke-width="4"></path>
-
-            <g fill="currentColor" font-size="16" text-anchor="middle">
-              <line stroke="currentColor" x1="250" x2="250" y1="70" y2="86"></line>
-              <text x="250" y="125">−1 exclu</text>
-              <line stroke="currentColor" x1="550" x2="550" y1="70" y2="86"></line>
-              <text x="550" y="125">3 inclus</text>
-              <text x="400" y="38">]−1 ; 3]</text>
-            </g>
-          </svg>
+    </header>
+    <main class="container">
+      <section class="section">
+        <h2>Cours</h2>
+        <div class="lesson-box">
+          <h3>1. Les intervalles de ℝ</h3>
+          <p>Un <strong>intervalle</strong> est un ensemble de nombres réels vérifiant une ou deux inégalités. Il se représente par une partie continue de la droite réelle.</p>
+          <p>
+            <strong>ℝ = ]−∞ ; +∞[</strong>.</p>
         </div>
-        <p><strong>Lecture graphique :</strong> la partie bleue représente tous les nombres compris entre −1 et 3. Le crochet est ouvert en −1 et fermé en 3.</p>
-      </div>
-
-      <div class="lesson-box">
-        <h3>3. Intervalles non bornés</h3>
-        <div style="overflow-x:auto">
-          <table style="width:100%; border-collapse:collapse">
-            <thead><tr><th>Condition</th><th>Intervalle</th><th>Lecture</th></tr></thead>
-            <tbody>
-              <tr><td>x ≥ a</td><td>[a ; +∞[</td><td>réels supérieurs ou égaux à a</td></tr>
-              <tr><td>x &gt; a</td><td>]a ; +∞[</td><td>réels strictement supérieurs à a</td></tr>
-              <tr><td>x ≤ a</td><td>]−∞ ; a]</td><td>réels inférieurs ou égaux à a</td></tr>
-              <tr><td>x &lt; a</td><td>]−∞ ; a[</td><td>réels strictement inférieurs à a</td></tr>
-            </tbody>
-          </table>
+        <div class="lesson-box">
+          <h3>2. Intervalles bornés</h3>
+          <div style="overflow-x:auto">
+            <table style="width:100%; border-collapse:collapse">
+              <thead>
+                <tr>
+                  <th>Condition sur x</th>
+                  <th>Intervalle</th>
+                  <th>Bornes</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>a ≤ x ≤ b</td>
+                  <td>[a ; b]</td>
+                  <td>a et b incluses</td>
+                </tr>
+                <tr>
+                  <td>a &lt; x &lt; b</td>
+                  <td>]a ; b[</td>
+                  <td>a et b exclues</td>
+                </tr>
+                <tr>
+                  <td>a ≤ x &lt; b</td>
+                  <td>[a ; b[</td>
+                  <td>a incluse, b exclue</td>
+                </tr>
+                <tr>
+                  <td>a &lt; x ≤ b</td>
+                  <td>]a ; b]</td>
+                  <td>a exclue, b incluse</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>
+            <strong>Lecture des crochets :</strong> une borne est incluse lorsque l’inégalité comporte ≤ ou ≥ ; elle est exclue lorsque l’inégalité comporte &lt; ou &gt;.</p>
         </div>
-      </div>
-
-      <div class="tip-box">
-        <p><strong>Attention :</strong> +∞ et −∞ ne sont pas des nombres réels. Ils ne peuvent jamais être inclus : le crochet est toujours ouvert du côté de l’infini.</p>
-      </div>
-
-      <div class="lesson-box">
-        <h3>4. Passer d’une inégalité à un intervalle</h3>
-        <ol>
-          <li>Repérer la ou les bornes.</li>
-          <li>Déterminer si chaque borne est incluse ou exclue.</li>
-          <li>Écrire les crochets et vérifier le côté de l’infini.</li>
-          <li>Contrôler la traduction sur une droite graduée.</li>
-        </ol>
-        <p>−2 ≤ x &lt; 5 ⇔ <strong>x ∈ [−2 ; 5[</strong></p>
-        <p>x &gt; 3 ⇔ <strong>x ∈ ]3 ; +∞[</strong></p>
-        <p>x ≤ −1 ⇔ <strong>x ∈ ]−∞ ; −1]</strong></p>
-      </div>
-
-      <div class="lesson-box">
-        <h3>5. Passer d’un intervalle à une inégalité</h3>
-        <p>x ∈ ]−4 ; 2] ⇔ <strong>−4 &lt; x ≤ 2</strong></p>
-        <p>x ∈ [1 ; +∞[ ⇔ <strong>x ≥ 1</strong></p>
-        <p>x ∈ ]−∞ ; 7[ ⇔ <strong>x &lt; 7</strong></p>
-      </div>
-
-      <div class="lesson-box">
-        <h3>6. Tester une appartenance</h3>
-        <p>Pour savoir si un réel appartient à un intervalle, on vérifie l’inégalité correspondante.</p>
-        <p>2 ∈ [−1 ; 2], car −1 ≤ 2 ≤ 2 ; mais 2 ∉ [−1 ; 2[, car la borne 2 est exclue.</p>
-        <p><strong>À ne pas confondre :</strong> un nombre <strong>appartient</strong> à un intervalle (∈), tandis qu’un intervalle est <strong>inclus</strong> dans ℝ (⊂).</p>
-      </div>
-
-      <div class="lesson-box">
-        <h3>7. Intersection et réunion d’intervalles</h3>
-        <p>Soient les intervalles <strong>A = [−3 ; 2]</strong> et <strong>B = [0 ; 5[</strong>.</p>
-
-        <h4>Intersection</h4>
-        <p>L’<strong>intersection</strong> de A et B, notée <strong>A ∩ B</strong>, contient les nombres qui appartiennent à la fois à A <strong>et</strong> à B.</p>
-        <p>La partie commune aux deux intervalles va de 0 à 2, bornes comprises :</p>
-        <p><strong>A ∩ B = [0 ; 2]</strong>.</p>
-
-        <h4>Réunion</h4>
-        <p>La <strong>réunion</strong> de A et B, notée <strong>A ∪ B</strong>, contient les nombres qui appartiennent à A <strong>ou</strong> à B, éventuellement aux deux.</p>
-        <p>Comme les deux intervalles se recouvrent, leur réunion forme un seul intervalle :</p>
-        <p><strong>A ∪ B = [−3 ; 5[</strong>.</p>
-
+        <div class="example-box">
+          <h3>Exemple : ]−1 ; 3]</h3>
+          <p>]−1 ; 3] est l’ensemble des réels <em>x</em> tels que <strong>−1 &lt; x ≤ 3</strong>.</p>
+          <p>Donc −1 ∉ ]−1 ; 3] et 3 ∈ ]−1 ; 3].</p>
+          <div style="overflow-x:auto; margin:1.2rem 0;">
+            <svg aria-label="Représentation de l’intervalle ouvert en moins un et fermé en trois" role="img" style="min-width:620px; width:100%; height:auto;" viewBox="0 0 760 150">
+              <line stroke="currentColor" stroke-width="2" x1="70" x2="690" y1="78" y2="78"></line>
+              <polygon fill="currentColor" points="690,78 678,72 678,84"></polygon>
+              <line stroke="#2563eb" stroke-width="7" x1="250" x2="550" y1="78" y2="78"></line>
+              <!-- Crochet ouvert en −1 : tourné vers l'extérieur de l'intervalle -->
+              <path d="M235 57 H250 V99 H235" fill="none" stroke="#2563eb" stroke-width="4"></path>
+              <!-- Crochet fermé en 3 : tourné vers l'intérieur de l'intervalle -->
+              <path d="M535 57 H550 V99 H535" fill="none" stroke="#2563eb" stroke-width="4"></path>
+              <g fill="currentColor" font-size="16" text-anchor="middle">
+                <line stroke="currentColor" x1="250" x2="250" y1="70" y2="86"></line>
+                <text x="250" y="125">−1 exclu</text>
+                <line stroke="currentColor" x1="550" x2="550" y1="70" y2="86"></line>
+                <text x="550" y="125">3 inclus</text>
+                <text x="400" y="38">]−1 ; 3]</text>
+              </g>
+            </svg>
+          </div>
+          <p>
+            <strong>Lecture graphique :</strong> la partie bleue représente tous les nombres compris entre −1 et 3. Le crochet est ouvert en −1 et fermé en 3.</p>
+        </div>
+        <div class="lesson-box">
+          <h3>3. Intervalles non bornés</h3>
+          <div style="overflow-x:auto">
+            <table style="width:100%; border-collapse:collapse">
+              <thead>
+                <tr>
+                  <th>Condition</th>
+                  <th>Intervalle</th>
+                  <th>Lecture</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>x ≥ a</td>
+                  <td>[a ; +∞[</td>
+                  <td>réels supérieurs ou égaux à a</td>
+                </tr>
+                <tr>
+                  <td>x &gt; a</td>
+                  <td>]a ; +∞[</td>
+                  <td>réels strictement supérieurs à a</td>
+                </tr>
+                <tr>
+                  <td>x ≤ a</td>
+                  <td>]−∞ ; a]</td>
+                  <td>réels inférieurs ou égaux à a</td>
+                </tr>
+                <tr>
+                  <td>x &lt; a</td>
+                  <td>]−∞ ; a[</td>
+                  <td>réels strictement inférieurs à a</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
         <div class="tip-box">
-          <p><strong>À retenir :</strong></p>
-          <p>∩ signifie « et » : on conserve uniquement la partie commune.</p>
-          <p>∪ signifie « ou » : on rassemble toutes les valeurs des deux intervalles.</p>
+          <p>
+            <strong>Attention :</strong> +∞ et −∞ ne sont pas des nombres réels. Ils ne peuvent jamais être inclus : le crochet est toujours ouvert du côté de l’infini.</p>
         </div>
-      </div>
-
-      <div class="example-box">
-        <h3>Exemple avec deux intervalles disjoints</h3>
-        <p>Si C = [−4 ; −2] et D = [1 ; 3], alors C et D n’ont aucune valeur commune.</p>
-        <p><strong>C ∩ D = ∅</strong> et <strong>C ∪ D = [−4 ; −2] ∪ [1 ; 3]</strong>.</p>
-        <p>Dans ce cas, la réunion ne peut pas s’écrire sous la forme d’un seul intervalle.</p>
-      </div>
-
-      <div class="lesson-box">
-        <h3>8. Valeur absolue et distance</h3>
-        <p>La valeur absolue d’un réel <em>a</em>, notée |a|, est sa distance à 0 sur la droite réelle.</p>
-        <p>|5| = 5 ; |−3| = 3 ; |0| = 0.</p>
-        <p>La distance entre deux réels <em>a</em> et <em>b</em> est <strong>|a − b|</strong>, et |a − b| = |b − a|.</p>
-        <p>Exemple : la distance entre −3 et 5 vaut |5 − (−3)| = 8.</p>
-      </div>
-
-      <div class="lesson-box">
-        <h3>9. Caractériser un intervalle par une distance</h3>
-        <p>Pour r ≥ 0 :</p>
-        <p><strong>|x − a| ≤ r ⇔ a − r ≤ x ≤ a + r ⇔ x ∈ [a − r ; a + r]</strong></p>
-        <p>L’intervalle [a − r ; a + r] a pour <strong>centre a</strong>, pour <strong>rayon r</strong> et pour <strong>amplitude 2r</strong>.</p>
-      </div>
-
-      <div class="example-box">
-        <h3>Exemple</h3>
-        <p>|x − 2| ≤ 4 ⇔ −4 ≤ x − 2 ≤ 4 ⇔ −2 ≤ x ≤ 6.</p>
-        <p>L’ensemble des solutions est <strong>[−2 ; 6]</strong> : centre 2, rayon 4, amplitude 8.</p>
-      </div>
-    </section>
-
-    <section class="section">
-      <h2>Exercices</h2>
-      <div class="exercise-box">
-        <h3>Exercice 1 — Traduire</h3>
-        <ol>
-          <li>Écrire sous forme d’intervalle : −3 ≤ x &lt; 4.</li>
-          <li>Écrire sous forme d’intervalle : x &gt; 5.</li>
-          <li>Écrire sous forme d’inégalité : x ∈ ]−2 ; 7].</li>
-          <li>Écrire sous forme d’inégalité : x ∈ ]−∞ ; 6[.</li>
-        </ol>
-      </div>
-      <div class="exercise-box">
-        <h3>Exercice 2 — Appartenance</h3>
-        <p>Compléter par ∈ ou ∉ :</p>
-        <ol>
-          <li>5 … ]1 ; 5]</li>
-          <li>1 … ]1 ; 5]</li>
-          <li>−2 … [−2 ; 3[</li>
-          <li>3 … [−2 ; 3[</li>
-        </ol>
-      </div>
-      <div class="exercise-box">
-        <h3>Exercice 3 — Distance et intervalle</h3>
-        <ol>
-          <li>Calculer |−7| puis la distance entre −2 et 5.</li>
-          <li>Résoudre |x − 3| ≤ 2 et donner l’intervalle obtenu.</li>
-          <li>Donner le centre, le rayon et l’amplitude de [−4 ; 8].</li>
-        </ol>
-      </div>
-      <div class="exercise-box">
-        <h3>Exercice 4 — Intersection et réunion</h3>
-        <p>On considère I = [−2 ; 4] et J = ]1 ; 6[.</p>
-        <ol>
-          <li>Déterminer I ∩ J.</li>
-          <li>Déterminer I ∪ J.</li>
-          <li>Représenter les deux résultats sur une droite graduée.</li>
-        </ol>
-      </div>
-    </section>
-
-    <section class="section" id="video">
-      <h2>Vidéo</h2>
-
-      <div class="video-box">
-        <p>Vidéo explicative sur les intervalles :</p>
-
-        <iframe
-          src="https://www.youtube.com/embed/LIEN_VIDEO"
-          title="Vidéo explicative sur les intervalles"
-          loading="lazy"
-          allowfullscreen>
+        <div class="lesson-box">
+          <h3>4. Passer d’une inégalité à un intervalle</h3>
+          <ol>
+            <li>Repérer la ou les bornes.</li>
+            <li>Déterminer si chaque borne est incluse ou exclue.</li>
+            <li>Écrire les crochets et vérifier le côté de l’infini.</li>
+            <li>Contrôler la traduction sur une droite graduée.</li>
+          </ol>
+          <p>−2 ≤ x &lt; 5 ⇔ <strong>x ∈ [−2 ; 5[</strong>
+          </p>
+          <p>x &gt; 3 ⇔ <strong>x ∈ ]3 ; +∞[</strong>
+          </p>
+          <p>x ≤ −1 ⇔ <strong>x ∈ ]−∞ ; −1]</strong>
+          </p>
+        </div>
+        <div class="lesson-box">
+          <h3>5. Passer d’un intervalle à une inégalité</h3>
+          <p>x ∈ ]−4 ; 2] ⇔ <strong>−4 &lt; x ≤ 2</strong>
+          </p>
+          <p>x ∈ [1 ; +∞[ ⇔ <strong>x ≥ 1</strong>
+          </p>
+          <p>x ∈ ]−∞ ; 7[ ⇔ <strong>x &lt; 7</strong>
+          </p>
+        </div>
+        <div class="lesson-box">
+          <h3>6. Tester une appartenance</h3>
+          <p>Pour savoir si un réel appartient à un intervalle, on vérifie l’inégalité correspondante.</p>
+          <p>2 ∈ [−1 ; 2], car −1 ≤ 2 ≤ 2 ; mais 2 ∉ [−1 ; 2[, car la borne 2 est exclue.</p>
+          <p>
+            <strong>À ne pas confondre :</strong> un nombre <strong>appartient</strong> à un intervalle (∈), tandis qu’un intervalle est <strong>inclus</strong> dans ℝ (⊂).</p>
+        </div>
+        <div class="lesson-box">
+          <h3>7. Intersection et réunion d’intervalles</h3>
+          <p>Soient les intervalles <strong>A = [−3 ; 2]</strong> et <strong>B = [0 ; 5[</strong>.</p>
+          <h4>Intersection</h4>
+          <p>L’<strong>intersection</strong> de A et B, notée <strong>A ∩ B</strong>, contient les nombres qui appartiennent à la fois à A <strong>et</strong> à B.</p>
+          <p>La partie commune aux deux intervalles va de 0 à 2, bornes comprises :</p>
+          <p>
+            <strong>A ∩ B = [0 ; 2]</strong>.</p>
+          <h4>Réunion</h4>
+          <p>La <strong>réunion</strong> de A et B, notée <strong>A ∪ B</strong>, contient les nombres qui appartiennent à A <strong>ou</strong> à B, éventuellement aux deux.</p>
+          <p>Comme les deux intervalles se recouvrent, leur réunion forme un seul intervalle :</p>
+          <p>
+            <strong>A ∪ B = [−3 ; 5[</strong>.</p>
+          <div class="tip-box">
+            <p>
+              <strong>À retenir :</strong>
+            </p>
+            <p>∩ signifie « et » : on conserve uniquement la partie commune.</p>
+            <p>∪ signifie « ou » : on rassemble toutes les valeurs des deux intervalles.</p>
+          </div>
+        </div>
+        <div class="example-box">
+          <h3>Exemple avec deux intervalles disjoints</h3>
+          <p>Si C = [−4 ; −2] et D = [1 ; 3], alors C et D n’ont aucune valeur commune.</p>
+          <p>
+            <strong>C ∩ D = ∅</strong> et <strong>C ∪ D = [−4 ; −2] ∪ [1 ; 3]</strong>.</p>
+          <p>Dans ce cas, la réunion ne peut pas s’écrire sous la forme d’un seul intervalle.</p>
+        </div>
+        <div class="lesson-box">
+          <h3>8. Valeur absolue et distance</h3>
+          <p>La valeur absolue d’un réel <em>a</em>, notée |a|, est sa distance à 0 sur la droite réelle.</p>
+          <p>|5| = 5 ; |−3| = 3 ; |0| = 0.</p>
+          <p>La distance entre deux réels <em>a</em> et <em>b</em> est <strong>|a − b|</strong>, et |a − b| = |b − a|.</p>
+          <p>Exemple : la distance entre −3 et 5 vaut |5 − (−3)| = 8.</p>
+        </div>
+        <div class="lesson-box">
+          <h3>9. Caractériser un intervalle par une distance</h3>
+          <p>Pour r ≥ 0 :</p>
+          <p>
+            <strong>|x − a| ≤ r ⇔ a − r ≤ x ≤ a + r ⇔ x ∈ [a − r ; a + r]</strong>
+          </p>
+          <p>L’intervalle [a − r ; a + r] a pour <strong>centre a</strong>, pour <strong>rayon r</strong> et pour <strong>amplitude 2r</strong>.</p>
+        </div>
+        <div class="example-box">
+          <h3>Exemple</h3>
+          <p>|x − 2| ≤ 4 ⇔ −4 ≤ x − 2 ≤ 4 ⇔ −2 ≤ x ≤ 6.</p>
+          <p>L’ensemble des solutions est <strong>[−2 ; 6]</strong> : centre 2, rayon 4, amplitude 8.</p>
+        </div>
+      </section>
+      <section class="section">
+        <h2>Exercices d'entrainement</h2>
+        <div class="exercise-box">
+          <h3>Exercice 1 — Traduire</h3>
+          <ol>
+            <li>Écrire sous forme d’intervalle : −3 ≤ x &lt; 4.</li>
+            <li>Écrire sous forme d’intervalle : x &gt; 5.</li>
+            <li>Écrire sous forme d’inégalité : x ∈ ]−2 ; 7].</li>
+            <li>Écrire sous forme d’inégalité : x ∈ ]−∞ ; 6[.</li>
+          </ol>
+          <details class="exercise-correction">
+            <summary>Afficher la correction</summary>
+            <ol>
+              <li>
+                <span>
+                  <strong>x ∈ [−3 ; 4[.</strong> Le symbole ≤ inclut −3 : crochet fermé. Le symbole &lt; exclut 4 : crochet ouvert.</span>
+              </li>
+              <li>
+                <span>
+                  <strong>x ∈ ]5 ; +∞[.</strong> La borne 5 est exclue car l’inégalité est stricte. Du côté de l’infini, le crochet est toujours ouvert.</span>
+              </li>
+              <li>
+                <span>
+                  <strong>−2 &lt; x ≤ 7.</strong> La borne −2 est exclue et la borne 7 est incluse.</span>
+              </li>
+              <li>
+                <span>
+                  <strong>x &lt; 6.</strong> L’intervalle contient tous les réels strictement inférieurs à 6 ; il n’impose aucune borne inférieure finie.</span>
+              </li>
+            </ol>
+          </details>
+        </div>
+        <div class="exercise-box">
+          <h3>Exercice 2 — Appartenance</h3>
+          <p>Compléter par ∈ ou ∉ :</p>
+          <ol>
+            <li>5 … ]1 ; 5]</li>
+            <li>1 … ]1 ; 5]</li>
+            <li>−2 … [−2 ; 3[</li>
+            <li>3 … [−2 ; 3[</li>
+          </ol>
+          <details class="exercise-correction">
+            <summary>Afficher la correction</summary>
+            <ol>
+              <li>
+                <span>
+                  <strong>5 ∈ ]1 ; 5]</strong> : le crochet fermé en 5 indique que cette borne est incluse.</span>
+              </li>
+              <li>
+                <span>
+                  <strong>1 ∉ ]1 ; 5]</strong> : le crochet ouvert en 1 exclut cette borne.</span>
+              </li>
+              <li>
+                <span>
+                  <strong>−2 ∈ [−2 ; 3[</strong> : le crochet fermé en −2 inclut cette borne.</span>
+              </li>
+              <li>
+                <span>
+                  <strong>3 ∉ [−2 ; 3[</strong> : le crochet ouvert en 3 exclut cette borne.</span>
+              </li>
+            </ol>
+          </details>
+        </div>
+        <div class="exercise-box">
+          <h3>Exercice 3 — Distance et intervalle</h3>
+          <ol>
+            <li>Calculer |−7| puis la distance entre −2 et 5.</li>
+            <li>Résoudre |x − 3| ≤ 2 et donner l’intervalle obtenu.</li>
+            <li>Donner le centre, le rayon et l’amplitude de [−4 ; 8].</li>
+          </ol>
+          <details class="exercise-correction">
+            <summary>Afficher la correction</summary>
+            <ol>
+              <li>
+                <span>
+                  <strong>|−7| = 7.</strong> La valeur absolue mesure la distance à zéro. La distance entre −2 et 5 vaut <strong>|5 − (−2)| = |7| = 7</strong>.</span>
+              </li>
+              <li>
+                <span>
+                  <strong>|x − 3| ≤ 2</strong> signifie que x est à une distance au plus égale à 2 de 3. Ainsi −2 ≤ x − 3 ≤ 2. En ajoutant 3 aux trois membres : <strong>1 ≤ x ≤ 5</strong>. L’ensemble des solutions est donc <strong>[1 ; 5]</strong>.</span>
+              </li>
+              <li>
+                <span>Pour [−4 ; 8], le <strong>centre</strong> est (−4 + 8)/2 = <strong>2</strong>. Le <strong>rayon</strong> vaut (8 − (−4))/2 = <strong>6</strong>. L’<strong>amplitude</strong> vaut 8 − (−4) = <strong>12</strong>.</span>
+              </li>
+            </ol>
+          </details>
+        </div>
+        <div class="exercise-box">
+          <h3>Exercice 4 — Intersection et réunion</h3>
+          <p>On considère I = [−2 ; 4] et J = ]1 ; 6[.</p>
+          <ol>
+            <li>Déterminer I ∩ J.</li>
+            <li>Déterminer I ∪ J.</li>
+            <li>Représenter les deux résultats sur une droite graduée.</li>
+          </ol>
+          <details class="exercise-correction">
+            <summary>Afficher la correction</summary>
+            <ol>
+              <li>
+                <span>
+                  <strong>I ∩ J = ]1 ; 4].</strong> L’intersection contient les nombres appartenant aux deux intervalles. Ils sont strictement supérieurs à 1 et inférieurs ou égaux à 4. La borne 1 est exclue par J ; la borne 4 appartient aux deux intervalles.</span>
+              </li>
+              <li>
+                <span>
+                  <strong>I ∪ J = [−2 ; 6[.</strong> La réunion contient les nombres appartenant à au moins un des intervalles. Les deux intervalles se recouvrent : il n’y a pas de trou. La borne −2 est incluse par I et la borne 6 est exclue des deux intervalles.</span>
+              </li>
+              <li>
+                <span>Sur les droites ci-dessous, un <strong>point plein</strong> marque une borne incluse et un <strong>point vide</strong> une borne exclue. Le segment coloré représente l’ensemble des solutions.</span>
+              </li>
+            </ol>
+            <div class="vector-figure">
+              <svg viewBox="0 0 700 260" role="img" aria-label="Intersection : intervalle de 1 exclu à 4 inclus. Réunion : intervalle de moins 2 inclus à 6 exclu.">
+                <title>Intersection et réunion : bornes incluses et exclues</title>
+                <text x="40" y="32" font-size="18" fill="#173e79">I ∩ J = ]1 ; 4]</text>
+                <line x1="50" y1="70" x2="650" y2="70" stroke="#64748b" stroke-width="2"></line>
+                <line x1="90" x2="90" y1="64" y2="76" stroke="#64748b"></line>
+                <text x="90" y="100" text-anchor="middle" font-size="16">-2</text>
+                <line x1="220" x2="220" y1="64" y2="76" stroke="#64748b"></line>
+                <text x="220" y="100" text-anchor="middle" font-size="16">0</text>
+                <line x1="285" x2="285" y1="64" y2="76" stroke="#64748b"></line>
+                <text x="285" y="100" text-anchor="middle" font-size="16">1</text>
+                <line x1="480" x2="480" y1="64" y2="76" stroke="#64748b"></line>
+                <text x="480" y="100" text-anchor="middle" font-size="16">4</text>
+                <line x1="610" x2="610" y1="64" y2="76" stroke="#64748b"></line>
+                <text x="610" y="100" text-anchor="middle" font-size="16">6</text>
+                <line x1="285" x2="480" y1="70" y2="70" stroke="#2454d3" stroke-width="5"></line>
+                <circle cx="285" cy="70" r="7" fill="white" stroke="#2454d3" stroke-width="3"></circle>
+                <circle cx="480" cy="70" r="7" fill="#2454d3" stroke="#2454d3" stroke-width="3"></circle>
+                <text x="40" y="152" font-size="18" fill="#173e79">I ∪ J = [−2 ; 6[</text>
+                <line x1="50" y1="190" x2="650" y2="190" stroke="#64748b" stroke-width="2"></line>
+                <line x1="90" x2="90" y1="184" y2="196" stroke="#64748b"></line>
+                <text x="90" y="220" text-anchor="middle" font-size="16">-2</text>
+                <line x1="220" x2="220" y1="184" y2="196" stroke="#64748b"></line>
+                <text x="220" y="220" text-anchor="middle" font-size="16">0</text>
+                <line x1="285" x2="285" y1="184" y2="196" stroke="#64748b"></line>
+                <text x="285" y="220" text-anchor="middle" font-size="16">1</text>
+                <line x1="480" x2="480" y1="184" y2="196" stroke="#64748b"></line>
+                <text x="480" y="220" text-anchor="middle" font-size="16">4</text>
+                <line x1="610" x2="610" y1="184" y2="196" stroke="#64748b"></line>
+                <text x="610" y="220" text-anchor="middle" font-size="16">6</text>
+                <line x1="90" x2="610" y1="190" y2="190" stroke="#2454d3" stroke-width="5"></line>
+                <circle cx="90" cy="190" r="7" fill="#2454d3" stroke="#2454d3" stroke-width="3"></circle>
+                <circle cx="610" cy="190" r="7" fill="white" stroke="#2454d3" stroke-width="3"></circle>
+              </svg>
+            </div>
+          </details>
+        </div>
+      </section>
+      <section class="section" id="video">
+        <h2>Vidéo</h2>
+        <div class="video-box">
+          <p>Vidéo explicative sur les intervalles :</p>
+          <iframe src="https://www.youtube.com/embed/LIEN_VIDEO" title="Vidéo explicative sur les intervalles" loading="lazy" allowfullscreen>
         </iframe>
-      </div>
-    </section>
-
-    <section class="section">
-      <h2>À retenir</h2>
-      <div class="tip-box">
-        <p>≤ ou ≥ : la borne est incluse. &lt; ou &gt; : la borne est exclue.</p>
-        <p>Du côté de +∞ ou −∞, le crochet est toujours ouvert.</p>
-        <p>∩ correspond à la partie commune ; ∪ rassemble les valeurs des deux intervalles.</p>
-        <p>|x − a| se lit comme la distance entre x et a.</p>
-      </div>
-      <div class="footer-nav">
-        <a href="nombres-calculs.html" class="btn btn-secondary">← Retour</a>
-        <a href="index.html" class="btn btn-primary">Accueil</a>
-      </div>
-    </section>
-  </main>
-</body>
+        </div>
+      </section>
+      <section class="section">
+        <h2>À retenir</h2>
+        <div class="tip-box">
+          <p>≤ ou ≥ : la borne est incluse. &lt; ou &gt; : la borne est exclue.</p>
+          <p>Du côté de +∞ ou −∞, le crochet est toujours ouvert.</p>
+          <p>∩ correspond à la partie commune ; ∪ rassemble les valeurs des deux intervalles.</p>
+          <p>|x − a| se lit comme la distance entre x et a.</p>
+        </div>
+        <div class="footer-nav">
+          <a href="nombres-calculs.html" class="btn btn-secondary">← Retour</a>
+          <a href="index.html" class="btn btn-primary">Accueil</a>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>

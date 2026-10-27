@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MathPhiX — Applications de Python en mathématiques</title>
+  <title>Python en seconde : applications et exercices corrigés | MathPhiX</title>
+  <meta name="description" content="Appliquez Python aux maths en seconde : pourcentages, fonctions, géométrie, statistiques et simulations. Sept exercices corrigés avec programmes expliqués." />
+  <link rel="canonical" href="https://mathphix.fr/seconde/applications-maths.html" />
   <link rel="stylesheet" href="css/style2.css" />
 </head>
 <body>
@@ -175,28 +177,53 @@ print(frequence_six(1000))
         <p>
           Utiliser puis modifier <code>valeur_finale</code> pour calculer le prix d’un
           article de 120 € après une remise de 25 %. Vérifier le résultat par un calcul.
-        </p>
+        </p><details class="exercise-correction"><summary>Afficher la correction</summary><p>Une remise de 25 % est une évolution de taux −25. On peut utiliser directement la fonction du cours, puis créer une fonction qui reçoit une remise positive et change son signe.</p><pre><code class="language-python">def valeur_finale(valeur, taux):
+    return valeur * (1 + taux / 100)
+
+print(valeur_finale(120, -25))
+
+def prix_solde(prix, remise):
+    return valeur_finale(prix, -remise)
+
+print(prix_solde(120, 25))</code></pre><p>Les deux appels affichent <strong>90.0</strong>, soit <strong>90 €</strong>. Vérification : 120 × (1 − 25/100) = 120 × 0,75 = 90 €. La réduction est de 30 €.</p></details>
       </div>
       <div class="exercise-box">
         <h3>Exercice 2 — Tableau de valeurs</h3>
         <p>
           Écrire une fonction correspondant à <em>g</em>(<em>x</em>) = 3<em>x</em> − 4,
           puis afficher <em>g</em>(<em>x</em>) pour tous les entiers de −5 à 5.
-        </p>
+        </p><details class="exercise-correction"><summary>Afficher la correction</summary><p>En Python, on écrit la multiplication avec <code>*</code>. La borne supérieure de <code>range</code> est exclue : on utilise donc <code>range(-5, 6)</code> pour aller jusqu’à 5.</p><pre><code class="language-python">def g(x):
+    return 3 * x - 4
+
+for x in range(-5, 6):
+    print(x, g(x))</code></pre><p>Pour les abscisses −5, −4, −3, −2, −1, 0, 1, 2, 3, 4, 5, les images sont respectivement <strong>−19, −16, −13, −10, −7, −4, −1, 2, 5, 8, 11</strong>. Par exemple, g(−5) = 3 × (−5) − 4 = −19.</p></details>
       </div>
       <div class="exercise-box">
         <h3>Exercice 3 — Encadrement</h3>
         <p>
           Modifier le programme d’encadrement afin d’obtenir deux millièmes consécutifs
           qui encadrent √5. Expliquer les deux changements effectués.
-        </p>
+        </p><details class="exercise-correction"><summary>Afficher la correction</summary><p>Les deux modifications essentielles sont de remplacer la cible 2 par <strong>5</strong> et le pas 0,01 par <strong>0,001</strong>. On peut aussi commencer à 2, car 2² &lt; 5 &lt; 3², pour réduire le nombre d’itérations.</p><pre><code class="language-python">x = 2.0
+pas = 0.001
+
+while (x + pas) ** 2 &lt;= 5:
+    x = x + pas
+
+print(round(x, 3), round(x + pas, 3))</code></pre><p>Le programme affiche <strong>2.236 et 2.237</strong>. La vérification exacte donne 2,236² = 4,999696 &lt; 5 et 2,237² = 5,004169 &gt; 5. Donc <strong>2,236 &lt; √5 &lt; 2,237</strong>. Ces deux millièmes sont consécutifs. <code>round</code> facilite seulement l’affichage des flottants ; la vérification des carrés justifie l’encadrement.</p></details>
       </div>
       <div class="exercise-box">
         <h3>Exercice 4 — Géométrie</h3>
         <p>
           Utiliser la fonction <code>sont_alignes</code> avec A(1 ; 2), B(3 ; 5) et
           C(7 ; 11), puis contrôler le résultat à l’aide d’un calcul de déterminant.
-        </p>
+        </p><details class="exercise-correction"><summary>Afficher la correction</summary><p>On remplace les paramètres par les coordonnées des trois points. Les parenthèses permettent d’écrire le déterminant sur plusieurs lignes sans antislash.</p><pre><code class="language-python">def sont_alignes(xA, yA, xB, yB, xC, yC):
+    determinant = (
+        (xB - xA) * (yC - yA)
+        - (yB - yA) * (xC - xA)
+    )
+    return determinant == 0
+
+print(sont_alignes(1, 2, 3, 5, 7, 11))</code></pre><p>La fonction affiche <strong>True</strong>. En effet, le vecteur AB a pour coordonnées (3 − 1 ; 5 − 2), soit (2 ; 3), et AC a pour coordonnées (7 − 1 ; 11 − 2), soit (6 ; 9). Leur déterminant vaut <strong>2 × 9 − 3 × 6 = 0</strong> : A, B et C sont alignés.</p></details>
       </div>
       <div class="exercise-box">
         <h3>Exercice 5 — Lire et modifier</h3>
@@ -204,21 +231,49 @@ print(frequence_six(1000))
           Expliquer le rôle des variables <code>total</code> et <code>valeur</code> dans la
           fonction <code>moyenne</code>. Modifier les données, puis prévoir le résultat avant
           d’exécuter le programme.
-        </p>
+        </p><details class="exercise-correction"><summary>Afficher la correction</summary><p>La variable <code>total</code> accumule la somme des valeurs, en partant de 0. La variable <code>valeur</code> prend successivement chaque élément de la liste. La division finale par <code>len(valeurs)</code> donne la moyenne ; la liste doit être non vide.</p><pre><code class="language-python">def moyenne(valeurs):
+    total = 0
+    for valeur in valeurs:
+        total = total + valeur
+    return total / len(valeurs)
+
+donnees = [6, 8, 10, 12, 14]
+print(moyenne(donnees))</code></pre><p>Pour les nouvelles données proposées, la somme est 6 + 8 + 10 + 12 + 14 = 50 et l’effectif est 5. On prévoit donc <strong>50/5 = 10</strong> avant l’exécution, qui affiche <strong>10.0</strong>. D’autres listes sont possibles : il faut adapter le calcul de vérification.</p></details>
       </div>
       <div class="exercise-box">
         <h3>Exercice 6 — Simulation</h3>
         <p>
           Modifier <code>frequence_six</code> pour estimer la fréquence d’obtention d’un
           nombre pair. Comparer les résultats pour 20, 200 puis 2 000 lancers.
-        </p>
+        </p><details class="exercise-correction"><summary>Afficher la correction</summary><p>Un entier est pair lorsque le reste de sa division par 2 est nul. On remplace donc le test de succès par <code>randint(1, 6) % 2 == 0</code>. Le nombre n doit être un entier strictement positif.</p><pre><code class="language-python">from random import randint
+
+def frequence_pair(n):
+    succes = 0
+    for _ in range(n):
+        if randint(1, 6) % 2 == 0:
+            succes = succes + 1
+    return succes / n
+
+for n in (20, 200, 2000):
+    print(n, frequence_pair(n))</code></pre><p>Les issues favorables sont 2, 4 et 6 : la probabilité théorique est <strong>3/6 = 0,5</strong>. Les fréquences affichées varient à chaque exécution. Sur de nombreuses répétitions, elles sont généralement plus concentrées autour de 0,5 pour les grandes tailles ; une exécution particulière ne garantit pas un rapprochement régulier.</p></details>
       </div>
       <div class="exercise-box">
         <h3>Exercice 7 — Défi de programmation</h3>
         <p>
           Écrire une fonction qui renvoie le nombre de lancers nécessaires pour obtenir
           un premier 6. Répéter plusieurs fois l’expérience et commenter les résultats.
-        </p>
+        </p><details class="exercise-correction"><summary>Afficher la correction</summary><p>On initialise le compteur à 0 et une valeur de face différente de 6 pour entrer dans la boucle. Chaque passage simule un lancer, puis incrémente le compteur. On s’arrête dès que le premier 6 apparaît.</p><pre><code class="language-python">from random import randint
+
+def attente_premier_six():
+    nombre_lancers = 0
+    face = 0
+    while face != 6:
+        face = randint(1, 6)
+        nombre_lancers = nombre_lancers + 1
+    return nombre_lancers
+
+for _ in range(10):
+    print(attente_premier_six())</code></pre><p>Le résultat est un entier au moins égal à 1. <strong>Le lancer donnant le premier 6 est inclus dans le compteur.</strong> Les dix expériences peuvent donner des nombres différents ; on ne doit pas attendre systématiquement six lancers. Le nombre de lancers n’a pas de maximum fixé : la boucle termine avec probabilité 1 dans le modèle du dé équilibré.</p></details>
       </div>
     </section>
 
