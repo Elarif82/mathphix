@@ -1,12 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://mathphix.fr/</loc>
-  </url>
-  <url>
-    <loc>https://mathphix.fr/seconde/</loc>
-  </url>
-  <url>
-    <loc>https://mathphix.fr/premiere-specialite/</loc>
-  </url>
+  <url><loc>https://mathphix.fr/</loc></url>
+  <url><loc>https://mathphix.fr/orientation.html</loc></url>
+
+  <url><loc>https://mathphix.fr/premiere-specialite/</loc></url>
+  <url><loc>https://mathphix.fr/premiere-specialite/algebre.html</loc></url>
+  <url><loc>https://mathphix.fr/premiere-specialite/probabilites-conditionnelles.html</loc></url>
+  <url><loc>https://mathphix.fr/premiere-specialite/probabilites-statistiques.html</loc></url>
+  <url><loc>https://mathphix.fr/premiere-specialite/second-degre.html</loc></url>
+  <url><loc>https://mathphix.fr/premiere-specialite/suites-numeriques.html</loc></url>
+
+  <url><loc>https://mathphix.fr/seconde/</loc></url>
+  <url><loc>https://mathphix.fr/seconde/algorithme-programmation.html</loc></url>
+  <url><loc>https://mathphix.fr/seconde/applications-maths.html</loc></url>
+  <url><loc>https://mathphix.fr/seconde/arithmetique.html</loc></url>
+  <url><loc>https://mathphix.fr/seconde/base-python.html</loc></url>
+  <url><loc>https://mathphix.fr/seconde/calcul-litteral.html</loc></url>
+  <url><loc>https://mathphix.fr/seconde/calcul-litteral2.html</loc></url>
+  <url><loc>https://mathphix.fr/seconde/droites.html</loc></url>
+  <url><loc>https://mathphix.fr/seconde/echantillonnage.html</loc></url>
+  <url><loc>https://mathphix.fr/seconde/ensembles.html</loc></url>
+  <url><loc>https://mathphix.fr/seconde/equations.html</loc></url>
+  <url><loc>https://mathphix.fr/seconde/equations2.html</loc></url>
+  <url><loc>https://mathphix.fr/seconde/fonctions-reference.html</loc></url>
+  <url><loc>https://mathphix.fr/seconde/fonctions-representation.html</loc></url>
+  <url><loc>https://mathphix.fr/seconde/fonctions.html</loc></url>
+  <url><loc>https://mathphix.fr/seconde/fractions.html</loc></url>
+  <url><loc>https://mathphix.fr/seconde/geometrie.html</loc></url>
+  <url><loc>https://mathphix.fr/seconde/inequations.html</loc></url>
+  <url><loc>https://mathphix.fr/seconde/information-chiffree.html</loc></url>
+  <url><loc>https://mathphix.fr/seconde/intervalles.html</loc></url>
+  <url><loc>https://mathphix.fr/seconde/nombres-calculs.html</loc></url>
+  <url><loc>https://mathphix.fr/seconde/nombres-relatifs.html</loc></url>
+  <url><loc>https://mathphix.fr/seconde/probabilites.html</loc></url>
+  <url><loc>https://mathphix.fr/seconde/puissances.html</loc></url>
+  <url><loc>https://mathphix.fr/seconde/puissances2.html</loc></url>
+  <url><loc>https://mathphix.fr/seconde/racines.html</loc></url>
+  <url><loc>https://mathphix.fr/seconde/statistiques-probabilites.html</loc></url>
+  <url><loc>https://mathphix.fr/seconde/statistiques.html</loc></url>
+  <url><loc>https://mathphix.fr/seconde/trigonometrie.html</loc></url>
+  <url><loc>https://mathphix.fr/seconde/variations-extremums.html</loc></url>
+  <url><loc>https://mathphix.fr/seconde/vecteurs-coordonnees.html</loc></url>
+  <url><loc>https://mathphix.fr/seconde/vecteurs.html</loc></url>
 </urlset>
