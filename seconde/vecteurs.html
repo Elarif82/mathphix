@@ -5,69 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Comprenez les vecteurs en seconde : translation, relation de Chasles, somme et colinéarité. Cours illustré et sept exercices corrigés étape par étape." />
   <title>Vecteurs en seconde : cours et exercices corrigés | MathPhiX</title>
-  <link rel="stylesheet" href="css/style2.css" />
+  <link rel="stylesheet" href="css/style2.css?v=20261028-6" />
 
-  <style>
-    .vector-figure {
-      margin: 1.25rem auto;
-      padding: 1rem;
-      max-width: 760px;
-      overflow-x: auto;
-      border: 1px solid #cbd5e1;
-      border-radius: 12px;
-      background: #f8fafc;
-      text-align: center;
-    }
-
-    .vector-figure svg {
-      display: block;
-      width: 100%;
-      min-width: 520px;
-      height: auto;
-    }
-
-    .vector-figure figcaption {
-      margin-top: 0.75rem;
-      color: #475569;
-      font-size: 0.95rem;
-    }
-
-    .vector-figure .point {
-      fill: #173f70;
-    }
-
-    .vector-figure .construction {
-      fill: none;
-      stroke: #64748b;
-      stroke-width: 2;
-    }
-
-    .vector-figure .vector-red {
-      fill: none;
-      stroke: #c94f4f;
-      stroke-width: 4;
-    }
-
-    .vector-figure .vector-blue {
-      fill: none;
-      stroke: #173f70;
-      stroke-width: 4;
-    }
-
-    .vector-figure .label-arrow {
-      stroke-width: 1.5;
-    }
-
-    .vector-figure text {
-      fill: #173f70;
-      font: 600 17px Arial, sans-serif;
-    }
-
-    .vector-figure .vector-label {
-      fill: #c94f4f;
-      font-weight: 700;
-    }
-  </style>
+  
 
   <script>
     window.MathJax = {
@@ -83,7 +23,7 @@
   <link rel="canonical" href="https://mathphix.fr/seconde/vecteurs.html" />
 </head>
 
-<body>
+<body class="corrections-mobile-page vecteurs-geometrie-page">
   <header class="site-header">
     <div class="header-container container">
       <div>
@@ -405,7 +345,7 @@
           <span class="math">\(\overrightarrow{EF}\)</span> représentés sur une figure,
           préciser sa direction, son sens et sa norme.
         </p><figure class="vector-figure"><svg viewBox="0 0 720 240" role="img" aria-labelledby="exercise-vectors-title"><title id="exercise-vectors-title">Trois vecteurs de normes indiquées en centimètres</title><defs><marker id="arrow-exercise" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#c94f4f"/></marker></defs><g class="vector-red" marker-end="url(#arrow-exercise)"><line x1="65" y1="130" x2="185" y2="130"/><line x1="340" y1="195" x2="340" y2="35"/><line x1="640" y1="180" x2="520" y2="20"/></g><g><text x="48" y="155">A</text><text x="190" y="155">B</text><text x="350" y="210">C</text><text x="350" y="35">D</text><text x="650" y="195">E</text><text x="495" y="20">F</text><text x="94" y="110">3 cm</text><text x="355" y="120">4 cm</text><text x="590" y="85">5 cm</text></g></svg><figcaption>Les longueurs indiquées sont les données de l’exercice ; le dessin s’adapte à l’écran.</figcaption></figure>
-<details class="exercise-correction"><summary>Afficher la correction</summary><ol><li>\(\overrightarrow{AB}\) a pour direction celle de la droite \((AB)\), horizontale sur la figure ; son sens va de A vers B, de gauche à droite. Sa norme est \(\|\overrightarrow{AB}\|=AB=3\) cm.</li><li>\(\overrightarrow{CD}\) a pour direction celle de \((CD)\), verticale sur la figure ; son sens va de C vers D, du bas vers le haut. Sa norme est \(\|\overrightarrow{CD}\|=CD=4\) cm.</li><li>\(\overrightarrow{EF}\) a pour direction celle de \((EF)\), oblique sur la figure ; son sens va de E vers F, du bas à droite vers le haut à gauche. Sa norme est \(\|\overrightarrow{EF}\|=EF=5\) cm.</li></ol><p>La direction ne dépend pas du sens de parcours : les vecteurs AB et BA ont la même direction, mais des sens opposés.</p></details>
+<details class="exercise-correction"><summary>Afficher la correction</summary><ol><li><span class="correction-math">\(\overrightarrow{AB}\)</span> a pour direction celle de la droite <span class="correction-math">\((AB)\)</span>, horizontale sur la figure ; son sens va de A vers B, de gauche à droite. Sa norme est <span class="correction-math">\(\|\overrightarrow{AB}\|=AB=3\)</span> cm.</li><li><span class="correction-math">\(\overrightarrow{CD}\)</span> a pour direction celle de <span class="correction-math">\((CD)\)</span>, verticale sur la figure ; son sens va de C vers D, du bas vers le haut. Sa norme est <span class="correction-math">\(\|\overrightarrow{CD}\|=CD=4\)</span> cm.</li><li><span class="correction-math">\(\overrightarrow{EF}\)</span> a pour direction celle de <span class="correction-math">\((EF)\)</span>, oblique sur la figure ; son sens va de E vers F, du bas à droite vers le haut à gauche. Sa norme est <span class="correction-math">\(\|\overrightarrow{EF}\|=EF=5\)</span> cm.</li></ol><p>La direction ne dépend pas du sens de parcours : les vecteurs AB et BA ont la même direction, mais des sens opposés.</p></details>
       </div>
 
       <div class="exercise-box">
@@ -416,7 +356,7 @@
           <li>Exprimer <span class="math">\(\overrightarrow{AC}\)</span> comme une somme de deux vecteurs.</li>
           <li>Construire le point <span class="math">\(E\)</span> tel que <span class="math">\(\overrightarrow{AE}=\overrightarrow{BD}\)</span>.</li>
         </ol>
-<details class="exercise-correction"><summary>Afficher la correction</summary><ol><li>Dans le parallélogramme ABCD, avec les sommets dans cet ordre, \(\overrightarrow{AB}=\overrightarrow{DC}\) et \(\overrightarrow{AD}=\overrightarrow{BC}\).</li><li>Par Chasles, \(\overrightarrow{AC}=\overrightarrow{AB}+\overrightarrow{BC}\). Comme \(\overrightarrow{BC}=\overrightarrow{AD}\), on obtient aussi \(\boxed{\overrightarrow{AC}=\overrightarrow{AB}+\overrightarrow{AD}}\).</li><li>À partir de A, on reporte le déplacement de B vers D : on trace par A la parallèle à (BD), puis on place E dans le même sens que B vers D, avec AE = BD. On obtient ainsi \(\overrightarrow{AE}=\overrightarrow{BD}\). E est l’image de A par la translation de vecteur \(\overrightarrow{BD}\).</li></ol></details>
+<details class="exercise-correction"><summary>Afficher la correction</summary><ol><li>Dans le parallélogramme ABCD, avec les sommets dans cet ordre, <span class="correction-math">\(\overrightarrow{AB}=\overrightarrow{DC}\)</span> et <span class="correction-math">\(\overrightarrow{AD}=\overrightarrow{BC}\)</span>.</li><li>Par Chasles, <span class="correction-math">\(\overrightarrow{AC}=\overrightarrow{AB}+\overrightarrow{BC}\)</span>. Comme <span class="correction-math">\(\overrightarrow{BC}=\overrightarrow{AD}\)</span>, on obtient aussi <span class="correction-math">\(\boxed{\overrightarrow{AC}=\overrightarrow{AB}+\overrightarrow{AD}}\)</span>.</li><li>À partir de A, on reporte le déplacement de B vers D : on trace par A la parallèle à (BD), puis on place E dans le même sens que B vers D, avec AE = BD. On obtient ainsi <span class="correction-math">\(\overrightarrow{AE}=\overrightarrow{BD}\)</span>. E est l’image de A par la translation de vecteur <span class="correction-math">\(\overrightarrow{BD}\)</span>.</li></ol></details>
       </div>
 
       <div class="exercise-box">
@@ -428,7 +368,7 @@
           <li><span class="math">\(\overrightarrow{MN}-\overrightarrow{PN}\)</span> ;</li>
           <li><span class="math">\(\overrightarrow{XA}+\overrightarrow{AB}+\overrightarrow{BX}\)</span>.</li>
         </ol>
-<details class="exercise-correction"><summary>Afficher la correction</summary><ol><li>Par Chasles, \(\boxed{\overrightarrow{AB}+\overrightarrow{BC}=\overrightarrow{AC}}\).</li><li>On regroupe les déplacements successifs : \(\overrightarrow{RS}+\overrightarrow{ST}+\overrightarrow{TU}=\overrightarrow{RT}+\overrightarrow{TU}=\boxed{\overrightarrow{RU}}\).</li><li>On remplace la soustraction par l’addition du vecteur opposé : \(\overrightarrow{MN}-\overrightarrow{PN}=\overrightarrow{MN}+\overrightarrow{NP}=\boxed{\overrightarrow{MP}}\).</li><li>Le déplacement revient au point de départ : \(\overrightarrow{XA}+\overrightarrow{AB}+\overrightarrow{BX}=\overrightarrow{XB}+\overrightarrow{BX}=\overrightarrow{XX}=\boxed{\vec0}\).</li></ol></details>
+<details class="exercise-correction"><summary>Afficher la correction</summary><ol><li>Par Chasles, <span class="correction-math">\(\boxed{\overrightarrow{AB}+\overrightarrow{BC}=\overrightarrow{AC}}\)</span>.</li><li>On regroupe les déplacements successifs : <span class="correction-math">\(\overrightarrow{RS}+\overrightarrow{ST}+\overrightarrow{TU}=\overrightarrow{RT}+\overrightarrow{TU}=\boxed{\overrightarrow{RU}}\)</span>.</li><li>On remplace la soustraction par l’addition du vecteur opposé : <span class="correction-math">\(\overrightarrow{MN}-\overrightarrow{PN}=\overrightarrow{MN}+\overrightarrow{NP}=\boxed{\overrightarrow{MP}}\)</span>.</li><li>Le déplacement revient au point de départ : <span class="correction-math">\(\overrightarrow{XA}+\overrightarrow{AB}+\overrightarrow{BX}=\overrightarrow{XB}+\overrightarrow{BX}=\overrightarrow{XX}=\boxed{\vec0}\)</span>.</li></ol></details>
       </div>
 
       <div class="exercise-box">
@@ -440,7 +380,7 @@
           <span class="math">\(-2\vec{u}\)</span> et
           <span class="math">\(\dfrac12\vec{u}\)</span>.
         </p>
-<details class="exercise-correction"><summary>Afficher la correction</summary><p>On utilise \(\|k\vec u\|=|k|\,\|\vec u\|\), avec \(\|\vec u\|=4\).</p><ol><li>Pour \(3\vec u\), le coefficient 3 est positif : même direction et même sens que \(\vec u\). Sa norme est \(3\times4=\boxed{12}\).</li><li>Pour \(-2\vec u\), le coefficient est négatif : même direction, mais sens opposé. Sa norme est \(|-2|\times4=\boxed8\).</li><li>Pour \(\dfrac12\vec u\), le coefficient est positif : même direction et même sens. Sa norme est \(\dfrac12\times4=\boxed2\).</li></ol><p>Une norme est toujours positive ou nulle : le signe du coefficient détermine le sens, pas le signe de la norme.</p></details>
+<details class="exercise-correction"><summary>Afficher la correction</summary><p>On utilise <span class="correction-math">\(\|k\vec u\|=|k|\,\|\vec u\|\)</span>, avec <span class="correction-math">\(\|\vec u\|=4\)</span>.</p><ol><li>Pour <span class="correction-math">\(3\vec u\)</span>, le coefficient 3 est positif : même direction et même sens que <span class="correction-math">\(\vec u\)</span>. Sa norme est <span class="correction-math">\(3\times4=\boxed{12}\)</span>.</li><li>Pour <span class="correction-math">\(-2\vec u\)</span>, le coefficient est négatif : même direction, mais sens opposé. Sa norme est <span class="correction-math">\(|-2|\times4=\boxed8\)</span>.</li><li>Pour <span class="correction-math">\(\dfrac12\vec u\)</span>, le coefficient est positif : même direction et même sens. Sa norme est <span class="correction-math">\(\dfrac12\times4=\boxed2\)</span>.</li></ol><p>Une norme est toujours positive ou nulle : le signe du coefficient détermine le sens, pas le signe de la norme.</p></details>
       </div>
 
       <div class="exercise-box">
@@ -452,7 +392,7 @@
           <span class="math">\(M\)</span> et <span class="math">\(B\)</span> ?
           Justifier et préciser la position de <span class="math">\(M\)</span>.
         </p>
-<details class="exercise-correction"><summary>Afficher la correction</summary><p>L’égalité \(\overrightarrow{AM}=\dfrac23\overrightarrow{AB}\) montre que les vecteurs AM et AB sont colinéaires : <strong>A, M et B sont alignés</strong>.</p><p>Si A et B sont distincts, le coefficient \(\dfrac23\) est strictement compris entre 0 et 1 : M se situe à l’intérieur du segment [AB], aux deux tiers du trajet de A vers B.</p><p>On a \(AM=\dfrac23AB\) et \(MB=AB-AM=\dfrac13AB\). Donc \(AM=2MB\).</p><p>Si A = B, le vecteur AB est nul et M = A = B.</p></details>
+<details class="exercise-correction"><summary>Afficher la correction</summary><p>L’égalité <span class="correction-math">\(\overrightarrow{AM}=\dfrac23\overrightarrow{AB}\)</span> montre que les vecteurs AM et AB sont colinéaires : <strong>A, M et B sont alignés</strong>.</p><p>Si A et B sont distincts, le coefficient <span class="correction-math">\(\dfrac23\)</span> est strictement compris entre 0 et 1 : M se situe à l’intérieur du segment [AB], aux deux tiers du trajet de A vers B.</p><p>On a <span class="correction-math">\(AM=\dfrac23AB\)</span> et <span class="correction-math">\(MB=AB-AM=\dfrac13AB\)</span>. Donc <span class="correction-math">\(AM=2MB\)</span>.</p><p>Si A = B, le vecteur AB est nul et M = A = B.</p></details>
       </div>
 
       <div class="exercise-box">
@@ -471,7 +411,7 @@
           <li>Comparer le sens et les normes des deux vecteurs.</li>
           <li>Si <span class="math">\(GH=4\)</span> cm, calculer <span class="math">\(EF\)</span>.</li>
         </ol>
-<details class="exercise-correction"><summary>Afficher la correction</summary><p>On suppose E ≠ F et G ≠ H afin que les droites (EF) et (GH) soient définies.</p><ol><li>De \(2\overrightarrow{EF}+3\overrightarrow{GH}=\vec0\), on déduit \(2\overrightarrow{EF}=-3\overrightarrow{GH}\), puis \(\boxed{\overrightarrow{EF}=-\dfrac32\overrightarrow{GH}}\).</li><li>Un vecteur est un multiple de l’autre : ils sont colinéaires. Les droites (EF) et (GH) sont donc <strong>parallèles, éventuellement confondues</strong>.</li><li>Le coefficient est négatif : les vecteurs sont de sens opposés. Leurs normes vérifient \(\|\overrightarrow{EF}\|=\dfrac32\|\overrightarrow{GH}\|\).</li><li>Si GH = 4 cm, alors \(EF=\dfrac32\times4=\boxed{6\text{ cm}}\).</li></ol></details>
+<details class="exercise-correction"><summary>Afficher la correction</summary><p>On suppose E ≠ F et G ≠ H afin que les droites (EF) et (GH) soient définies.</p><ol><li>De <span class="correction-math">\(2\overrightarrow{EF}+3\overrightarrow{GH}=\vec0\)</span>, on déduit <span class="correction-math">\(2\overrightarrow{EF}=-3\overrightarrow{GH}\)</span>, puis <span class="correction-math">\(\boxed{\overrightarrow{EF}=-\dfrac32\overrightarrow{GH}}\)</span>.</li><li>Un vecteur est un multiple de l’autre : ils sont colinéaires. Les droites (EF) et (GH) sont donc <strong>parallèles, éventuellement confondues</strong>.</li><li>Le coefficient est négatif : les vecteurs sont de sens opposés. Leurs normes vérifient <span class="correction-math">\(\|\overrightarrow{EF}\|=\dfrac32\|\overrightarrow{GH}\|\)</span>.</li><li>Si GH = 4 cm, alors <span class="correction-math">\(EF=\dfrac32\times4=\boxed{6\text{ cm}}\)</span>.</li></ol></details>
       </div>
 
       <div class="exercise-box">
@@ -488,7 +428,7 @@
           <li>Démontrer que <span class="math">\(\overrightarrow{MN}=\overrightarrow{AD}\)</span>.</li>
           <li>En déduire la nature du quadrilatère <span class="math">\(AMND\)</span>.</li>
         </ol>
-<details class="exercise-correction"><summary>Afficher la correction</summary><ol><li>On passe successivement par A puis D : \(\overrightarrow{MN}=\overrightarrow{MA}+\overrightarrow{AD}+\overrightarrow{DN}\).</li><li>On sait que \(\overrightarrow{MA}=-\dfrac23\overrightarrow{AB}\). Dans le parallélogramme ABCD, \(\overrightarrow{DC}=\overrightarrow{AB}\), donc \(\overrightarrow{DN}=\dfrac23\overrightarrow{AB}\). En remplaçant : \(\overrightarrow{MN}=-\dfrac23\overrightarrow{AB}+\overrightarrow{AD}+\dfrac23\overrightarrow{AB}=\boxed{\overrightarrow{AD}}\).</li><li>L’égalité \(\overrightarrow{MN}=\overrightarrow{AD}\) signifie que deux côtés opposés, orientés de manière correspondante, sont égaux. Ainsi <strong>AMND est un parallélogramme</strong>. On a également \(\overrightarrow{AM}=\overrightarrow{DN}\).</li></ol></details>
+<details class="exercise-correction"><summary>Afficher la correction</summary><ol><li>On passe successivement par A puis D : <span class="correction-math">\(\overrightarrow{MN}=\overrightarrow{MA}+\overrightarrow{AD}+\overrightarrow{DN}\)</span>.</li><li>On sait que <span class="correction-math">\(\overrightarrow{MA}=-\dfrac23\overrightarrow{AB}\)</span>. Dans le parallélogramme ABCD, <span class="correction-math">\(\overrightarrow{DC}=\overrightarrow{AB}\)</span>, donc <span class="correction-math">\(\overrightarrow{DN}=\dfrac23\overrightarrow{AB}\)</span>. En remplaçant : <span class="correction-math">\(\overrightarrow{MN}=-\dfrac23\overrightarrow{AB}+\overrightarrow{AD}+\dfrac23\overrightarrow{AB}=\boxed{\overrightarrow{AD}}\)</span>.</li><li>L’égalité <span class="correction-math">\(\overrightarrow{MN}=\overrightarrow{AD}\)</span> signifie que deux côtés opposés, orientés de manière correspondante, sont égaux. Ainsi <strong>AMND est un parallélogramme</strong>. On a également <span class="correction-math">\(\overrightarrow{AM}=\overrightarrow{DN}\)</span>.</li></ol></details>
       </div>
 
     </section>

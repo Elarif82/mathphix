@@ -1058,3 +1058,102 @@ mjx-container[display="true"] {
 .probabilites-page .weighted-tree > svg {
   display: block;
 }
+
+/* Vecteurs géométriques : styles de figures externalisés. */
+
+.vecteurs-geometrie-page .vector-figure {
+      margin: 1.25rem auto;
+      padding: 1rem;
+      max-width: 760px;
+      overflow-x: auto;
+      border: 1px solid #cbd5e1;
+      border-radius: 12px;
+      background: #f8fafc;
+      text-align: center;
+    }
+.vecteurs-geometrie-page .vector-figure > svg {
+      display: block;
+      width: 100%;
+      min-width: 520px;
+      height: auto;
+    }
+.vecteurs-geometrie-page .vector-figure figcaption {
+      margin-top: 0.75rem;
+      color: #475569;
+      font-size: 0.95rem;
+    }
+.vecteurs-geometrie-page .vector-figure .point {
+      fill: #173f70;
+    }
+.vecteurs-geometrie-page .vector-figure .construction {
+      fill: none;
+      stroke: #64748b;
+      stroke-width: 2;
+    }
+.vecteurs-geometrie-page .vector-figure .vector-red {
+      fill: none;
+      stroke: #c94f4f;
+      stroke-width: 4;
+    }
+.vecteurs-geometrie-page .vector-figure .vector-blue {
+      fill: none;
+      stroke: #173f70;
+      stroke-width: 4;
+    }
+.vecteurs-geometrie-page .vector-figure .label-arrow {
+      stroke-width: 1.5;
+    }
+.vecteurs-geometrie-page .vector-figure text {
+      fill: #173f70;
+      font: 600 17px Arial, sans-serif;
+    }
+.vecteurs-geometrie-page .vector-figure .vector-label {
+      fill: #c94f4f;
+      font-weight: 700;
+    }
+  
+/* Corrections dépliables : le débordement reste local, jamais sur la page. */
+.corrections-mobile-page .exercise-correction {
+  display: block;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  overflow-wrap: anywhere;
+}
+.corrections-mobile-page .exercise-correction p,
+.corrections-mobile-page .exercise-correction li,
+.corrections-mobile-page .exercise-correction ul,
+.corrections-mobile-page .exercise-correction ol {
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+.corrections-mobile-page .exercise-correction .math {
+  min-width: 0;
+  max-width: calc(100% - 0.2rem);
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+.corrections-mobile-page .exercise-correction .correction-math {
+  display: inline-block;
+  box-sizing: border-box;
+  min-width: 0;
+  max-width: 100%;
+  vertical-align: middle;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-block: 0.25em;
+  white-space: nowrap;
+  overscroll-behavior-x: contain;
+}
+/* La formule conserve sa taille naturelle dans son conteneur défilant. */
+.corrections-mobile-page .exercise-correction .correction-math mjx-container {
+  display: inline-block !important;
+  width: auto !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  overflow: visible !important;
+  margin: 0 !important;
+}
