@@ -442,7 +442,7 @@ code {
   text-align: center;
 }
 
-.vector-figure svg {
+.vector-figure > svg {
   display: block;
   width: 100%;
   min-width: 520px;
@@ -544,7 +544,7 @@ mjx-container[display="true"] {
     padding: 0.75rem;
   }
 
-  .vector-figure svg {
+  .vector-figure > svg {
     min-width: 520px;
   }
 }
@@ -667,7 +667,7 @@ mjx-container[display="true"] {
   background: #fff;
 }
 
-.figure-box svg {
+.figure-box > svg {
   display: block;
   width: 100%;
   max-width: 700px;
@@ -707,7 +707,7 @@ mjx-container[display="true"] {
     grid-template-columns: 1fr;
   }
 
-  .figure-box svg {
+  .figure-box > svg {
     min-width: 480px;
   }
 
@@ -752,7 +752,7 @@ mjx-container[display="true"] {
   background: #f8fafc;
   text-align: center;
 }
-.vecteurs-page .vector-figure svg {
+.vecteurs-page .vector-figure > svg {
   display: block;
   width: 100%;
   min-width: 520px;
@@ -841,4 +841,220 @@ mjx-container[display="true"] {
     margin-inline: 0;
     padding: 0.75rem;
   }
+}
+
+/* Correctif V2 : neutraliser les largeurs minimales ajoutées par MathJax. */
+.vecteurs-page .vector-formula {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin: 0.75rem 0;
+  padding: 0.65rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface-soft);
+  color: var(--primary-dark);
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+}
+
+.vecteurs-page mjx-container,
+.vecteurs-page mjx-container[display="true"] {
+  min-width: 0 !important;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.vecteurs-page mjx-container[display="true"] {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  text-align: left !important;
+}
+
+.vecteurs-page .math {
+  box-sizing: border-box;
+  max-width: calc(100% - 0.2rem);
+}
+
+.vecteurs-page .vector-formula mjx-container {
+  margin-block: 0.25rem;
+}
+
+.vecteurs-page .vector-figure {
+  width: 100%;
+  margin-inline: 0;
+  box-sizing: border-box;
+}
+
+/* Pages de calcul : les expressions textuelles peuvent revenir à la ligne. */
+.mobile-course-page .header-container > div,
+.mobile-course-page .hero-card,
+.mobile-course-page .lesson-box,
+.mobile-course-page .example-box,
+.mobile-course-page .exercise-box,
+.mobile-course-page .tip-box {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.mobile-course-page .math {
+  box-sizing: border-box;
+  min-width: 0;
+  max-width: calc(100% - 0.2rem);
+  white-space: normal;
+  overflow-wrap: anywhere;
+  vertical-align: middle;
+}
+
+.mobile-course-page p.math {
+  display: block;
+  margin-inline: 0;
+}
+
+.mobile-course-page mjx-container {
+  min-width: 0 !important;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-block: 0.25em;
+}
+
+.mobile-course-page mjx-container[display="true"] {
+  display: block;
+  width: 100%;
+  text-align: left !important;
+}
+
+/* Les tableaux de signes gardent leur structure et défilent dans leur cadre. */
+.mobile-course-page .latex-sign-table {
+  box-sizing: border-box;
+  min-width: 0;
+  max-width: 100%;
+  margin: 1.25rem 0;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  padding: 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 14px;
+  background: #fff;
+  text-align: left;
+}
+
+.mobile-course-page .latex-sign-table mjx-container {
+  width: max-content;
+  min-width: 680px !important;
+  max-width: none;
+  margin: 0 !important;
+  overflow: visible;
+}
+
+
+/* Styles propres à fonctions-representation-page */
+
+.fonctions-representation-page .formula-line {display:flex;flex-wrap:wrap;align-items:center;gap:.45rem}
+.fonctions-representation-page .method-steps {padding-left:1.4rem}
+.fonctions-representation-page .method-steps li+li {margin-top:.5rem}
+.fonctions-representation-page .table-wrap {width:100%;overflow-x:auto;margin:1rem 0}
+.fonctions-representation-page .value-table {width:100%;min-width:430px;border-collapse:collapse;text-align:center}
+.fonctions-representation-page .value-table th, .fonctions-representation-page .value-table td {border:1px solid #cbd5e1;padding:.7rem .55rem}
+.fonctions-representation-page .value-table th {background:#eff6ff;color:#1d4ed8}
+.fonctions-representation-page .graph-card {margin-top:1rem;padding:.65rem;border:1px solid #dbe4f0;border-radius:16px;background:#fff}
+.fonctions-representation-page .graph-card > svg {display:block;width:100%;height:auto;max-height:430px}
+.fonctions-representation-page .graph-caption {margin:.65rem .3rem .2rem;color:#475569;font-size:.95rem;text-align:center}
+.fonctions-representation-page .note-box {margin-top:1rem;padding:.85rem 1rem;border-left:4px solid #f59e0b;border-radius:8px;background:#fffbeb}
+.fonctions-representation-page .comparison-list li+li {margin-top:.65rem}
+@media(max-width:640px) {
+.fonctions-representation-page .formula-line {gap:.2rem .35rem}
+.fonctions-representation-page .graph-card {padding:.25rem;margin-left:-.2rem;margin-right:-.2rem}
+.fonctions-representation-page .graph-caption {font-size:.86rem}
+.fonctions-representation-page .value-table th, .fonctions-representation-page .value-table td {padding:.55rem .4rem}}
+  
+
+
+/* Styles propres à statistiques-page */
+
+.statistiques-page .stat-table-wrapper {overflow-x:auto;margin:1rem 0}
+.statistiques-page .stat-table {width:100%;min-width:560px;border-collapse:collapse;background:#fff}
+.statistiques-page .stat-table th, .statistiques-page .stat-table td {padding:.7rem;border:1px solid #cbd5e1;text-align:center}
+.statistiques-page .stat-table th {background:#eaf2ff;color:#173e79}
+.statistiques-page .formula-box {margin:1rem 0;padding:1rem;border-left:4px solid #2454d3;background:#f8fafc;text-align:center}
+.statistiques-page .method-steps {counter-reset:step;list-style:none;padding-left:0}
+.statistiques-page .method-steps li {counter-increment:step;margin:.65rem 0;padding-left:2.4rem;position:relative}
+.statistiques-page .method-steps li::before {content:counter(step);position:absolute;left:0;top:-.1rem;width:1.7rem;height:1.7rem;border-radius:50%;display:grid;place-items:center;background:#2454d3;color:#fff;font-weight:700}
+.statistiques-page .histogram {display:flex;align-items:flex-end;height:190px;margin:1.5rem auto .5rem;padding:0 1rem;border-left:2px solid #475569;border-bottom:2px solid #475569;max-width:620px}
+.statistiques-page .hist-bar {position:relative;flex:1;margin:0 1px;background:#7db2f5;border:1px solid #2454d3}
+.statistiques-page .hist-bar span {position:absolute;left:50%;transform:translateX(-50%);top:-1.5rem;font-weight:700;color:#173e79}
+.statistiques-page .hist-labels {display:grid;grid-template-columns:repeat(5,1fr);max-width:620px;margin:0 auto;text-align:center;font-size:.85rem}
+.statistiques-page .comparison-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+.statistiques-page .comparison-card {padding:1rem;border:1px solid #cbd5e1;border-radius:12px;background:#fff}
+@media(max-width:650px) {
+.statistiques-page .comparison-grid {grid-template-columns:1fr}
+.statistiques-page .histogram {height:155px;padding:0 .3rem}
+.statistiques-page .hist-labels {font-size:.72rem}}
+  
+
+.statistiques-page .hist-height-20 { height: 20%; }
+
+.statistiques-page .hist-height-60 { height: 60%; }
+
+.statistiques-page .hist-height-100 { height: 100%; }
+
+.statistiques-page .hist-height-70 { height: 70%; }
+
+.statistiques-page .hist-height-50 { height: 50%; }
+
+
+/* Styles propres à probabilites-page */
+
+.probabilites-page .prob-table-wrapper {overflow-x:auto;margin:1rem 0}
+.probabilites-page .prob-table {width:100%;border-collapse:collapse;min-width:560px;background:#fff}
+.probabilites-page .prob-table th, .probabilites-page .prob-table td {border:1px solid #cbd5e1;padding:.75rem;text-align:center}
+.probabilites-page .prob-table th {background:#eaf2ff;color:#173e79}
+.probabilites-page .formula-box {margin:1rem 0;padding:1rem;border-left:4px solid #2454d3;background:#f8fafc;text-align:center}
+.probabilites-page .event-complement {display:inline-block;line-height:1;text-decoration-line:overline;text-decoration-thickness:2px;text-decoration-skip-ink:none}
+.probabilites-page .weighted-tree {margin:1.25rem 0;padding:1rem;border:1px solid #d7e1ef;border-radius:14px;background:#fff;overflow-x:auto}
+.probabilites-page .weighted-tree > svg {display:block;width:100%;min-width:640px;height:auto}
+.probabilites-page .tree-line {stroke:#335f9e;stroke-width:3;fill:none}
+.probabilites-page .tree-dot {fill:#2454d3}
+.probabilites-page .tree-event {font-size:17px;font-weight:700;fill:#173e79}
+.probabilites-page .tree-weight {font-size:15px;font-weight:700;fill:#b45309}
+.probabilites-page .tree-result {font-size:14px;fill:#475569}
+.probabilites-page .tree-overline {stroke:#173e79;stroke-width:1.8;stroke-linecap:round}
+@media(max-width:650px) {
+.probabilites-page .weighted-tree {padding:.5rem}
+.probabilites-page .weighted-tree > svg {min-width:590px}}
+  
+
+/* Contenir les éléments larges dans les trois nouvelles pages. */
+.mobile-course-page .formula-box,
+.mobile-course-page .table-wrap,
+.mobile-course-page .stat-table-wrapper,
+.mobile-course-page .prob-table-wrapper,
+.mobile-course-page .weighted-tree,
+.mobile-course-page .graph-card,
+.mobile-course-page .comparison-card {
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+.mobile-course-page .formula-box,
+.mobile-course-page .table-wrap,
+.mobile-course-page .stat-table-wrapper,
+.mobile-course-page .prob-table-wrapper {
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+}
+.fonctions-representation-page .formula-line > * {
+  min-width: 0;
+  max-width: 100%;
+}
+.fonctions-representation-page .graph-card {
+  margin-inline: 0;
+}
+/* Seul le dessin principal reçoit les dimensions de la figure. */
+.probabilites-page .weighted-tree > svg {
+  display: block;
 }
