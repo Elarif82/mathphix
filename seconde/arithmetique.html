@@ -143,12 +143,36 @@
         </div>
       </section>
       <section class="section" id="fractions-irreductibles">
-        <h2>5. Fractions irréductibles</h2>
+        <h2>5. Nombres premiers et fractions irréductibles</h2>
         <div class="lesson-box">
-          <h3>Définition</h3>
+          <h3>5.1 Rappel : nombre premier</h3>
+          <p>Un entier naturel est <strong>premier</strong> s’il possède exactement deux diviseurs <strong>positifs</strong> : 1 et lui-même.</p>
+          <p>Les premiers nombres premiers sont <span class="math">2, 3, 5, 7, 11, 13, 17, 19</span>.</p>
+          <p>Le nombre 1 n’est pas premier ; 0 non plus. Le seul nombre premier pair est 2.</p>
+        </div>
+        <div class="lesson-box">
+          <h3>5.2 Complément : tester si un entier n ≥ 2 est premier</h3>
+          <p>Il suffit de tester les diviseurs premiers <strong>inférieurs ou égaux à <span class="math">√n</span></strong>. Si aucun ne divise <span class="math">n</span>, alors <span class="math">n</span> est premier.</p>
+          <p>En effet, dans une factorisation <span class="math">n = ab</span> avec <span class="math">1 &lt; a ≤ b</span>, on a <span class="math">a ≤ √n</span> ; un diviseur premier de <span class="math">a</span> est alors lui aussi inférieur ou égal à <span class="math">√n</span>.</p>
+        </div>
+        <div class="example-box">
+          <h3>Exemples : 79, 91 et 49</h3>
+          <p><span class="math">√79 ≈ 8,89</span> : on teste 2, 3, 5 et 7. Aucun ne divise 79, donc <strong>79 est premier</strong>.</p>
+          <p>En revanche, <span class="math">91 = 7 × 13</span> : <strong>91 n’est pas premier</strong>.</p>
+          <p>Il faut inclure l’égalité : pour 49, on doit tester <span class="math">7 = √49</span>. Comme <span class="math">49 = 7 × 7</span>, 49 n’est pas premier.</p>
+        </div>
+        <div class="lesson-box">
+          <h3>5.3 Décomposition en facteurs premiers - Propriété admise</h3>
+          <p>Tout entier naturel supérieur ou égal à 2 s’écrit comme un produit de nombres premiers. Cette décomposition est <strong>unique à l’ordre des facteurs près</strong>.</p>
+          <p class="math">30 = 2 × 3 × 5 ; 72 = 2³ × 3².</p>
+        </div>
+        <div class="lesson-box">
+          <h3>5.4 Entiers premiers entre eux et fractions irréductibles</h3>
           <p>
           Deux entiers sont <strong>premiers entre eux</strong> lorsque leur seul diviseur positif commun est 1.
-          Une fraction est <strong>irréductible</strong> lorsque son numérateur et son dénominateur sont premiers entre eux.
+          Cela ne signifie pas que chacun est premier : 20 et 77 sont premiers entre eux, bien qu’ils ne soient pas premiers.
+          </p>
+          <p>Une fraction <span class="math">a/b</span>, où <span class="math">a</span> et <span class="math">b</span> sont des entiers et <span class="math">b ≠ 0</span>, est <strong>irréductible</strong> si son numérateur et son dénominateur sont premiers entre eux. On choisit habituellement un dénominateur positif.
         </p>
         </div>
         <div class="example-box">
@@ -160,8 +184,12 @@
         <div class="example-box">
           <h3>Exemple 2 - Rendre une fraction irréductible</h3>
           <p>Le numérateur et le dénominateur de <span class="math">84/126</span> sont divisibles par 42 :</p>
-          <p class="math">84/126 = (42 × 2)/(42 × 3) = 2/3.</p>
-          <p>Comme 2 et 3 sont premiers entre eux, <span class="math">2/3</span> est irréductible.</p>
+          <p class="math">84/126 = (2² × 3 × 7)/(2 × 3² × 7) = (42 × 2)/(42 × 3) = 2/3.</p>
+          <p>On a divisé le numérateur et le dénominateur par 42. Comme 2 et 3 sont premiers entre eux, <span class="math">2/3</span> est irréductible.</p>
+          <p>De même, <span class="math">−72/120 = −3/5</span>.</p>
+        </div>
+        <div class="tip-box">
+          <p><strong>Attention.</strong> On simplifie des facteurs communs, jamais des termes d’une somme : <span class="math">(2 + 3)/(2 + 5)</span> vaut <span class="math">5/7</span>, pas <span class="math">3/5</span>.</p>
         </div>
       </section>
       <section class="section" id="algorithmes">
